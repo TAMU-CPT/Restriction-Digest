@@ -47,7 +47,7 @@ with open(sys.argv[1],'r') as file:
 #                    iterator+=1
 
 
-
+    i = 1
     iterator = 1
     dummy = 1
     enzyme_list = []
@@ -67,9 +67,13 @@ with open(sys.argv[1],'r') as file:
                 elif iterator%6==5:
                     cut_list_2+=[element.get_text()]
                 iterator+=1
-    print enzyme_list
-    print cut_list_1
-    print cut_list_2
+with open('data.txt','a') as f:
+    while i < len(enzyme_list):
+        string = (enzyme_list[i].replace(u'\xa0',u' ')+' '+cut_list_1[i].replace(u'\xa0',u' ').replace(u'\n3',u' ')+' '+cut_list_2[i].replace(u'\xa0',u' ').replace(u'\n3',u' '))
+        f.write(string)
+        f.write('\n')
+        i+=1
+  
 #list = soup.find_all('table',border='1',limit=1)
 #for element in list:
 #    sublist = element.find_all('tr',recursive=False)
