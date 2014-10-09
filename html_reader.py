@@ -22,16 +22,20 @@ with open(sys.argv[1],'r') as file:
                     cut_list_2 += [cell.get_text()]
                 iterator+=1
             iterator = 1
-    print enzyme_list
+   # print enzyme_list
 '''
 Cleans up the text and writes the list to a file.
 '''
-with open('test.txt','r+') as f:
+with open('test.txt','a') as f:
     while i < len(enzyme_list):
-        string = enzyme_list[i]+' ['+cut_list_1[i].replace('\n','') + '] ['+cut_list_2[i].replace(u'\xa0','').replace('\n','') + ']'
+        enzyme_string  = enzyme_list[i]
+        cut_string_1 =' ['+cut_list_1[i].replace('\n','') + ']'
+        cut_string_2 =' ['+cut_list_2[i].replace(u'\xa0','') + ']'
+        cut_string_2 = cut_string_2.replace('\n','')
+        string = enzyme_string+cut_string_2+'\n'
         #.replace(u'\xa0',u' ')+' '+cut_list_1[i].replace(u'\xa0',u' ').replace(u'\n3',u' ')+' '+cut_list_2[i].replace(u'\xa0',u' ').replace(u'\n3',u' '))
         f.write(string)
-        f.write('\n')
         i+=1
-    print f.readlines()
+        
+
 
