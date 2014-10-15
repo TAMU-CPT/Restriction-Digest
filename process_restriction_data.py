@@ -1,3 +1,4 @@
+import pprint
 tracker = 0
 enzyme_list = []
 recog_sequence_1 = []
@@ -42,8 +43,7 @@ with open('test.txt','r') as file:
     for enzyme in enzyme_list:
         info_dict[enzyme] = ((recog_sequence_1[m],cut_strand_1[m]),(recog_sequence_2[m],cut_strand_2[m]))
         m+=1
-    for entry in info_dict:
-        print entry,info_dict[entry]
+    pprint.pprint(info_dict)
     
         
 		
