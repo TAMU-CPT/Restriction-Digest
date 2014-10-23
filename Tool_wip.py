@@ -1,4 +1,5 @@
 import pprint
+import re
 def get_dict():
 	tracker = 0
 	enzyme_list = []
@@ -54,9 +55,43 @@ def get_seq(file):
 	'''
 	return 'ATGATGTTGTGTGTCGCGCCGCGAATGTGTTGACACTGTACATCGATCAGCTAGCTAGCTAGCTAACATGCTGTGTAATATTATATGCGATGCATGC'
 
+def matcher(sequence,enzyme,recognition_sequence):
+    mod_seq_string = ''
+    for letter in recognition_sequence:
+        if letter in 'ATGC':
+            mod_seq_string+=letter
+        elif letter == 'N':
+            mod_seq_string+='.'
+        elif letter == 'M':
+            mod_seq_string+='[AC]'
+        elif letter == 'R':
+            mod_seq_string+='[AG]'
+        elif letter == 'W':
+            mod_seq_string+='[AT]'
+        elif letter == 'Y':
+            mod_seq_string+='[CT]'
+        elif letter == 'S':
+            mod_seq_string+='[CG]'
+        elif letter == 'K':
+            mod_seq_string+='[GT]'
+        elif letter == 'H':
+            mod_seq_string+='[^G]'
+        elif letter == 'B':
+            mod_seq_string+='[^A]'
+        elif letter == 'V':
+            mod_seq_string+='[^T]'
+        elif letter == 'D':
+            mod_seq_string+='[^C]'
+    regex = re.compile(mod_seq_string)
+    if len(regex.findall(sequence))!=0:
+        return enzyme
+    else:
+        return 'No'
+
+
 def main():
-        enzymes_that_can_cleave_before_edit = 172
         i=0
+        can_cleave_list = []
 	import sys
         enzyme_dict = get_dict()
         seq = get_seq(open(sys.argv[1],'r'))
@@ -85,8 +120,15 @@ def main():
                     if letter == ' ':
                         break
                 enzyme_dict[enzyme][list][2]=cut_pos
-        pprint.pprint(enzyme_dict)                   
-        nucleobase_dict = {'N':['A','C','G','T'],'M':['A','C'],'R':['A','G'],'W':['A','T'],'Y':['C','T'],'S':['C','G'],'K':['G','T'],'H':['A','C','T'],'B':['C','G','T'],'V':['A','C','G'],'D':['A','G','T']}
+        for enzyme in enzyme_dict:
+            if matcher(seq,enzyme,enzyme_dict[enzyme][0][0])!='No':
+               can_cleave_list+= [matcher(seq,enzyme,enzyme_dict[enzyme][0][0])]
+        print len(can_cleave_list)              
+            #total_list = ['']
+            #for letter in enzyme_dict[enzyme][0][0]:
+            #total_list = string_adder(letter,total_list)
+                                                   
+
 
 main()
         
