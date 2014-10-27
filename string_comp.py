@@ -29,12 +29,11 @@ def string_processor(old_fragment_list,recognition,recog_nucl_index):
 
 def main():
     fragment_list = ['DFABCEFHABCGHGGGHGH']
-    recognition = ['ABC','DF']
-    recog_nucl_index = [5,3]
+    recognition = ['ABC','DF','EFH']
+    recog_nucl_index = [5,3,2]
     #seq1 = sequence
     #seq2 = ''
     for pair in zip(recognition,recog_nucl_index):
-        print pair
         fragment_list = string_processor(fragment_list,pair[0],pair[1])
         print fragment_list
 
