@@ -2,52 +2,35 @@ import pprint
 import re
 from Bio import SeqIO
 import sys
+import yaml
 
 
 def get_dict():
-    enzyme_list = []
-    recog_sequence_1 = []
-    recog_sequence_2 = []
-    cut_list = []
-    cut_strand_1=[]
-    cut_strand_2 = []
-    info_dict = {}
-    m=0
-    with open('Enzyme_Data.txt','r') as file:
-        for line in file.readlines():
-            i=0
-            while line[i]!=' ':
-                    i+=1
-            j=-1
-            while line[j]!='[':
-                    j-=1
-            cut_list += [line[j:]]
-            enzyme_list += [line[0:i]]
-        for cut in cut_list:
-            k=-1
-            l=0
-            while cut[k]!='3':
-                k-=1
-            while cut[l]!='3':
-                l+=1
-            cut_strand_1+=[cut[5:l]]
-            cut_strand_2+=[cut[k+2:len(cut)-4]]
-        for cut in cut_strand_1:
-            string= ''
-            for letter in cut:
-                if letter!=' ' and letter!='-':
-                    string+=letter
-            recog_sequence_1+=[string]
-        for cut in cut_strand_2:
-            string= ''
-            for letter in cut:
-                if letter!=' ' and letter!='-':
-                    string+=letter
-            recog_sequence_2+=[string]
-        for enzyme in enzyme_list:
-            info_dict[enzyme] = ([recog_sequence_1[m].strip(),cut_strand_1[m].strip(),''],[recog_sequence_2[m].strip(),cut_strand_2[m].strip(),''])
-            m+=1
-        return info_dict
+    with open('enzyme_data.yaml') as handle:
+        data_structure = yaml.load(handle)
+
+    tmp_corrected = {}
+    for enzyme in data_structure:
+        #'ZhoI': (['ATCGAT', '--AT  CGAT---', ''], ['TAGCTA', '---TAGC
+        # TA---', '']),
+        try:
+            tmp_corrected[enzyme['enzyme']] = (
+                [
+                    enzyme['recognition_sequence'][0].split()[1],
+                    enzyme['cut'][0].split()[1],
+                    ''
+                ],
+                [
+                    enzyme['recognition_sequence'][1].split()[1],
+                    enzyme['cut'][1].split()[1],
+                    ''
+                ],
+            )
+        except Exception, e:
+            # These enzymes will need to be corrected, possibly on wikipedia.
+            print e
+            print enzyme
+    return tmp_corrected
 
 def matcher(sequence,enzyme,recognition_sequence):
     mod_seq_string = ''
@@ -111,7 +94,7 @@ def string_processor(old_fragment_list,recognition,recog_nucl_index):
     return new_fragment_list
 
 def main():
-        seqs = [str(record.seq) for record in SeqIO.parse(sys.argv[2],'fasta')]
+        seqs = [str(record.seq) for record in SeqIO.parse(sys.argv[1],'fasta')]
         print len(seqs)
         can_cleave_list = []
         enzyme_dict = get_dict()
