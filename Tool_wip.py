@@ -2,50 +2,52 @@ import pprint
 import re
 from Bio import SeqIO
 import sys
+
+
 def get_dict():
-	enzyme_list = []
-	recog_sequence_1 = []
-	recog_sequence_2 = []
-	cut_list = []
-	cut_strand_1=[]
-	cut_strand_2 = []
-	info_dict = {}
-	m=0
-	with open('Enzyme_Data.txt','r') as file:
-	    for line in file.readlines():
-		i=0
-	        while line[i]!=' ':
-			i+=1
-	        j=-1
-	        while line[j]!='[':
-	                j-=1
-	        cut_list += [line[j:]]
-		enzyme_list += [line[0:i]]
-	    for cut in cut_list:
-	        k=-1
-	        l=0
-	        while cut[k]!='3':
-	            k-=1
-	        while cut[l]!='3':
-	            l+=1
-	        cut_strand_1+=[cut[5:l]]
-	        cut_strand_2+=[cut[k+2:len(cut)-4]]
-	    for cut in cut_strand_1:
-	        string= ''
-	        for letter in cut:
-	            if letter!=' ' and letter!='-':
-	                string+=letter
-	        recog_sequence_1+=[string]
-	    for cut in cut_strand_2:
-	        string= ''
-	        for letter in cut:
-	            if letter!=' ' and letter!='-':
-	                string+=letter
-	        recog_sequence_2+=[string]
-	    for enzyme in enzyme_list:
-	        info_dict[enzyme] = ([recog_sequence_1[m].strip(),cut_strand_1[m].strip(),''],[recog_sequence_2[m].strip(),cut_strand_2[m].strip(),''])
-	        m+=1
-	    return info_dict
+    enzyme_list = []
+    recog_sequence_1 = []
+    recog_sequence_2 = []
+    cut_list = []
+    cut_strand_1=[]
+    cut_strand_2 = []
+    info_dict = {}
+    m=0
+    with open('Enzyme_Data.txt','r') as file:
+        for line in file.readlines():
+            i=0
+            while line[i]!=' ':
+                    i+=1
+            j=-1
+            while line[j]!='[':
+                    j-=1
+            cut_list += [line[j:]]
+            enzyme_list += [line[0:i]]
+        for cut in cut_list:
+            k=-1
+            l=0
+            while cut[k]!='3':
+                k-=1
+            while cut[l]!='3':
+                l+=1
+            cut_strand_1+=[cut[5:l]]
+            cut_strand_2+=[cut[k+2:len(cut)-4]]
+        for cut in cut_strand_1:
+            string= ''
+            for letter in cut:
+                if letter!=' ' and letter!='-':
+                    string+=letter
+            recog_sequence_1+=[string]
+        for cut in cut_strand_2:
+            string= ''
+            for letter in cut:
+                if letter!=' ' and letter!='-':
+                    string+=letter
+            recog_sequence_2+=[string]
+        for enzyme in enzyme_list:
+            info_dict[enzyme] = ([recog_sequence_1[m].strip(),cut_strand_1[m].strip(),''],[recog_sequence_2[m].strip(),cut_strand_2[m].strip(),''])
+            m+=1
+        return info_dict
 
 def matcher(sequence,enzyme,recognition_sequence):
     mod_seq_string = ''
@@ -114,7 +116,7 @@ def main():
         can_cleave_list = []
         enzyme_dict = get_dict()
         enzyme_list = str(raw_input('Please enter the names of the restriction enzymes separated only by spaces.')).split(' ')
-	template = raw_input('Enter 1 for template strand,0 otherwise.')
+        template = raw_input('Enter 1 for template strand,0 otherwise.')
         for seq in seqs:
             print 1
             if template ==1:
@@ -144,7 +146,7 @@ def main():
                     enzyme_dict[enzyme][list][2]=cut_pos
             for enzyme in enzyme_dict:
                 if matcher(seq,enzyme,enzyme_dict[enzyme][0][0])!='No':
-                    can_cleave_list+= [matcher(seq,enzyme,enzyme_dict[enzyme][0][0])]              
+                    can_cleave_list+= [matcher(seq,enzyme,enzyme_dict[enzyme][0][0])]
             fragment_list = [seq]
             recognition = [enzyme_dict[enzyme][0][0] for enzyme in enzyme_list]
             recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in enzyme_list]
@@ -152,8 +154,8 @@ def main():
                 fragment_list = string_processor(fragment_list,pair[0],pair[1])
             print seq,fragment_list
             return fragment_list
-            
+
 
 main()
-  
-		
+
+
