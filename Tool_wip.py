@@ -93,52 +93,47 @@ def string_processor(old_fragment_list,recognition,recog_nucl_index):
         single_cleavage_sequence = seq2+seq1[0:(len(store)-len(seq2))]
     return new_fragment_list
 
-def main():
-        seqs = [str(record.seq) for record in SeqIO.parse(sys.argv[1],'fasta')]
-        print len(seqs)
-        can_cleave_list = []
-        enzyme_dict = get_dict()
-        enzyme_list = str(raw_input('Please enter the names of the restriction enzymes separated only by spaces.')).split(' ')
-        template = raw_input('Enter 1 for template strand,0 otherwise.')
-        for seq in seqs:
-            print 1
-            if template ==1:
-                seq = seq.reverse_complement()
-            for enzyme in enzyme_dict:
-                for list in range(2):
-                    for element in range(2):
-                        num_list = ['0','1','2','3','4','5','6','7','8','9']
-                        num_string = '0'
-                        new_seq = ''
-                        for letter in enzyme_dict[enzyme][list][element]:
-                            if letter in num_list:
-                                num_string+=letter
+if __name__ == '__main__':
+    seqs = [str(record.seq) for record in SeqIO.parse(sys.argv[1],'fasta')]
+    print len(seqs)
+    can_cleave_list = []
+    enzyme_dict = get_dict()
+    enzyme_list = str(raw_input('Please enter the names of the restriction enzymes separated only by spaces.')).split(' ')
+    template = raw_input('Enter 1 for template strand,0 otherwise.')
+    for seq in seqs:
+        print 1
+        if template ==1:
+            seq = seq.reverse_complement()
+        for enzyme in enzyme_dict:
+            for list in range(2):
+                for element in range(2):
+                    num_list = ['0','1','2','3','4','5','6','7','8','9']
+                    num_string = '0'
+                    new_seq = ''
+                    for letter in enzyme_dict[enzyme][list][element]:
+                        if letter in num_list:
+                            num_string+=letter
+                        else:
+                            if int(num_string)!=0:
+                                new_seq+=new_seq[-1]*(int(num_string)-1)+letter
+                                num_string = '0'
                             else:
-                                if int(num_string)!=0:
-                                    new_seq+=new_seq[-1]*(int(num_string)-1)+letter
-                                    num_string = '0'
-                                else:
-                                    new_seq+=letter
-                        enzyme_dict[enzyme][list][element]=new_seq
-                    cut_pos = 0
-                    for letter in enzyme_dict[enzyme][list][1]:
-                        if letter != ' ' and letter!= '-':
-                            cut_pos+=1
-                        if letter == ' ':
-                            break
-                    enzyme_dict[enzyme][list][2]=cut_pos
-            for enzyme in enzyme_dict:
-                if matcher(seq,enzyme,enzyme_dict[enzyme][0][0])!='No':
-                    can_cleave_list+= [matcher(seq,enzyme,enzyme_dict[enzyme][0][0])]
-            fragment_list = [seq]
-            recognition = [enzyme_dict[enzyme][0][0] for enzyme in enzyme_list]
-            recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in enzyme_list]
-            for pair in zip(recognition,recog_nucl_index):
-                fragment_list = string_processor(fragment_list,pair[0],pair[1])
-            print seq,fragment_list
-            return fragment_list
-
-
-main()
-
-
+                                new_seq+=letter
+                    enzyme_dict[enzyme][list][element]=new_seq
+                cut_pos = 0
+                for letter in enzyme_dict[enzyme][list][1]:
+                    if letter != ' ' and letter!= '-':
+                        cut_pos+=1
+                    if letter == ' ':
+                        break
+                enzyme_dict[enzyme][list][2]=cut_pos
+        for enzyme in enzyme_dict:
+            if matcher(seq,enzyme,enzyme_dict[enzyme][0][0])!='No':
+                can_cleave_list+= [matcher(seq,enzyme,enzyme_dict[enzyme][0][0])]
+        fragment_list = [seq]
+        recognition = [enzyme_dict[enzyme][0][0] for enzyme in enzyme_list]
+        recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in enzyme_list]
+        for pair in zip(recognition,recog_nucl_index):
+            fragment_list = string_processor(fragment_list,pair[0],pair[1])
+        print seq,fragment_list
+        return fragment_list
