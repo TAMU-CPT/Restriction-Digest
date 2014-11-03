@@ -3,6 +3,7 @@ import re
 from Bio import SeqIO
 import sys
 import yaml
+import argparse
 
 
 def get_dict():
@@ -94,16 +95,29 @@ def string_processor(old_fragment_list,recognition,recog_nucl_index):
     return new_fragment_list
 
 if __name__ == '__main__':
-    seqs = [str(record.seq) for record in SeqIO.parse(sys.argv[1],'fasta')]
+
+    parser = argparse.ArgumentParser(description='Restriction Digest Tool')
+    # Input filename, required
+    parser.add_argument('file', help='Input fasta genome(s)')
+    # A single string with default value of 'enzyme_data.yaml'
+    parser.add_argument('--data', help='Enzyme cut site dataset', default='enzyme_data.yaml')
+    # A list of one or more strings, at the end
+    parser.add_argument('enzyme', metavar='E', type=str, nargs='+', help='Space separated list of enzymes')
+    args = parser.parse_args()
+
+    seqs = [str(record.seq) for record in SeqIO.parse(args.file,'fasta')]
     print len(seqs)
     can_cleave_list = []
     enzyme_dict = get_dict()
-    enzyme_list = str(raw_input('Please enter the names of the restriction enzymes separated only by spaces.')).split(' ')
-    template = raw_input('Enter 1 for template strand,0 otherwise.')
+    # For now, just write against plus strand, this is a minor issue that can
+    # be corrected later: This program should function against BOTH strands
+    # without asking user, as that's the biological reality. If only we could
+    # selectively cut against only one strand...
+
+    #template = raw_input('Enter 1 for template strand,0 otherwise.')
     for seq in seqs:
-        print 1
-        if template ==1:
-            seq = seq.reverse_complement()
+        #if template ==1:
+            #seq = seq.reverse_complement()
         for enzyme in enzyme_dict:
             for list in range(2):
                 for element in range(2):
@@ -131,9 +145,8 @@ if __name__ == '__main__':
             if matcher(seq,enzyme,enzyme_dict[enzyme][0][0])!='No':
                 can_cleave_list+= [matcher(seq,enzyme,enzyme_dict[enzyme][0][0])]
         fragment_list = [seq]
-        recognition = [enzyme_dict[enzyme][0][0] for enzyme in enzyme_list]
-        recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in enzyme_list]
+        recognition = [enzyme_dict[enzyme][0][0] for enzyme in args.enzyme]
+        recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in args.enzyme]
         for pair in zip(recognition,recog_nucl_index):
             fragment_list = string_processor(fragment_list,pair[0],pair[1])
         print seq,fragment_list
-        return fragment_list
