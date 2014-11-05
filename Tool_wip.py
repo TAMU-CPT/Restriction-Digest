@@ -29,8 +29,10 @@ def get_dict():
             )
         except Exception, e:
             # These enzymes will need to be corrected, possibly on wikipedia.
-            print e
-            print enzyme
+            #print e
+            #print enzyme
+            #Dummy line to prevent the error message from popping up every time I run the program
+            x=2
     return tmp_corrected
 
 def matcher(sequence,enzyme,recognition_sequence):
@@ -66,15 +68,17 @@ def matcher(sequence,enzyme,recognition_sequence):
     else:
         return 'No'
 
-def string_cutter(sequence,recognition,recog_nucl_index):
+def string_cutter(sequence,recognition,recog_nucl_index,status):
     rec_seq = re.compile(recognition)
     match_start = rec_seq.search(str(sequence))
+    if len(rec_seq.findall(str(sequence))) == 1 and status == 'circular':
+        return traverse_circular_loop(sequence,len(recognition),recognition,status)
     if match_start is not None:
         return sequence[:rec_seq.search(sequence).start()+recog_nucl_index],sequence[recog_nucl_index+rec_seq.search(sequence).start():]
     else:
         return sequence,'END OF SEQUENCE'
 
-def string_processor(old_fragment_list,recognition,recog_nucl_index):
+def string_processor(old_fragment_list,recognition,recog_nucl_index,status):
     new_fragment_list = []
     for fragment in old_fragment_list:
         seq1 = fragment
@@ -83,7 +87,12 @@ def string_processor(old_fragment_list,recognition,recog_nucl_index):
             if seq1!=fragment:
                 new_fragment_list+=[seq1]
                 seq1 = seq2
-            seq1,seq2=string_cutter(seq1,recognition,recog_nucl_index)
+            print 'Sequence:',seq1
+            print 'Recognition:',recognition
+            print 'Index:',recog_nucl_index
+            print 'Status:',status
+            #seq1,seq2,status=string_cutter(seq1,recognition,recog_nucl_index,status)
+            print string_cutter(seq1,recognition,recog_nucl_index,status)
         if seq2 == 'END OF SEQUENCE':
             new_fragment_list+=[seq1]
     if len(new_fragment_list) in [1,2]  and len(old_fragment_list)==1:
@@ -93,6 +102,27 @@ def string_processor(old_fragment_list,recognition,recog_nucl_index):
         seq1,seq2 = string_cutter(seq1,recognition,recog_nucl_index)
         single_cleavage_sequence = seq2+seq1[0:(len(store)-len(seq2))]
     return new_fragment_list
+
+def traverse_circular_loop(string,step,recog,status):
+    working_str = string*2
+    cut = [0]
+    start = 0
+    end = step
+    string2 = '  '
+    while string2[1]!=working_str[0]:
+        string2 = working_str[start:end]
+        start+=1
+        if string2 == recog:
+            cut[0] = end
+        end+=1
+    print string
+    if cut[0]>= len(string):
+        cut[0] = cut[0]%len(string)
+    if cut[0]!=0:
+        status = 'linear'
+        return string[cut:]+string[0:cut],' ',status
+    else:
+        return string,' ',status
 
 if __name__ == '__main__':
 
@@ -106,7 +136,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     seqs = [str(record.seq) for record in SeqIO.parse(args.file,'fasta')]
-    print len(seqs)
     can_cleave_list = []
     enzyme_dict = get_dict()
     # For now, just write against plus strand, this is a minor issue that can
@@ -116,6 +145,7 @@ if __name__ == '__main__':
 
     #template = raw_input('Enter 1 for template strand,0 otherwise.')
     for seq in seqs:
+        status = 'circular'
         #if template ==1:
             #seq = seq.reverse_complement()
         for enzyme in enzyme_dict:
@@ -148,5 +178,6 @@ if __name__ == '__main__':
         recognition = [enzyme_dict[enzyme][0][0] for enzyme in args.enzyme]
         recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in args.enzyme]
         for pair in zip(recognition,recog_nucl_index):
-            fragment_list = string_processor(fragment_list,pair[0],pair[1])
-        print seq,fragment_list
+            fragment_list = string_processor(fragment_list,pair[0],pair[1],status)
+        print seq, fragment_list
+         
