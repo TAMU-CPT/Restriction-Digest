@@ -75,25 +75,19 @@ def string_cutter(sequence,recognition,recog_nucl_index,status):
         working_seq = sequence*2
         start = rec_seq.search(str(sequence))    
         if rec_seq.search(working_seq) is not None and len(rec_seq.findall(working_seq))<=1:
-            print 'Path 1'
             return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'END OF SEQUENCE','linear'
         else:
-            print 'Path 2'
             return sequence,'END OF SEQUENCE','circular'
     if len(rec_seq.findall(str(sequence)))== 1 and status == 'circular':
         working_seq = sequence*2
         start = rec_seq.search(str(sequence))
         if rec_seq.search(working_seq) is not None:
-            print 'Path 3'
             return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index], working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'linear'
         else:
-            print 'Path 4'
             return sequence,'END OF SEQUENCE','circular'
     if match_start is not None and (len(rec_seq.findall(str(sequence)))!=1 or status!='circular'):
-        print 'Path 5'
         return sequence[:rec_seq.search(sequence).start()+recog_nucl_index],sequence[recog_nucl_index+rec_seq.search(sequence).start():],'linear'
     else:
-        print 'Path 6'
         return sequence,'END OF SEQUENCE','linear'
 
 def string_processor(old_fragment_list,recognition,recog_nucl_index,status):
