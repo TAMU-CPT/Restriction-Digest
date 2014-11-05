@@ -71,16 +71,29 @@ def matcher(sequence,enzyme,recognition_sequence):
 def string_cutter(sequence,recognition,recog_nucl_index,status):
     rec_seq = re.compile(recognition)
     match_start = rec_seq.search(str(sequence))
-    if len(rec_seq.findall(str(sequence))) in [0,1] and status == 'circular':
+    if len(rec_seq.findall(str(sequence)))== 0 and status == 'circular':
         working_seq = sequence*2
         start = rec_seq.search(str(sequence))    
-        if rec_seq.search(working_seq) is not None:
+        if rec_seq.search(working_seq) is not None and len(rec_seq.findall(working_seq))<=1:
+            print 'Path 1'
             return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'END OF SEQUENCE','linear'
         else:
-            return sequence,'END OF SEQUENCE','circular',
+            print 'Path 2'
+            return sequence,'END OF SEQUENCE','circular'
+    if len(rec_seq.findall(str(sequence)))== 1 and status == 'circular':
+        working_seq = sequence*2
+        start = rec_seq.search(str(sequence))
+        if rec_seq.search(working_seq) is not None:
+            print 'Path 3'
+            return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index], working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'linear'
+        else:
+            print 'Path 4'
+            return sequence,'END OF SEQUENCE','circular'
     if match_start is not None and (len(rec_seq.findall(str(sequence)))!=1 or status!='circular'):
+        print 'Path 5'
         return sequence[:rec_seq.search(sequence).start()+recog_nucl_index],sequence[recog_nucl_index+rec_seq.search(sequence).start():],'linear'
     else:
+        print 'Path 6'
         return sequence,'END OF SEQUENCE','linear'
 
 def string_processor(old_fragment_list,recognition,recog_nucl_index,status):
@@ -89,7 +102,7 @@ def string_processor(old_fragment_list,recognition,recog_nucl_index,status):
         seq1 = fragment
         seq2 = ''
         while seq2!='END OF SEQUENCE':
-            if seq1!=fragment:
+            if seq1!=fragment and seq2!=seq1:
                 new_fragment_list+=[seq1]
                 seq1 = seq2
             seq1,seq2,status=string_cutter(seq1,recognition,recog_nucl_index,status)
@@ -163,5 +176,7 @@ if __name__ == '__main__':
         recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in args.enzyme]
         for recognition_pair in zip(recognition,recog_nucl_index):
             fragment_list,status = string_processor(fragment_list,recognition_pair[0],recognition_pair[1],status)
+        if '' in fragment_list:
+            fragment_list.remove('')
         print seq, fragment_list
-        print zip(recognition,recog_nucl_index)         
+                 
