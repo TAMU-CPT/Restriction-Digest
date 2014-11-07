@@ -1,7 +1,5 @@
-import pprint
 import re
 from Bio import SeqIO
-import sys
 import yaml
 import argparse
 
@@ -27,12 +25,11 @@ def get_dict():
                     ''
                 ],
             )
-        except Exception, e:
+        except:
             # These enzymes will need to be corrected, possibly on wikipedia.
             #print e
             #print enzyme
-            #Dummy line to prevent the error message from popping up every time I run the program
-            x=2
+            pass
     return tmp_corrected
 
 def matcher(sequence,enzyme,recognition_sequence):
@@ -73,7 +70,7 @@ def string_cutter(sequence,recognition,recog_nucl_index,status):
     match_start = rec_seq.search(str(sequence))
     if len(rec_seq.findall(str(sequence)))== 0 and status == 'circular':
         working_seq = sequence*2
-        start = rec_seq.search(str(sequence))    
+        start = rec_seq.search(str(sequence))
         if rec_seq.search(working_seq) is not None and len(rec_seq.findall(working_seq))<=1:
             return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'END OF SEQUENCE','linear'
         else:
@@ -114,21 +111,8 @@ def string_processor(old_fragment_list,recognition,recog_nucl_index,status):
     #rec_seq = re.compile(recognition)
     #return seq1, 'END OF SEQUENCE',status
 
-
-if __name__ == '__main__':
-
-    parser = argparse.ArgumentParser(description='Restriction Digest Tool')
-    # Input filename, required
-    parser.add_argument('file', help='Input fasta genome(s)')
-    # A single string with default value of 'enzyme_data.yaml'
-    parser.add_argument('--data', help='Enzyme cut site dataset', default='enzyme_data.yaml')
-    # A list of one or more strings, at the end
-    parser.add_argument('enzyme', metavar='E', type=str, nargs='+', help='Space separated list of enzymes')
-    args = parser.parse_args()
-
-    seqs = [str(record.seq) for record in SeqIO.parse(args.file,'fasta')]
+def process_data(seqs, enzyme_dict):
     can_cleave_list = []
-    enzyme_dict = get_dict()
     # For now, just write against plus strand, this is a minor issue that can
     # be corrected later: This program should function against BOTH strands
     # without asking user, as that's the biological reality. If only we could
@@ -173,4 +157,20 @@ if __name__ == '__main__':
         if '' in fragment_list:
             fragment_list.remove('')
         print seq, fragment_list
-                 
+
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description='Restriction Digest Tool')
+    # Input filename, required
+    parser.add_argument('file', help='Input fasta genome(s)')
+    # A single string with default value of 'enzyme_data.yaml'
+    parser.add_argument('--data', help='Enzyme cut site dataset', default='enzyme_data.yaml')
+    # A list of one or more strings, at the end
+    parser.add_argument('enzyme', metavar='E', type=str, nargs='+', help='Space separated list of enzymes')
+    args = parser.parse_args()
+
+    seqs = [str(record.seq) for record in SeqIO.parse(args.file,'fasta')]
+    enzyme_dict = get_dict()
+
+    process_data(seqs, enzyme_dict)
