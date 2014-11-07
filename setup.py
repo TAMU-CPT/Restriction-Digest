@@ -12,7 +12,7 @@ requirements = [
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
+    'nose'
 ]
 
 setup(
