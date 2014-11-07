@@ -4,8 +4,8 @@ import yaml
 
 class Dnadigest():
 
-    def get_dict(self):
-        with open('enzyme_data.yaml') as handle:
+    def get_dict(self, data_file):
+        with open(data_file) as handle:
             data_structure = yaml.load(handle)
 
         tmp_corrected = {}
@@ -96,14 +96,14 @@ class Dnadigest():
                 if seq1!=fragment and seq2!=seq1:
                     new_fragment_list+=[seq1]
                     seq1 = seq2
-                seq1,seq2,status=string_cutter(seq1,recognition,recog_nucl_index,status)
+                seq1,seq2,status=self.string_cutter(seq1,recognition,recog_nucl_index,status)
             if seq2 == 'END OF SEQUENCE':
                 new_fragment_list+=[seq1]
         if len(new_fragment_list) in [1,2]  and len(old_fragment_list)==1:
             seq1 = old_fragment_list[0]*2
             store = old_fragment_list[0]
             seq2 = ''
-            seq1,seq2,status = string_cutter(seq1,recognition,recog_nucl_index,status)
+            seq1,seq2,status = self.string_cutter(seq1,recognition,recog_nucl_index,status)
             single_cleavage_sequence = seq2+seq1[0:(len(store)-len(seq2))]
         return new_fragment_list,status
 
@@ -111,7 +111,7 @@ class Dnadigest():
         #rec_seq = re.compile(recognition)
         #return seq1, 'END OF SEQUENCE',status
 
-    def process_data(self, seqs, enzyme_dict):
+    def process_data(self, seqs, enzyme_dict, cut_with):
         can_cleave_list = []
         # For now, just write against plus strand, this is a minor issue that can
         # be corrected later: This program should function against BOTH strands
@@ -147,13 +147,13 @@ class Dnadigest():
                             break
                     enzyme_dict[enzyme][list][2]=cut_pos
             for enzyme in enzyme_dict:
-                if matcher(seq,enzyme,enzyme_dict[enzyme][0][0])!='No':
-                    can_cleave_list+= [matcher(seq,enzyme,enzyme_dict[enzyme][0][0])]
+                if self.matcher(seq,enzyme,enzyme_dict[enzyme][0][0])!='No':
+                    can_cleave_list+= [self.matcher(seq,enzyme,enzyme_dict[enzyme][0][0])]
             fragment_list = [seq]
-            recognition = [enzyme_dict[enzyme][0][0] for enzyme in args.enzyme]
-            recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in args.enzyme]
+            recognition = [enzyme_dict[enzyme][0][0] for enzyme in cut_with]
+            recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in cut_with]
             for recognition_pair in zip(recognition,recog_nucl_index):
-                fragment_list,status = string_processor(fragment_list,recognition_pair[0],recognition_pair[1],status)
+                fragment_list,status = self.string_processor(fragment_list,recognition_pair[0],recognition_pair[1],status)
             if '' in fragment_list:
                 fragment_list.remove('')
             print seq, fragment_list
