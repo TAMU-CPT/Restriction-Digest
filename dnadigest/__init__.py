@@ -1,7 +1,5 @@
 import re
-from Bio import SeqIO
 import yaml
-import argparse
 
 
 def get_dict():
@@ -159,18 +157,3 @@ def process_data(seqs, enzyme_dict):
         print seq, fragment_list
 
 
-if __name__ == '__main__':
-
-    parser = argparse.ArgumentParser(description='Restriction Digest Tool')
-    # Input filename, required
-    parser.add_argument('file', help='Input fasta genome(s)')
-    # A single string with default value of 'enzyme_data.yaml'
-    parser.add_argument('--data', help='Enzyme cut site dataset', default='enzyme_data.yaml')
-    # A list of one or more strings, at the end
-    parser.add_argument('enzyme', metavar='E', type=str, nargs='+', help='Space separated list of enzymes')
-    args = parser.parse_args()
-
-    seqs = [str(record.seq) for record in SeqIO.parse(args.file,'fasta')]
-    enzyme_dict = get_dict()
-
-    process_data(seqs, enzyme_dict)
