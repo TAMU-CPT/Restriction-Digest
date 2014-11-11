@@ -11,14 +11,14 @@ info_dict = {}
 m=0
 with open('test.txt','r') as file:
     for line in file.readlines():
-	i=0
+    i=0
         while line[i]!=' ':
-		i+=1
+        i+=1
         j=-1
         while line[j]!='[':
                 j-=1
         cut_list += [line[j:]]
-	enzyme_list += [line[0:i]]
+    enzyme_list += [line[0:i]]
     for cut in cut_list:
         k=-1
         l=0
@@ -44,6 +44,3 @@ with open('test.txt','r') as file:
         info_dict[enzyme] = ((recog_sequence_1[m],cut_strand_1[m]),(recog_sequence_2[m],cut_strand_2[m]))
         m+=1
     pprint.pprint(info_dict)
-    
-        
-		
