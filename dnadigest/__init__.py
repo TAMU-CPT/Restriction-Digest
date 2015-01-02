@@ -33,7 +33,7 @@ class Dnadigest():
                 pass
         return tmp_corrected
 
-    def matcher(self, sequence,enzyme, recognition_sequence):
+    def matcher(self, sequence, recognition_sequence):
         mod_seq_string = ''
         dna_regex_translations = {
             'A': 'A',
@@ -54,10 +54,8 @@ class Dnadigest():
         }
         mod_seq_string = ''.join(dna_regex_translations[x] for x in recognition_sequence)
         regex = re.compile(mod_seq_string)
-        if len(regex.findall(str(sequence)))!=0:
-            return enzyme
-        else:
-            return 'No'
+
+        return  len(regex.findall(str(sequence))) != 0
 
     def string_cutter(self, sequence, recognition, recog_nucl_index, status):
         rec_seq = re.compile(recognition)
@@ -145,7 +143,7 @@ class Dnadigest():
                             break
                     enzyme_dict[enzyme][list][2]=cut_pos
             for enzyme in enzyme_dict:
-                if self.matcher(seq,enzyme,enzyme_dict[enzyme][0][0])!='No':
+                if self.matcher(seq, enzyme_dict[enzyme][0][0]):
                     can_cleave_list+= [self.matcher(seq,enzyme,enzyme_dict[enzyme][0][0])]
             fragment_list = [seq]
             recognition = [enzyme_dict[enzyme][0][0] for enzyme in cut_with]
