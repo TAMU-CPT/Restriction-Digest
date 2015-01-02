@@ -5,27 +5,18 @@ import math
 #After Autosave
 
 
-def drawer(total_nucl, enzyme_names, nucl_cut_ind):
-    fasta_id = '>FASTA #####'
-    radius = 250.
-    distance = 25
-    center = 350
-    i=1
-    FASTA_headers = ['>FASTA 12345']
-    for triad in zip(FASTA_headers, nucl_cut_ind, enzyme_names):
-        j=0
-        header = triad[0]
-        nucl_cut_index = triad[1]
-        enzymes = triad[2]
-        #total_nucl,  nucl_cut_index, enzyme_names,  and FASTA_headers need to be obtained from the dnadigest class.
-        filename = 'plasmid'+str(i)+'.svg'
-        i+=1
-        svg_document = svgwrite.Drawing(filename = filename, size = ("1000px", "1000px"))
-        svg_document.add(svg_document.circle(center = (center, center), r=radius, fill="rgb(255, 255, 255)", stroke="black"))
-        svg_document.add(svg_document.text(header, insert = (300,  350)))
+def drawer(total_nucl, enzyme_names, nucl_cut_ind, fasta_header=">Seq 12345",
+           radius=250, distance=25, center=350, image_size=1000):
+           # Feels like some of these should be calculated
 
-        print nucl_cut_index
-        for index in nucl_cut_index:
+    svg_document = svgwrite.Drawing(filename = "plasmid.svg", size = ("%spx" % image_size, "%spx" % image_size))
+    svg_document.add(svg_document.circle(center = (center, center), r=radius, fill="rgb(255, 255, 255)", stroke="black"))
+
+    svg_document.add(svg_document.text(fasta_header, insert = (300,  350)))
+    for (nucl_cut_index, enzymes) in zip(nucl_cut_ind, enzyme_names):
+        j=0
+
+        for index in [nucl_cut_index]:
             angle = (float(index)/float(total_nucl))*2*(math.pi)
             line_x = radius*math.cos(angle)+center
             line_y = radius*math.sin(angle)+center
@@ -74,9 +65,10 @@ def drawer(total_nucl, enzyme_names, nucl_cut_ind):
                 x3, y3, x4, y4 = line_endpoint_calculator(text_dist, x1, y1, slope)
                 svg_document.add(svg_document.text(enzymes[j], insert=(x3, y3)))
             j+=1
+        # Eh?
         svg_document.add(svg_document.rect(insert = (800,  50), size = ("200px",  "500px"), stroke_width = "1", stroke = "black", fill = "rgb(255, 255, 255)"))
-        print(svg_document.tostring())
-        svg_document.save()
+    print(svg_document.tostring())
+    svg_document.save()
 
 
 def line_endpoint_calculator(d, p, q, m):
