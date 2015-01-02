@@ -1,5 +1,4 @@
 import dnadigest
-import pprint
 import svgwrite
 import math
 #After Autosave
@@ -16,6 +15,7 @@ def drawer(total_nucl, enzyme_names, nucl_cut_ind, fasta_header=">Seq 12345",
     for (nucl_cut_index, enzymes) in zip(nucl_cut_ind, enzyme_names):
         j=0
 
+        # This seems wrong
         for index in [nucl_cut_index]:
             angle = (float(index)/float(total_nucl))*2*(math.pi)
             line_x = radius*math.cos(angle)+center
