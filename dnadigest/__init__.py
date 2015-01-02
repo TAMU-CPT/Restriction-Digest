@@ -132,6 +132,34 @@ class Dnadigest():
         #rec_seq = re.compile(recognition)
         #return seq1, 'END OF SEQUENCE',status
 
+
+    def __find_cut_site(self, enzyme_dict):
+        # This can probably be cut down/refactored
+        for list in range(2):
+            for element in range(2):
+                num_list = ['0','1','2','3','4','5','6','7','8','9']
+                num_string = '0'
+                new_seq = ''
+                for letter in enzyme_dict[list][element]:
+                    if letter in num_list:
+                        num_string+=letter
+                    else:
+                        if int(num_string)!=0:
+                            new_seq+=new_seq[-1]*(int(num_string)-1)+letter
+                            num_string = '0'
+                        else:
+                            new_seq+=letter
+                enzyme_dict[list][element]=new_seq
+            cut_pos = 0
+            for letter in enzyme_dict[list][1]:
+                if letter != ' ' and letter!= '-':
+                    cut_pos+=1
+                if letter == ' ':
+                    break
+            enzyme_dict[list][2]=cut_pos
+            return enzyme_dict[list]
+
+
     def process_data(self, seqs, enzyme_dict, cut_with):
         can_cleave_list = []
         # For now, just write against plus strand, this is a minor issue that can
@@ -147,28 +175,9 @@ class Dnadigest():
             #if template ==1:
                 #seq = seq.reverse_complement()
             for enzyme in enzyme_dict:
-                for list in range(2):
-                    for element in range(2):
-                        num_list = ['0','1','2','3','4','5','6','7','8','9']
-                        num_string = '0'
-                        new_seq = ''
-                        for letter in enzyme_dict[enzyme][list][element]:
-                            if letter in num_list:
-                                num_string+=letter
-                            else:
-                                if int(num_string)!=0:
-                                    new_seq+=new_seq[-1]*(int(num_string)-1)+letter
-                                    num_string = '0'
-                                else:
-                                    new_seq+=letter
-                        enzyme_dict[enzyme][list][element]=new_seq
-                    cut_pos = 0
-                    for letter in enzyme_dict[enzyme][list][1]:
-                        if letter != ' ' and letter!= '-':
-                            cut_pos+=1
-                        if letter == ' ':
-                            break
-                    enzyme_dict[enzyme][list][2]=cut_pos
+                enzyme_dict[enzyme] = self.__find_cut_site(enzyme_dict[enzyme])
+
+
             for enzyme in enzyme_dict:
                 if self.matcher(seq, enzyme_dict[enzyme][0][0]):
                     can_cleave_list+= [self.matcher(seq,enzyme,enzyme_dict[enzyme][0][0])]
