@@ -28,9 +28,27 @@ def drawer():
     else:
         slope = -1*1/(radius*math.cos(angle)*math.sqrt(radius**2-(radius**2)*(math.cos(angle))**2))
 
-    svg_document = svgwrite.Drawing(filename = "test-svgwrite.svg",size = ("1000px","1000px"))
-    svg_document.add(svg_document.circle(center = (350,350),r=radius,fill = "rgb(255,255,255)",stroke="black"))
-    svg_document.add(svg_document.line(start = (line_x+distance,slope*(line_x+distance)-slope*line_x-line_y),end = (line_x-distance,slope*(line_x-distance)-slope*line_$
+    # Reformatted for clarity
+    svg_document = svgwrite.Drawing(
+        filename = "test-svgwrite.svg",
+        size = ("1000px","1000px")
+    )
+    svg_document.add(
+        svg_document.circle(
+            center = (350,350),
+            r=radius,
+            fill = "rgb(255,255,255)",
+            stroke="black"
+        )
+    )
+    svg_document.add(
+        svg_document.line(
+            start = (line_x+distance,slope*(line_x+distance)-slope*line_x-line_y),
+            # after -slope*line_x, this line was roken. I finished it off, probably incorrectly
+            end = (line_x-distance,slope*(line_x-distance)-slope*line_x-line_y)
+        )
+    )
+
     print line_x+distance,slope*(line_x+distance)-slope*line_x-line_y
     print line_x-distance,slope*(line_x-distance)-slope*line_x-line_y
     svg_document.add(svg_document.text(fasta_id,insert = (300, 350)))
@@ -50,12 +68,12 @@ def line_endpoint_calculator():
     print 'Point 2: ('+str(x2)+','+str(y2)+')'
     print 'Twice given distance:',2.0*d
 
-def main():
+if __name__ == '__main__':
     dict = dnadigest.Dnadigest()
     dict = dict.get_dict('enzyme_data.yaml')
     output = dnadigest.Dnadigest()
     fragment_list,assoc_enzyme_list,line_marker_list,length = output.process_data(['AAAAATGTACAAATGTACAAAA'],dict,['AaaI'])
-    print 'Fragments:',fragment_list 
+    print 'Fragments:',fragment_list
     print 'Enzymes:',assoc_enzyme_list
     print 'Cut Points:',line_marker_list
     print 'Total Num of Nucleotides:',length
