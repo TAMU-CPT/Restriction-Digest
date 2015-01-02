@@ -71,11 +71,11 @@ class Dnadigest():
         all_matches = rec_seq.findall(sequence)
         # That said, shouldn't need BOTH of these, should find a way to reduce to one.
 
+        # I don't have data to check this, but you NEVER actually cut
+        # outside the end of the sequence (judging by the calls), so you
+        # may be able to remove working_seq completely.
+        working_seq = sequence + sequence[0:100]
         if len(all_matches) == 0 and status == 'circular':
-            # I don't have data to check this, but you NEVER actually cut
-            # outside the end of the sequence (judging by the calls), so you
-            # may be able to remove working_seq completely.
-            working_seq = sequence + sequence[0:100]
             if rec_seq.search(working_seq) is not None and len(rec_seq.findall(working_seq))<=1:
                 cut_location = rec_seq.search(working_seq).start() + recog_nucl_index
                 return (working_seq[cut_location:len(sequence)]+working_seq[0:cut_location],
@@ -85,7 +85,6 @@ class Dnadigest():
             else:
                 return sequence,'END OF SEQUENCE','circular',''
         elif len(all_matches) == 1 and status == 'circular':
-            working_seq = sequence + sequence[0:100]
             if rec_seq.search(working_seq) is not None:
                 cut_location = rec_seq.search(working_seq).start() + recog_nucl_index
                 return (working_seq[cut_location:len(sequence)]+working_seq[0:cut_location],
@@ -95,6 +94,7 @@ class Dnadigest():
             else:
                 return sequence,'END OF SEQUENCE','circular',''
         elif match_start is not None and (len(all_matches)!=1 or status!='circular'):
+            # Whoops, screwed this one up
             cut_location = rec_seq.search(working_seq).start() + recog_nucl_index
             return (
                 sequence[:cut_location],
@@ -180,7 +180,11 @@ class Dnadigest():
 
             for enzyme in enzyme_dict:
                 if self.matcher(seq, enzyme_dict[enzyme][0][0]):
-                    can_cleave_list+= [self.matcher(seq,enzyme,enzyme_dict[enzyme][0][0])]
+                    can_cleave_list+= [self.matcher(seq, enzyme_dict[enzyme][0][0])]
+
+            print can_cleave_list
+
+            # TODO: I think the indentation is wrong here
             fragment_list = [seq]
             recognition = [enzyme_dict[enzyme][0][0] for enzyme in cut_with]
             recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in cut_with]
