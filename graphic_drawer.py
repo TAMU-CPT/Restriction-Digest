@@ -82,15 +82,15 @@ def line_endpoint_calculator(d, p, q, m):
     y1 = float(m*x1-m*p+q)
     x2 = float(p-math.sqrt((d**2)/(m**2+1)))
     y2 = float(m*x2-m*p+q)
-    print 'Point 1: ('+str(x1)+', '+str(y1)+')'
-    print 'Point 2: ('+str(x2)+', '+str(y2)+')'
+    print 'Point 1: (%s,  %s)' % (x1,  y1)
+    print 'Point 2: (%s,  %s)' % (x2,  y2)
     print 'Distance:' + str(math.sqrt((x1-x2)**2+(y1-y2)**2))
     return x1, y1, x2, y2
 
 
 if __name__ == '__main__':
-    dict = dnadigest.Dnadigest()
-    dict = dict.get_dict('enzyme_data.yaml')
+    digester = dnadigest.Dnadigest()
+    digester = digester.get_dict('enzyme_data.yaml')
     output = dnadigest.Dnadigest()
     fragment_list, assoc_enzyme_list, line_marker_list, length = output.process_data(['AAAAATGTACAAATGTACAAAA'], dict, ['AaaI'])
     print 'Fragments:', fragment_list
