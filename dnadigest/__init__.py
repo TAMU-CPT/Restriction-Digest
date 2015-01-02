@@ -58,31 +58,51 @@ class Dnadigest():
         return  len(regex.findall(str(sequence))) != 0
 
     def string_cutter(self, sequence, recognition, recog_nucl_index, status):
+        """
+
+        I'm not sure about this method, it "smells". The returns worry me? I
+        dunno. I'll keep poking at it.
+        """
         # Regex to match a given recognition site
         rec_seq = re.compile(recognition)
         # If the regex matches the sequence
         match_start = rec_seq.search(sequence)
         # Find all of the matches
         all_matches = rec_seq.findall(sequence)
+        # That said, shouldn't need BOTH of these, should find a way to reduce to one.
 
         if len(all_matches) == 0 and status == 'circular':
+            # I don't have data to check this, but you NEVER actually cut
+            # outside the end of the sequence (judging by the calls), so you
+            # may be able to remove working_seq completely.
             working_seq = sequence + sequence[0:100]
-            start = rec_seq.search(str(sequence))
             if rec_seq.search(working_seq) is not None and len(rec_seq.findall(working_seq))<=1:
-                return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'END OF SEQUENCE','linear',rec_seq.search(working_seq).start()+recog_nucl_index
+                cut_location = rec_seq.search(working_seq).start() + recog_nucl_index
+                return (working_seq[cut_location:len(sequence)]+working_seq[0:cut_location],
+                        'END OF SEQUENCE',
+                        'linear',
+                        rec_seq.search(working_seq).start()+recog_nucl_index)
             else:
                 return sequence,'END OF SEQUENCE','circular',''
         elif len(all_matches) == 1 and status == 'circular':
             working_seq = sequence + sequence[0:100]
-            start = rec_seq.search(str(sequence))
             if rec_seq.search(working_seq) is not None:
-                return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index], working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'linear',rec_seq.search(working_seq).start()+recog_nucl_index
+                cut_location = rec_seq.search(working_seq).start() + recog_nucl_index
+                return (working_seq[cut_location:len(sequence)]+working_seq[0:cut_location],
+                        working_seq[cut_location:len(sequence)]+working_seq[0:cut_location],
+                        'linear',
+                        rec_seq.search(working_seq).start()+recog_nucl_index)
             else:
                 return sequence,'END OF SEQUENCE','circular',''
-        elif match_start is not None and (len(rec_seq.findall(str(sequence)))!=1 or status!='circular'):
-            return sequence[:rec_seq.search(sequence).start()+recog_nucl_index],sequence[recog_nucl_index+rec_seq.search(sequence).start():],'linear',rec_seq.search(sequence).start()+recog_nucl_index
+        elif match_start is not None and (len(all_matches)!=1 or status!='circular'):
+            cut_location = rec_seq.search(working_seq).start() + recog_nucl_index
+            return (
+                sequence[:cut_location],
+                sequence[cut_location:],
+                'linear',
+                rec_seq.search(sequence).start()+recog_nucl_index)
         else:
-            return sequence,'END OF SEQUENCE','linear',''
+            return (sequence,'END OF SEQUENCE','linear','')
 
     def string_processor(self, old_fragment_list,recognition,recog_nucl_index,status):
         new_fragment_list = []
