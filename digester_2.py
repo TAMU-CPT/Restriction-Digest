@@ -6,11 +6,11 @@ import math
 dict = dnadigest.Dnadigest()
 dict = dict.get_dict('enzyme_data.yaml')
 output = dnadigest.Dnadigest()
-fragment_list,assoc_enzyme_list,line_marker_list,length = output.process_data(['AAAAATGTACAAATGTACAAAA'],dict,['AaaI'])
-print 'Fragments:',fragment_list
-print 'Enzymes:',assoc_enzyme_list
-print 'Cut Points:',line_marker_list
-print 'Total Num of Nucleotides:',length
+(fragment_list, assoc_enzyme_list, line_marker_list, length) = output.process_data(['AAAAATGTACAAATGTACAAAA'], dict, ['AaaI'])
+print 'Fragments:', fragment_list
+print 'Enzymes:', assoc_enzyme_list
+print 'Cut Points:', line_marker_list
+print 'Total Num of Nucleotides:', length
 
 def drawer():
     fasta_id = '>FASTA #####'
@@ -31,27 +31,27 @@ def drawer():
     # Reformatted for clarity
     svg_document = svgwrite.Drawing(
         filename = "test-svgwrite.svg",
-        size = ("1000px","1000px")
+        size = ("1000px", "1000px")
     )
     svg_document.add(
         svg_document.circle(
-            center = (350,350),
+            center = (350, 350),
             r=radius,
-            fill = "rgb(255,255,255)",
+            fill = "rgb(255, 255, 255)",
             stroke="black"
         )
     )
     svg_document.add(
         svg_document.line(
-            start = (line_x+distance,slope*(line_x+distance)-slope*line_x-line_y),
-            # after -slope*line_x, this line was roken. I finished it off, probably incorrectly
-            end = (line_x-distance,slope*(line_x-distance)-slope*line_x-line_y)
+            start = (line_x+distance, slope*(line_x+distance)-slope*line_x-line_y),
+            # after -slope*line_x,  this line was roken. I finished it off,  probably incorrectly
+            end = (line_x-distance, slope*(line_x-distance)-slope*line_x-line_y)
         )
     )
 
-    print line_x+distance,slope*(line_x+distance)-slope*line_x-line_y
-    print line_x-distance,slope*(line_x-distance)-slope*line_x-line_y
-    svg_document.add(svg_document.text(fasta_id,insert = (300, 350)))
+    print line_x+distance, slope*(line_x+distance)-slope*line_x-line_y
+    print line_x-distance, slope*(line_x-distance)-slope*line_x-line_y
+    svg_document.add(svg_document.text(fasta_id, insert = (300,  350)))
     print(svg_document.tostring())
     svg_document.save()
 
@@ -64,17 +64,17 @@ def line_endpoint_calculator():
     y1 = float(m*x1-m*p+q)
     x2 = float(p-math.sqrt((d**2+(m*p)**2+(p*m**2)**2)/(m**2+1)))
     y2 = float(m*x2-m*p+q)
-    print 'Point 1: (%s, %s)' % (x1, y1)
-    print 'Point 2: (%s, %s)' % (x2, y2)
+    print 'Point 1: (%s,  %s)' % (x1,  y1)
+    print 'Point 2: (%s,  %s)' % (x2,  y2)
     print 'Twice given distance: %s' % (2.0*d)
 
 if __name__ == '__main__':
     digester = dnadigest.Dnadigest()
     digester = digester.get_dict('enzyme_data.yaml')
     output = dnadigest.Dnadigest()
-    fragment_list,assoc_enzyme_list,line_marker_list,length = output.process_data(['AAAAATGTACAAATGTACAAAA'],digester,['AaaI'])
-    print 'Fragments:',fragment_list
-    print 'Enzymes:',assoc_enzyme_list
-    print 'Cut Points:',line_marker_list
-    print 'Total Num of Nucleotides:',length
+    fragment_list, assoc_enzyme_list, line_marker_list, length = output.process_data(['AAAAATGTACAAATGTACAAAA'], digester, ['AaaI'])
+    print 'Fragments:', fragment_list
+    print 'Enzymes:', assoc_enzyme_list
+    print 'Cut Points:', line_marker_list
+    print 'Total Num of Nucleotides:', length
 
