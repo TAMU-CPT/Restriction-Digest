@@ -9,16 +9,16 @@ list = []
 
 def string_adder(letter,list):
     new_list = []
-    nucleobase_dict = {'A':['A'],'G':['G'],'C':['C'],'T':['T'],'N':['A','C','G','T'],'M':['A','C'],'R':['A','G'],'W':['A','T'],'Y':['C','T'],'S':['C','G'],'K':['G','T'],'H':['A','C','T'],'B':['C','G','T'],'V':['A','C','G'],'D':['A','G','T']}
+    nucleobase_dict = {
+        'A':['A'],
+        'G':['G'],
+        'C':['C'], 'T':['T'], 'N':['A', 'C', 'G', 'T'], 'M':['A', 'C'], 'R':['A', 'G'], 'W':['A', 'T'], 'Y':['C', 'T'], 'S':['C', 'G'], 'K':['G', 'T'], 'H':['A', 'C', 'T'], 'B':['C', 'G', 'T'], 'V':['A', 'C', 'G'], 'D':['A', 'G', 'T']}
     for element in list:
         for value in nucleobase_dict[letter]:
             new_list+=[element+value]
     return new_list
-    
 
-
-
-def main():
+if __name__ == '__main__':
     string = 'NNN'
     extant_list = ['']
     for letter in string:
@@ -27,10 +27,3 @@ def main():
         print 'Success'
     else:
         print 'WIP'
-    
-
-
-
-
-
-main()

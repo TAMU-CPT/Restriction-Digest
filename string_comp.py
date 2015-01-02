@@ -14,7 +14,7 @@ def string_cutter(sequence,recognition,recog_nucl_index):
 
 def string_processor(old_fragment_list,recognition,recog_nucl_index):
     new_fragment_list = []
-    for fragment in old_fragment_list:    
+    for fragment in old_fragment_list:
         seq1 = fragment
         seq2 = ''
         while seq2!='END OF SEQUENCE':
@@ -34,7 +34,7 @@ def string_processor(old_fragment_list,recognition,recog_nucl_index):
     return new_fragment_list
 
 
-def main():
+if __name__ == '__main__':
     fragment_list = ['ABCDEFG']
     recognition = ['GAB']
     recog_nucl_index = [3]
@@ -43,6 +43,3 @@ def main():
     for pair in zip(recognition,recog_nucl_index):
         fragment_list = string_processor(fragment_list,pair[0],pair[1])
         print fragment_list
-
-main()
-
