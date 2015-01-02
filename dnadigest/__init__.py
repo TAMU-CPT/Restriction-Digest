@@ -141,6 +141,8 @@ class Dnadigest():
 
         #template = raw_input('Enter 1 for template strand,0 otherwise.')
         for seq in seqs:
+            # Seems strange? Seems like it should be a global, set-once
+            # parameter based on the sequence, not something mutable
             status = 'circular'
             #if template ==1:
                 #seq = seq.reverse_complement()
@@ -175,7 +177,7 @@ class Dnadigest():
             recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in cut_with]
             q = 0
             for recognition_pair in zip(recognition,recog_nucl_index):
-                fragment_list,status,line_marker_list = self.string_processor(fragment_list,recognition_pair[0],recognition_pair[1],status)
+                (fragment_list,status,line_marker_list) = self.string_processor(fragment_list,recognition_pair[0],recognition_pair[1],status)
                 assoc_enzyme_list = [cut_with[q] for mark in line_marker_list]
                 q+=1
             if '' in fragment_list:
