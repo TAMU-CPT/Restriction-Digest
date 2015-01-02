@@ -69,10 +69,10 @@ def line_endpoint_calculator():
     print 'Twice given distance: %s' % (2.0*d)
 
 if __name__ == '__main__':
-    dict = dnadigest.Dnadigest()
-    dict = dict.get_dict('enzyme_data.yaml')
+    digester = dnadigest.Dnadigest()
+    digester = digester.get_dict('enzyme_data.yaml')
     output = dnadigest.Dnadigest()
-    fragment_list,assoc_enzyme_list,line_marker_list,length = output.process_data(['AAAAATGTACAAATGTACAAAA'],dict,['AaaI'])
+    fragment_list,assoc_enzyme_list,line_marker_list,length = output.process_data(['AAAAATGTACAAATGTACAAAA'],digester,['AaaI'])
     print 'Fragments:',fragment_list
     print 'Enzymes:',assoc_enzyme_list
     print 'Cut Points:',line_marker_list
