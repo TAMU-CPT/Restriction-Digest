@@ -33,40 +33,33 @@ class Dnadigest():
                 pass
         return tmp_corrected
 
-    def matcher(self,sequence,enzyme,recognition_sequence):
+    def matcher(self, sequence,enzyme, recognition_sequence):
         mod_seq_string = ''
-        for letter in recognition_sequence:
-            if letter in 'ATGC':
-                mod_seq_string+=letter
-            elif letter == 'N':
-                mod_seq_string+='.'
-            elif letter == 'M':
-                mod_seq_string+='[AC]'
-            elif letter == 'R':
-                mod_seq_string+='[AG]'
-            elif letter == 'W':
-                mod_seq_string+='[AT]'
-            elif letter == 'Y':
-                mod_seq_string+='[CT]'
-            elif letter == 'S':
-                mod_seq_string+='[CG]'
-            elif letter == 'K':
-                mod_seq_string+='[GT]'
-            elif letter == 'H':
-                mod_seq_string+='[^G]'
-            elif letter == 'B':
-                mod_seq_string+='[^A]'
-            elif letter == 'V':
-                mod_seq_string+='[^T]'
-            elif letter == 'D':
-                mod_seq_string+='[^C]'
+        dna_regex_translations = {
+            'A': 'A',
+            'T': 'T',
+            'C': 'C',
+            'G': 'G',
+            'N': '.',
+            'M': '[AC]',
+            'R': '[AG]',
+            'W': '[AT]',
+            'Y': '[CT]',
+            'S': '[CG]',
+            'K': '[GT]',
+            'H': '[^G]',
+            'B': '[^A]',
+            'V': '[^T]',
+            'D': '[^C]',
+        }
+        mod_seq_string = ''.join(dna_regex_translations[x] for x in recognition_sequence)
         regex = re.compile(mod_seq_string)
         if len(regex.findall(str(sequence)))!=0:
             return enzyme
         else:
             return 'No'
 
-    def string_cutter(self, sequence,recognition,recog_nucl_index,status):
+    def string_cutter(self, sequence, recognition, recog_nucl_index, status):
         rec_seq = re.compile(recognition)
         match_start = rec_seq.search(str(sequence))
         if len(rec_seq.findall(str(sequence)))== 0 and status == 'circular':
@@ -165,6 +158,6 @@ class Dnadigest():
             if '' in fragment_list:
                 fragment_list.remove('')
             return fragment_list,assoc_enzyme_list,line_marker_list,len(seq)
-            
+
 
 
