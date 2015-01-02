@@ -1,16 +1,6 @@
 import dnadigest
-import pprint
 import svgwrite
 import math
-
-dict = dnadigest.Dnadigest()
-dict = dict.get_dict('enzyme_data.yaml')
-output = dnadigest.Dnadigest()
-(fragment_list, assoc_enzyme_list, line_marker_list, length) = output.process_data(['AAAAATGTACAAATGTACAAAA'], dict, ['AaaI'])
-print 'Fragments:', fragment_list
-print 'Enzymes:', assoc_enzyme_list
-print 'Cut Points:', line_marker_list
-print 'Total Num of Nucleotides:', length
 
 def drawer():
     fasta_id = '>FASTA #####'
