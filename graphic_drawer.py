@@ -23,6 +23,8 @@ def drawer(total_nucl, enzyme_names, nucl_cut_ind):
         svg_document = svgwrite.Drawing(filename = filename, size = ("1000px", "1000px"))
         svg_document.add(svg_document.circle(center = (center, center), r=radius, fill="rgb(255, 255, 255)", stroke="black"))
         svg_document.add(svg_document.text(header, insert = (300,  350)))
+
+        print nucl_cut_index
         for index in nucl_cut_index:
             angle = (float(index)/float(total_nucl))*2*(math.pi)
             line_x = radius*math.cos(angle)+center
@@ -90,9 +92,8 @@ def line_endpoint_calculator(d, p, q, m):
 
 if __name__ == '__main__':
     digester = dnadigest.Dnadigest()
-    digester = digester.get_dict('enzyme_data.yaml')
-    output = dnadigest.Dnadigest()
-    fragment_list, assoc_enzyme_list, line_marker_list, length = output.process_data(['AAAAATGTACAAATGTACAAAA'], dict, ['AaaI'])
+    enzyme_dict = digester.get_dict('enzyme_data.yaml')
+    fragment_list, assoc_enzyme_list, line_marker_list, length = digester.process_data(['AAAAATGTACAAATGTACAAAA'], enzyme_dict, ['AaaI'])
     print 'Fragments:', fragment_list
     print 'Enzymes:', assoc_enzyme_list
     print 'Cut Points:', line_marker_list
