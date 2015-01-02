@@ -66,14 +66,14 @@ class Dnadigest():
         all_matches = rec_seq.findall(sequence)
 
         if len(all_matches) == 0 and status == 'circular':
-            working_seq = sequence*2
+            working_seq = sequence + sequence[0:100]
             start = rec_seq.search(str(sequence))
             if rec_seq.search(working_seq) is not None and len(rec_seq.findall(working_seq))<=1:
                 return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'END OF SEQUENCE','linear',rec_seq.search(working_seq).start()+recog_nucl_index
             else:
                 return sequence,'END OF SEQUENCE','circular',''
         elif len(all_matches) == 1 and status == 'circular':
-            working_seq = sequence*2
+            working_seq = sequence + sequence[0:100]
             start = rec_seq.search(str(sequence))
             if rec_seq.search(working_seq) is not None:
                 return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index], working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'linear',rec_seq.search(working_seq).start()+recog_nucl_index
