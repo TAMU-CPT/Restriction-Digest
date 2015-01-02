@@ -533,7 +533,7 @@
 - cut:
   - 5' ---GACTCNNNN  NN--- 3'
   - 3' ---CTGAGNNNNNN  --- 5'
-  enzyme: BspD6I [7][8]
+  enzyme: BspD6I
   isoscizomers:
   - ''
   recognition_sequence:
@@ -1329,7 +1329,7 @@
 - cut:
   - 5' ---C  TAG--- 3'
   - 3' ---GAT  C--- 5'
-  enzyme: BfaI [7]
+  enzyme: BfaI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -1399,7 +1399,7 @@
 - cut:
   - 5' ---ATGCA  T--- 3'
   - 3' ---T  ACGTA--- 5'
-  enzyme: BfrBI [8]
+  enzyme: BfrBI
   isoscizomers:
   - Csp68KIII
   - EcoT22I
@@ -1805,7 +1805,7 @@
 - cut:
   - 5' ---ACTGGGNNNNN  --- 3'
   - 3' ---TGACCCNNNN  N--- 5'
-  enzyme: BmrI [9][10]
+  enzyme: BmrI
   isoscizomers:
   - BfiI
   recognition_sequence:
@@ -1829,7 +1829,7 @@
 - cut:
   - 5' ---GDGCH  C--- 3'
   - 3' ---C  HCGDG--- 5'
-  enzyme: BmyI [11]
+  enzyme: BmyI
   isoscizomers:
   - AocII
   - BsoCI
@@ -1997,7 +1997,7 @@
 - cut:
   - 5' ---GAAGACNN  NNNN--- 3'
   - 3' ---CTTCTGNNNNNN  --- 5'
-  enzyme: BpuAI [12]
+  enzyme: BpuAI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -2042,7 +2042,7 @@
 - cut:
   - 5' ---CCCGTN10N  NNNNNNNN--- 3'
   - 3' ---GGGCAN10NNNNNNNNN  --- 5'
-  enzyme: BpuJI [13][14]
+  enzyme: BpuJI
   isoscizomers:
   - None on May 2010
   recognition_sequence:
@@ -2076,7 +2076,7 @@
 - cut:
   - 5' ---ACN4GTAYCN6NNNNNN  --- 3'
   - 3' ---TGN4CATYGN6N  NNNNN--- 5'
-  enzyme: BaeI [7]
+  enzyme: BaeI
   isoscizomers:
   - None on May 2010
   recognition_sequence:
@@ -2085,7 +2085,7 @@
 - cut:
   - 5' ---TGG  CCA--- 3'
   - 3' ---ACC  GGT--- 5'
-  enzyme: BalI [8][9]
+  enzyme: BalI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -2110,7 +2110,7 @@
 - cut:
   - 5' ---G  GATCC--- 3'
   - 3' ---CCTAG  G--- 5'
-  enzyme: BamHI [10][11][12][13][14][15][16][17][18][19][20][21][22][23][24][25][26][27][28][29][30]
+  enzyme: BamHI
   isoscizomers:
   - AccEBI
   - AliI
@@ -2147,7 +2147,7 @@
 - cut:
   - 5' ---G  GYRCC--- 3'
   - 3' ---CCRYG  G--- 5'
-  enzyme: BanI [31][32]
+  enzyme: BanI
   isoscizomers:
   - AccB1I
   - BbvBI
@@ -2163,7 +2163,7 @@
 - cut:
   - 5' ---GRGCY  C--- 3'
   - 3' ---C  YCGRG--- 5'
-  enzyme: BanII [12][31]
+  enzyme: BanII
   isoscizomers:
   - ''
   recognition_sequence:
@@ -2172,7 +2172,7 @@
 - cut:
   - 5' ---AT  CGAT--- 3'
   - 3' ---TAGC  TA--- 5'
-  enzyme: BanIII [31]
+  enzyme: BanIII
   isoscizomers:
   - AagI
   - BavCI
@@ -2296,7 +2296,7 @@
 - cut:
   - 5' ---GGCGC  C--- 3'
   - 3' ---C  CGCGG--- 5'
-  enzyme: BbeI [33]
+  enzyme: BbeI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -2348,7 +2348,7 @@
 - cut:
   - 5' ---CAC  GTG--- 3'
   - 3' ---GTG  CAC--- 5'
-  enzyme: BbrPI [34][35]
+  enzyme: BbrPI
   isoscizomers:
   - AcvI
   - BcoAI
@@ -2362,7 +2362,7 @@
 - cut:
   - 5' ---GAAGACNN  NNNN--- 3'
   - 3' ---CTTCTGNNNNNN  --- 5'
-  enzyme: BbsI [36]
+  enzyme: BbsI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -2371,7 +2371,7 @@
 - cut:
   - 5' ---GCATG  C--- 3'
   - 3' ---C  GTACG--- 5'
-  enzyme: BbuI [37]
+  enzyme: BbuI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -2380,7 +2380,7 @@
 - cut:
   - 5' ---GCAGCN7N  NNNN--- 3'
   - 3' ---CGTCGN7NNNNN  --- 5'
-  enzyme: BbvI [38][39]
+  enzyme: BbvI
   isoscizomers:
   - AlwXI
   - BseKI
@@ -2395,7 +2395,7 @@
 - cut:
   - 5' ---GAAGACNN  NNNN--- 3'
   - 3' ---CTTCTGNNNNNN  --- 5'
-  enzyme: BbvII [40]
+  enzyme: BbvII
   isoscizomers:
   - ''
   recognition_sequence:
@@ -2404,7 +2404,7 @@
 - cut:
   - 5' ---GWGCW  C--- 3'
   - 3' ---C  WCGWG--- 5'
-  enzyme: Bbv12I [41]
+  enzyme: Bbv12I
   isoscizomers:
   - Alw21I
   - AspHI
@@ -2488,7 +2488,7 @@
 - cut:
   - 5' ---CC  TCAGC--- 3'
   - 3' ---GGAGT  CG--- 5'
-  enzyme: BbvCI [42]
+  enzyme: BbvCI
   isoscizomers:
   - AbeI
   recognition_sequence:
@@ -2540,7 +2540,7 @@
 - cut:
   - 5' ---CTTGAGN13NNN  --- 3'
   - 3' ---GAACTCN13N  NN--- 5'
-  enzyme: Bce83I [43]
+  enzyme: Bce83I
   isoscizomers:
   - ''
   recognition_sequence:
@@ -2616,7 +2616,7 @@
 - cut:
   - 5' ---ACGGCN10NN  N--- 3'
   - 3' ---TGCCGN10NNN  --- 5'
-  enzyme: BcefI [44]
+  enzyme: BcefI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -2625,7 +2625,7 @@
 - cut:
   - 5' ---CGAN6TGCN9NNN  --- 3'
   - 3' ---GCTN6ACGN9N  NN--- 5'
-  enzyme: BcgI [45][46]
+  enzyme: BcgI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -2683,7 +2683,7 @@
 - cut:
   - 5' ---GTATCCN4NN  --- 3'
   - 3' ---CATAGGN4N  N--- 5'
-  enzyme: BciVI [47]
+  enzyme: BciVI
   isoscizomers:
   - BfuI
   recognition_sequence:
@@ -2692,7 +2692,7 @@
 - cut:
   - 5' ---T  GATCA--- 3'
   - 3' ---ACTAG  T--- 5'
-  enzyme: BclI [15][48][49]
+  enzyme: BclI
   isoscizomers:
   - AbaI
   - BsiQI
@@ -2723,7 +2723,7 @@
 - cut:
   - 5' ---CC  SGG--- 3'
   - 3' ---GGS  CC--- 5'
-  enzyme: BcnI [50][51][52]
+  enzyme: BcnI
   isoscizomers:
   - AhaI
   - AseII
@@ -2740,7 +2740,7 @@
 - cut:
   - 5' ---C  YCGRG--- 3'
   - 3' ---GRGCY  C--- 5'
-  enzyme: BcoI [53]
+  enzyme: BcoI
   isoscizomers:
   - Ama87I
   - AquI
@@ -4039,7 +4039,7 @@
 - cut:
   - 5' ---CTGCA  G--- 3'
   - 3' ---G  ACGTC--- 5'
-  enzyme: PstI [7]
+  enzyme: PstI
   isoscizomers:
   - AliAJI
   - BspBI
@@ -5935,7 +5935,7 @@
 - cut:
   - 5' ---GACGCN4N  NNNNN--- 3'
   - 3' ---CTGCGN4NNNNNN  --- 5'
-  enzyme: HgaI [7]
+  enzyme: HgaI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -6624,7 +6624,7 @@
 - cut:
   - 5' ---GGTAC  C--- 3'
   - 3' ---C  CATGG--- 5'
-  enzyme: KpnI [8]
+  enzyme: KpnI
   isoscizomers:
   - Acc65I
   - AhaB8I
@@ -6816,7 +6816,7 @@
 - cut:
   - 5' ---GR  CGYC--- 3'
   - 3' ---CYGC  RG--- 5'
-  enzyme: BsaHI [7]
+  enzyme: BsaHI
   isoscizomers:
   - AcyI
   - AhaII
@@ -6875,7 +6875,7 @@
 - cut:
   - 5' ---ACN5CTCCN6NNNN  --- 3'
   - 3' ---TGN5GAGGN6N  NNN--- 5'
-  enzyme: BsaXI [8]
+  enzyme: BsaXI
   isoscizomers:
   - BsmCI
   - BsmDI
@@ -7100,7 +7100,7 @@
 - cut:
   - 5' ---R  CCGGY--- 3'
   - 3' ---YGGCC  R--- 5'
-  enzyme: Bse118I [9]
+  enzyme: Bse118I
   isoscizomers:
   - ''
   recognition_sequence:
@@ -7118,7 +7118,7 @@
 - cut:
   - 5' ---T  CCGGA--- 3'
   - 3' ---AGGCC  T--- 5'
-  enzyme: BseAI [10]
+  enzyme: BseAI
   isoscizomers:
   - AccIII
   - Aor13HI
@@ -7134,7 +7134,7 @@
 - cut:
   - 5' ---CC  WGG--- 3'
   - 3' ---GGW  CC--- 5'
-  enzyme: BseBI [11]
+  enzyme: BseBI
   isoscizomers:
   - AjnI
   - AorI
@@ -7152,7 +7152,7 @@
 - cut:
   - 5' ---AT  CGAT--- 3'
   - 3' ---TAGC  TA--- 5'
-  enzyme: BseCI [12][13][14]
+  enzyme: BseCI
   isoscizomers:
   - AagI
   - BanIII
@@ -7238,7 +7238,7 @@
 - cut:
   - 5' ---CTCAGN7NNN  --- 3'
   - 3' ---GAGTCN7N  NN--- 5'
-  enzyme: BseMII [15]
+  enzyme: BseMII
   isoscizomers:
   - ''
   recognition_sequence:
@@ -7274,7 +7274,7 @@
 - cut:
   - 5' ---GAGGAGN7NNN  --- 3'
   - 3' ---CTCCTCN7N  NN--- 5'
-  enzyme: BseRI [16]
+  enzyme: BseRI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -7283,7 +7283,7 @@
 - cut:
   - 5' ---GKGCM  C--- 3'
   - 3' ---C  MCGKG--- 5'
-  enzyme: BseSI [17]
+  enzyme: BseSI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -7440,7 +7440,7 @@
 - cut:
   - 5' ---GG  CC--- 3'
   - 3' ---CC  GG--- 5'
-  enzyme: BshFI [18]
+  enzyme: BshFI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -7515,7 +7515,7 @@
 - cut:
   - 5' ---C  ACGAG--- 3'
   - 3' ---GTGCT  C--- 5'
-  enzyme: BsiI [19][20]
+  enzyme: BsiI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -7524,7 +7524,7 @@
 - cut:
   - 5' ---GATNN  NNATC--- 3'
   - 3' ---CTANN  NNTAG--- 5'
-  enzyme: BsiBI [21]
+  enzyme: BsiBI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -7550,7 +7550,7 @@
 - cut:
   - 5' ---CGRY  CG--- 3'
   - 3' ---GC  YRGC--- 5'
-  enzyme: BsiEI [22]
+  enzyme: BsiEI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -7559,7 +7559,7 @@
 - cut:
   - 5' ---GWGCW  C--- 3'
   - 3' ---C  WCGWG--- 5'
-  enzyme: BsiHKAI [23]
+  enzyme: BsiHKAI
   isoscizomers:
   - Alw21I
   - AspHI
@@ -7590,7 +7590,7 @@
 - cut:
   - 5' ---G  GTNACC--- 3'
   - 3' ---CCANTG  G--- 5'
-  enzyme: BsiKI [24]
+  enzyme: BsiKI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -7647,7 +7647,7 @@
 - cut:
   - 5' ---C  CGG--- 3'
   - 3' ---GGC  C--- 5'
-  enzyme: BsiSI [25]
+  enzyme: BsiSI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -7681,7 +7681,7 @@
 - cut:
   - 5' ---CCNNNNN  NNGG--- 3'
   - 3' ---GGNN  NNNNNCC--- 5'
-  enzyme: BsiYI [26]
+  enzyme: BsiYI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -9195,7 +9195,7 @@
 - cut:
   - 5' ---GAGCT  C--- 3'
   - 3' ---C  TCGAG--- 5'
-  enzyme: SacI [7]
+  enzyme: SacI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -9222,7 +9222,7 @@
 - cut:
   - 5' ---G  TCGAC--- 3'
   - 3' ---CAGCT  G--- 5'
-  enzyme: SalI [7]
+  enzyme: SalI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -9477,7 +9477,7 @@
 - cut:
   - 5' ---AGT  ACT--- 3'
   - 3' ---TCA  TGA--- 5'
-  enzyme: ScaI [7]
+  enzyme: ScaI
   isoscizomers:
   - Acc113I
   - AssI
@@ -10056,7 +10056,7 @@
 - cut:
   - 5' ---GCATG  C--- 3'
   - 3' ---C  GTACG--- 5'
-  enzyme: SphI [7]
+  enzyme: SphI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -10698,7 +10698,7 @@
 - cut:
   - 5' ---AGG  CCT--- 3'
   - 3' ---TCC  GGA--- 5'
-  enzyme: StuI [8]
+  enzyme: StuI
   isoscizomers:
   - AatI
   - AspMI
@@ -12779,7 +12779,7 @@
 - cut:
   - 5' ---T  CTAGA--- 3'
   - 3' ---AGATC  T--- 5'
-  enzyme: XbaI [7]
+  enzyme: XbaI
   isoscizomers:
   - ''
   recognition_sequence:
@@ -13374,7 +13374,7 @@
 - cut:
   - 5' ---R  CCGGY--- 3'
   - 3' ---YGGCC  R--- 5'
-  enzyme: Cfr10I [7][8]
+  enzyme: Cfr10I
   isoscizomers:
   - ''
   recognition_sequence:
@@ -14138,7 +14138,7 @@
 - cut:
   - 5' ---GT  MKAC--- 3'
   - 3' ---CAKM  TG--- 5'
-  enzyme: AccI [7][8][9][10]
+  enzyme: AccI
   isoscizomers:
   - FblI
   - XmiI
@@ -14148,7 +14148,7 @@
 - cut:
   - 5' ---CG  CG--- 3'
   - 3' ---GC  GC--- 5'
-  enzyme: AccII [7][11]
+  enzyme: AccII
   isoscizomers:
   - Bsh1236I
   - Bsp50I
@@ -14165,7 +14165,7 @@
 - cut:
   - 5' ---T  CCGGA--- 3'
   - 3' ---AGGCC  T--- 5'
-  enzyme: AccIII [12]
+  enzyme: AccIII
   isoscizomers:
   - Aor13HI
   - BbvAIII
@@ -14199,7 +14199,7 @@
 - cut:
   - 5' ---ACCTGCN3N  NNNN--- 3'
   - 3' ---TGGACGN3NNNNN  --- 5'
-  enzyme: Acc36I [13]
+  enzyme: Acc36I
   isoscizomers:
   - BfuAI
   - BspMI
@@ -14210,7 +14210,7 @@
 - cut:
   - 5' ---G  GTACC--- 3'
   - 3' ---CCATG  G--- 5'
-  enzyme: Acc65I [14]
+  enzyme: Acc65I
   isoscizomers:
   - AhaB8I
   - Asp718I
@@ -14268,7 +14268,7 @@
 - cut:
   - 5' ---CCANNNN  NTGG--- 3'
   - 3' ---GGTN  NNNNACC--- 5'
-  enzyme: AccB7I [15]
+  enzyme: AccB7I
   isoscizomers:
   - AcpII
   - Asp10HII
@@ -14283,7 +14283,7 @@
 - cut:
   - 5' ---CCG  CTC--- 3'
   - 3' ---GGC  GAG--- 5'
-  enzyme: AccBSI [16]
+  enzyme: AccBSI
   isoscizomers:
   - BsrBI
   - BstD102I
@@ -14346,7 +14346,7 @@
 - cut:
   - 5' ---C  CGC--- 3'
   - 3' ---GGC  G--- 5'
-  enzyme: AciI [17][18]
+  enzyme: AciI
   isoscizomers:
   - SsiI
   recognition_sequence:
@@ -14355,7 +14355,7 @@
 - cut:
   - 5' ---AA  CGTT--- 3'
   - 3' ---TTGC  AA--- 5'
-  enzyme: AclI [19]
+  enzyme: AclI
   isoscizomers:
   - Psp1406I
   recognition_sequence:
@@ -14440,7 +14440,7 @@
 - cut:
   - 5' ---R  AATTY--- 3'
   - 3' ---YTTAA  R--- 5'
-  enzyme: AcsI [20]
+  enzyme: AcsI
   isoscizomers:
   - ApoI
   - CfaI
@@ -14477,7 +14477,7 @@
 - cut:
   - 5' ---GR  CGYC--- 3'
   - 3' ---CYGC  RG--- 5'
-  enzyme: AcyI [21]
+  enzyme: AcyI
   isoscizomers:
   - AhaII
   - AosII
@@ -14521,7 +14521,7 @@
 - cut:
   - 5' ---GT  AC--- 3'
   - 3' ---CA  TG--- 5'
-  enzyme: AfaI [22]
+  enzyme: AfaI
   isoscizomers:
   - Csp6I
   - CviQI
@@ -14572,7 +14572,7 @@
 - cut:
   - 5' ---AGC  GCT--- 3'
   - 3' ---TCG  CGA--- 5'
-  enzyme: AfeI [23]
+  enzyme: AfeI
   isoscizomers:
   - AitI
   - Aor51H
@@ -14584,7 +14584,7 @@
 - cut:
   - 5' ---G  GWCC--- 3'
   - 3' ---CCWG  G--- 5'
-  enzyme: AflI [24]
+  enzyme: AflI
   isoscizomers:
   - Asp745I
   - BamNxI
@@ -14600,7 +14600,7 @@
 - cut:
   - 5' ---C  TTAAG--- 3'
   - 3' ---GAATT  C--- 5'
-  enzyme: AflII [24][25][26]
+  enzyme: AflII
   isoscizomers:
   - BfrI
   - BspTI
@@ -14616,7 +14616,7 @@
 - cut:
   - 5' ---A  CRYGT--- 3'
   - 3' ---TGYRC  A--- 5'
-  enzyme: AflIII [24][27]
+  enzyme: AflIII
   isoscizomers:
   - Asp90I
   recognition_sequence:
@@ -14625,7 +14625,7 @@
 - cut:
   - 5' ---A  CCGGT--- 3'
   - 3' ---TGGCC  A--- 5'
-  enzyme: AgeI [17][28]
+  enzyme: AgeI
   isoscizomers:
   - AsiAI
   - AsiGI
@@ -14690,7 +14690,7 @@
 - cut:
   - 5' ---TTT  AAA--- 3'
   - 3' ---AAA  TTT--- 5'
-  enzyme: AhaIII [9][25][26][30]
+  enzyme: AhaIII
   isoscizomers:
   - DraI
   - PauAII
@@ -14713,7 +14713,7 @@
 - cut:
   - 5' ---GACNNN  NNGTC--- 3'
   - 3' ---CTGNN  NNNCAG--- 5'
-  enzyme: AhdI [31][32]
+  enzyme: AhdI
   isoscizomers:
   - AspEI
   - BmeRI
@@ -14854,7 +14854,7 @@
 - cut:
   - 5' ---GAACN6TCCN6NNNNNN  --- 3'
   - 3' ---CTTGN6AGGN6N  NNNNN--- 5'
-  enzyme: AloI [33][34]
+  enzyme: AloI
   isoscizomers:
   - None on May 2010
   recognition_sequence:
@@ -14863,7 +14863,7 @@
 - cut:
   - 5' ---AG  CT--- 3'
   - 3' ---TC  GA--- 5'
-  enzyme: AluI [7][9][35][36][37][38]
+  enzyme: AluI
   isoscizomers:
   - AluBI
   - MltI
@@ -14904,7 +14904,7 @@
 - cut:
   - 5' ---GTCTCN  NNNN--- 3'
   - 3' ---CAGAGNNNNN  --- 5'
-  enzyme: Alw26I [39]
+  enzyme: Alw26I
   isoscizomers:
   - BcoDI
   - BscQII
@@ -14928,7 +14928,7 @@
 - cut:
   - 5' ---CAGNNN  CTG--- 3'
   - 3' ---GTC  NNNGAC--- 5'
-  enzyme: AlwNI [40]
+  enzyme: AlwNI
   isoscizomers:
   - CaiI
   recognition_sequence:
@@ -15016,7 +15016,7 @@
 - cut:
   - 5' ---T  CCGGA--- 3'
   - 3' ---AGGCC  T--- 5'
-  enzyme: Aor13HI [41]
+  enzyme: Aor13HI
   isoscizomers:
   - AccIII
   - BbvAIII
@@ -15034,7 +15034,7 @@
 - cut:
   - 5' ---AGC  GCT--- 3'
   - 3' ---TCG  CGA--- 5'
-  enzyme: Aor51HI [42]
+  enzyme: Aor51HI
   isoscizomers:
   - AfeI
   - AitI
@@ -15080,7 +15080,7 @@
 - cut:
   - 5' ---GGGCC  C--- 3'
   - 3' ---C  CCGGG--- 5'
-  enzyme: ApaI [17][26][43]
+  enzyme: ApaI
   isoscizomers:
   - Bsp120I
   - PpeI
@@ -15091,7 +15091,7 @@
 - cut:
   - 5' ---GCANNNNN  TGC--- 3'
   - 3' ---CGT  NNNNNACG--- 5'
-  enzyme: ApaBI [44]
+  enzyme: ApaBI
   isoscizomers:
   - BstAPI
   recognition_sequence:
@@ -15117,7 +15117,7 @@
 - cut:
   - 5' ---G  TGCAC--- 3'
   - 3' ---CACGT  G--- 5'
-  enzyme: ApaLI [45][46]
+  enzyme: ApaLI
   isoscizomers:
   - Alw44I
   - SnoI
@@ -15145,7 +15145,7 @@
 - cut:
   - 5' ---G  CWGC--- 3'
   - 3' ---CGWC  G--- 5'
-  enzyme: ApeKI [47]
+  enzyme: ApeKI
   isoscizomers:
   - AceI
   - SuiI
@@ -15174,7 +15174,7 @@
 - cut:
   - 5' ---R  AATTY--- 3'
   - 3' ---YTTAA  R--- 5'
-  enzyme: ApoI [48]
+  enzyme: ApoI
   isoscizomers:
   - 'AcsI
 
@@ -15220,7 +15220,7 @@
 - cut:
   - 5' ---GG  CGCGCC--- 3'
   - 3' ---CCGCGC  GG--- 5'
-  enzyme: AscI [17][49]
+  enzyme: AscI
   isoscizomers:
   - PalAI
   - SgsI
@@ -15230,7 +15230,7 @@
 - cut:
   - 5' ---AT  TAAT--- 3'
   - 3' ---TAAT  TA--- 5'
-  enzyme: AseI [50]
+  enzyme: AseI
   isoscizomers:
   - AsnI
   - BpoAI
@@ -15243,7 +15243,7 @@
 - cut:
   - 5' ---CC  SGG--- 3'
   - 3' ---GGS  CC--- 5'
-  enzyme: AseII [50]
+  enzyme: AseII
   isoscizomers:
   - AhaI
   - AsuC2I
@@ -15302,7 +15302,7 @@
 - cut:
   - 5' ---AT  TAAT--- 3'
   - 3' ---TAAT  TA--- 5'
-  enzyme: AsnI [51]
+  enzyme: AsnI
   isoscizomers:
   - AseI
   - BpoAI
@@ -15315,7 +15315,7 @@
 - cut:
   - 5' ---GACN  NNGTC--- 3'
   - 3' ---CTGNN  NCAG--- 5'
-  enzyme: AspI [52]
+  enzyme: AspI
   isoscizomers:
   - AtsI
   - PflFI
@@ -15328,7 +15328,7 @@
 - cut:
   - 5' ---GAANN  NNTTC--- 3'
   - 3' ---CTTNN  NNAAG--- 5'
-  enzyme: Asp700I [53]
+  enzyme: Asp700I
   isoscizomers:
   - BbvAI
   - MroXI
@@ -15358,7 +15358,7 @@
 - cut:
   - 5' ---G  GTACC--- 3'
   - 3' ---CCATG  G--- 5'
-  enzyme: Asp718I [54]
+  enzyme: Asp718I
   isoscizomers:
   - Acc65I
   - AhaB8I
@@ -15416,7 +15416,7 @@
 - cut:
   - 5' ---GACNNN  NNGTC--- 3'
   - 3' ---CTGNN  NNNCAG--- 5'
-  enzyme: AspEI [55]
+  enzyme: AspEI
   isoscizomers:
   - AhdI
   - BmeRI
@@ -15431,7 +15431,7 @@
 - cut:
   - 5' ---GWGCW  C--- 3'
   - 3' ---C  WCGWG--- 5'
-  enzyme: AspHI [56]
+  enzyme: AspHI
   isoscizomers:
   - Alw21I
   - Bbv12I
@@ -15680,7 +15680,7 @@
 - cut:
   - 5' ---G  GNCC--- 3'
   - 3' ---CCNG  G--- 5'
-  enzyme: AsuI [57]
+  enzyme: AsuI
   isoscizomers:
   - AspS9I
   - AvcI
@@ -15697,7 +15697,7 @@
 - cut:
   - 5' ---TT  CGAA--- 3'
   - 3' ---AAGC  TT--- 5'
-  enzyme: AsuII [58]
+  enzyme: AsuII
   isoscizomers:
   - AcpI
   - Bpu14I
@@ -15747,7 +15747,7 @@
 - cut:
   - 5' ---GGTGAN6NN  --- 3'
   - 3' ---CCACTN6N  N--- 5'
-  enzyme: AsuHPI [59]
+  enzyme: AsuHPI
   isoscizomers:
   - HphI
   - SspD5I
@@ -15757,7 +15757,7 @@
 - cut:
   - 5' ---G  CTAGC--- 3'
   - 3' ---CGATC  G--- 5'
-  enzyme: AsuNHI [59]
+  enzyme: AsuNHI
   isoscizomers:
   - AceII
   - BmtI
@@ -15784,7 +15784,7 @@
 - cut:
   - 5' ---C  YCGRG--- 3'
   - 3' ---GRGCY  C--- 5'
-  enzyme: AvaI [9][60][61]
+  enzyme: AvaI
   isoscizomers:
   - AquI
   - Ama87I
@@ -15800,7 +15800,7 @@
 - cut:
   - 5' ---G  GWCC--- 3'
   - 3' ---CCWG  G--- 5'
-  enzyme: AvaII [7][9][38][60][61]
+  enzyme: AvaII
   isoscizomers:
   - Bme18I
   - Bme216I
@@ -15848,7 +15848,7 @@
 - cut:
   - 5' ---C  CTAGG--- 3'
   - 3' ---GGATC  C--- 5'
-  enzyme: AvrII [17][25]
+  enzyme: AvrII
   isoscizomers:
   - AspA2I
   - AvrBII
@@ -15874,7 +15874,7 @@
 - cut:
   - 5' ---CC  TNAGG--- 3'
   - 3' ---GGANT  CC--- 5'
-  enzyme: AxyI [62]
+  enzyme: AxyI
   isoscizomers:
   - AocI
   - BliHKI
