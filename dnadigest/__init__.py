@@ -5,6 +5,24 @@ import yaml
 class Dnadigest():
     def __init__(self):
         self.data = ''
+        self.dna_regex_translations = {
+            'A': 'A',
+            'T': 'T',
+            'C': 'C',
+            'G': 'G',
+            'N': '.',
+            'M': '[AC]',
+            'R': '[AG]',
+            'W': '[AT]',
+            'Y': '[CT]',
+            'S': '[CG]',
+            'K': '[GT]',
+            'H': '[^G]',
+            'B': '[^A]',
+            'V': '[^T]',
+            'D': '[^C]',
+        }
+
     def get_dict(self, data_file):
         with open(data_file) as handle:
             data_structure = yaml.load(handle)
@@ -39,24 +57,7 @@ class Dnadigest():
 
     def matcher(self, sequence, recognition_sequence):
         mod_seq_string = ''
-        dna_regex_translations = {
-            'A': 'A',
-            'T': 'T',
-            'C': 'C',
-            'G': 'G',
-            'N': '.',
-            'M': '[AC]',
-            'R': '[AG]',
-            'W': '[AT]',
-            'Y': '[CT]',
-            'S': '[CG]',
-            'K': '[GT]',
-            'H': '[^G]',
-            'B': '[^A]',
-            'V': '[^T]',
-            'D': '[^C]',
-        }
-        mod_seq_string = ''.join(dna_regex_translations[x] for x in recognition_sequence)
+        mod_seq_string = ''.join(self.dna_regex_translations[x] for x in recognition_sequence)
         regex = re.compile(mod_seq_string)
 
         return  len(regex.findall(str(sequence))) != 0
