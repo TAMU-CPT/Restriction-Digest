@@ -69,64 +69,97 @@ class Dnadigest():
         # This code "smells" really bad.
         rec_seq = re.compile(self.generate_regex_str(recognition))
 
+        # TODO: try and make this appx. the length of the cut site, we don't
+        # want to have a case where we match TWO times within the wrapped
+        # around section
+        wrap_around = 15
+
+        fragments = []
+        prev_index = 0
+
         if status == 'circular':
             # Add a little bit on the end where it'd "wrap"
-            match_list = rec_seq.search(sequence + sequence[0:100])
+            mod_sequence = sequence + sequence[0:wrap_around]
+            match_list = rec_seq.finditer(mod_sequence)
+            # Track where our first cut was made
+            first_cut = None
+            # Cleanup for some corner cases
+            remove_first_fragment = False
+            for match in match_list:
+                cut_location = match.start() + recog_nucl_index
+                # Again, track the first cut location
+                if first_cut is None:
+                    first_cut = cut_location
+
+                # If this is a "normal" cut, append the new fragment from the
+                # previous cut site to here
+                remove_first_fragment = True
+                if cut_location < len(sequence):
+                    fragments.append(mod_sequence[prev_index:cut_location])
+                    prev_index = cut_location
+                else:
+                    # This is not a normal cut, i.e. in the wrapped sequenc
+                    # This case is a bit complicated:
+                    # - need to add the correct fragment
+                    # - need to removeleading characters from the first fragment (and ensure it wasn't detected there too)
+                    if first_cut == cut_location - len(sequence):
+                        # First cut was in the same position as this, so we
+                        # delete first fragment and trim up to this cut
+                        # location here.
+                        fragments.append(mod_sequence[prev_index:cut_location])
+                        break
+                    else:
+                        # This cut was NOT caught by the first cut, so this
+                        # means that there's some serious overlap and we cannot
+                        # delete the first fragment.
+                        #
+                        # This is a REALLY unpleasant case.
+
+                        # Get the full first fragment by taking the first
+                        # fragment with the "latest" sequence, not including
+                        # the wrap around
+                        full_first_fragment = mod_sequence[prev_index:] + fragments[0]
+                        remapped_cut_location = cut_location - prev_index
+                        fragments.append(full_first_fragment[0:remapped_cut_location])
+                        fragments.append(full_first_fragment[remapped_cut_location:])
+
+            if remove_first_fragment and len(fragments) > 1:
+                del fragments[0]
+            # If we didn't go down the rabbit hole, then we need to append
+            # the last fragment
+            #if prev_index < len(sequence):
+                #fragments.append(sequence[prev_index:])
         else:
-            match_list = rec_seq.search(sequence)
+            match_list = rec_seq.finditer(sequence)
+            for match in match_list:
+                cut_location = match.start() + recog_nucl_index
+                fragments.append(sequence[prev_index:cut_location])
+                prev_index = cut_location
+            fragments.append(sequence[prev_index:])
 
-        print match_list
-
-
-        if len(rec_seq.findall(str(sequence)))== 0 and status == 'circular':
-            working_seq = sequence*2
-            if rec_seq.search(working_seq) is not None and len(rec_seq.findall(working_seq))<=1:
-                return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'END OF SEQUENCE','linear',rec_seq.search(working_seq).start()+recog_nucl_index
-            else:
-                return sequence,'END OF SEQUENCE','circular',''
-        if len(rec_seq.findall(str(sequence)))== 1 and status == 'circular':
-            working_seq = sequence*2
-            if rec_seq.search(working_seq) is not None:
-                return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index], working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'linear',rec_seq.search(working_seq).start()+recog_nucl_index
-            else:
-                return sequence,'END OF SEQUENCE','circular',''
-        if match_start is not None and (len(rec_seq.findall(str(sequence)))!=1 or status!='circular'):
-            return (
-                sequence[:rec_seq.search(sequence).start()+recog_nucl_index],
-                sequence[recog_nucl_index+rec_seq.search(sequence).start():],
-                'linear',
-                rec_seq.search(sequence).start()+recog_nucl_index
-                )
-        else:
-            return sequence,'END OF SEQUENCE','linear',''
+        # Instead of returning status, if len(fragments) > 1: status='linear'
+        return fragments
 
     def string_processor(self, old_fragment_list, recognition, recog_nucl_index, status):
         new_fragment_list = []
-        line_marker_list = []
-        line_marker_init = 0
+
+        did_cut = False
 
         for fragment in old_fragment_list:
             print "SP: fragment: " + fragment
             print "Cutting: %s %s %s" % (recognition, recog_nucl_index, status)
-            print self.string_cutter(fragment, recognition, recog_nucl_index, status)
-            seq1 = fragment
-            seq2 = ''
-            while seq2!='END OF SEQUENCE':
-                if seq1!=fragment and seq2!=seq1:
-                    new_fragment_list+=[seq1]
-                    line_marker_list+=[int(line_marker)+int(line_marker_init)]
-                    line_marker_init+=int(line_marker)
-                    seq1 = seq2
-                seq1,seq2,status,line_marker=self.string_cutter(seq1,recognition,recog_nucl_index,status)
-            if seq2 == 'END OF SEQUENCE':
-                new_fragment_list+=[seq1]
-        if len(new_fragment_list) in [1,2]  and len(old_fragment_list)==1:
-            seq1 = old_fragment_list[0]*2
-            store = old_fragment_list[0]
-            seq2 = ''
-            seq1,seq2,status,line_marker = self.string_cutter(seq1,recognition,recog_nucl_index,status)
-            single_cleavage_sequence = seq2+seq1[0:(len(store)-len(seq2))]
-        return new_fragment_list,status,line_marker_list
+            fragments = self.string_cutter(fragment, recognition, recog_nucl_index, status)
+            print fragments
+
+            if status == 'circular' and len(fragments) > 0:
+                status = 'linear'
+
+            if len(fragments) > 0:
+                did_cut = True
+
+            new_fragment_list += fragments
+
+        return new_fragment_list, status, did_cut
 
     #def traverse_circular_loop(sequence,recog_length,recog,recog_nucl_index,status):
         #rec_seq = re.compile(recognition)
@@ -184,14 +217,19 @@ class Dnadigest():
             fragment_list = [seq]
 
             for enzyme in enzyme_dict:
-                (fragment_list, status, line_marker_list) = self.string_processor(fragment_list,
-                                                                                  enzyme_dict[enzyme][0],
-                                                                                  enzyme_dict[enzyme][2],
-                                                                                  status)
+                (fragment_list, status, did_cut) = \
+                    self.string_processor(fragment_list,
+                                          enzyme_dict[enzyme][0],
+                                          enzyme_dict[enzyme][2],
+                                          status)
+
                 print "FL: ", fragment_list
                 print "Status: ", status
-                print "LML: ", line_marker_list
+                print "DC: ", did_cut
 
-                assoc_enzyme_list.append([cut_with[q] for mark in line_marker_list])
+        try:
+            del fragment_list[0]
+        except:
+            pass
 
-        return fragment_list,assoc_enzyme_list,line_marker_list,len(seq)
+        return fragment_list
