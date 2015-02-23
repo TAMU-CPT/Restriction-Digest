@@ -28,8 +28,6 @@ class Dnadigest():
                 )
             except:
                 # These enzymes will need to be corrected, possibly on wikipedia.
-                #print e
-                #print enzyme
                 pass
         return tmp_corrected
 
@@ -113,35 +111,39 @@ class Dnadigest():
         #return seq1, 'END OF SEQUENCE',status
 
 
+    def expand_multiple(self, base_str):
+        m = re.search('(?P<base>[A-Z])(?P<count>[0-9]+)', base_str)
+        try:
+            # Get position of first match
+            base = m.group('base')
+            count = int(m.group('count'))
+
+            # Create a fixed string with those bases replaced properly
+            replaced = base_str[0:m.start('base')] + \
+                base * count + \
+                base_str[m.end('count'):]
+            # Recurse to replace any more instances of [ACTG][0-9]+
+            return self.expand_multiple(replaced)
+        except AttributeError:
+            return base_str
+
     def __find_cut_site(self, enzyme_dict):
-        # This can probably be cut down/refactored
-        for list in range(2):
-            for element in range(2):
-                num_list = ['0','1','2','3','4','5','6','7','8','9']
-                num_string = '0'
-                new_seq = ''
-                for letter in enzyme_dict[list][element]:
-                    if letter in num_list:
-                        num_string+=letter
-                    else:
-                        if int(num_string)!=0:
-                            new_seq+=new_seq[-1]*(int(num_string)-1)+letter
-                            num_string = '0'
-                        else:
-                            new_seq+=letter
-                enzyme_dict[list][element]=new_seq
-            cut_pos = 0
-            for letter in enzyme_dict[list][1]:
-                if letter != ' ' and letter!= '-':
-                    cut_pos+=1
-                if letter == ' ':
-                    break
-            enzyme_dict[list][2]=cut_pos
-            return enzyme_dict[list]
+        for recogsite, datalist in enumerate(enzyme_dict):
+            for i, element in enumerate(enzyme_dict[recogsite]):
+                # Expand stuff like N6
+                enzyme_dict[recogsite][i] = \
+                    self.expand_multiple(element)
+        # TODO, check that data doesn't include any ------ACTG-, but it SHOULDN'T
+        enzyme_dict[recogsite][2] = enzyme_dict[recogsite][2].strip().count('-')
+        return enzyme_dict[recogsite]
 
 
     def process_data(self, seqs, enzyme_dict, cut_with):
         can_cleave_list = []
+        status = 'circular'
+        for enzyme in enzyme_dict:
+            enzyme_dict[enzyme] = self.__find_cut_site(enzyme_dict[enzyme])
+
         # For now, just write against plus strand, this is a minor issue that can
         # be corrected later: This program should function against BOTH strands
         # without asking user, as that's the biological reality. If only we could
@@ -150,13 +152,6 @@ class Dnadigest():
         #template = raw_input('Enter 1 for template strand,0 otherwise.')
         for seq in seqs:
             # Seems strange? Seems like it should be a global, set-once
-            # parameter based on the sequence, not something mutable
-            status = 'circular'
-            #if template ==1:
-                #seq = seq.reverse_complement()
-            for enzyme in enzyme_dict:
-                enzyme_dict[enzyme] = self.__find_cut_site(enzyme_dict[enzyme])
-
             for enzyme in enzyme_dict:
                 #enzyme_dict[enzyme] = ['AGATCT', '---A', 1]
                 if self.matcher(seq, enzyme_dict[enzyme][0][0]):
@@ -175,6 +170,3 @@ class Dnadigest():
             if '' in fragment_list:
                 fragment_list.remove('')
             return fragment_list,assoc_enzyme_list,line_marker_list,len(seq)
-
-
-

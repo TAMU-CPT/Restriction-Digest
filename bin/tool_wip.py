@@ -15,6 +15,7 @@ if __name__ == '__main__':
 
     seqs = [str(record.seq) for record in SeqIO.parse(args.file,'fasta')]
     dd = dnadigest.Dnadigest()
-    enzyme_dict = dd.get_dict('enzyme_data.yaml')
+    enzyme_dict = dd.get_dict(args.data)
+    print seqs
 
-    dd.process_data(seqs, enzyme_dict, cut_with=args.enzyme)
+    print dd.process_data(seqs, enzyme_dict, cut_with=args.enzyme)
