@@ -55,12 +55,6 @@ class Dnadigest():
 
         return tmp_corrected
 
-    def matcher(self, sequence, recognition_sequence):
-        mod_seq_string = ''.join([self.dna_regex_translations[x] for x in
-                                  recognition_sequence])
-        regex = re.compile(mod_seq_string)
-        return  len(regex.findall(sequence)) != 0
-
     def string_cutter(self, sequence, recognition, recog_nucl_index, status):
         # TODO: Refactor!!!!
         # This code "smells" really bad.
@@ -88,11 +82,15 @@ class Dnadigest():
         else:
             return sequence,'END OF SEQUENCE','linear',''
 
-    def string_processor(self, old_fragment_list,recognition,recog_nucl_index,status):
+    def string_processor(self, old_fragment_list, recognition, recog_nucl_index, status):
         new_fragment_list = []
         line_marker_list = []
         line_marker_init = 0
+
         for fragment in old_fragment_list:
+            print "SP: fragment: " + fragment
+            print "Cutting: %s %s %s" % (recognition, recog_nucl_index, status)
+            print self.string_cutter(fragment, recognition, recog_nucl_index, status)
             seq1 = fragment
             seq2 = ''
             while seq2!='END OF SEQUENCE':
@@ -165,13 +163,17 @@ class Dnadigest():
 
         assoc_enzyme_list = []
         for seq in seqs:
-            fragment_list = []
+            fragment_list = [seq]
 
             for enzyme in enzyme_dict:
                 (fragment_list, status, line_marker_list) = self.string_processor(fragment_list,
-                                                                                  enzyme_dict[enzyme][0][0],
-                                                                                  enzyme_dict[enzyme][0][2],
+                                                                                  enzyme_dict[enzyme][0],
+                                                                                  enzyme_dict[enzyme][2],
                                                                                   status)
+                print "FL: ", fragment_list
+                print "Status: ", status
+                print "LML: ", line_marker_list
+
                 assoc_enzyme_list.append([cut_with[q] for mark in line_marker_list])
 
         return fragment_list,assoc_enzyme_list,line_marker_list,len(seq)
