@@ -55,10 +55,17 @@ class Dnadigest():
 
         return tmp_corrected
 
+    def generate_regex_str(self, recognition_sequence):
+        return ''.join([self.dna_regex_translations[x] for x in recognition_sequence])
+
+    def matcher(self, sequence, recognition_sequence):
+        regex = re.compile(self.generate_regex_str(recognition_sequence))
+        return  len(regex.findall(sequence)) != 0
+
     def string_cutter(self, sequence, recognition, recog_nucl_index, status):
         # TODO: Refactor!!!!
         # This code "smells" really bad.
-        rec_seq = re.compile(recognition)
+        rec_seq = re.compile(self.generate_regex_str(recognition))
         match_start = rec_seq.search(str(sequence))
         if len(rec_seq.findall(str(sequence)))== 0 and status == 'circular':
             working_seq = sequence*2
