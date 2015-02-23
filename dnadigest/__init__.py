@@ -64,20 +64,23 @@ class Dnadigest():
         match_start = rec_seq.search(str(sequence))
         if len(rec_seq.findall(str(sequence)))== 0 and status == 'circular':
             working_seq = sequence*2
-            start = rec_seq.search(str(sequence))
             if rec_seq.search(working_seq) is not None and len(rec_seq.findall(working_seq))<=1:
                 return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'END OF SEQUENCE','linear',rec_seq.search(working_seq).start()+recog_nucl_index
             else:
                 return sequence,'END OF SEQUENCE','circular',''
         if len(rec_seq.findall(str(sequence)))== 1 and status == 'circular':
             working_seq = sequence*2
-            start = rec_seq.search(str(sequence))
             if rec_seq.search(working_seq) is not None:
                 return working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index], working_seq[rec_seq.search(working_seq).start()+recog_nucl_index:len(sequence)]+working_seq[0:rec_seq.search(working_seq).start()+recog_nucl_index],'linear',rec_seq.search(working_seq).start()+recog_nucl_index
             else:
                 return sequence,'END OF SEQUENCE','circular',''
         if match_start is not None and (len(rec_seq.findall(str(sequence)))!=1 or status!='circular'):
-            return sequence[:rec_seq.search(sequence).start()+recog_nucl_index],sequence[recog_nucl_index+rec_seq.search(sequence).start():],'linear',rec_seq.search(sequence).start()+recog_nucl_index
+            return (
+                sequence[:rec_seq.search(sequence).start()+recog_nucl_index],
+                sequence[recog_nucl_index+rec_seq.search(sequence).start():],
+                'linear',
+                rec_seq.search(sequence).start()+recog_nucl_index
+                )
         else:
             return sequence,'END OF SEQUENCE','linear',''
 
@@ -154,12 +157,11 @@ class Dnadigest():
             for enzyme in enzyme_dict:
                 enzyme_dict[enzyme] = self.__find_cut_site(enzyme_dict[enzyme])
 
-
             for enzyme in enzyme_dict:
+                #enzyme_dict[enzyme] = ['AGATCT', '---A', 1]
                 if self.matcher(seq, enzyme_dict[enzyme][0][0]):
                     can_cleave_list+= [self.matcher(seq, enzyme_dict[enzyme][0][0])]
 
-            print can_cleave_list
 
             # TODO: I think the indentation is wrong here
             fragment_list = [seq]
