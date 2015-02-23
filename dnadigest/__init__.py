@@ -56,11 +56,10 @@ class Dnadigest():
         return tmp_corrected
 
     def matcher(self, sequence, recognition_sequence):
-        mod_seq_string = ''
-        mod_seq_string = ''.join(self.dna_regex_translations[x] for x in recognition_sequence)
+        mod_seq_string = ''.join([self.dna_regex_translations[x] for x in
+                                  recognition_sequence])
         regex = re.compile(mod_seq_string)
-
-        return  len(regex.findall(str(sequence))) != 0
+        return  len(regex.findall(sequence)) != 0
 
     def string_cutter(self, sequence, recognition, recog_nucl_index, status):
         # TODO: Refactor!!!!
@@ -169,12 +168,13 @@ class Dnadigest():
             for enzyme in enzyme_dict:
                 #enzyme_dict[enzyme] = ['AGATCT', '---A', 1]
                 if self.matcher(seq, enzyme_dict[enzyme][0][0]):
-                    can_cleave_list+= [self.matcher(seq, enzyme_dict[enzyme][0][0])]
+                    can_cleave_list.append(enzyme)
 
+            # TODO, exit this part of the loop early if nothing matches? Or
+            # remove can_cleave_list completely.
             print can_cleave_list
 
 
-            # TODO: I think the indentation is wrong here
             fragment_list = [seq]
             recognition = [enzyme_dict[enzyme][0][0] for enzyme in cut_with]
             recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in cut_with]
