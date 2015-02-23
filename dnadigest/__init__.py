@@ -29,6 +29,12 @@ class Dnadigest():
             except:
                 # These enzymes will need to be corrected, possibly on wikipedia.
                 pass
+
+        # GLobal data which requires global processing MUST be done on load,
+        # not for each processing loop
+        for enzyme in tmp_corrected:
+            tmp_corrected[enzyme] = self.__find_cut_site(tmp_corrected[enzyme])
+
         return tmp_corrected
 
     def matcher(self, sequence, recognition_sequence):
@@ -133,29 +139,38 @@ class Dnadigest():
                 # Expand stuff like N6
                 enzyme_dict[recogsite][i] = \
                     self.expand_multiple(element)
-        # TODO, check that data doesn't include any ------ACTG-, but it SHOULDN'T
+        # TODO, check that data doesn't include any ------ACTG-, but it
+        # SHOULDN'T, and that there aren't spaces in it...
         enzyme_dict[recogsite][2] = enzyme_dict[recogsite][2].strip().count('-')
         return enzyme_dict[recogsite]
 
+    def enzyme_dict_filter(self, data, cut_list):
+        # TODO: need to include isoscizomers, but current data structure
+        # doesn't allow for that.
+        #
+        # For the time being, just remove all enzymes that the user didn't
+        # request
+        return {x: data[x] for x in data if x in cut_list}
 
     def process_data(self, seqs, enzyme_dict, cut_with):
         can_cleave_list = []
         status = 'circular'
-        for enzyme in enzyme_dict:
-            enzyme_dict[enzyme] = self.__find_cut_site(enzyme_dict[enzyme])
-
         # For now, just write against plus strand, this is a minor issue that can
         # be corrected later: This program should function against BOTH strands
         # without asking user, as that's the biological reality. If only we could
         # selectively cut against only one strand...
 
-        #template = raw_input('Enter 1 for template strand,0 otherwise.')
+        # Filter for requested enzymes so we aren't searching and processing
+        # HUGE amounts of data
+        enzyme_dict = self.enzyme_dict_filter(enzyme_dict, cut_with)
+
         for seq in seqs:
-            # Seems strange? Seems like it should be a global, set-once
             for enzyme in enzyme_dict:
                 #enzyme_dict[enzyme] = ['AGATCT', '---A', 1]
                 if self.matcher(seq, enzyme_dict[enzyme][0][0]):
                     can_cleave_list+= [self.matcher(seq, enzyme_dict[enzyme][0][0])]
+
+            print can_cleave_list
 
 
             # TODO: I think the indentation is wrong here
