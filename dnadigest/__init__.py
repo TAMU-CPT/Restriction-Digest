@@ -63,10 +63,19 @@ class Dnadigest():
         return  len(regex.findall(sequence)) != 0
 
     def string_cutter(self, sequence, recognition, recog_nucl_index, status):
+        """Attempt to cut a piece of DNA with a specific enzyme
+        """
         # TODO: Refactor!!!!
         # This code "smells" really bad.
         rec_seq = re.compile(self.generate_regex_str(recognition))
-        match_start = rec_seq.search(str(sequence))
+
+        if status == 'circular':
+            # Add a little bit on the end where it'd "wrap"
+            match_list = rec_seq.search(sequence + sequence[0:100])
+        else:
+            match_list = rec_seq.search(sequence)
+
+
         if len(rec_seq.findall(str(sequence)))== 0 and status == 'circular':
             working_seq = sequence*2
             if rec_seq.search(working_seq) is not None and len(rec_seq.findall(working_seq))<=1:
@@ -146,7 +155,7 @@ class Dnadigest():
                     self.expand_multiple(element)
         # TODO, check that data doesn't include any ------ACTG-, but it
         # SHOULDN'T, and that there aren't spaces in it...
-        enzyme_dict[recogsite][2] = enzyme_dict[recogsite][2].strip().count('-')
+        enzyme_dict[recogsite][2] = enzyme_dict[recogsite][1].strip().count('-')
         return enzyme_dict[recogsite]
 
     def enzyme_dict_filter(self, data, cut_list):
@@ -173,6 +182,7 @@ class Dnadigest():
             fragment_list = [seq]
 
             for enzyme in enzyme_dict:
+                import pprint; pprint.pprint(enzyme_dict[enzyme])
                 (fragment_list, status, line_marker_list) = self.string_processor(fragment_list,
                                                                                   enzyme_dict[enzyme][0],
                                                                                   enzyme_dict[enzyme][2],
