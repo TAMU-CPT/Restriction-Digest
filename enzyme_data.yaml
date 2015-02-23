@@ -5064,14 +5064,6 @@
   - 5' CAGCAG
   - 3' GTCGTC
 - cut:
-  - '5'' '
-  - ''
-  enzyme: EcoR124II
-  isoscizomers:
-  - ''
-  recognition_sequence:
-  - 5' 5'-GAAN7RTCG-3'
-- cut:
   - 5' ---G  AATTC--- 3'
   - 3' ---CTTAA  G--- 5'
   enzyme: EcoRI
