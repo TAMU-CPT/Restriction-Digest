@@ -75,6 +75,8 @@ class Dnadigest():
         else:
             match_list = rec_seq.search(sequence)
 
+        print match_list
+
 
         if len(rec_seq.findall(str(sequence)))== 0 and status == 'circular':
             working_seq = sequence*2
@@ -182,7 +184,6 @@ class Dnadigest():
             fragment_list = [seq]
 
             for enzyme in enzyme_dict:
-                import pprint; pprint.pprint(enzyme_dict[enzyme])
                 (fragment_list, status, line_marker_list) = self.string_processor(fragment_list,
                                                                                   enzyme_dict[enzyme][0],
                                                                                   enzyme_dict[enzyme][2],
