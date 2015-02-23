@@ -153,7 +153,6 @@ class Dnadigest():
         return {x: data[x] for x in data if x in cut_list}
 
     def process_data(self, seqs, enzyme_dict, cut_with):
-        can_cleave_list = []
         status = 'circular'
         # For now, just write against plus strand, this is a minor issue that can
         # be corrected later: This program should function against BOTH strands
@@ -164,25 +163,15 @@ class Dnadigest():
         # HUGE amounts of data
         enzyme_dict = self.enzyme_dict_filter(enzyme_dict, cut_with)
 
+        assoc_enzyme_list = []
         for seq in seqs:
+            fragment_list = []
+
             for enzyme in enzyme_dict:
-                #enzyme_dict[enzyme] = ['AGATCT', '---A', 1]
-                if self.matcher(seq, enzyme_dict[enzyme][0][0]):
-                    can_cleave_list.append(enzyme)
+                (fragment_list, status, line_marker_list) = self.string_processor(fragment_list,
+                                                                                  enzyme_dict[enzyme][0][0],
+                                                                                  enzyme_dict[enzyme][0][2],
+                                                                                  status)
+                assoc_enzyme_list.append([cut_with[q] for mark in line_marker_list])
 
-            # TODO, exit this part of the loop early if nothing matches? Or
-            # remove can_cleave_list completely.
-            print can_cleave_list
-
-
-            fragment_list = [seq]
-            recognition = [enzyme_dict[enzyme][0][0] for enzyme in cut_with]
-            recog_nucl_index = [enzyme_dict[enzyme][0][2] for enzyme in cut_with]
-            q = 0
-            for recognition_pair in zip(recognition,recog_nucl_index):
-                (fragment_list,status,line_marker_list) = self.string_processor(fragment_list,recognition_pair[0],recognition_pair[1],status)
-                assoc_enzyme_list = [cut_with[q] for mark in line_marker_list]
-                q+=1
-            if '' in fragment_list:
-                fragment_list.remove('')
-            return fragment_list,assoc_enzyme_list,line_marker_list,len(seq)
+        return fragment_list,assoc_enzyme_list,line_marker_list,len(seq)
