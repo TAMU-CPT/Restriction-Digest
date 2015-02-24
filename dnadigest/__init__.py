@@ -29,8 +29,8 @@ class Dnadigest():
 
         tmp_corrected = {}
         for enzyme in data_structure:
-            #'ZhoI': (['ATCGAT', '--AT  CGAT---', ''], ['TAGCTA', '---TAGC
-            # TA---', '']),
+            # 'ZhoI': (['ATCGAT', '--AT  CGAT---', ''], ['TAGCTA', '---TAGC
+            #  TA---', '']),
             try:
                 tmp_corrected[enzyme['enzyme']] = (
                     [
@@ -60,13 +60,11 @@ class Dnadigest():
 
     def matcher(self, sequence, recognition_sequence):
         regex = re.compile(self.generate_regex_str(recognition_sequence))
-        return  len(regex.findall(sequence)) != 0
+        return len(regex.findall(sequence)) != 0
 
     def string_cutter(self, sequence, recognition, recog_nucl_index, status):
         """Attempt to cut a piece of DNA with a specific enzyme
         """
-        # TODO: Refactor!!!!
-        # This code "smells" really bad.
         rec_seq = re.compile(self.generate_regex_str(recognition))
 
         # TODO: try and make this appx. the length of the cut site, we don't
@@ -87,9 +85,19 @@ class Dnadigest():
             remove_first_fragment = False
             for match in match_list:
                 cut_location = match.start() + recog_nucl_index
-                # Again, track the first cut location
                 if first_cut is None:
-                    first_cut = cut_location
+                    # If this is the first cut, in order to handle some nasty
+                    # corner cases more nicely, just recursively call ourselves
+                    # with the strand opened at the first cut site.
+                    if cut_location < len(sequence):
+                        reopened_sequence = sequence[cut_location:] + \
+                            sequence[0:cut_location]
+                    else:
+                        reopened_sequence = mod_sequence[cut_location:] + \
+                            mod_sequence[wrap_around:cut_location]
+
+                    return self.string_cutter(reopened_sequence, recognition,
+                                              recog_nucl_index, 'linear')
 
                 # If this is a "normal" cut, append the new fragment from the
                 # previous cut site to here
@@ -101,7 +109,8 @@ class Dnadigest():
                     # This is not a normal cut, i.e. in the wrapped sequenc
                     # This case is a bit complicated:
                     # - need to add the correct fragment
-                    # - need to removeleading characters from the first fragment (and ensure it wasn't detected there too)
+                    # - need to removeleading characters from the first
+                    #   fragment (and ensure it wasn't detected there too)
                     if first_cut == cut_location - len(sequence):
                         # First cut was in the same position as this, so we
                         # delete first fragment and trim up to this cut
@@ -125,10 +134,6 @@ class Dnadigest():
 
             if remove_first_fragment and len(fragments) > 1:
                 del fragments[0]
-            # If we didn't go down the rabbit hole, then we need to append
-            # the last fragment
-            #if prev_index < len(sequence):
-                #fragments.append(sequence[prev_index:])
         else:
             match_list = rec_seq.finditer(sequence)
             for match in match_list:
@@ -160,11 +165,6 @@ class Dnadigest():
             new_fragment_list += fragments
 
         return new_fragment_list, status, did_cut
-
-    #def traverse_circular_loop(sequence,recog_length,recog,recog_nucl_index,status):
-        #rec_seq = re.compile(recognition)
-        #return seq1, 'END OF SEQUENCE',status
-
 
     def expand_multiple(self, base_str):
         m = re.search('(?P<base>[A-Z])(?P<count>[0-9]+)', base_str)
@@ -212,7 +212,6 @@ class Dnadigest():
         # HUGE amounts of data
         enzyme_dict = self.enzyme_dict_filter(enzyme_dict, cut_with)
 
-        assoc_enzyme_list = []
         for seq in seqs:
             fragment_list = [seq]
 
