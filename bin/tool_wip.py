@@ -10,20 +10,26 @@ if __name__ == '__main__':
     # Input filename, required
     parser.add_argument('file', help='Input fasta genome(s)')
     # A single string with default value of 'enzyme_data.yaml'
-    parser.add_argument('--data', help='Enzyme cut site dataset', default='enzyme_data.yaml')
+    parser.add_argument('--data', help='Enzyme cut site dataset',
+                        default='enzyme_data.yaml')
     # A list of one or more strings, at the end
-    parser.add_argument('enzyme', metavar='E', type=str, nargs='+', help='Space separated list of enzymes')
+    parser.add_argument('enzyme', metavar='E', type=str, nargs='+',
+                        help='Space separated list of enzymes')
     args = parser.parse_args()
 
     dd = dnadigest.Dnadigest()
     enzyme_dict = dd.get_dict(args.data)
 
-    for record in SeqIO.parse(args.file,'fasta'):
-        fragments, status = dd.process_data(str(record.seq), enzyme_dict,
-                                    cut_with=args.enzyme)
+    template = '>%s_%s [orig=%s;status=%s;cut_with=%s]\n%s\n'
 
-        for i, fragment in enumerate(fragments):
+    for record in SeqIO.parse(args.file, 'fasta'):
+        processed_results = dd.process_data(str(record.seq), enzyme_dict,
+                                            cut_with=args.enzyme)
+
+        for i, fragment in enumerate(processed_results['fragment_list']):
             fragseq = Seq.Seq(fragment)
-            print '>%s_%s [%s;status=%s]\n%s\n' % (record.id, i,
-                                                   record.description, status,
-                                                   fragseq)
+            print template % (record.id, i,
+                              record.description,
+                              processed_results['status'],
+                              ','.join(processed_results['cut_with']),
+                              fragseq)

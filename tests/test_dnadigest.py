@@ -95,23 +95,23 @@ class TestDnaDigest(unittest.TestCase):
         enzyme_dict = dd.get_dict('bsp.yaml')
 
         # DseDI
-        digest_dsedi, status = dd.process_data(sequence, enzyme_dict,
-                                               ['DseDI'], status='circular')
-        self.assertEqual(digest_dsedi,
+        results = dd.process_data(sequence, enzyme_dict, ['DseDI'],
+                                  status='circular')
+        self.assertEqual(results['fragment_list'],
                          ['NNGTCoooGCnGCoooqqqCGnCGwwwwwwTCCGGAeeeeeAGGCCTrrrrrGACNNNN'])
 
         # Bsp13I
-        digest_acciii, status = dd.process_data(digest_dsedi[0], enzyme_dict,
-                                                ['AccIII'], status=status)
-        self.assertEqual(sorted(digest_acciii),
+        results = dd.process_data(results['fragment_list'][0], enzyme_dict,
+                                  ['AccIII'], status=results['status'])
+        self.assertEqual(sorted(results['fragment_list']),
                          sorted(['NNGTCoooGCnGCoooqqqCGnCGwwwwwwT',
                                  'CCGGAeeeeeAGGCC', 'TrrrrrGACNNNN']))
 
         complete_frags = []
-        for fragment in digest_acciii:
-            digested, status = dd.process_data(fragment, enzyme_dict,
-                                               ['Bsp6I'], status=status)
-            complete_frags += digested
+        for fragment in results['fragment_list']:
+            results2 = dd.process_data(fragment, enzyme_dict, ['Bsp6I'],
+                                       status=results['status'])
+            complete_frags += results2['fragment_list']
 
         self.assertEqual(
             sorted(complete_frags),

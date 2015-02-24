@@ -261,12 +261,19 @@ class Dnadigest():
 
         fragment_list = [seq]
 
+        cuts = []
         for enzyme in enzyme_dict:
-            #print 'Cutting ', fragment_list, 'with',  enzyme
             log.info('Cutting [%s] with %s' % (','.join(fragment_list), enzyme))
             (fragment_list, status, did_cut) = \
                 self.string_processor(fragment_list,
                                         enzyme_dict[enzyme]['recognition_sequence'],
                                         enzyme_dict[enzyme]['sense_cut_idx'],
                                         status)
-        return fragment_list, status
+            if did_cut:
+                cuts.append(enzyme)
+
+        return {
+            'fragment_list': fragment_list,
+            'cut_with': cuts,
+            'status': status,
+        }
