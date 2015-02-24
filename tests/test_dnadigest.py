@@ -22,23 +22,6 @@ class TestDnaDigest(unittest.TestCase):
         self.assertEqual(dd.string_cutter('qqqqqqACTGnnnnnn', 'ACTG', 2, 'linear'), ['qqqqqqAC', 'TGnnnnnn'])
         self.assertEqual(dd.string_cutter('qqqqqqACTGnnnnnn', 'ACTG', 1, 'linear'), ['qqqqqqA', 'CTGnnnnnn'])
 
-        # Only one cut
-        self.assertEqual(dd.string_cutter('ACTGnnnnnnqqqqqq', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('CTGnnnnnnqqqqqqA', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('GnnnnnnqqqqqqACT', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('TGnnnnnnqqqqqqAC', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('nnnnnnqqqqqqACTG', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('nnnnnqqqqqqACTGn', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('qqqqqqACTGnnnnnn', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC'])
-
-        self.assertEqual(dd.string_cutter('ACTGnnnnnnqqqqqqACTGnnnnnnqqqqqq', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC', 'TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('CTGnnnnnnqqqqqqACTGnnnnnnqqqqqqA', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC', 'TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('GnnnnnnqqqqqqACTGnnnnnnqqqqqqACT', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC', 'TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('TGnnnnnnqqqqqqACTGnnnnnnqqqqqqAC', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC', 'TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('nnnnnnqqqqqqACTGnnnnnnqqqqqqACTG', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC', 'TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('nnnnnqqqqqqACTGnnnnnnqqqqqqACTGn', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC', 'TGnnnnnnqqqqqqAC'])
-        self.assertEqual(dd.string_cutter('qqqqqqACTGnnnnnnqqqqqqACTGnnnnnn', 'ACTG', 2, 'circular'), ['TGnnnnnnqqqqqqAC', 'TGnnnnnnqqqqqqAC'])
-
         # Heavy duty testing :)
         cut_concatamer = ('n' * 10 + 'ACC', 'CCG' + 'q' * 10)
         # Join the two halves
@@ -50,4 +33,6 @@ class TestDnaDigest(unittest.TestCase):
                        range(len(concatamer))]
         for c in concatamers:
             self.assertEqual(dd.string_cutter(c, 'ANNNNG', 3, 'circular'),
+                             [cut_concatamer[1] + cut_concatamer[0] for x in range(5)])
+            self.assertEqual(dd.string_cutter(c, 'CNNNNT', 3, 'circular'),
                              [cut_concatamer[1] + cut_concatamer[0] for x in range(5)])

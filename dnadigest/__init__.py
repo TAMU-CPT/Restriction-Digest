@@ -17,11 +17,27 @@ class Dnadigest():
             'Y': '[CT]',
             'S': '[CG]',
             'K': '[GT]',
+
             'H': '[^G]',
             'B': '[^A]',
             'V': '[^T]',
             'D': '[^C]',
         }
+
+        # These provide translations between the ambiguity codes.
+        self.complement_regex = {
+            'A': 'T',
+            'C': 'G',
+            'N': 'N',
+            'H': 'D',
+            'B': 'V',
+            'M': 'K',
+            'R': 'Y',
+            'W': 'S',
+        }
+        # Less typing
+        for k in self.complement_regex.keys():
+            self.complement_regex[self.complement_regex[k]] = k
 
     def get_dict(self, data_file):
         with open(data_file) as handle:
@@ -29,30 +45,40 @@ class Dnadigest():
 
         tmp_corrected = {}
         for enzyme in data_structure:
-            # 'ZhoI': (['ATCGAT', '--AT  CGAT---', ''], ['TAGCTA', '---TAGC
-            #  TA---', '']),
-            try:
-                tmp_corrected[enzyme['enzyme']] = (
-                    [
-                        enzyme['recognition_sequence'][0].split()[1],
-                        enzyme['cut'][0].split()[1],
-                        ''
-                    ],
-                    [
-                        enzyme['recognition_sequence'][1].split()[1],
-                        enzyme['cut'][1].split()[1],
-                        ''
-                    ],
-                )
-            except:
-                # These enzymes will need to be corrected, possibly on wikipedia.
-                pass
+            # {
+            # 'enzyme': 'Bsp13I',
+            # 'cut': [
+            #   "5' ---T  CCGGA--- 3'",
+            #   "3' ---AGGCCT--- 5'"
+            # ],
+            # 'isoscizomers': ['AccIII', 'BbvAIII', 'BlfI', 'BsiMI', 'BspMII',
+            #                  'Bsu23I', 'Kpn2I', 'PinBII'],
+            # 'recognition_sequence': ["5' TCCGGA", "3' AGGCCT"]}
 
-        # GLobal data which requires global processing MUST be done on load,
-        # not for each processing loop
-        for enzyme in tmp_corrected:
-            tmp_corrected[enzyme] = self.__find_cut_site(tmp_corrected[enzyme])
+            if len(enzyme['cut'][0]) != len(enzyme['cut'][1]):
+                print "Cannot use %s; no support for non-matching cuts" % enzyme['enzyme']
+            elif len(enzyme['cut']) != 2:
+                print "Cannot use %s; too many cut sites" % enzyme['enzyme']
+            else:
+                # Ensure we're using the right one...
+                if enzyme['cut'][0][0] == '5':
+                    enzyme['sense_cut_idx'] = enzyme['cut'][0].strip('-').index(' ')
+                else:
+                    enzyme['sense_cut_idx'] = enzyme['cut'][1].strip('-').index(' ')
 
+                # Convert
+                # d['k'] = ["5' asdfasdf", "3' asdfasdf"]
+                # to
+                # d['k'] = {"5": "asdfasdf", "3": "asdfasdf" }
+                enzyme['recognition_sequence'] = {
+                    x[0]: x[3:] for x in enzyme['recognition_sequence']
+                }
+                enzyme['cut'] = {
+                    x[0]: x[3:-3] for x in enzyme['cut']
+                }
+
+                print enzyme
+                tmp_corrected[enzyme['enzyme']] = enzyme
         return tmp_corrected
 
     def generate_regex_str(self, recognition_sequence):
@@ -66,6 +92,7 @@ class Dnadigest():
         """Attempt to cut a piece of DNA with a specific enzyme
         """
         rec_seq = re.compile(self.generate_regex_str(recognition))
+        rec_seq_r = re.compile(self.generate_regex_str(recognition))
 
         # TODO: try and make this appx. the length of the cut site, we don't
         # want to have a case where we match TWO times within the wrapped
@@ -182,24 +209,22 @@ class Dnadigest():
         except AttributeError:
             return base_str
 
-    def __find_cut_site(self, enzyme_dict):
-        for recogsite, datalist in enumerate(enzyme_dict):
-            for i, element in enumerate(enzyme_dict[recogsite]):
-                # Expand stuff like N6
-                enzyme_dict[recogsite][i] = \
-                    self.expand_multiple(element)
-        # TODO, check that data doesn't include any ------ACTG-, but it
-        # SHOULDN'T, and that there aren't spaces in it...
-        enzyme_dict[recogsite][2] = enzyme_dict[recogsite][1].strip().count('-')
-        return enzyme_dict[recogsite]
-
     def enzyme_dict_filter(self, data, cut_list):
         # TODO: need to include isoscizomers, but current data structure
         # doesn't allow for that.
         #
         # For the time being, just remove all enzymes that the user didn't
         # request
-        return {x: data[x] for x in data if x in cut_list}
+        good = {}
+        for enzyme in data:
+            if enzyme in cut_list:
+                good[enzyme] = data[enzyme]
+            elif 'isoscizomers' in data[enzyme]:
+                for iso in data[enzyme]['isoscizomers']:
+                    if iso in cut_list:
+                        good[enzyme] = data[enzyme]
+                        continue
+        return good
 
     def process_data(self, seqs, enzyme_dict, cut_with):
         status = 'circular'
@@ -218,8 +243,8 @@ class Dnadigest():
             for enzyme in enzyme_dict:
                 (fragment_list, status, did_cut) = \
                     self.string_processor(fragment_list,
-                                          enzyme_dict[enzyme][0],
-                                          enzyme_dict[enzyme][2],
+                                          enzyme_dict[enzyme]['recognition_sequence']['5'],
+                                          enzyme_dict[enzyme]['sense_cut_idx'],
                                           status)
 
                 print "FL: ", fragment_list
