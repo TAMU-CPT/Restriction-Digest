@@ -1,6 +1,8 @@
-from Bio import SeqIO
+#!/usr/bin/env python
+from Bio import SeqIO, Seq
 import argparse
 import dnadigest
+
 
 if __name__ == '__main__':
 
@@ -13,9 +15,15 @@ if __name__ == '__main__':
     parser.add_argument('enzyme', metavar='E', type=str, nargs='+', help='Space separated list of enzymes')
     args = parser.parse_args()
 
-    seqs = [str(record.seq) for record in SeqIO.parse(args.file,'fasta')]
     dd = dnadigest.Dnadigest()
     enzyme_dict = dd.get_dict(args.data)
-    print seqs
 
-    print dd.process_data(seqs, enzyme_dict, cut_with=args.enzyme)
+    for record in SeqIO.parse(args.file,'fasta'):
+        fragments, status = dd.process_data(str(record.seq), enzyme_dict,
+                                    cut_with=args.enzyme)
+
+        for i, fragment in enumerate(fragments):
+            fragseq = Seq.Seq(fragment)
+            print '>%s_%s [%s;status=%s]\n%s\n' % (record.id, i,
+                                                   record.description, status,
+                                                   fragseq)

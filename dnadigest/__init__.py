@@ -1,6 +1,8 @@
 import re
 import yaml
-import itertools
+import logging
+logging.basicConfig()
+log = logging.getLogger()
 
 
 class Dnadigest():
@@ -47,15 +49,10 @@ class Dnadigest():
         tmp_corrected = {}
         for enzyme in data_structure:
             if len(enzyme['cut'][0]) != len(enzyme['cut'][1]):
-                print "Cannot use %s; no support for non-matching cuts" % enzyme['enzyme']
+                log.warning("Cannot use %s; no support for non-matching cuts" % enzyme['enzyme'])
             elif len(enzyme['cut']) != 2:
-                print "Cannot use %s; too many cut sites" % enzyme['enzyme']
+                log.warning("Cannot use %s; too many cut sites" % enzyme['enzyme'])
             else:
-                # Ensure we're using the right one...
-                if enzyme['cut'][0][0] == '5':
-                    enzyme['sense_cut_idx'] = enzyme['cut'][0].strip('-').index(' ')
-                else:
-                    enzyme['sense_cut_idx'] = enzyme['cut'][1].strip('-').index(' ')
 
                 # Convert
                 # d['k'] = ["5' asdfasdf", "3' asdfasdf"]
@@ -67,30 +64,38 @@ class Dnadigest():
                 enzyme['cut'] = {
                     x[0]: x[3:-3] for x in enzyme['cut']
                 }
+                enzyme['sense_cut_idx'] = self.determine_cut_index(enzyme)
 
-                print enzyme
+
                 tmp_corrected[enzyme['enzyme']] = enzyme
         return tmp_corrected
 
+    @classmethod
+    def determine_cut_index(cls, enzyme):
+        return enzyme['cut']['5'].strip('-').index(' ')
+
     def generate_regex_str(self, recognition_sequence):
-        return ''.join([self.dna_regex_translations[x] for x in recognition_sequence])
+        return ''.join([self.dna_regex_translations[x] for x in
+                        recognition_sequence])
 
     def matcher(self, sequence, recognition_sequence):
         regex = re.compile(self.generate_regex_str(recognition_sequence))
         return len(regex.findall(sequence)) != 0
 
-    # http://stackoverflow.com/a/243902
-    def __merged_iter(cls, a, b):
-        for i in a:
-            yield i
-        for i in b:
-            yield i
+    def __merged_iter(cls, *args):
+        """Treat multiple iterators as a single iterator
+        """
+        for arg in args:
+            for x in arg:
+                yield x
 
     def string_cutter(self, sequence, recognition_fr, recog_nucl_index, status):
-        """Attempt to cut a piece of DNA with a specific enzyme
+        """Cut a sequence with a 5'+3' cut recognition site
         """
-        rec_seq_f = re.compile(self.generate_regex_str(recognition_fr['5']))
-        rec_seq_r = re.compile(self.generate_regex_str(recognition_fr['3']))
+        rec_f_exp = self.expand_multiple(recognition_fr['5'])
+        rec_r_exp = self.expand_multiple(recognition_fr['3'])
+        rec_seq_f = re.compile(self.generate_regex_str(rec_f_exp))
+        rec_seq_r = re.compile(self.generate_regex_str(rec_r_exp))
 
         # TODO: try and make this appx. the length of the cut site, we don't
         # want to have a case where we match TWO times within the wrapped
@@ -112,7 +117,8 @@ class Dnadigest():
             # Cleanup for some corner cases
             remove_first_fragment = False
             for match in match_list:
-                cut_location = match.start() + recog_nucl_index
+                adjusted_recog = self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp, match.group(0))
+                cut_location = match.start() + adjusted_recog
                 if first_cut is None:
                     # If this is the first cut, in order to handle some nasty
                     # corner cases more nicely, just recursively call ourselves
@@ -125,7 +131,7 @@ class Dnadigest():
                             mod_sequence[wrap_around:cut_location]
 
                     return self.string_cutter(reopened_sequence, recognition_fr,
-                                              recog_nucl_index, 'linear')
+                                              adjusted_recog, 'linear')
 
                 # If this is a "normal" cut, append the new fragment from the
                 # previous cut site to here
@@ -168,7 +174,8 @@ class Dnadigest():
                 rec_seq_r.finditer(sequence)
             )
             for match in match_list:
-                cut_location = match.start() + recog_nucl_index
+                adjusted_recog = self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp, match.group(0))
+                cut_location = match.start() + adjusted_recog
                 fragments.append(sequence[prev_index:cut_location])
                 prev_index = cut_location
             fragments.append(sequence[prev_index:])
@@ -176,16 +183,24 @@ class Dnadigest():
         # Instead of returning status, if len(fragments) > 1: status='linear'
         return fragments
 
+    def __adjust_recog_for_strand(self, recog_nucl_index, plus_reference, matchstr):
+        #log.debug("RNI: %s, PR: %s, M: %s" % (recog_nucl_index, plus_reference, matchstr))
+        # If the matched group is the plus sense strand, then cut site is FINE
+        plus_ref_re = re.compile(self.generate_regex_str(plus_reference))
+        #log.debug('%s %s %s' % (plus_reference, plus_ref_re.match(matchstr), matchstr))
+        if plus_ref_re.match(matchstr):
+            return recog_nucl_index
+        else:
+            # Otherwise, invert it against length of matchstr
+            return len(matchstr) - recog_nucl_index
+
     def string_processor(self, fragment_list, recognition_fr, recog_nucl_index, status):
         new_fragment_list = []
-
         did_cut = False
-
+        log.debug("SP: FL: %s, RF: %s, RNI: %s, ST: %s" % (fragment_list, recognition_fr, recog_nucl_index, status))
         for fragment in fragment_list:
-            print "SP: fragment: " + fragment
-            print "Cutting: %s %s %s" % (recognition_fr, recog_nucl_index, status)
             fragments = self.string_cutter(fragment, recognition_fr, recog_nucl_index, status)
-            print fragments
+            log.info("Fragments: [%s]" % ','.join(fragments))
 
             if status == 'circular' and len(fragments) > 0:
                 status = 'linear'
@@ -195,7 +210,11 @@ class Dnadigest():
 
             new_fragment_list += fragments
 
-        return new_fragment_list, status, did_cut
+        # Ensure we return a complete fragment list and not empty
+        if len(new_fragment_list) == 0:
+            return fragment_list, status, False
+        else:
+            return new_fragment_list, status, did_cut
 
     def expand_multiple(self, base_str):
         m = re.search('(?P<base>[A-Z])(?P<count>[0-9]+)', base_str)
@@ -230,8 +249,7 @@ class Dnadigest():
                         continue
         return good
 
-    def process_data(self, seqs, enzyme_dict, cut_with):
-        status = 'circular'
+    def process_data(self, seq, enzyme_dict, cut_with, status='circular'):
         # For now, just write against plus strand, this is a minor issue that can
         # be corrected later: This program should function against BOTH strands
         # without asking user, as that's the biological reality. If only we could
@@ -241,23 +259,14 @@ class Dnadigest():
         # HUGE amounts of data
         enzyme_dict = self.enzyme_dict_filter(enzyme_dict, cut_with)
 
-        for seq in seqs:
-            fragment_list = [seq]
+        fragment_list = [seq]
 
-            for enzyme in enzyme_dict:
-                (fragment_list, status, did_cut) = \
-                    self.string_processor(fragment_list,
-                                          enzyme_dict[enzyme]['recognition_sequence'],
-                                          enzyme_dict[enzyme]['sense_cut_idx'],
-                                          status)
-
-                print "FL: ", fragment_list
-                print "Status: ", status
-                print "DC: ", did_cut
-
-        try:
-            del fragment_list[0]
-        except:
-            pass
-
-        return fragment_list
+        for enzyme in enzyme_dict:
+            #print 'Cutting ', fragment_list, 'with',  enzyme
+            log.info('Cutting [%s] with %s' % (','.join(fragment_list), enzyme))
+            (fragment_list, status, did_cut) = \
+                self.string_processor(fragment_list,
+                                        enzyme_dict[enzyme]['recognition_sequence'],
+                                        enzyme_dict[enzyme]['sense_cut_idx'],
+                                        status)
+        return fragment_list, status

@@ -23,10 +23,12 @@ class TestDnaDigest(unittest.TestCase):
             '5': 'ACTG',
             '3': 'TGAC',
         }
-        self.assertEqual(dd.string_cutter('qqqqqqACTGnnnnnn', cut_site, 2, 'linear'),
-                         ['qqqqqqAC', 'TGnnnnnn'])
-        self.assertEqual(dd.string_cutter('qqqqqqACTGnnnnnn', cut_site, 1, 'linear'),
-                         ['qqqqqqA', 'CTGnnnnnn'])
+        self.assertEqual(
+            dd.string_cutter('qqqqqqACTGnnnnnn', cut_site, 2, 'linear'),
+            ['qqqqqqAC', 'TGnnnnnn'])
+        self.assertEqual(
+            dd.string_cutter('qqqqqqACTGnnnnnn', cut_site, 1, 'linear'),
+            ['qqqqqqA', 'CTGnnnnnn'])
 
         # Heavy duty testing :)
         cut_concatamers = (
@@ -49,4 +51,69 @@ class TestDnaDigest(unittest.TestCase):
             }
             for c in concatamers:
                 self.assertEqual(dd.string_cutter(c, cut_site, 3, 'circular'),
-                                [cut_concatamer[1] + cut_concatamer[0] for x in range(5)])
+                                [cut_concatamer[1] + cut_concatamer[0] for x in
+                                 range(5)])
+
+        cut_site = {
+            '5': 'GACN6GTC',
+            '3': 'CTGN6CAG',
+        }
+        sequence = 'qqqCGnCGwwwwwwTCCGGAeeeeeAGGCCTrrrrrGACNNNNNNGTCoooooo'
+        self.assertEqual(
+            dd.string_cutter(sequence, cut_site, 7, 'circular'),
+            ['NNGTCooooooqqqCGnCGwwwwwwTCCGGAeeeeeAGGCCTrrrrrGACNNNN'])
+
+        cut_site = {
+            '5': 'TCCGGA',
+            '3': 'AGGCCT',
+        }
+        sequence = 'NNGTCooooooqqqCGnCGwwwwwwTCCGGAeeeeeAGGCCTrrrrrGACNNNN'
+        self.assertEqual(
+            sorted(dd.string_cutter(sequence, cut_site, 1, 'linear')),
+            sorted(['NNGTCooooooqqqCGnCGwwwwwwT', 'CCGGAeeeeeAGGCC',
+                    'TrrrrrGACNNNN']))
+
+        cut_site = {
+            '5': 'GCNGC',
+            '3': 'CGNCG',
+        }
+        sequence = 'NNGTCoooGCnGCoooqqqCGnCGwwwwwwT'
+        self.assertEqual(
+            sorted(dd.string_cutter(sequence, cut_site, 2, 'linear')),
+            sorted(['NNGTCoooGC', 'nGCoooqqqCGn', 'CGwwwwwwT']))
+
+    def test_determine_cut_index(self):
+        dd = dnadigest.Dnadigest()
+        enzyme = {'cut': {
+            '5': '---GACNNNN  NNGTC---',
+            '3': '---CTGNN  NNNNCAG---'}}
+        self.assertEqual(dd.determine_cut_index(enzyme), 7)
+
+    def test_process_data(self):
+        dd = dnadigest.Dnadigest()
+        sequence = 'qqqCGnCGwwwwwwTCCGGAeeeeeAGGCCTrrrrrGACNNNNNNGTCoooGCnGCooo'
+        enzyme_dict = dd.get_dict('bsp.yaml')
+
+        # DseDI
+        digest_dsedi, status = dd.process_data(sequence, enzyme_dict,
+                                               ['DseDI'], status='circular')
+        self.assertEqual(digest_dsedi,
+                         ['NNGTCoooGCnGCoooqqqCGnCGwwwwwwTCCGGAeeeeeAGGCCTrrrrrGACNNNN'])
+
+        # Bsp13I
+        digest_acciii, status = dd.process_data(digest_dsedi[0], enzyme_dict,
+                                                ['AccIII'], status=status)
+        self.assertEqual(sorted(digest_acciii),
+                         sorted(['NNGTCoooGCnGCoooqqqCGnCGwwwwwwT',
+                                 'CCGGAeeeeeAGGCC', 'TrrrrrGACNNNN']))
+
+        complete_frags = []
+        for fragment in digest_acciii:
+            digested, status = dd.process_data(fragment, enzyme_dict,
+                                               ['Bsp6I'], status=status)
+            complete_frags += digested
+
+        self.assertEqual(
+            sorted(complete_frags),
+            sorted(['NNGTCoooGC', 'nGCoooqqqCGn', 'CGwwwwwwT',
+                    'CCGGAeeeeeAGGCC', 'TrrrrrGACNNNN']))
