@@ -19,20 +19,34 @@ class TestDnaDigest(unittest.TestCase):
 
     def test_string_cutter(self):
         dd = dnadigest.Dnadigest()
-        self.assertEqual(dd.string_cutter('qqqqqqACTGnnnnnn', 'ACTG', 2, 'linear'), ['qqqqqqAC', 'TGnnnnnn'])
-        self.assertEqual(dd.string_cutter('qqqqqqACTGnnnnnn', 'ACTG', 1, 'linear'), ['qqqqqqA', 'CTGnnnnnn'])
+        cut_site = {
+            '5': 'ACTG',
+            '3': 'TGAC',
+        }
+        self.assertEqual(dd.string_cutter('qqqqqqACTGnnnnnn', cut_site, 2, 'linear'),
+                         ['qqqqqqAC', 'TGnnnnnn'])
+        self.assertEqual(dd.string_cutter('qqqqqqACTGnnnnnn', cut_site, 1, 'linear'),
+                         ['qqqqqqA', 'CTGnnnnnn'])
 
         # Heavy duty testing :)
-        cut_concatamer = ('n' * 10 + 'ACC', 'CCG' + 'q' * 10)
-        # Join the two halves
-        concatamer = ''.join(cut_concatamer)
-        # A bunch of copies
-        full_concatamer = concatamer * 5
-        # Generate a set, chopping at each location in the original concatamer
-        concatamers = [full_concatamer[x:] + full_concatamer[0:x] for x in
-                       range(len(concatamer))]
-        for c in concatamers:
-            self.assertEqual(dd.string_cutter(c, 'ANNNNG', 3, 'circular'),
-                             [cut_concatamer[1] + cut_concatamer[0] for x in range(5)])
-            self.assertEqual(dd.string_cutter(c, 'CNNNNT', 3, 'circular'),
-                             [cut_concatamer[1] + cut_concatamer[0] for x in range(5)])
+        cut_concatamers = (
+            # + sense cut
+            ('n' * 10 + 'ACC', 'CCG' + 'q' * 10),
+            # - sense cut
+            ('n' * 10 + 'CCC', 'CCT' + 'q' * 10)
+        )
+        for cut_concatamer in cut_concatamers:
+            # Join the two halves
+            concatamer = ''.join(cut_concatamer)
+            # A bunch of copies
+            full_concatamer = concatamer * 5
+            # Generate a set, chopping at each location in the original concatamer
+            concatamers = [full_concatamer[x:] + full_concatamer[0:x] for x in
+                        range(len(concatamer))]
+            cut_site = {
+                '5': 'ANNNNG',
+                '3': 'CNNNNT',
+            }
+            for c in concatamers:
+                self.assertEqual(dd.string_cutter(c, cut_site, 3, 'circular'),
+                                [cut_concatamer[1] + cut_concatamer[0] for x in range(5)])
