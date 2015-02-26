@@ -1,5 +1,5 @@
-<tool id="digest_dna.py" name="digest_dna.py" version="1.0">
-  <description>Restriction Digest Tool</description>
+<tool id="edu.tamu.cpt.fasta.digest" name="Virtual DNA Digest" version="1.1">
+  <description>with a large selection of enzymes</description>
   <stdio>
     <exit_code level="fatal" range="1:"/>
   </stdio>
@@ -7,9 +7,8 @@
   <command interpreter="python"><![CDATA[
 digest_dna.py
 $positional_1
---data enzyme_data.yaml
+--data /home/galaxy/galaxy/tools/cpt/Restriction-Digest-Tool/enzyme_data.yaml
 $positional_2
-
 > $default]]></command>
   <inputs>
     <param label="Input fasta genome(s)" name="positional_1" type="data" format="fasta"/>
@@ -301,7 +300,7 @@ $positional_2
       </param>
   </inputs>
   <outputs>
-      <data format="fasta" hidden="false" name="default" label="$positional_1.name digested with "/>
+      <data format="fasta" hidden="false" name="default" label="$positional_1.name digested with $positional_2"/>
   </outputs>
   <help><![CDATA[
 **What it does**
