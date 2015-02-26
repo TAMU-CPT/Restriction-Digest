@@ -1119,11 +1119,7 @@ PceI:
 PctI:
   cut: [5' ---GAATGCN  --- 3', 3' ---CTTAC  GN--- 5']
   enzyme: PctI
-  isoscizomers: [Asp26HI, Asp27HI, 'Asp35HI
-
-
-
-      BmaHI', BsaMI, BscCI, Mva1269I, BsmI, Asp35HI, Asp36HI, Asp40HI, Asp50HI]
+  isoscizomers: [Asp26HI, Asp27HI, Asp35HI, BmaHI, BsaMI, BscCI, Mva1269I, BsmI, Asp35HI, Asp36HI, Asp40HI, Asp50HI]
   recognition_sequence: [5' GAATGC, 3' CTTACG]
 PdiI:
   cut: [5' ---GCC  GGC--- 3', 3' ---CGG  CCG--- 5']
@@ -1158,11 +1154,7 @@ PfoI:
 PinAI:
   cut: [5' ---A  CCGGT--- 3', 3' ---TGGCC  A--- 5']
   enzyme: PinAI
-  isoscizomers: [AgeI, AsiAI, AsiGI, 'BshTI
-
-
-
-      CsiAI', CspAI, BshTI, CsiAI]
+  isoscizomers: [AgeI, AsiAI, AsiGI, BshTI, CsiAI, CspAI, BshTI, CsiAI]
   recognition_sequence: [5' ACCGGT, 3' TGGCCA]
 PlaAII:
   cut: [5' ---GT  AC--- 3', 3' ---CA  TG--- 5']

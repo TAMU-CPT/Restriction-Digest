@@ -1,0 +1,342 @@
+<tool id="digest_dna.py" name="digest_dna.py" version="1.0">
+  <description>Restriction Digest Tool</description>
+  <stdio>
+    <exit_code level="fatal" range="1:"/>
+  </stdio>
+  <version_command>python digest_dna.py --version</version_command>
+  <command interpreter="python"><![CDATA[
+digest_dna.py
+$positional_1
+--data enzyme_data.yaml
+$positional_2
+
+> $default]]></command>
+  <inputs>
+    <param label="Input fasta genome(s)" name="positional_1" type="data" format="fasta"/>
+      <param label="Enzymes for digestion" name="positional_2" type="select" multiple="True">
+        <option value="Acc36I">Acc36I [BfuAI BspMI BveI]</option>
+        <option value="AceIII">AceIII</option>
+        <option value="AflIII">AflIII [Asp90I]</option>
+        <option value="AlfI">AlfI</option>
+        <option value="AloI">AloI</option>
+        <option value="AlwI">AlwI [AclWI BinI BspPI BsrWI BstH9I BthII Bth617I EacI]</option>
+        <option value="ApaBI">ApaBI [BstAPI]</option>
+        <option value="AscI">AscI [PalAI SgsI]</option>
+        <option value="BaeI">BaeI</option>
+        <option value="BalI">BalI [MlsI Mlu31I MluNI MscI Msp20I]</option>
+        <option value="BasI">BasI [AccB7I AcpII Asp10HII Esp1396I PflBI PflMI Van91I]</option>
+        <option value="BbeI">BbeI</option>
+        <option value="Bbi24I">Bbi24I [MluI]</option>
+        <option value="Bbr7I">Bbr7I</option>
+        <option value="BbrPI">BbrPI [AcvI BcoAI Eco72I PmaCI PmlI PspCI]</option>
+        <option value="BbuI">BbuI [PaeI PfaAIII RspLKI SpaHI SphI]</option>
+        <option value="Bbv12I">Bbv12I [Alw21I AspHI Bsh45I BsiHKAI HgiAI HpyF46II MspV281I]</option>
+        <option value="BbvAI">BbvAI [Asp700I MroXI PdmI XmnI]</option>
+        <option value="BbvCI">BbvCI [AbeI]</option>
+        <option value="BccI">BccI [HpyC1I]</option>
+        <option value="BceAI">BceAI</option>
+        <option value="BcefI">BcefI</option>
+        <option value="BcgI">BcgI</option>
+        <option value="BcnI">BcnI [AhaI AseII AsuC2I BpuMI CauII Eco1831I HgiS22I Kpn49kII NciI Mgl14481I]</option>
+        <option value="Bco27I">Bco27I [Pde137I HapII Hin2I HpaII BsiSI Bst40I BsuFI Sth134I MnoI MspI CboI]</option>
+        <option value="Bco5I">Bco5I [Bco116I BcoKI Eam1104I EarI Ksp632I BseZI Bst6I Bsu6I]</option>
+        <option value="BcuI">BcuI [AhII AclNI SpeI AhlI]</option>
+        <option value="BdiSI">BdiSI [BfmI BpcI BstSFI SfcI SfeI Srl56DI LlaBI]</option>
+        <option value="BetI">BetI [Bca77I BsaWI]</option>
+        <option value="BfaI">BfaI [RmaI FgoI FspBI MaeI MthZI XspI]</option>
+        <option value="Bfi89I">Bfi89I [EaeI EcoHK31I CfrI]</option>
+        <option value="BfiI">BfiI [BmrI]</option>
+        <option value="BflI">BflI [Bsc4I Bsc107I BseLI BsiYI BslI]</option>
+        <option value="BfrBI">BfrBI [Csp68KIII EcoT22I Mph1103I PinBI Ppu10I SepI SspD5II Zsp2I NsiI]</option>
+        <option value="BfuI">BfuI [BciVI]</option>
+        <option value="BglI">BglI [Tsp8EI]</option>
+        <option value="BglII">BglII [Pae2kI Pae18kI NcrI NspMACI]</option>
+        <option value="BloHI">BloHI [PsuI BstX2I BstYI MflI Tru201I XhoII DsaIII]</option>
+        <option value="Bme1390I">Bme1390I [ScrFI Msp67I MspR9I]</option>
+        <option value="Bme142I">Bme142I [AccB2I BfoI Bsp143II BstH2I HaeII LpnI]</option>
+        <option value="Bme1580I">Bme1580I [BseSI]</option>
+        <option value="Bme585I">Bme585I [FauI BstFZ438I SmuI]</option>
+        <option value="BmgBI">BmgBI [BtrI]</option>
+        <option value="BmtI">BmtI [AceII AsuNHI BspOI NheI LlaG2I PstNHI]</option>
+        <option value="BoxI">BoxI [PshAI BstPAI]</option>
+        <option value="BplI">BplI</option>
+        <option value="BpmI">BpmI</option>
+        <option value="BpoAI">BpoAI [AseI AsnI PshBI Sru4DI VspI]</option>
+        <option value="Bpu10I">Bpu10I [BpuDI]</option>
+        <option value="BpuAmI">BpuAmI [Ecl136II EcoICRI Eco53kI MxaI]</option>
+        <option value="BpuB5I">BpuB5I [Pfl23II PpuAI PspLI BsiWI BvuBI SplI SunI MaeK81I]</option>
+        <option value="BpuEI">BpuEI [Bce83I]</option>
+        <option value="BpuJI">BpuJI</option>
+        <option value="BpuSI">BpuSI</option>
+        <option value="BsaOI">BsaOI [Bsh1285I BsiEI BstMCI McrI]</option>
+        <option value="BsaXI">BsaXI [BsmCI BsmDI BsmXI]</option>
+        <option value="BscAI">BscAI [Bst19I]</option>
+        <option value="BseGI">BseGI [BstF5I]</option>
+        <option value="BseMII">BseMII</option>
+        <option value="BseRI">BseRI</option>
+        <option value="BseYI">BseYI</option>
+        <option value="BsgI">BsgI</option>
+        <option value="BsmAI">BsmAI [Alw26I BcoDI BscQII BsoMAI BstMAI]</option>
+        <option value="Bsp106I">Bsp106I [BbvAII Bci29I BciBI BcmI BspOVII BstNZ169I Rme21I BspDI BspJII BspXI BspZEI BdiI Bli41I Bli86I BliAI BliRI BanIII BavCI PgaI Bsa29I BscI BseCI BsiXI Bst28I Bsu15I BsuTUI SpmI Ssp27144I LcaI LplI ZhoI ClaI]</option>
+        <option value="Bsp119I">Bsp119I [AcpI Bim19I Bpu14I BspT104I Csp45I FspII NspV SspRFI BspLAII BimI PlaII PpaAI BsiCI BstBI SfuI Ssp1I SviI LspI MlaI CbiI Csp68KII Asp10HI AsuII]</option>
+        <option value="Bsp120I">Bsp120I [ApaI PpeI PspOMI]</option>
+        <option value="Bsp1286I">Bsp1286I [AocII BmyI BsoCI Bsp1286I BspLS2I NspII SduI MhlI]</option>
+        <option value="Bsp13I">Bsp13I [AccIII BbvAIII BlfI BsiMI BspMII Bsu23I Kpn2I PinBII BspEI PtaI BseAI MroI CauB3I Aor13HI]</option>
+        <option value="Bsp1407I">Bsp1407I [AauI BsmRI BsrGI BstAUI Ssp4800I SspBI AaaI]</option>
+        <option value="Bsp143II">Bsp143II [AccB2I BfoI Bme142I BstH2I HaeII LpnI]</option>
+        <option value="Bsp153AI">Bsp153AI [BspM39I BspO4I BavI BavAI BavBI Pae17kI PovII Pun14627II PvuII Pvu84II EclI NmeRI Uba153AI UbaM39I Cfr6I DmaI]</option>
+        <option value="Bsp1720I">Bsp1720I [BlpI Bpu1102I EspI CelII]</option>
+        <option value="Bsp1894I">Bsp1894I [AspS9I Bac36I BavBII BshKI BspBII CcuI MaeK81II Pde12I BspF4I Bal228I BavAII Bce22I PspPI BsiZI Bsu54I Sau96I NspIV Nsp7121I Cfr13I AsuI AvcI]</option>
+        <option value="Bsp19I">Bsp19I [NcoI]</option>
+        <option value="Bsp211I">Bsp211I [BspANI BspBRI BspKI BspRI BecAII Bim19II Bme361I BanAI PalI Pde133I PflKI PhoI PlaI EsaBC4I FnuDI HaeIII BseQI BshI BshFI BsuRI BteI SbvI SfaI SuaI MchAII MfoAI NgoPII NspLKI CltI DsaII]</option>
+        <option value="Bsp24I">Bsp24I</option>
+        <option value="Bsp423I">Bsp423I [AlwXI BbvI BseKI BseXI Bst12I Bst71I BstV1I]</option>
+        <option value="Bsp50I">Bsp50I [BceBI Bsh1236I BstFNI BstUI Bsu1532I FalII FnuDII MvnI ThaI Bsp123I BepI Bpu95I FauBII BtkI Csp68KVI CspKVI AccII]</option>
+        <option value="Bsp519I">Bsp519I [BpuI BanII PaeHI Eco24I Eco75KI EcoT38I FriOI HgiJII KoxII Bsu1854I BvuI SacNI]</option>
+        <option value="Bsp63I">Bsp63I [AjoI Asp713I BloHII MhaAI Pfl21I PstI SalPI SflI Sst12I YenI BspBI BspMAI PaePI Psp23I Ecl37kI Ecl2zI HalII BsuBI Srl5DI CflI CfrA4I CfuII CstI AliAJI ApiI]</option>
+        <option value="Bsp67I">Bsp67I [AspMDI Bsp143I BspJI BtkII DpnII LlaAI NlaII SsiBI Bsp105I Bsp2095I BspAI BspFI Bfi57I BfuCI Bme12I Bce243I RalF40I FnuCI FnuEI HacI Kzo9I BscFI Bst19II BstENII BstMBI Sau3AI SauMI SsiAI Sth368I MboI MgoI MkrAI NdeII NmeCI NphI CacI CcyI CpfI CviAI]</option>
+        <option value="Bsp68I">Bsp68I [NruI Sbo13I SpoI MluB2I]</option>
+        <option value="Bsp6I">Bsp6I [FbrI Fnu4HI Fsp4HI ItaI BsoFI SatI Uur960I]</option>
+        <option value="Bsp98I">Bsp98I [AccEBI AliI BamHI BnaI BstI CelI OkrAI NspSAIV Pfl8I SurI Bsp4009I BspAAIII Bce751I RspLKII GstI SolI Mlu23I Nsp29132II Uba4009I ApaCI AsiI]</option>
+        <option value="BspA2I">BspA2I [AspA2I AvrII AvrBII BlnI XmaJI]</option>
+        <option value="BspAAI">BspAAI [AbrI BluI BstVI PanI SauLPII SciI SlaI StrI TliI BssHI PaeR7I BsuMI Sau3239I Sbi68I Sfr274I Sol10179I MavI MlaAI XhoI XpaI CcrI]</option>
+        <option value="BspAAII">BspAAII [XbaI]</option>
+        <option value="BspBS31I">BspBS31I [BspIS4I BspTS514I BpiI BpuAI BbsI BbvII Bbv16II Bsc91I BstBS32I BstTS5I BstV2I]</option>
+        <option value="BspCI">BspCI [Afa16RI Afa22MI EagBI ErhB9I NblI Psu161I RshI XorII Ple19I PvuI MvrI]</option>
+        <option value="BspCNI">BspCNI</option>
+        <option value="BspD6I">BspD6I</option>
+        <option value="BspHI">BspHI [PagI RcaI RspXI]</option>
+        <option value="BspKT5I">BspKT5I [Eco57I AcuI]</option>
+        <option value="BspKT6I">BspKT6I [BfuCI Bsp2095I Bst19II BstKTI DpnII LlaAI NmeCI SsiAI]</option>
+        <option value="BspKT8I">BspKT8I [BspLAIII BbrI EcoVIII HindIII HsuI BstFI SsbI LlaCI]</option>
+        <option value="BspLAI">BspLAI [AspLEI BstHHI CfoI FnuDIII HhaI Hin6I HinP1I HsoI HspAI SciNI]</option>
+        <option value="BspLI">BspLI [AspNI BscBI BmiI NlaIV PspN4I]</option>
+        <option value="BspLU11I">BspLU11I [PciI]</option>
+        <option value="BspLU11III">BspLU11III [FaqI BslFI BsmFI BstOZ616I]</option>
+        <option value="BspLU4I">BspLU4I [Ama87I AvaI Bse15I BsoBI BstSI NspIII NspSAI OfoI BcoI PlaAI PunAI Eco88I Eco27kI BsiHKCI AquI]</option>
+        <option value="BspM90I">BspM90I [BssNAI Bst1107I BstBSI BstZ17I XcaI]</option>
+        <option value="BspMI">BspMI [Acc36I BfuAI BveI]</option>
+        <option value="BspMKI">BspMKI [RflFI RtrI Rtr63I HgiCIII HgiDII SalI NopI XciI]</option>
+        <option value="BspNI">BspNI [AglI BseBI Bse17I Bst2I CbrI CthII EcoRII MvaI SspAI TaqXI BptI BciBII Fsp1604I Bse16I Bse24I BshGI BsiLI Bst1I Bst38I Bst100I BstM6I BstNI BstOI Bst2UI BthDI BthEI SniI SslI Sth117I ZanI AeuI AglI[29] AorI ApaORI ApyI]</option>
+        <option value="BspOVI">BspOVI [AhdI AspEI BmeRI DriI Eam1105I EclHKI NruGI]</option>
+        <option value="BspPI">BspPI [AclWI AlwI BinI BsrWI BstH9I Bst31TI Bth617I EacI]</option>
+        <option value="BspR7I">BspR7I [AocI AxyI Bse21I Bsu36I Eco81I MstII SauI SshAI BliHKI OxaNI Lmu60I CvnI]</option>
+        <option value="BspST5I">BspST5I [PhaI SfaNI LweI]</option>
+        <option value="BspT107I">BspT107I [AccB1I BanI BbvBI Eco64I HgiCI HgiHI MspB4I PfaAI BshNI]</option>
+        <option value="BspTI">BspTI [AflII BfrI Esp4I Bst98I BstPZ740I MspCI Vha464I]</option>
+        <option value="BspTNI">BspTNI [Bli736I Eco31I EcoA4I EcoO44I BsaI Bso31I]</option>
+        <option value="BspWI">BspWI [Bce4I BceCI HpyF10VI BstMWI MwoI]</option>
+        <option value="BspXII">BspXII [AbaI BclI BsiQI BstT7I FbaI Ksp22I ParI]</option>
+        <option value="BsrAI">BsrAI [BamNxI BcuAI Csp68KI Eco47I FssI HgiCII HgiJI SinI Bme18I Bme216I EagMI ErpI FdiI FspMSI HgiBI HgiEI HgiHIII Kzo49I BthAI SmuEI VpaK11BI CauI DsaIV AflI Asp745I AvaII]</option>
+        <option value="BsrBI">BsrBI [AccBSI BstD102I Bst31NI MbiI]</option>
+        <option value="BsrBRI">BsrBRI [BsaBI Bse8I BseJI Bsh1365I BsiBI MamI]</option>
+        <option value="BsrDI">BsrDI [Bse3DI BseMI]</option>
+        <option value="BsrFI">BsrFI [BssAI Bco118I Bse118I Bse634I BstB7SI Cfr10I]</option>
+        <option value="BsrI">BsrI [BsrSI Bse1I BseNI Bst11I Tsp1I]</option>
+        <option value="BssECI">BssECI [BsaJI BseDI SecI]</option>
+        <option value="BssHII">BssHII [PauI BsePI BstBZ153I]</option>
+        <option value="BssIMI">BssIMI [SimI]</option>
+        <option value="BssKI">BssKI [Ecl18kI Eco13kI Eco21kI Eco137kI Kpn2kI BstMZ611I BstSCI SsoII StyD4I DsaV]</option>
+        <option value="BssNI">BssNI [AcyI AhaII AosII AstWI AsuIII BsaHI HgiI Hsp92I Msp17I BbiII PamII HgiDI HgiGI HgiHII Hin1I BstACI]</option>
+        <option value="BssSI">BssSI [BauI BsiI Bst2BI]</option>
+        <option value="BssT1I">BssT1I [Eco130I EcoT14I ErhI ErhB9II BsmSI StyI CfrBI]</option>
+        <option value="BstAPI">BstAPI [ApaBI]</option>
+        <option value="BstC8I">BstC8I [Cac8I]</option>
+        <option value="BstDEI">BstDEI [BstJZ301I DdeI]</option>
+        <option value="BstDSI">BstDSI [BtgI TspBI DsaI]</option>
+        <option value="BstHZ55I">BstHZ55I [BstXI]</option>
+        <option value="BstIZ316I">BstIZ316I [AdeI DraIII]</option>
+        <option value="BstMAI">BstMAI [Alw26I BcoDI BscQII BsmAI BsoMAI]</option>
+        <option value="BstRZ246I">BstRZ246I [BstSWI SmiI SwaI MspSWI]</option>
+        <option value="BtgZI">BtgZI</option>
+        <option value="BthCI">BthCI</option>
+        <option value="BtsI">BtsI</option>
+        <option value="CaiI">CaiI [AlwNI]</option>
+        <option value="CdiI">CdiI</option>
+        <option value="CfuI">CfuI [DpnI]</option>
+        <option value="ChaI">ChaI [BfuCI Bsp2095I BspKT6I BtkII FnuCI MboI NmeCI SsiAI]</option>
+        <option value="CjeI">CjeI</option>
+        <option value="CjePI">CjePI</option>
+        <option value="Csp6I">Csp6I [AfaI CviQI CviRII HpyBI PabI PlaAII RsaI RsaNI ]</option>
+        <option value="CspCI">CspCI</option>
+        <option value="CstMI">CstMI</option>
+        <option value="CviAII">CviAII</option>
+        <option value="CviJI">CviJI [CviTI]</option>
+        <option value="DrdI">DrdI [AasI DseDI]</option>
+        <option value="EagI">EagI [AaaI BseX3I BstZI EclXI Eco52I SenPT16I XmaIII]</option>
+        <option value="EciI">EciI</option>
+        <option value="Eco105I">Eco105I [BstSNI SnaBI]</option>
+        <option value="Eco1831I">Eco1831I [AhaI AseII AsuC2I BcnI BpuMI CauII EcoHI HgiS22I Kpn49kII]</option>
+        <option value="Eco32I">Eco32I [EcoRV HjaI HpyCI NsiCI CeqI]</option>
+        <option value="Eco47III">Eco47III [AfeI AitI Aor51H FunI Aor51HI]</option>
+        <option value="Eco56I">Eco56I [SceIII SrlI MroNI NgoAIV NgoMIV]</option>
+        <option value="Eco57MI">Eco57MI</option>
+        <option value="Eco78I">Eco78I [EgeI EheI SfoI]</option>
+        <option value="EcoNI">EcoNI [BstENI XagI]</option>
+        <option value="EcoO109I">EcoO109I [DraII]</option>
+        <option value="EcoP15I">EcoP15I</option>
+        <option value="EsaBC3I">EsaBC3I</option>
+        <option value="Esp3I">Esp3I [BsmBI BstGZ53I]</option>
+        <option value="FalI">FalI</option>
+        <option value="FatI">FatI</option>
+        <option value="FblI">FblI [AccI XmiI]</option>
+        <option value="FmuI">FmuI [FmuI AvcI BavAII Bce22I Bsu54I NspIV Pde12I UnbI]</option>
+        <option value="FnuAI">FnuAI [HhaII HinfI SscL1I CviBI]</option>
+        <option value="FokI">FokI [BstPZ418I]</option>
+        <option value="FseI">FseI</option>
+        <option value="FsiI">FsiI [AcsI ApoI CfaI XapI]</option>
+        <option value="FspAI">FspAI</option>
+        <option value="GdiII">GdiII</option>
+        <option value="GsuI">GsuI</option>
+        <option value="HaeI">HaeI</option>
+        <option value="HaeIV">HaeIV</option>
+        <option value="HgaI">HgaI</option>
+        <option value="Hin1II">Hin1II [HpyCH4I Hsp92II NlaIII]</option>
+        <option value="Hin4I">Hin4I</option>
+        <option value="Hin6I">Hin6I [AspLEI BspLAI BstHHI CfoI FnuDIII HhaI HsoI HspAI SciNI HinP1I]</option>
+        <option value="HinJCI">HinJCI [HincII HindII]</option>
+        <option value="HpaI">HpaI [KspAI BstEZ359I BstHPI SsrI]</option>
+        <option value="HphI">HphI [AsuHPI SspD5I]</option>
+        <option value="Hpy178III">Hpy178III [Hpy188III]</option>
+        <option value="Hpy188I">Hpy188I</option>
+        <option value="Hpy51I">Hpy51I [NmuCI Tsp45I]</option>
+        <option value="Hpy8I">Hpy8I [HpyBII]</option>
+        <option value="Hpy99I">Hpy99I</option>
+        <option value="HpyAV">HpyAV</option>
+        <option value="HpyCH4III">HpyCH4III [Bst4CI TaaI Tsp4CI]</option>
+        <option value="HpyCH4IV">HpyCH4IV [MaeII]</option>
+        <option value="HpyCH4V">HpyCH4V [HpyF44III CviRI]</option>
+        <option value="KasI">KasI</option>
+        <option value="KpnI">KpnI [Acc65I AhaB8I Asp718I SthI]</option>
+        <option value="MaeIII">MaeIII</option>
+        <option value="MboII">MboII [NcuI]</option>
+        <option value="MchAI">MchAI [NotI CciNI CsiBI CspBI]</option>
+        <option value="MfeI">MfeI [MunI]</option>
+        <option value="MltI">MltI [AluBI AluI]</option>
+        <option value="MmeI">MmeI</option>
+        <option value="MnlI">MnlI</option>
+        <option value="MseI">MseI [Tru1I Tru9I]</option>
+        <option value="MspA1I">MspA1I [NspBII]</option>
+        <option value="Nli3877I">Nli3877I [Ama87I AvaI BcoI BsiHKCI Eco27kI Eco88I NspSAI OfoI]</option>
+        <option value="OliI">OliI [AleI]</option>
+        <option value="PabI">PabI [AfaI Csp6I CviQI HpyBI HpyBI PlaAII RsaI RsaNI ]</option>
+        <option value="Pac25I">Pac25I [AhyI Cfr9I EaeAI EclRI PspAI PspALI XcyI XmaI XmaCI TspMI = UthSI]</option>
+        <option value="PacI">PacI</option>
+        <option value="PaeAI">PaeAI [PaeQI Pae5kI Pae14kI Eae46I Eco29kI GalI GceI GceGLI Kpn378I KspI SacII SchZI SenPT14bI SexBI SexCI Sfr303I SgrBI SpuI SstII NgoAIII NgoPIII Cfr42I CscI]</option>
+        <option value="PaeBI">PaeBI [AhyI Cfr9I EaeAI EclRI PspALI SmaI TspMI XcyI XmaI XmaCI CfrJ4I]</option>
+        <option value="PamI">PamI [Acc16I AosI AviII FdiII FspI MstI NsbI Pun14627I]</option>
+        <option value="PasI">PasI</option>
+        <option value="PauAI">PauAI [PunAII BstNSI NspI NspHI XceI]</option>
+        <option value="PauAII">PauAII [AhaIII DraI SruI]</option>
+        <option value="PceI">PceI [AatI AspMI GdiI PceI Pme55I SarI Sru30DI SseBI SteI StuI Eco147I]</option>
+        <option value="PctI">PctI [Asp26HI Asp27HI Asp35HI BmaHI BsaMI BscCI Mva1269I BsmI Asp35HI Asp36HI Asp40HI Asp50HI]</option>
+        <option value="PdiI">PdiI [SauBMKI SauHPI SauLPI SauNI SauSI Slu1777I SspCI NaeI CcoI]</option>
+        <option value="PfaAII">PfaAII [FauNDI NdeI]</option>
+        <option value="PfeI">PfeI [TfiI]</option>
+        <option value="Pfl27I">Pfl27I [PpuMI PpuXI Psp5II PspPPI]</option>
+        <option value="PflFI">PflFI [AspI AtsI PsyI TelI Tth111I]</option>
+        <option value="PfoI">PfoI</option>
+        <option value="PinAI">PinAI [AgeI AsiAI AsiGI BshTI CsiAI CspAI BshTI CsiAI]</option>
+        <option value="PlaAII">PlaAII [AfaI Csp6I CviQI CviRII HpyBI PabI RsaI RsaNI ]</option>
+        <option value="PleI">PleI [PpsI]</option>
+        <option value="PmeI">PmeI [MssI]</option>
+        <option value="PpaAII">PpaAII [TaqI Tsp32I Tsp32II TthHB8I]</option>
+        <option value="PpeI">PpeI [ApaI Bsp120I PspOMI]</option>
+        <option value="PpiI">PpiI</option>
+        <option value="Ppu10I">Ppu10I [BfrBI Csp68KII EcoT22I Mph1103I NsiI SepI SspD5II]</option>
+        <option value="Ppu111I">Ppu111I [RsrI EcoRI FunII HalI Kpn49kI Srl32DII Srl55DI SsoI]</option>
+        <option value="PsiI">PsiI</option>
+        <option value="Psp03I">Psp03I [Bme216I CauI EagMI FdiI HgiBI HgiHIII SinI VpaK11AI]</option>
+        <option value="Psp124BI">Psp124BI [SacI SstI]</option>
+        <option value="Psp1406I">Psp1406I [AclI]</option>
+        <option value="Psp6I">Psp6I [AeuI AglI ApaORI Bse17I EcoRII Fsp1604I SspAI Sth117I PspGI SleI AjnI]</option>
+        <option value="PspEI">PspEI [AcrII AspAI BstEII BstPI Eci125I Eco91I EcoO65I EcoO128I EcaI Bse64I BseT9I BseT10I BsiKI BstT9I BstT10I NspSAII]</option>
+        <option value="PspXI">PspXI</option>
+        <option value="PsrI">PsrI</option>
+        <option value="PssI">PssI [Kaz48kI]</option>
+        <option value="PstNHI">PstNHI [AceII AsuNHI BmtI BspOI NheI LlaG2I]</option>
+        <option value="PsuAI">PsuAI [BsaAI BstBAI MspYI]</option>
+        <option value="RflFII">RflFII [Acc113I AssI BmcAI Bpa34I DpaI Eco255I ScaI ZrmI]</option>
+        <option value="RleAI">RleAI</option>
+        <option value="RsrII">RsrII [Rsr2I CpoI CspI]</option>
+        <option value="SanDI">SanDI [Sse1825I]</option>
+        <option value="SapI">SapI [VpaK32I]</option>
+        <option value="SbfI">SbfI [SdaI Sse8387I]</option>
+        <option value="SchI">SchI [MlyI]</option>
+        <option value="SciI">SciI [BspAAI BstVI MlaAI PaeR7I SauLPII SlaI Sol10179I XhoI]</option>
+        <option value="SdiI">SdiI [SfiI]</option>
+        <option value="SelI">SelI [AccII Bsh1236I Bsp123I Bsp50I BstFNI BstUI BtkI Csp68KVI]</option>
+        <option value="SexAI">SexAI [MabI]</option>
+        <option value="SgfI">SgfI [AsiSI RgaI SfaAI]</option>
+        <option value="SgrAI">SgrAI</option>
+        <option value="SmiMI">SmiMI [MslI]</option>
+        <option value="SmlI">SmlI</option>
+        <option value="SnoI">SnoI [Alw44I ApaLI VneI]</option>
+        <option value="SrfI">SrfI</option>
+        <option value="Sse232I">Sse232I</option>
+        <option value="Sse8647I">Sse8647I</option>
+        <option value="Sse9I">Sse9I [TasI Tsp509I TspEI]</option>
+        <option value="SseAI">SseAI [MchI Mly113I NarI NdaI NunII]</option>
+        <option value="SsiI">SsiI [AciI]</option>
+        <option value="Ssp5230I">Ssp5230I [AatII ZraI]</option>
+        <option value="SspD5I">SspD5I [AsuHPI HphI]</option>
+        <option value="SspI">SspI</option>
+        <option value="Sth132I">Sth132I</option>
+        <option value="SthI">SthI [Acc65I AhaB8I Asp718I KpnI ]</option>
+        <option value="StsI">StsI</option>
+        <option value="SuiI">SuiI [AceI ApeKI Taq52I TseI]</option>
+        <option value="TaiI">TaiI [TscI Tsp49I]</option>
+        <option value="Taq52I">Taq52I [AceI ApeKI SuiI TseI]</option>
+        <option value="TaqII">TaqII</option>
+        <option value="TatI">TatI</option>
+        <option value="TauI">TauI</option>
+        <option value="TspDTI">TspDTI</option>
+        <option value="TspGWI">TspGWI</option>
+        <option value="TspRI">TspRI</option>
+        <option value="Tth111II">Tth111II</option>
+        <option value="UnbI">UnbI [AvcI BavAII Bce22I Bsp1894I Bsu54I FmuI NspIV UnbI]</option>
+        <option value="VpaK11AI">VpaK11AI [Bme216I CauI EagMI FdiI HgiBI HgiHIII SinI VpaK11BI]</option>
+        <option value="XcmI">XcmI</option>
+        <option value="ZraI">ZraI [AatII Ssp5230I]</option>
+      </param>
+  </inputs>
+  <outputs>
+      <data format="fasta" hidden="false" name="default" label="$positional_1.name digested with "/>
+  </outputs>
+  <help><![CDATA[
+**What it does**
+
+Digest a DNA string with selected enzymes.
+
+
+For an input fasta file:
+
+::
+
+    >test
+    QQQQQQQQQAGGCCTAAAAAAAAAAAAGCCGCCCCCCCCCCCCGACNNNNNNGTCRRRRRRRRRR
+    >test2
+    QQQQQQQQQGAAAAAAAAAAAAACGCCCCCCCCCCCC
+
+This will be digested into appropriate fragments when cut with Bsp13I, Bsp6I,
+and DseDI
+
+::
+
+    >test_0 [orig=test;status=linear;cut_with=Bsp13I,Bsp6I,DrdI]
+    TAAAAAAAAAAAAGC
+
+    >test_1 [orig=test;status=linear;cut_with=Bsp13I,Bsp6I,DrdI]
+    CGCCCCCCCCCCCCGACNNNN
+
+    >test_2 [orig=test;status=linear;cut_with=Bsp13I,Bsp6I,DrdI]
+    NNGTCRRRRRRRRRRQQQQQQQQQAGGCC
+
+    >test2_0 [orig=test2;status=circular;cut_with=]
+    QQQQQQQQQGAAAAAAAAAAAAACGCCCCCCCCCCCC
+
+Undigested fragments will retain their "circular" label and indicate that they
+haven't been cut by any enzymes.
+      ]]></help>
+</tool>
+

@@ -6,15 +6,15 @@ import dnadigest
 
 if __name__ == '__main__':
 
-    parser = argparse.ArgumentParser(description='Restriction Digest Tool')
+    parser = argparse.ArgumentParser(description='Restriction Digest Tool',
+                                     epilog="")
     # Input filename, required
     parser.add_argument('file', help='Input fasta genome(s)')
     # A single string with default value of 'enzyme_data.yaml'
     parser.add_argument('--data', help='Enzyme cut site dataset',
                         default='enzyme_data.yaml')
     # A list of one or more strings, at the end
-    parser.add_argument('enzyme', metavar='E', type=str, nargs='+',
-                        help='Space separated list of enzymes')
+    parser.add_argument('enzyme', help='Comma separated list of enzymes')
     args = parser.parse_args()
 
     dd = dnadigest.Dnadigest()
@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     for record in SeqIO.parse(args.file, 'fasta'):
         processed_results = dd.process_data(str(record.seq), enzyme_dict,
-                                            cut_with=args.enzyme)
+                                            cut_with=args.enzyme.split(','))
 
         for i, fragment in enumerate(processed_results['fragment_list']):
             fragseq = Seq.Seq(fragment)
