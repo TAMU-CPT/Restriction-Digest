@@ -47,7 +47,8 @@ class Dnadigest():
             data_structure = yaml.load(handle)
 
         tmp_corrected = {}
-        for enzyme in data_structure:
+        for enzyme_key in data_structure:
+            enzyme = data_structure[enzyme_key]
             if len(enzyme['cut'][0]) != len(enzyme['cut'][1]):
                 log.warning("Cannot use %s; no support for non-matching cuts" % enzyme['enzyme'])
             elif len(enzyme['cut']) != 2:

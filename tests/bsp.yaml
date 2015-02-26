@@ -1,35 +1,16 @@
-- cut:
-  - 5' ---GC  NGC--- 3'
-  - 3' ---CGN  CG--- 5'
+Bsp6I:
+  cut: [5' ---GC  NGC--- 3', 3' ---CGN  CG--- 5']
   enzyme: Bsp6I
-  isoscizomers:
-  - ''
-  recognition_sequence:
-  - 5' GCNGC
-  - 3' CGNCG
-- cut:
-  - 5' ---T  CCGGA--- 3'
-  - 3' ---AGGCC  T--- 5'
+  isoscizomers: [FbrI, Fnu4HI, Fsp4HI, ItaI, BsoFI, SatI, Uur960I]
+  recognition_sequence: [5' GCNGC, 3' CGNCG]
+Bsp13I:
+  cut: [5' ---T  CCGGA--- 3', 3' ---AGGCC  T--- 5']
   enzyme: Bsp13I
-  isoscizomers:
-  - AccIII
-  - BbvAIII
-  - BlfI
-  - BsiMI
-  - BspMII
-  - Bsu23I
-  - Kpn2I
-  - PinBII
-  recognition_sequence:
-  - 5' TCCGGA
-  - 3' AGGCCT
-- cut:
-  - 5' ---GACNNNN  NNGTC--- 3'
-  - 3' ---CTGNN  NNNNCAG--- 5'
-  enzyme: DseDI
-  isoscizomers:
-  - AasI
-  - DrdI
-  recognition_sequence:
-  - 5' GACN6GTC
-  - 3' CTGN6CAG
+  isoscizomers: [AccIII, BbvAIII, BlfI, BsiMI, BspMII, Bsu23I, Kpn2I, PinBII, BspEI,
+    PtaI, BseAI, MroI, CauB3I, Aor13HI]
+  recognition_sequence: [5' TCCGGA, 3' AGGCCT]
+DrdI:
+  cut: [5' ---GACNNNN  NNGTC--- 3', 3' ---CTGNN  NNNNCAG--- 5']
+  enzyme: DrdI
+  isoscizomers: [AasI, DseDI]
+  recognition_sequence: [5' GACN6GTC, 3' CTGN6CAG]
