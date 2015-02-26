@@ -1,4 +1,5 @@
 import unittest
+import os
 import dnadigest
 
 class TestDnaDigest(unittest.TestCase):
@@ -92,7 +93,10 @@ class TestDnaDigest(unittest.TestCase):
     def test_process_data(self):
         dd = dnadigest.Dnadigest()
         sequence = 'qqqCGnCGwwwwwwTCCGGAeeeeeAGGCCTrrrrrGACNNNNNNGTCoooGCnGCooo'
-        enzyme_dict = dd.get_dict('bsp.yaml')
+        enzyme_dict = dd.get_dict(
+            os.path.join(
+                os.path.dirname(os.path.abspath(__file__)),
+                'bsp.yaml'))
 
         # DseDI
         results = dd.process_data(sequence, enzyme_dict, ['DseDI'],
