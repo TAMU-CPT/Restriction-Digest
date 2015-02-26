@@ -1817,9 +1817,8 @@
   enzyme: BmtI
   isoscizomers:
   - AceII
-  - 'AsuNHI
-
-    BspOI'
+  - AsuNHI
+  - BspOI
   - NheI
   - LlaG2I
   - PstNHI
