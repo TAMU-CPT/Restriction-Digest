@@ -4,10 +4,10 @@
     <exit_code level="fatal" range="1:"/>
   </stdio>
   <version_command>python digest_dna.py --version</version_command>
-  <command><![CDATA[
+  <command interpreter="python"><![CDATA[
 digest_dna.py
 $positional_1
---data ../enzyme_data.yaml
+--data /home/galaxy/galaxy/tools/cpt/Restriction-Digest-Tool/enzyme_data.yaml
 $positional_2
 > $default]]></command>
   <inputs>
