@@ -6,10 +6,15 @@ import math
 import svgwrite
 logging.basicConfig()
 log = logging.getLogger()
+from pkg_resources import resource_stream
 
 
 class Dnadigest():
-    def __init__(self):
+    def __init__(self, enzyme_data_file=None):
+        """Class to digest DNA strings.
+
+        By default a dataset based on the Wikipedia enzyme list is loaded
+        """
         self.data = ''
         self.dna_regex_translations = {
             'A': 'A',
@@ -45,11 +50,16 @@ class Dnadigest():
         for k in self.complement_regex.keys():
             self.complement_regex[self.complement_regex[k]] = k
 
-    def get_dict(self, data_file):
-        with open(data_file) as handle:
-            data_structure = yaml.load(handle)
+        if enzyme_data_file is None:
+            handle = resource_stream(__name__, 'enzyme_data.yaml')
+            self.load_enzyme_data(handle)
+        else:
+            with open(enzyme_data_file, 'r') as handle:
+                self.load_enzyme_data(handle)
 
-        tmp_corrected = {}
+    def load_enzyme_data(self, data_handle):
+        data_structure = yaml.load(data_handle)
+        self.enzyme_dict = {}
         for enzyme_key in data_structure:
             enzyme = data_structure[enzyme_key]
             if len(enzyme['cut'][0]) != len(enzyme['cut'][1]):
@@ -57,7 +67,6 @@ class Dnadigest():
             elif len(enzyme['cut']) != 2:
                 log.warning("Cannot use %s; too many cut sites" % enzyme['enzyme'])
             else:
-
                 # Convert
                 # d['k'] = ["5' asdfasdf", "3' asdfasdf"]
                 # to
@@ -69,10 +78,7 @@ class Dnadigest():
                     x[0]: x[3:-3] for x in enzyme['cut']
                 }
                 enzyme['sense_cut_idx'] = self.determine_cut_index(enzyme)
-
-
-                tmp_corrected[enzyme['enzyme']] = enzyme
-        return tmp_corrected
+                self.enzyme_dict[enzyme['enzyme']] = enzyme
 
     @classmethod
     def determine_cut_index(cls, enzyme):
@@ -187,16 +193,15 @@ class Dnadigest():
         # Instead of returning status, if len(fragments) > 1: status='linear'
         return fragments
 
-    def find_cut_sites(self, sequence, enzyme_list, enzyme_dict,
-                       status='circular'):
+    def find_cut_sites(self, sequence, enzyme_list, status='circular'):
         """Primarily for use with the drawer() method
         """
-        enzymes = self.enzyme_dict_filter(enzyme_dict, enzyme_list)
+        enzymes = self.enzyme_dict_filter(self.enzyme_dict, enzyme_list)
         cut_sites = {}
         for enzyme in enzymes:
             sites, status = self.__find_cut_sites(sequence,
-                                                  enzyme_dict[enzyme]['recognition_sequence'],
-                                                  enzyme_dict[enzyme]['sense_cut_idx'],
+                                                  self.enzyme_dict[enzyme]['recognition_sequence'],
+                                                  self.enzyme_dict[enzyme]['sense_cut_idx'],
                                                   'circular')
             for site in sites:
                 try:
@@ -308,26 +313,21 @@ class Dnadigest():
                         continue
         return good
 
-    def process_data(self, seq, enzyme_dict, cut_with, status='circular'):
-        # For now, just write against plus strand, this is a minor issue that can
-        # be corrected later: This program should function against BOTH strands
-        # without asking user, as that's the biological reality. If only we could
-        # selectively cut against only one strand...
-
-        # Filter for requested enzymes so we aren't searching and processing
-        # HUGE amounts of data
-        enzyme_dict = self.enzyme_dict_filter(enzyme_dict, cut_with)
+    def process_data(self, seq, cut_with, status='circular'):
+        filtered_enzyme_dict = self.enzyme_dict_filter(self.enzyme_dict,
+                                                       cut_with)
 
         fragment_list = [seq]
 
         cuts = []
-        for enzyme in enzyme_dict:
-            log.info('Cutting [%s] with %s' % (','.join(fragment_list), enzyme))
+        for enzyme in filtered_enzyme_dict:
+            log.info('Cutting [%s] with %s' % (','.join(fragment_list),
+                                               enzyme))
             (fragment_list, status, did_cut) = \
                 self.string_processor(fragment_list,
-                                        enzyme_dict[enzyme]['recognition_sequence'],
-                                        enzyme_dict[enzyme]['sense_cut_idx'],
-                                        status)
+                                      filtered_enzyme_dict[enzyme]['recognition_sequence'],
+                                      filtered_enzyme_dict[enzyme]['sense_cut_idx'],
+                                      status)
             if did_cut:
                 cuts.append(enzyme)
 

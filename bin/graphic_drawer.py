@@ -18,14 +18,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     dd = dnadigest.Dnadigest()
-    enzyme_dict = dd.get_dict(args.data)
 
     print '<html><head></head><body>'
     for record in SeqIO.parse(args.file, 'fasta'):
-        cut_sites = dd.find_cut_sites(str(record.seq), args.enzyme.split(','),
-                                      enzyme_dict)
-        processed_results = dd.process_data(str(record.seq), enzyme_dict,
-                                            cut_with=args.enzyme.split(','))
+        cut_sites = dd.find_cut_sites(str(record.seq), args.enzyme.split(','))
         print '<h1>%s</h1>' % record.id
         print dd.drawer(len(record.seq), cut_sites, sequence_id=record.id)
     print '</body></html>'
