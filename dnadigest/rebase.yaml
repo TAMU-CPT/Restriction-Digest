@@ -1,0 +1,3202 @@
+AbsI:
+  commercial_availability: I
+  cut: [5' ---CC  TCGAGG--- 3', 3' ---GGAGCT  CC--- 5']
+  enzyme: AbsI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Arthrobacter species 7M06
+  recognition_sequence: [5' CCTCGAGG, 3' GGAGCTCC]
+  references: Chernukhin, V.A., Kashirina, Y.G., Tomilova, J.E., Gonchar, D.A., Dedkov,
+    V.S., Mikhnenkova, N.A., Degtyarev, S.K., (2006) Ovchinnikov Bull. Biotechnol.
+    Phys. Chem. Biol., vol. 2, pp. 29-34.
+  source: S.K. Degtyarev
+AccII:
+  commercial_availability: JK
+  cut: [5' ---CG  CG--- 3', 3' ---GC  GC--- 5']
+  enzyme: AccII
+  isoscizomers: [FnuDII, Bce31293I, BceBI, BceRI, BepI, Bpu95I, Bsh1236I, Bsp50I,
+    Bsp70I, Bsp123I, BspFNI, BspJ76I, BstFNI, BstUI, Bsu1192II, Bsu1193I, Bsu1532I,
+    Bsu6633I, BsuEII, BtkI, Cpa1150I, CpaAI, Csp68KVI, EsaBS9I, FalII, FauBII, FspMI,
+    Hin1056I, HpyF14I, HpyF15I, HpyF26I, HpyF52II, HpyF64IV, MvaAI, MvnI, PflAI, SceAI,
+    SelI, ThaI, TmaI, TneDI, Uba1321I, Uba1404I, Uba1405I, Uba1446I]
+  methylation_site: ''
+  microorganism: Acinetobacter calcoaceticus
+  recognition_sequence: [5' CGCG, 3' GCGC]
+  references: 'Kita, K., Hiraoka, N., Kimizuka, F., Obayashi, A., (1984) Agric. Biol.
+    Chem., vol. 48, pp. 531-532.
+
+    Zabeau, M., Roberts, R.J., Unpublished observations.'
+  source: ATCC 49823
+AceII:
+  commercial_availability: ''
+  cut: [5' ---GCTAG  C--- 3', 3' ---C  GATCG--- 5']
+  enzyme: AceII
+  isoscizomers: [NheI, AsuNHI, BmtI, BspOI, LlaG2I, PstNHI]
+  methylation_site: ''
+  microorganism: Anabaena cedrorum
+  recognition_sequence: [5' GCTAGC, 3' CGATCG]
+  references: Affram, C., Rahman, H., Unpublished observations.
+  source: M.M. Wijdenbosch
+AclI:
+  commercial_availability: INV
+  cut: [5' ---AA  CGTT--- 3', 3' ---TTGC  AA--- 5']
+  enzyme: AclI
+  isoscizomers: [Psp1406I, UbaN9I]
+  methylation_site: 3(5)
+  microorganism: Acinetobacter calcoaceticus M4
+  recognition_sequence: [5' AACGTT, 3' TTGCAA]
+  references: 'Degtyarev, S.K., Abdurashitov, M.A., Kolyhalov, A.A., Rechkunova, N.I.,
+    (1992) Nucleic Acids Res., vol. 20, pp. 3787.
+
+    Lunnen, K.D., Wilson, G.G., Unpublished observations.
+
+    Lunnen, K.D., Wilson, G.G., Unpublished observations.
+
+    Morgan, R.D., Roberts, R.J., International Patent Office, 2007.'
+  source: S.K. Degtyarev
+AcoI:
+  commercial_availability: I
+  cut: [5' ---Y  GGCCR--- 3', 3' ---RCCGG  Y--- 5']
+  enzyme: AcoI
+  isoscizomers: [CfrI, Ava458I, Bfi89I, Cfr14I, Cfr38I, Cfr39I, Cfr40I, Cfr55I, Cfr59I,
+    EaeI, EciBI, Eco90I, Eco164I, EcoHAI, EcoHK31I, EspHK16I, EspHK24I, KspHK15I,
+    Uba36I, Uba1188I, Uba1327I]
+  methylation_site: ''
+  microorganism: Acinetobacter calcoaceticus
+  recognition_sequence: [5' YGGCCR, 3' RCCGGY]
+  references: Chernukhin, V.A., Belichenko, O.A., Doroganov, A.O., Tomilova, J.E.,
+    Dedkov, V.S., Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+AcvI:
+  commercial_availability: QX
+  cut: [5' ---CAC  GTG--- 3', 3' ---GTG  CAC--- 5']
+  enzyme: AcvI
+  isoscizomers: [PmaCI, BbrPI, BcoAI, Bsp87I, Eco72I, Pgl34I, PmlI, PshCI, PshDI,
+    Psp38I, PspBI, PspCI, VpaK3AI, VpaK3BI]
+  methylation_site: ''
+  microorganism: Aeromonas caviae
+  recognition_sequence: [5' CACGTG, 3' GTGCAC]
+  references: Skowron, P.M., Unpublished observations.
+  source: P.M. Skowron
+AdeI:
+  commercial_availability: B
+  cut: [5' ---CACNNN  GTG--- 3', 3' ---GTG  NNNCAC--- 5']
+  enzyme: AdeI
+  isoscizomers: [DraIII, BstIZ316I]
+  methylation_site: ''
+  microorganism: Alcaligenes denitrificans Ss 3-028
+  recognition_sequence: [5' CACNNNGTG, 3' GTGNNNCAC]
+  references: 'Maneliene, Z., Butkus, V., Unpublished observations.
+
+    Vitkute, J., Zutautiene, D., Capskaja, L., Kiuduliene, E., Petrusyte, M., Butkus,
+    V., Janulaitis, A., Unpublished observations.'
+  source: A. Janulaitis
+Afa16RI:
+  commercial_availability: ''
+  cut: [5' ---CGAT  CG--- 3', 3' ---GC  TAGC--- 5']
+  enzyme: Afa16RI
+  isoscizomers: [PvuI, Afa22MI, BmaI, BmaAI, BmaBI, BmaCI, BmaDI, BpvUI, BspCI, BstZ8I,
+    Cas2I, Cfr51I, DrdIII, EagBI, EclJI, ErhB9I, Kpl79I, MvrI, NblI, Ple19I, PntI,
+    Psu161I, Pvu84I, RshI, RspI, SmaAIII, SpaPII, SplAIII, Uba1129I, Uba1139I, Xgl3216I,
+    Xgl3217I, Xgl3218I, Xgl3219I, Xgl3220I, XmlI, XmlAI, XniI, XorII, XorKI]
+  methylation_site: ''
+  microorganism: Acidiphilium species 16R
+  recognition_sequence: [5' CGATCG, 3' GCTAGC]
+  references: Inagaki, K., Dou, D., Kita, K., Hiraoka, N., Kishimoto, N., Sugio, T.,
+    Tano, T., (1990) J. Ferment. Bioeng., vol. 69, pp. 60-62.
+  source: K. Inagaki
+AflII:
+  commercial_availability: JKN
+  cut: [5' ---C  TTAAG--- 3', 3' ---GAATT  C--- 5']
+  enzyme: AflII
+  isoscizomers: [BfrI, BsaFI, BscLI, BspTI, Bst98I, BstAFI, BstPZ740I, Cfr92I, Esp4I,
+    MspCI, TrsTII, Uba1266I, Uba1299I, Uba1312I, Uba1313I, Uba1331I, Uba1374I, Uba1420I,
+    Uba1426I, Uba1443I, VfiI, Vha464I]
+  methylation_site: ''
+  microorganism: Anabaena flos-aquae
+  recognition_sequence: [5' CTTAAG, 3' GAATTC]
+  references: 'Lunnen, K.D., Wilson, G.G., US Patent Office, 1991.
+
+    Morgan, R.D., Roberts, R.J., International Patent Office, 2007.
+
+    Whitehead, P.R., Brown, N.L., (1985) J. Gen. Microbiol., vol. 131, pp. 951-958.
+
+    Wilson, G.G., Lunnen, K.D., Unpublished observations.'
+  source: CCAP 1403/13f
+AflIII:
+  commercial_availability: MN
+  cut: [5' ---A  CRYGT--- 3', 3' ---TGYRC  A--- 5']
+  enzyme: AflIII
+  isoscizomers: [Asp90I]
+  methylation_site: 2(4)
+  microorganism: Anabaena flos-aquae
+  recognition_sequence: [5' ACRYGT, 3' TGYRCA]
+  references: 'Lunnen, K.D., Moran, L., Slatko, B.E., Wilson, G.G., Unpublished observations.
+
+    Morgan, R.D., Roberts, R.J., International Patent Office, 2007.
+
+    Stickel, S.K., Roberts, R.J., Unpublished observations.
+
+    Whitehead, P.R., Brown, N.L., (1985) J. Gen. Microbiol., vol. 131, pp. 951-958.'
+  source: CCAP 1403/13f
+AgsI:
+  commercial_availability: I
+  cut: [5' ---TTS  AA--- 3', 3' ---AA  WTT--- 5']
+  enzyme: AgsI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Agrococcus species 25
+  recognition_sequence: [5' TTSAA, 3' AAWTT]
+  references: Chernukhin, V.A., Kileva, E.V., Tarasova, G.V., Dedkov, V.S., Mikhnenkova,
+    N.A., Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+AhaI:
+  commercial_availability: ''
+  cut: [5' ---CC  SGG--- 3', 3' ---GGW  CC--- 5']
+  enzyme: AhaI
+  isoscizomers: [CauII, AseII, Asp1I, AsuC2I, BcnI, BpuMI, Bsp7I, Bsp8I, Bsp55I, BspF105I,
+    BspJ67I, EciDI, Eco121I, Eco179I, Eco190I, Eco1831I, EcoHI, HgiS21I, HgiS22I,
+    Hin3I, Kpn49kII, Mgl14481I, NciI, Pae181I, RshII, SflHK10695I, SflHK11086I, SflHK11087I,
+    SflHK11572I, SflHK115731I, Ssp2I, Tmu1I, Uba41I, Uba42I, Uba1280I, Uba1318I, Uba1347I,
+    Uba1370I, Uba1372I, Uba1376I, Uba1378I, Uba1389I, Uba1401I, Uba1423I, Uba1424I,
+    UbaN11I]
+  methylation_site: ''
+  microorganism: Aphanothece halophytica
+  recognition_sequence: [5' CCSGG, 3' GGWCC]
+  references: Whitehead, P.R., Brown, N.L., (1985) Arch. Microbiol., vol. 141, pp.
+    70-74.
+  source: ATCC 29534
+AhlI:
+  commercial_availability: IV
+  cut: [5' ---A  CTAGT--- 3', 3' ---TGATC  A--- 5']
+  enzyme: AhlI
+  isoscizomers: [SpeI, AclNI, BcuI]
+  methylation_site: ''
+  microorganism: Alteromonas haloplanktis SP
+  recognition_sequence: [5' ACTAGT, 3' TGATCA]
+  references: Myakisheva, T.V., Belichenko, O.A., Popichenko, D.V., Dedkov, V.S.,
+    Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+AluI:
+  commercial_availability: BCIJKMNOQRSUVX
+  cut: [5' ---AG  CT--- 3', 3' ---TC  GA--- 5']
+  enzyme: AluI
+  isoscizomers: [AluBI, BsaLI, MarI, Mho2111I, MltI, OtuI, OtuNI, OxaI, Uba1433I,
+    Uba1441I]
+  methylation_site: 3(5)
+  microorganism: Arthrobacter luteus
+  recognition_sequence: [5' AGCT, 3' TCGA]
+  references: 'Kramarov, V.M., Smolyaninov, V.V., (1981) Biokhimiia, vol. 46, pp.
+    1526-1529.
+
+    Labeots, L.A., (1993) Diss. Abstr., vol. 53, pp. 2842.
+
+    Roberts, R.J., Myers, P.A., Morrison, A., Murray, K., (1976) J. Mol. Biol., vol.
+    102, pp. 157-165.
+
+    Smith, M.D., Schmidt, B.J., Longo, M.C., Chatterjee, D.K., US Patent Office, 1994.
+
+    Ware, J., Zhang, B.-H., Slatko, B.S., Wilson, G.G., Unpublished observations.
+
+    Ware, J., Zhang, B.-H., Slatko, B.S., Wilson, G.G., Unpublished observations.
+
+    Yoon, H., Suh, H., Kim, K., Han, M.H., Yoo, O.J., (1985) Korean Biochem. J., vol.
+    18, pp. 88-93.'
+  source: ATCC 21606
+AlwNI:
+  commercial_availability: N
+  cut: [5' ---CAGNNN  CTG--- 3', 3' ---GTC  NNNGAC--- 5']
+  enzyme: AlwNI
+  isoscizomers: [CaiI, PstNI]
+  methylation_site: ''
+  microorganism: Acinetobacter lwoffi
+  recognition_sequence: [5' CAGNNNCTG, 3' GTCNNNGAC]
+  references: 'Morgan, R.D., Dalton, M., Stote, R., (1987) Nucleic Acids Res., vol.
+    15, pp. 7201.
+
+    Zhu, Z., Unpublished observations.
+
+    Zhu, Z., Roberts, R.J., Unpublished observations.'
+  source: NEB 419
+Ama87I:
+  commercial_availability: IV
+  cut: [5' ---C  YCGRG--- 3', 3' ---GRGCY  C--- 5']
+  enzyme: Ama87I
+  isoscizomers: [AvaI, AcrI, AquI, AspBI, AspDI, AvrI, BcoI, BmeT110I, Bse15I, BsiHKCI,
+    BsoBI, BspLU4I, BstBAII, BstNSII, Bst7QI, BstSI, BstZ4I, Eco88I, Eco27kI, EspHK29I,
+    Gst1588I, NliI, Nli3877I, NmuAI, NspIII, NspDI, NspEI, NspSAI, OfoI, PlaAI, PunAI,
+    Uba1205II, Uba1436I, Uba1440I, UbaN6II, Umi5I]
+  methylation_site: ''
+  microorganism: Alteromonas macleodii 87
+  recognition_sequence: [5' CYCGRG, 3' GRGCYC]
+  references: Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+AoxI:
+  commercial_availability: ''
+  cut: [5' ---  GGCC--- 3', 3' ---CCGG  --- 5']
+  enzyme: AoxI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Arthrobacter oxydans 25K
+  recognition_sequence: [5' GGCC, 3' CCGG]
+  references: Chernukhin, V.A., Belichenko, O.A., Tarasova, G.V., Gonchar, D.A., Akishev,
+    A.G., Dedkov, V.S., Mikhnenkova, N.A., Degtyarev, S.K., Russian Patent Office,
+    2010.
+  source: S.K. Degtyarev
+ApaBI:
+  commercial_availability: ''
+  cut: [5' ---GCANNNNN  TGC--- 3', 3' ---CGT  NNNNNACG--- 5']
+  enzyme: ApaBI
+  isoscizomers: [BstAPI]
+  methylation_site: ''
+  microorganism: Acetobacter pasteurianus B
+  recognition_sequence: [5' GCANNNNNTGC, 3' CGTNNNNNACG]
+  references: Grones, J., Turna, J., (1991) Biologia (Bratisl), vol. 46, pp. 1103-1108.
+  source: J. Grones
+ApeKI:
+  commercial_availability: N
+  cut: [5' ---G  CWGC--- 3', 3' ---CGSC  G--- 5']
+  enzyme: ApeKI
+  isoscizomers: [TseI, AceI, Bce14579I, SuiI, Taq52I, TneI, TseBI]
+  methylation_site: ?(5)
+  microorganism: Aeropyrum pernix K1
+  recognition_sequence: [5' GCWGC, 3' CGSCG]
+  references: 'Kawarabayasi, Y. et al., (1999) DNA Res., vol. 6, pp. 83-101.
+
+    Opitz, L., Xu, S.-Y., Unpublished observations.
+
+    Xu, S.-Y., Opitz, L., Unpublished observations.'
+  source: ATCC 700893
+AseI:
+  commercial_availability: JN
+  cut: [5' ---AT  TAAT--- 3', 3' ---TAAT  TA--- 5']
+  enzyme: AseI
+  isoscizomers: [VspI, AsnI, BpoAI, CprJK722I, PbuMZI, PshBI, Srl8DI, Srl55DII, Srl65DI,
+    Srr17I, Sru4DI]
+  methylation_site: ?(6)
+  microorganism: Aquaspirillum serpens
+  recognition_sequence: [5' ATTAAT, 3' TAATTA]
+  references: 'Morgan, R.D., US Patent Office, 1992.
+
+    Morgan, R.D., Roberts, R.J., International Patent Office, 2007.
+
+    Polisson, C., Morgan, R.D., (1988) Nucleic Acids Res., vol. 16, pp. 10365.
+
+    Stewart, F., Morgan, R.D., Unpublished observations.
+
+    Stewart, F., Morgan, R.D., Unpublished observations.'
+  source: NEB 448
+Asi256I:
+  commercial_availability: ''
+  cut: [5' ---G  ATC--- 3', 3' ---CTA  G--- 5']
+  enzyme: Asi256I
+  isoscizomers: [MboI, AspMDI, AsuMBI, Bce243I, Bfi57I, BfiSHI, BfuCI, Bme12I, Bme2494I,
+    BsaPI, BscFI, BsmXII, BspI, Bsp9I, Bsp18I, Bsp49I, Bsp51I, Bsp52I, Bsp54I, Bsp57I,
+    Bsp58I, Bsp59I, Bsp60I, Bsp61I, Bsp64I, Bsp65I, Bsp66I, Bsp67I, Bsp72I, Bsp74I,
+    Bsp76I, Bsp91I, Bsp105I, Bsp122I, Bsp135I, Bsp136I, Bsp138I, Bsp143I, Bsp147I,
+    Bsp2095I, BspAI, BspFI, BspJI, BspJ64I, BspKMI, BspKT6I, BsrMI, BsrPII, BssGII,
+    BssMI, Bst19II, Bst1274I, BstEIII, BstENII, BstKTI, BstMBI, BstXII, BtcI, Bth84I,
+    Bth211I, Bth213I, Bth221I, Bth945I, Bth1140I, Bth1141I, Bth1786I, Bth1997I, BthCanI,
+    BtkII, Btu33I, Btu34I, Btu36I, Btu37I, Btu39I, Btu41I, CacI, CcoP31I, CcoP76I,
+    CcoP84I, CcoP95II, CcoP219I, CcyI, CdiCD6II, ChaI, Cin1467I, CjeP338I, CpaPI,
+    CpfI, CpfAI, Csp5I, Cte1179I, Cte1180I, CtyI, CviAI, CviHI, DpnII, EsaLHCI, FnuAII,
+    FnuCI, FnuEI, Gst1588II, HacI, HpyAIII, HpyHPK5II, Kzo9I, LlaAI, LlaDCHI, LlaKR2I,
+    Lsp1109II, Mel3JI, Mel5JI, Mel7JI, Mel4OI, Mel5OI, Mel2TI, Mel5TI, MeuI, MgoI,
+    MjaIII, MkrAI, MmeII, Mmu5I, MmuP2I, MnoIII, MosI, Msp67II, MspBI, MthI, Mth1047I,
+    MthAI, NciAI, NdeII, NflI, NflAII, NflBI, NlaII, NlaDI, NmeCI, NphI, NsiAI, NspAI,
+    NsuI, PbrTI, Pei9403I, PfaI, Pph288I, RalF40I, Rlu1I, SalAI, SalHI, Sau15I, Sau6782I,
+    Sau3AI, SauCI, SauDI, SauEI, SauFI, SauGI, SauMI, SinMI, SmiMBI, SsiAI, SsiBI,
+    Ssu211I, Ssu212I, Ssu220I, R1.Ssu2479I, R2.Ssu2479I, R1.Ssu4109I, R2.Ssu4109I,
+    R1.Ssu4961I, R2.Ssu4961I, R1.Ssu8074I, R2.Ssu8074I, R1.Ssu11318I, R2.Ssu11318I,
+    R1.SsuDAT1I, R2.SsuDAT1I, Sth368I, TrsKTI, TrsSI, TrsTI, TruII, Tsp133I, Uba4I,
+    Uba59I, Uba1101I, Uba1177I, Uba1182I, Uba1183I, Uba1204I, Uba1259I, Uba1317I,
+    Uba1323I, Uba1366I, UbaN1I, Vha44I]
+  methylation_site: ''
+  microorganism: Arthrobacter species strain Ck256
+  recognition_sequence: [5' GATC, 3' CTAG]
+  references: Ushakova, T.A., Puchkova, L.I., Gutorov, V.V., Totmenina, O.D., Repin,
+    V.E., (2008) Prikl. Biokhim. Mikrobiol., vol. 44, pp. 28-31.
+  source: V.E. Repin
+Asp718I:
+  commercial_availability: M
+  cut: [5' ---G  GTACC--- 3', 3' ---CCATG  G--- 5']
+  enzyme: Asp718I
+  isoscizomers: [KpnI, Acc65I, AhaB8I, BspJ106I, Eco149I, Esp19I, KpnK14I, MvsI, MvsAI,
+    MvsBI, MvsCI, MvsDI, MvsEI, NmiI, Sau10I, SthI, SthAI, SthBI, SthCI, SthDI, SthEI,
+    SthFI, SthGI, SthHI, SthJI, SthKI, SthLI, SthMI, SthNI, Uba76I, Uba85I, Uba86I,
+    Uba87I, Uba1201I]
+  methylation_site: ''
+  microorganism: Achromobacter species 718
+  recognition_sequence: [5' GGTACC, 3' CCATGG]
+  references: Bolton, B.J., Nesch, G., Comer, M.J., Wolf, W., Kessler, C., (1985)
+    FEBS Lett., vol. 182, pp. 130-134.
+  source: DSM 2969
+Asp745I:
+  commercial_availability: ''
+  cut: [5' ---G  GWCC--- 3', 3' ---CCSG  G--- 5']
+  enzyme: Asp745I
+  isoscizomers: [AvaII, AflI, Asp697I, AspBII, AspDII, BamNII, BceSII, BcuAI, Bme18I,
+    Bme216I, BmpI, Bsp71I, Bsp100I, Bsp128I, Bsp132I, Bsp133I, Bsp1260I, BspF53I,
+    BspJ105I, BsrAI, Bst4QI, BthAI, BtiI, CauI, CliI, ClmII, Csp68KI, DsaIV, EagMI,
+    Eco47I, ErpI, FdiI, FspMSI, FssI, GspAI, HgiBI, HgiCII, HgiEI, HgiHIII, HgiJI,
+    Hsp2I, Kzo49I, Mae7806III, MfoI, MliI, MspAI, MspNI, NliII, Nli3877II, NmuAII,
+    NspDII, NspGI, NspHII, NspKI, Pfl19I, PolI, Psp03I, SfnI, Sgh1835I, SinI, SinAI,
+    SinBI, SinCI, SinDI, SinEI, SinFI, SinGI, SinHI, SinJI, SmuEI, SynI, TruI, Tru28I,
+    Tsp301I, Uba48I, Uba62I, Uba1131I, Uba1249I, Uba1272I, Uba1278I, Uba1304I, Uba1314I,
+    Uba1373I, Uba1413I, Uba1438I, UbaN15I, Uth554I, VpaK11I, VpaK65I, VpaK7AI, VpaK11AI,
+    VpaK13AI, VpaK11BI, VpaK11CI, VpaK11DI]
+  methylation_site: ''
+  microorganism: Achromobacter species 745
+  recognition_sequence: [5' GGWCC, 3' CCSGG]
+  references: Wersig, U., Bolton, B., Frey, B., Jarsch, M., Kessler, C., Unpublished
+    observations.
+  source: U. Mayr
+AsuNHI:
+  commercial_availability: IV
+  cut: [5' ---G  CTAGC--- 3', 3' ---CGATC  G--- 5']
+  enzyme: AsuNHI
+  isoscizomers: [NheI, AceII, BmtI, BspOI, LlaG2I, PstNHI]
+  methylation_site: ''
+  microorganism: Actinobacillus suis NH
+  recognition_sequence: [5' GCTAGC, 3' CGATCG]
+  references: Dedkov, V.S., Degtyarev, S.K., (1998) Biol. Chem., vol. 379, pp. 573-574.
+  source: S.K. Degtyarev
+AvrBII:
+  commercial_availability: ''
+  cut: [5' ---C  CTAGG--- 3', 3' ---GGATC  C--- 5']
+  enzyme: AvrBII
+  isoscizomers: [AvrII, AspA2I, BlnI, BspA2I, XmaJI]
+  methylation_site: ''
+  microorganism: Arthrobacter variabilis
+  recognition_sequence: [5' CCTAGG, 3' GGATCC]
+  references: Calmero, J., Unpublished observations.
+  source: M.M. Wijdenbosch
+BanII:
+  commercial_availability: KNX
+  cut: [5' ---GRGCY  C--- 3', 3' ---C  YCGRG--- 5']
+  enzyme: BanII
+  isoscizomers: [HgiJII, BpuI, BscMI, Bsp117I, Bsp519I, BstZ7I, Bsu1854I, BvuI, Cfr48I,
+    Eco24I, Eco25I, Eco26I, Eco35I, Eco68I, Eco113I, Eco180I, Eco211I, Eco215I, Eco216I,
+    Eco232I, Eco249I, Eco262I, Eco75KI, EcoT38I, EcoT88I, EcoT93I, EcoT95I, Ese4I,
+    FriOI, KoxII, OmiAI, OmiBI, PaeHI, Ppu20I, Psp31I, SacNI, Uba39I, Uba57I, Uba1124I,
+    Uba1142I, Uba1159I, Uba1206I, Uba1263I, Uba1264I, Uba1307I, Uba1329I, Uba1330I,
+    Uba1357I, Uba1363I, Uba1409I, Uba1421I]
+  methylation_site: 4(5)
+  microorganism: Bacillus aneurinolyticus
+  recognition_sequence: [5' GRGCYC, 3' CYCGRG]
+  references: 'Forrow, S., Lee, M., Souhami, R.L., Hartley, J.A., (1994) ACS Abstracts,
+    vol. 208, pp. 97.
+
+    Kilz, S., Kroeger, M., Lunnen, K.D., Wilson, G.G., Unpublished observations.
+
+    Lunnen, K.D., Barsomian, J.M., Camp, R.R., Card, C.O., Chen, S.-Z., Croft, R.,
+    Looney, M.C., Meda, M.M., Moran, L.S., Nwankwo, D.O., Slatko, B.E., Van Cott,
+    E.M., Wilson, G.G., (1988) Gene, vol. 74, pp. 25-32.
+
+    Lunnen, K.D., Kilz, S., Kroeger, M., Wilson, G.G., Unpublished observations.
+
+    Sugisaki, H., Maekawa, Y., Kanazawa, S., Takanami, M., (1982) Nucleic Acids Res.,
+    vol. 10, pp. 5747-5752.
+
+    Wilson, G.G., Unpublished observations.'
+  source: IAM 1077
+BbeI:
+  commercial_availability: ''
+  cut: [5' ---GGCGC  C--- 3', 3' ---C  CGCGG--- 5']
+  enzyme: BbeI
+  isoscizomers: [NarI, BbeAI, R1.BbrUI, BinSII, DinI, Eco78I, EgeI, EheI, KasI, McaAI,
+    MchI, Mly113I, MsaI, NamI, NdaI, NunII, PatAI, PluTI, PmnI, SfoI, SseAI, SspDI]
+  methylation_site: ''
+  microorganism: Bifidobacterium breve YIT4006
+  recognition_sequence: [5' GGCGCC, 3' CCGCGG]
+  references: Khosaka, T., Sakurai, T., Takahashi, H., Saito, H., (1982) Gene, vol.
+    17, pp. 117-122.
+  source: H. Takahashi
+Bbi24I:
+  commercial_availability: ''
+  cut: [5' ---A  CGCGT--- 3', 3' ---TGCGC  A--- 5']
+  enzyme: Bbi24I
+  isoscizomers: [MluI, ApeI, BstZ9I, Uba6I]
+  methylation_site: ''
+  microorganism: Bifidobacterium bifidum S-24
+  recognition_sequence: [5' ACGCGT, 3' TGCGCA]
+  references: Kanematsu, T., Ozawa, O., Murakami, M., Japanese Patent Office, 1991.
+  source: T. Kanematsu
+BbiII:
+  commercial_availability: ''
+  cut: [5' ---GR  CGYC--- 3', 3' ---CYGC  RG--- 5']
+  enzyme: BbiII
+  isoscizomers: [AcyI, AhaII, AosII, AstWI, AsuIII, BsaHI, BssNI, BstACI, HgiI, HgiDI,
+    HgiGI, HgiHII, Hin1I, Hin8I, Hsp92I, Msp17I, NlaSII, PamII, SspJII, SspM1II, SspM2II,
+    Uba1381I]
+  methylation_site: ''
+  microorganism: Bifidobacterium bifidum YIT4007
+  recognition_sequence: [5' GRCGYC, 3' CYGCRG]
+  references: Khosaka, T., Kiwaki, M., (1984) FEBS Lett., vol. 177, pp. 57-60.
+  source: T. Khosaka
+BclI:
+  commercial_availability: BCJMNORS
+  cut: [5' ---T  GATCA--- 3', 3' ---ACTAG  T--- 5']
+  enzyme: BclI
+  isoscizomers: [AbaI, AtuSI, BceDI, Bco102I, BmeTI, BsiQI, BspXII, Bst77I, BstGI,
+    BstKI, BstT7I, BstZ10II, CpeI, CthI, FbaI, Ksp22I, ParI, PovI, SseI, SstIV, Uba1282I,
+    Uba1283I, Uba1431I, Uba1447I, Umi7I]
+  methylation_site: 3(6)
+  microorganism: Bacillus caldolyticus
+  recognition_sequence: [5' TGATCA, 3' ACTAGT]
+  references: 'Bingham, A.H.A., Atkinson, T., Sciaky, D., Roberts, R.J., (1978) Nucleic
+    Acids Res., vol. 5, pp. 3457-3467.
+
+    Mersha, F., Unpublished observations.
+
+    Mersha, F., Unpublished observations.
+
+    Morgan, R.D., Roberts, R.J., International Patent Office, 2007.
+
+    Strimpel, D., Stickel, S., Roberts, R.J., Unpublished observations.'
+  source: A. Atkinson
+BflI:
+  commercial_availability: ''
+  cut: [5' ---CCNNNNN  NNGG--- 3', 3' ---GGNN  NNNNNCC--- 5']
+  enzyme: BflI
+  isoscizomers: [BsiYI, AfiI, Bsc4I, Bsc107I, Bse23I, BseLI, BslI, BsmYI, Bst22I]
+  methylation_site: ''
+  microorganism: Bacillus flavothermus
+  recognition_sequence: [5' CCNNNNNNNGG, 3' GGNNNNNNNCC]
+  references: D'Souza, D.R., Morgan, R.D., Parashar, V., Capalash, N., Sharma, P.,
+    (2004) World J. Microbiol. Biotechnol., vol. 20, pp. 593-598.
+  source: P. Sharma
+BfrBI:
+  commercial_availability: ''
+  cut: [5' ---ATGCA  T--- 3', 3' ---T  ACGTA--- 5']
+  enzyme: BfrBI
+  isoscizomers: [AvaIII, Asi372I, BfrCI, Csp68KIII, EcoT22I, Mph1103I, NsiI, PinBI,
+    Ppu10I, PxyJKI, SepI, SmuCI, SrlII, SspD5II, Uba1353I, Uba1367I, Uba1384I, Zsp2I]
+  methylation_site: ''
+  microorganism: Bacteroides fragilis BE3
+  recognition_sequence: [5' ATGCAT, 3' TACGTA]
+  references: 'Azeddoug, H., Reysset, G., Sebald, M., (1992) FEMS Microbiol. Lett.,
+    vol. 95, pp. 133-136.
+
+    Morgan, R.D., Unpublished observations.'
+  source: H. Azeddoug
+BglI:
+  commercial_availability: BCIJKNOQRVX
+  cut: [5' ---GCCNNNN  NGGC--- 3', 3' ---CGGN  NNNNCCG--- 5']
+  enzyme: BglI
+  isoscizomers: [Bpu86I, BseB631I, BsoJI, CagI, Psp1009I, RspRSI, Tsp219I, Tsp8EI,
+    VanI]
+  methylation_site: ?(4)
+  microorganism: Bacillus globigii
+  recognition_sequence: [5' GCCNNNNNGGC, 3' CGGNNNNNCCG]
+  references: 'Bickle, T.A., Ineichen, K., (1980) Gene, vol. 9, pp. 205-212.
+
+    Duncan, C.H., Wilson, G.A., Young, F.E., (1978) J. Bacteriol., vol. 134, pp. 338-344.
+
+    Lautenberger, J.A., White, C.T., Haigwood, N.L., Edgell, M.H., Hutchison, C.A.,
+    (1980) Gene, vol. 9, pp. 213-231.
+
+    Lunnen, K.D., Barsomian, J.M., Camp, R.R., Card, C.O., Chen, S.-Z., Croft, R.,
+    Looney, M.C., Meda, M.M., Moran, L.S., Nwankwo, D.O., Slatko, B.E., Van Cott,
+    E.M., Wilson, G.G., (1988) Gene, vol. 74, pp. 25-32.
+
+    Lunnen, K.D., Wilson, G.G., US Patent Office, 1994.
+
+    Van Heuverswyn, H., Fiers, W., (1980) Gene, vol. 9, pp. 195-203.'
+  source: ATCC 49760
+BlsI:
+  commercial_availability: I
+  cut: [5' ---GCN  GC--- 3', 3' ---CG  NCG--- 5']
+  enzyme: BlsI
+  isoscizomers: [BisI, GluI, Rfl17I]
+  methylation_site: ''
+  microorganism: Bacillus simplex 23
+  recognition_sequence: [5' GCNGC, 3' CGNCG]
+  references: 'Chernukhin, V.A., Tomilova, J.E., Chmuzh, E.V., Sokolova, O.O., Dedkov,
+    V.S., Degtyarev, S.K., (2007) Ovchinnikov Bull. Biotechnol. Phys. Chem. Biol.,
+    vol. 3, pp. 28-33.
+
+    Chernukhin, V.A., Tomilova, J.E., Chmuzh, E.V., Sokolova, O.O., Dedkov, V.S.,
+    Degtyarev, S.K., Russian Patent Office, 2008.'
+  source: S.K. Degtyarev
+Bme142I:
+  commercial_availability: ''
+  cut: [5' ---RGC  GCY--- 3', 3' ---YCG  CGR--- 5']
+  enzyme: Bme142I
+  isoscizomers: [HaeII, AccB2I, BfoI, BsmHI, Bsp143II, Bst16I, Bst1473II, BstH2I,
+    Btu34II, HinHI, LpnI, NgoAI, NgoBI, NgoCI, NgoGI, NgoJI, NgoMI, NgoWI]
+  methylation_site: ''
+  microorganism: Bacillus megaterium 142
+  recognition_sequence: [5' RGCGCY, 3' YCGCGR]
+  references: Fomenkov, A.I., Kramarov, V.M., Andreev, L.V., Mochalov, V.V., Smolyaninov,
+    V.V., Matvienko, N.I., (1988) Nucleic Acids Res., vol. 16, pp. 10399.
+  source: N.I. Matvienko
+BmeRI:
+  commercial_availability: V
+  cut: [5' ---GACNNN  NNGTC--- 3', 3' ---CTGNN  NNNCAG--- 5']
+  enzyme: BmeRI
+  isoscizomers: [Eam1105I, AhdI, AspEI, BspOVI, BstZ2I, DriI, EclHKI, NruGI, Uba1190I,
+    Uba1191I]
+  methylation_site: ''
+  microorganism: Bacillus megaterium
+  recognition_sequence: [5' GACNNNNNGTC, 3' CTGNNNNNCAG]
+  references: Chee, H.Y., Unpublished observations.
+  source: Vivantis 32
+BmrFI:
+  commercial_availability: V
+  cut: [5' ---CC  NGG--- 3', 3' ---GGN  CC--- 5']
+  enzyme: BmrFI
+  isoscizomers: [ScrFI, Bme1390I, BsaCI, BsoI, Bsp53I, Bsp73I, Bsp548I, BssKI, BstMZ611I,
+    BstSCI, DsaV, Ecl18kI, Eco43I, Eco51II, Eco80I, Eco85I, Eco93I, Eco153I, Eco200I,
+    Eco13kI, Eco21kI, Eco137kI, HpyNI, Kpn2kI, LlaMI, Msp67I, MspR9I, SdeAII, SsoII,
+    StyD4I, Uba17I, Uba1391I]
+  methylation_site: ''
+  microorganism: Bacillus megaterium F
+  recognition_sequence: [5' CCNGG, 3' GGNCC]
+  references: Chee, H.Y., Unpublished observations.
+  source: Vivantis 91
+BpuAmI:
+  commercial_availability: ''
+  cut: [5' ---GAG  CTC--- 3', 3' ---CTC  GAG--- 5']
+  enzyme: BpuAmI
+  isoscizomers: [SacI, Ecl136II, Ecl137I, EcoICRI, Eco53kI, MxaI, NasSI, Pfl18I, Psp124BI,
+    ScoI, Sgr13350I, Ssm4I, Ssm5I, SstI, UcoMSI]
+  methylation_site: ''
+  microorganism: Bacillus pumilus
+  recognition_sequence: [5' GAGCTC, 3' CTCGAG]
+  references: Chies, J.M., de O-Dias, A.C., Maia, H.M.M., Astolfi-Filho, S., Unpublished
+    observations.
+  source: J.M. Chies
+BsaBI:
+  commercial_availability: N
+  cut: [5' ---GATNN  NNATC--- 3', 3' ---CTANN  NNTAG--- 5']
+  enzyme: BsaBI
+  isoscizomers: [Bco63I, Bco631I, Bse8I, Bse631I, BseJI, Bsh1365I, BsiBI, BsrBRI,
+    MamI, UbaN6I, UbaN20I]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus B674
+  recognition_sequence: [5' GATNNNNATC, 3' CTANNNNTAG]
+  references: 'Chen, Z., Kong, H., Unpublished observations.
+
+    Zhu, Z., Roberts, R.J., Unpublished observations.
+
+    Zhu, Z., Xu, S.-Y., Unpublished observations.'
+  source: NEB 537
+BsaWI:
+  commercial_availability: N
+  cut: [5' ---W  CCGGW--- 3', 3' ---SGGCC  S--- 5']
+  enzyme: BsaWI
+  isoscizomers: [BetI, Bba179I, Bca77I, Bst1473I, UbaN10I]
+  methylation_site: ?(5)
+  microorganism: Bacillus stearothermophilus W1718
+  recognition_sequence: [5' WCCGGW, 3' SGGCCS]
+  references: 'Chen, W., Pan, X., Chen, Z., Unpublished observations.
+
+    Morgan, R.D., Unpublished observations.
+
+    Xu, S.-Y., Unpublished observations.
+
+    Xu, S.-Y., Zhou, J., Hume, A., Maunus, R., US Patent Office, 2003.'
+  source: Z. Chen
+BseSI:
+  commercial_availability: B
+  cut: [5' ---GKGCM  C--- 3', 3' ---C  MCGKG--- 5']
+  enzyme: BseSI
+  isoscizomers: [BaeGI, Bme1580I, BmgAI, BstSLI]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus Jo-553
+  recognition_sequence: [5' GKGCMC, 3' CMCGKG]
+  references: Steponaviciene, D., Maneliene, Z., Petrusyte, M., Janulaitis, A., (1999)
+    Nucleic Acids Res., vol. 27, pp. 2644-2645.
+  source: V. Butkus
+BshTI:
+  commercial_availability: B
+  cut: [5' ---A  CCGGT--- 3', 3' ---TGGCC  A--- 5']
+  enzyme: BshTI
+  isoscizomers: [AgeI, AsiAI, AsiGI, CsiAI, CspAI, PinAI]
+  methylation_site: ''
+  microorganism: Bacillus sphaericus Jo22-024
+  recognition_sequence: [5' ACCGGT, 3' TGGCCA]
+  references: Rudokas, K., Petrusyte, M., Maneliene, Z., Trinkunaite, L., Kiuduliene,
+    E., Butkus, V., Janulaitis, A., Unpublished observations.
+  source: V. Butkus
+BsiHKAI:
+  commercial_availability: N
+  cut: [5' ---GWGCW  C--- 3', 3' ---C  SCGSG--- 5']
+  enzyme: BsiHKAI
+  isoscizomers: [HgiAI, Alw21I, AspHI, Bbv12I, Bfu1570I, BsaGI, Bsh45I, Bsm6I, BsmPI,
+    Hpy8III, HpyF7II, HpyF46II, MspV281I, Pph3215I]
+  methylation_site: ?(5)
+  microorganism: Bacillus stearothermophilus
+  recognition_sequence: [5' GWGCWC, 3' CSCGSG]
+  references: 'Lee, K.-F., Shi, S.-D., Kam, K.-M., Shaw, P.-C., (1992) Nucleic Acids
+    Res., vol. 20, pp. 921.
+
+    Zhu, Z., Unpublished observations.'
+  source: P.C. Shaw
+Bsp1286I:
+  commercial_availability: JKN
+  cut: [5' ---GDGCH  C--- 3', 3' ---C  HCGDG--- 5']
+  enzyme: Bsp1286I
+  isoscizomers: [SduI, AocII, Bka1125I, BmyI, BsoCI, BspLS2I, BstZ15I, HpyF36IV, HpyF47I,
+    MhlI, Mlu40I, NspII, TseAI, Uba1362I]
+  methylation_site: ?(5)
+  microorganism: Bacillus sphaericus
+  recognition_sequence: [5' GDGCHC, 3' CHCGDG]
+  references: 'Myers, P.A., Roberts, R.J., Unpublished observations.
+
+    Schildkraut, I., Christ, C., Unpublished observations.
+
+    Shibata, T., Ikawa, S., Kim, C., Ando, T., (1976) J. Bacteriol., vol. 128, pp.
+    473-476.
+
+    Zhu, Z., Unpublished observations.'
+  source: IAM 1286
+Bsp1720I:
+  commercial_availability: IV
+  cut: [5' ---GC  TNAGC--- 3', 3' ---CGANT  CG--- 5']
+  enzyme: Bsp1720I
+  isoscizomers: [EspI, BlpI, Bpu1102I, BpuGCI, CelII, Uba1221I, Uba1222I, Uba1284I,
+    Uba1320I]
+  methylation_site: ''
+  microorganism: Bacillus species 1720
+  recognition_sequence: [5' GCTNAGC, 3' CGANTCG]
+  references: Degtyarev, S.K., Kolyhalov, A.A., Rechkunova, N.T., Tepavicharova, I.I.,
+    Mechandjiska, L.I., Builieva, E.I., (1991) Nucleic Acids Res., vol. 19, pp. 2504.
+  source: S.K. Degtyarev
+Bsp6I:
+  commercial_availability: ''
+  cut: [5' ---GC  NGC--- 3', 3' ---CGN  CG--- 5']
+  enzyme: Bsp6I
+  isoscizomers: [Fnu4HI, Bli1904II, Bpu1811I, BsoFI, BssFI, BssXI, BthCI, Cac824I,
+    CcoP215I, CcoP216I, FbrI, Fsp4HI, ItaI, LlaDII, SatI, Uur960I, Rfl17I, BisI, GluI]
+  methylation_site: ?(5)
+  microorganism: Bacillus species RFL6
+  recognition_sequence: [5' GCNGC, 3' CGNCG]
+  references: 'Lubys, A., Janulaitis, A., (1995) Gene, vol. 157, pp. 25-29.
+
+    Puzio, P., Blau, A., Plesch, G., Kamlage, B., Looser, R., Schmitz, O., Wendel,
+    B., European Patent Office, 2009.'
+  source: A. Janulaitis
+BspJII:
+  commercial_availability: ''
+  cut: [5' ---AT  CGAT--- 3', 3' ---TAGC  TA--- 5']
+  enzyme: BspJII
+  isoscizomers: [ClaI, AagI, Apu16I, Asp14I, Asp37I, Asp86I, Asp123I, Asp130I, Asp707I,
+    BanIII, BavCI, BazI, BbvAII, Bci29I, BciBI, BcmI, Bco79I, BdiI, BfrAI, Bli41I,
+    Bli86I, Bli576I, Bli585I, BliAI, BliRI, BpsII, Bsa29I, BscI, BseCI, Bsh108AI,
+    BshVI, BsiXI, Bsp2I, Bsp4I, Bsp84I, Bsp106I, Bsp125I, Bsp126I, Bsp127I, Bsp145I,
+    BspDI, BspOVII, BspXI, BspZEI, BsrCI, Bst28I, BstLVI, BstNZ169I, Bsu15I, BsuTUI,
+    Bth1202I, Bth9415I, BtuI, Csp4I, LcaI, LplI, PgaI, Rme21I, SonI, SpmI, Ssp27144I,
+    Uba22I, Uba24I, Uba30I, Uba34I, Uba43I, Uba1096I, Uba1100I, Uba1133I, Uba1137I,
+    Uba1138I, Uba1144I, Uba1145I, Uba1161I, Uba1168I, Uba1195I, Uba1196I, Uba1197I,
+    Uba1198I, Uba1199I, Uba1200I, Uba1233I, Uba1238I, Uba1246I, Uba1257I, Uba1275I,
+    Uba1286I, Uba1295I, Uba1315I, Uba1342I, Uba1366II, Uba1379I, Uba1380I, Uba1394I,
+    Uba1412I, Uba1416I, Uba1427I, Uba1430I, Uba1451I, Uba1453I, UbaN18I, UbaN22I,
+    ZhoI]
+  methylation_site: ''
+  microorganism: Bacillus species BspJ
+  recognition_sequence: [5' ATCGAT, 3' TAGCTA]
+  references: Sokolov, N.N., Anikeitcheva, N.V., Samko, O.T., Kalugin, A.A., Fitsner,
+    A.B., Unpublished observations.
+  source: N.N. Sokolov
+BspLU11I:
+  commercial_availability: ''
+  cut: [5' ---A  CATGT--- 3', 3' ---TGTAC  A--- 5']
+  enzyme: BspLU11I
+  isoscizomers: [PciI, PscI]
+  methylation_site: ''
+  microorganism: Bacillus species LU11
+  recognition_sequence: [5' ACATGT, 3' TGTACA]
+  references: Matvienko, N.N., Zeleznaja, L.A., Matvienko, N.I., (1993) Nucleic Acids
+    Res., vol. 21, pp. 1495.
+  source: N.I. Matvienko
+BspR7I:
+  commercial_availability: ''
+  cut: [5' ---CC  TNAGG--- 3', 3' ---GGANT  CC--- 5']
+  enzyme: BspR7I
+  isoscizomers: [SauI, AocI, AsuSAI, AxyI, Bli643I, BliHKI, Bse21I, BseG73I, Bst29I,
+    Bst30I, BstZ6I, Bsu36I, CvnI, EciCI, Eco76I, Eco81I, Eco115I, Eco118I, Eco110kI,
+    Lmu60I, MstII, OxaNI, PxyMZI, SauHI, SecIII, SshAI, Uba1184II, Uba1294I, Uba1332I,
+    Uba1333I]
+  methylation_site: ''
+  microorganism: Bacillus species R7
+  recognition_sequence: [5' CCTNAGG, 3' GGANTCC]
+  references: Vasiljeva, L.Y., Zheleznaya, L.A., Matvienko, N.I., (1996) Biokhimiia,
+    vol. 61, pp. 2147-2157.
+  source: N.I. Matvienko
+BspUI:
+  commercial_availability: ''
+  cut: [5' ---GCSG  C--- 3', 3' ---C  GWCG--- 5']
+  enzyme: BspUI
+  isoscizomers: [TauI, AspCNI, CglI, NgoFVII]
+  methylation_site: ''
+  microorganism: Bacillus species
+  recognition_sequence: [5' GCSGC, 3' CGWCG]
+  references: 'Abila, P., Nanyonjo, H., Egwang, T.G., Unpublished observations.
+
+    Morgan, R.D., Unpublished observations.
+
+    Zhu, Z., Roberts, R.J., Unpublished observations.
+
+    Zhu, Z., Xu, S.-Y., Unpublished observations.'
+  source: NEB 1593
+BsrFI:
+  commercial_availability: N
+  cut: [5' ---R  CCGGY--- 3', 3' ---YGGCC  R--- 5']
+  enzyme: BsrFI
+  isoscizomers: [Cfr10I, Bco118I, BscRI, Bse118I, Bse634I, Bsp21I, BssAI, BstB7SI,
+    NmeDI, TseDI]
+  methylation_site: ?(5)
+  microorganism: Bacillus stearothermophilus CPW16
+  recognition_sequence: [5' RCCGGY, 3' YGGCCR]
+  references: 'Chen, W., Pan, X., Chen, Z., Unpublished observations.
+
+    Xu, S.-Y., Xiao, J.-P., US Patent Office, 2000.'
+  source: Z. Chen
+BssECI:
+  commercial_availability: I
+  cut: [5' ---C  CNNGG--- 3', 3' ---GGNNC  C--- 5']
+  enzyme: BssECI
+  isoscizomers: [SecI, BsaJI, BseDI, BsoKI, BstZ10I, Hpy99IV, HpyF10III, HpyF61II,
+    HpyF67IV, Uba1442I]
+  methylation_site: 1(4)
+  microorganism: Bacillus stearothermophilus EC
+  recognition_sequence: [5' CCNNGG, 3' GGNNCC]
+  references: 'Abdurashitov, M.A., Dedkov, V.S., Kileva, E.V., Shevchenko, A.V., Degtyarev,
+    S.K., Unpublished observations.
+
+    Dedkov, V.S., Mikhnenkova, N.A., Djanobilova, Z.K., Tarasova, M.V., (2012) Biotekhnologiya,
+    vol. 2, pp. 32-42.'
+  source: S.K. Degtyarev
+BssHII:
+  commercial_availability: JKMNQRX
+  cut: [5' ---G  CGCGC--- 3', 3' ---CGCGC  G--- 5']
+  enzyme: BssHII
+  isoscizomers: [BsePI, BscEI, BsoPI, BsrHI, BssBI, BstBZ153I, CfrJ5I, Eco143I, Eco152I,
+    Esp7I, Esp8I, Kpn30I, McaTI, PauI, PteI, TtmII, Uba69I]
+  methylation_site: ?(5)
+  microorganism: Bacillus stearothermophilus H3
+  recognition_sequence: [5' GCGCGC, 3' CGCGCG]
+  references: 'Langdale, J.A., Myers, P.A., Roberts, R.J., Unpublished observations.
+
+    Schildkraut, I., Greenough, L., Unpublished observations.
+
+    Schumann, J., Willert, J., Wild, C., Waler, J., Trautner, T.A., (1995) Gene, vol.
+    157, pp. 103-104.
+
+    Xu, S.-Y., Xiao, J.-P., Posfai, J., Maunus, R., Benner, J., (1997) Nucleic Acids
+    Res., vol. 25, pp. 3991-3994.'
+  source: ATCC 49820
+Bst1107I:
+  commercial_availability: BK
+  cut: [5' ---GTA  TAC--- 3', 3' ---CAT  ATG--- 5']
+  enzyme: Bst1107I
+  isoscizomers: [SnaI, BspM90I, BssNAI, BstBSI, BstZ17I, VchO25I, XcaI]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus RFL1107
+  recognition_sequence: [5' GTATAC, 3' CATATG]
+  references: Janulaitis, A., Kazlauskiene, R., Trinkunaite, L., Kiuduliene, L., Maneliene,
+    Z., Petrusyte, M., Butkus, V., Unpublished observations.
+  source: A. Janulaitis
+BstAPI:
+  commercial_availability: IN
+  cut: [5' ---GCANNNN  NTGC--- 3', 3' ---CGTN  NNNNACG--- 5']
+  enzyme: BstAPI
+  isoscizomers: [ApaBI]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus AP
+  recognition_sequence: [5' GCANNNNNTGC, 3' CGTNNNNNACG]
+  references: 'Abdurashitov, M.A., Belichenko, O.A., Shevchenko, A.V., Dedkov, V.S.,
+    Degtyarev, S.K., (1997) Nucleic Acids Res., vol. 25, pp. 2301-2302.
+
+    Zhu, Z., Roberts, R.J., Unpublished observations.'
+  source: NEB 1778
+BstAUI:
+  commercial_availability: IV
+  cut: [5' ---T  GTACA--- 3', 3' ---ACATG  T--- 5']
+  enzyme: BstAUI
+  isoscizomers: [Bsp1407I, AauI, BsmGI, BsmRI, BsrGI, Bst170I, Ssp4800I, SspBI]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus AU
+  recognition_sequence: [5' TGTACA, 3' ACATGT]
+  references: Abdurashitov, M.A., Dedkov, V.S., Shinkarenko, N.M., Tomilova, J.E.,
+    Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+BstBAI:
+  commercial_availability: IV
+  cut: [5' ---YAC  GTR--- 3', 3' ---RTG  CAY--- 5']
+  enzyme: BstBAI
+  isoscizomers: [BsaAI, MspYI, Ppu6I, Ppu11I, Ppu21I, PsuAI]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus BA
+  recognition_sequence: [5' YACGTR, 3' RTGCAY]
+  references: Abdurashitov, M.A., Shinkarenko, N.M., Dedkov, V.S., Shevchenko, A.V.,
+    Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+BstC8I:
+  commercial_availability: I
+  cut: [5' ---GCN  NGC--- 3', 3' ---CGN  NCG--- 5']
+  enzyme: BstC8I
+  isoscizomers: [Cac8I, BniI]
+  methylation_site: 2(5)
+  microorganism: Bacillus stearothermophilus C8
+  recognition_sequence: [5' GCNNGC, 3' CGNNCG]
+  references: 'Abdurashitov, M.A., Dedkov, V.S., Mikhnenkova, N.A., Kileva, E.V.,
+    Popichenko, D.V., Degtyarev, S.K., Unpublished observations.
+
+    Dedkov, V.S., (2012) Mol. Genet. Microbiol. Virol., vol. 27, pp. 40-47.'
+  source: S.K. Degtyarev
+BstFI:
+  commercial_availability: ''
+  cut: [5' ---A  AGCTT--- 3', 3' ---TTCGA  A--- 5']
+  enzyme: BstFI
+  isoscizomers: [HindIII, Asp52I, Asp3065I, BbrI, BbrAI, BpeI, BseHI, BsmGII, BspKT8I,
+    BspLAIII, Bst170II, BstZ1II, Cfr32I, ChuEI, Csp231I, Eco65I, Eco98I, Eco188I,
+    Eco231I, EcoVIII, Hin5III, Hin173I, Hin1076III, HinJCII, HinSAFI, HinbIII, HinfII,
+    HsuI, LlaCI, MkiI, SpaPIV, SsbI, Uba83I, Uba1164II, Uba1219I, Uba1435I, UbaN17I]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus FH58
+  recognition_sequence: [5' AAGCTT, 3' TTCGAA]
+  references: Kong, H., Chen, Z., (1987) Nucleic Acids Res., vol. 15, pp. 7205.
+  source: Z. Chen
+BstI:
+  commercial_availability: ''
+  cut: [5' ---G  GATCC--- 3', 3' ---CCTAG  G--- 5']
+  enzyme: BstI
+  isoscizomers: [BamHI, AacLI, AaeI, AcaII, AccEBI, AinII, AliI, Ali12257I, Ali12258I,
+    ApaCI, AsiI, AspTII, Atu1II, BamFI, BamKI, BamNI, Bca1259I, Bce751I, Bco10278I,
+    BnaI, BsaDI, Bsp30I, Bsp46I, Bsp90II, Bsp98I, Bsp130I, Bsp131I, Bsp144I, Bsp4009I,
+    BspAAIII, Bst1126I, Bst2464I, Bst2902I, BstQI, Bsu90I, Bsu8565I, Bsu8646I, BsuB519I,
+    BsuB763I, CelI, DdsI, GdoI, GinI, GoxI, GseIII, GstI, MleI, Mlu23I, NasBI, Nsp29132II,
+    NspSAIV, OkrAI, Pac1110I, Pae177I, PboCI, Pfl8I, Psp56I, RhsI, Rlu4I, RspLKII,
+    SolI, SpvI, SurI, Uba19I, Uba31I, Uba38I, Uba51I, Uba88I, Uba1098I, Uba1163I,
+    Uba1167I, Uba1172I, Uba1173I, Uba1205I, Uba1224I, Uba1242I, Uba1250I, Uba1258I,
+    Uba1297I, Uba1302I, Uba1324I, Uba1325I, Uba1334I, Uba1339I, Uba1346I, Uba1383I,
+    Uba1398I, Uba1402I, Uba1414I, Uba4009I, UbaN3I, UbaN14I]
+  methylation_site: 3(6)
+  microorganism: Bacillus stearothermophilus 1503-4R
+  recognition_sequence: [5' GGATCC, 3' CCTAGG]
+  references: 'Catterall, J.F., Welker, N.E., (1977) J. Bacteriol., vol. 129, pp.
+    1110-1120.
+
+    Clarke, C.M., Hartley, B.S., (1979) Biochem. J., vol. 177, pp. 49-62.
+
+    Levy, W.P., Welker, N.E., (1981) Biochemistry, vol. 20, pp. 1120-1127.'
+  source: N. Welker
+BstKTI:
+  commercial_availability: I
+  cut: [5' ---GAT  C--- 3', 3' ---C  TAG--- 5']
+  enzyme: BstKTI
+  isoscizomers: [MboI, Asi256I, AspMDI, AsuMBI, Bce243I, Bfi57I, BfiSHI, BfuCI, Bme12I,
+    Bme2494I, BsaPI, BscFI, BsmXII, BspI, Bsp9I, Bsp18I, Bsp49I, Bsp51I, Bsp52I, Bsp54I,
+    Bsp57I, Bsp58I, Bsp59I, Bsp60I, Bsp61I, Bsp64I, Bsp65I, Bsp66I, Bsp67I, Bsp72I,
+    Bsp74I, Bsp76I, Bsp91I, Bsp105I, Bsp122I, Bsp135I, Bsp136I, Bsp138I, Bsp143I,
+    Bsp147I, Bsp2095I, BspAI, BspFI, BspJI, BspJ64I, BspKMI, BspKT6I, BsrMI, BsrPII,
+    BssGII, BssMI, Bst19II, Bst1274I, BstEIII, BstENII, BstMBI, BstXII, BtcI, Bth84I,
+    Bth211I, Bth213I, Bth221I, Bth945I, Bth1140I, Bth1141I, Bth1786I, Bth1997I, BthCanI,
+    BtkII, Btu33I, Btu34I, Btu36I, Btu37I, Btu39I, Btu41I, CacI, CcoP31I, CcoP76I,
+    CcoP84I, CcoP95II, CcoP219I, CcyI, CdiCD6II, ChaI, Cin1467I, CjeP338I, CpaPI,
+    CpfI, CpfAI, Csp5I, Cte1179I, Cte1180I, CtyI, CviAI, CviHI, DpnII, EsaLHCI, FnuAII,
+    FnuCI, FnuEI, Gst1588II, HacI, HpyAIII, HpyHPK5II, Kzo9I, LlaAI, LlaDCHI, LlaKR2I,
+    Lsp1109II, Mel3JI, Mel5JI, Mel7JI, Mel4OI, Mel5OI, Mel2TI, Mel5TI, MeuI, MgoI,
+    MjaIII, MkrAI, MmeII, Mmu5I, MmuP2I, MnoIII, MosI, Msp67II, MspBI, MthI, Mth1047I,
+    MthAI, NciAI, NdeII, NflI, NflAII, NflBI, NlaII, NlaDI, NmeCI, NphI, NsiAI, NspAI,
+    NsuI, PbrTI, Pei9403I, PfaI, Pph288I, RalF40I, Rlu1I, SalAI, SalHI, Sau15I, Sau6782I,
+    Sau3AI, SauCI, SauDI, SauEI, SauFI, SauGI, SauMI, SinMI, SmiMBI, SsiAI, SsiBI,
+    Ssu211I, Ssu212I, Ssu220I, R1.Ssu2479I, R2.Ssu2479I, R1.Ssu4109I, R2.Ssu4109I,
+    R1.Ssu4961I, R2.Ssu4961I, R1.Ssu8074I, R2.Ssu8074I, R1.Ssu11318I, R2.Ssu11318I,
+    R1.SsuDAT1I, R2.SsuDAT1I, Sth368I, TrsKTI, TrsSI, TrsTI, TruII, Tsp133I, Uba4I,
+    Uba59I, Uba1101I, Uba1177I, Uba1182I, Uba1183I, Uba1204I, Uba1259I, Uba1317I,
+    Uba1323I, Uba1366I, UbaN1I, Vha44I]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus KT
+  recognition_sequence: [5' GATC, 3' CTAG]
+  references: Nadeev, A.N., Abdurashitov, M.A., Dedkov, V.S., Shinkarenko, N.M., Popichenko,
+    D.V., Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+BstMCI:
+  commercial_availability: IV
+  cut: [5' ---CGRY  CG--- 3', 3' ---GC  YRGC--- 5']
+  enzyme: BstMCI
+  isoscizomers: [McrI, BsaOI, BscNI, Bsh1285I, BsiEI, BstZ5I, Uba1303I]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus MC
+  recognition_sequence: [5' CGRYCG, 3' GCYRGC]
+  references: Belichenko, O.A., Shevchenko, A.V., Dedkov, V.S., Abdurashitov, M.A.,
+    Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+BstNSI:
+  commercial_availability: IV
+  cut: [5' ---RCATG  Y--- 3', 3' ---Y  GTACR--- 5']
+  enzyme: BstNSI
+  isoscizomers: [NspI, AvoI, Lsp1270I, NspHI, PauAI, PunAII, XceI]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus 1161NS
+  recognition_sequence: [5' RCATGY, 3' YGTACR]
+  references: Abdurashitov, M.A., Bondar, T.S., Shevchenko, A.V., Degtyarev, S.K.,
+    Unpublished observations.
+  source: S.K. Degtyarev
+BstOI:
+  commercial_availability: R
+  cut: [5' ---CC  WGG--- 3', 3' ---GGS  CC--- 5']
+  enzyme: BstOI
+  isoscizomers: [EcoRII, Acc38I, AcuII, AeuI, AglI, AjnI, AorI, ApaORI, ApyI, Asp2HI,
+    AtuII, Atu1I, AtuBI, BciBII, BciT130I, BinSI, Bme2095I, BptI, BsaNI, Bse16I, Bse17I,
+    Bse24I, BseBI, BshGI, BsiLI, BsiUI, BsiVI, BsoGI, Bsp44I, Bsp56I, Bsp103I, Bsp317I,
+    BspH43I, BspNI, BspSI, Bst1I, Bst2I, Bst38I, Bst100I, BstGII, BstM6I, BstNI, Bst7QII,
+    Bst2UI, BthDI, BthEI, CbrI, Cdi27I, Cfr5I, Cfr11I, Cfr20I, Cfr22I, Cfr24I, Cfr25I,
+    Cfr27I, Cfr28I, Cfr29I, Cfr30I, Cfr31I, Cfr35I, Cfr58I, CfrS37I, CthII, Dde51507I,
+    EagKI, EcaII, EclII, Ecl66I, Ecl136I, Ecl137II, EclS39I, Ecl37kII, Ecl54kI, Ecl57kI,
+    Ecl1zII, Eco38I, Eco40I, Eco41I, Eco60I, Eco61I, Eco67I, Eco70I, Eco71I, Eco128I,
+    Eco170I, Eco193I, Eco206I, Eco207I, Eco254I, Eco256I, Efa1KI, Ese6II, Esp2I, Esp24I,
+    EspHK7I, EspHK22I, EspHK30I, Fsp1604I, HhdI, Kox165I, Kpn10I, Kpn13I, Kpn14I,
+    Kpn16I, KspHK12I, KspHK14I, Lla497I, Mlu2300I, MphI, MpsI, MvaI, Pca17AI, Psp6I,
+    Psp39I, PspGI, Sau16I, Scg2I, SelPI, SflHK1794I, SflHK2374I, SflHK2731I, SflHK6873I,
+    SflHK7234I, SflHK7462I, SflHK8401I, SflHK10790I, Sfl2aI, Sfl2bI, Sgr20I, SleI,
+    SniI, SslI, SspAI, Sth117I, Sth302I, Sth455I, TaqXI, TspAI, Uba11I, Uba13I, Uba20I,
+    Uba81I, Uba82I, Uba1114I, Uba1118I, Uba1120I, Uba1121I, Uba1125I, Uba1171I, Uba1181I,
+    Uba1185I, Uba1189I, Uba1193I, Uba1218I, Uba1243I, Uba1410I, Uba1428I, UbaN11II,
+    UbaN16I, ZanI]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus O22
+  recognition_sequence: [5' CCWGG, 3' GGSCC]
+  references: Chen, Z., Kong, H., Unpublished observations.
+  source: Z. Chen
+BstPAI:
+  commercial_availability: IV
+  cut: [5' ---GACNN  NNGTC--- 3', 3' ---CTGNN  NNCAG--- 5']
+  enzyme: BstPAI
+  isoscizomers: [PshAI, BoxI]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus PA
+  recognition_sequence: [5' GACNNNNGTC, 3' CTGNNNNCAG]
+  references: Tomilova, J.E., Dedkov, V.S., Kileva, E.V., Popichenko, D.V., Degtyarev,
+    S.K., Unpublished observations.
+  source: S.K. Degtyarev
+BstSNI:
+  commercial_availability: IV
+  cut: [5' ---TAC  GTA--- 3', 3' ---ATG  CAT--- 5']
+  enzyme: BstSNI
+  isoscizomers: [SnaBI, Bpu1831I, EciAI, Eco105I, Eco158II, SspJI, SspM1I, SspM2I,
+    Uba1240I]
+  methylation_site: ''
+  microorganism: Bacillus stearothermophilus SN
+  recognition_sequence: [5' TACGTA, 3' ATGCAT]
+  references: Myakisheva, T.V., Dedkov, V.S., Kileva, E.V., Abdurashitov, M.A., Shevchenko,
+    A.V., Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+BstXI:
+  commercial_availability: BIJKMNQRVXY
+  cut: [5' ---CCANNNNN  NTGG--- 3', 3' ---GGTN  NNNNNACC--- 5']
+  enzyme: BstXI
+  isoscizomers: [BscJI, BssGI, BstHZ55I, BstTI]
+  methylation_site: 3(6)
+  microorganism: Bacillus stearothermophilus X1
+  recognition_sequence: [5' CCANNNNNNTGG, 3' GGTNNNNNNACC]
+  references: 'Fomenkov, A., Unpublished observations.
+
+    Fomenkov, A., Lunnen, K.D., Zhu, Z., Wilson, G.G., Vincze, T., Roberts, R.J.,
+    Unpublished observations.
+
+    Fomenkov, A., Roberts, R.J., Unpublished observations.
+
+    Langdale, J.A., Myers, P.A., Roberts, R.J., Unpublished observations.
+
+    Nwankwo, D., Unpublished observations.
+
+    Skowron, P.M., Rutkowska, S.M., Harasimowicz-Slowinska, R.I., Unpublished observations.
+
+    Wise, R., Schildkraut, I., Unpublished observations.
+
+    Zhu, Z., Blanchard, A., Xu, S.-Y., Guan, S., Wei, H., Zhang, P., Sun, D., Chan,
+    S.-h., International Patent Office, 2009.
+
+    Zhu, Z., Roberts, R.J., Unpublished observations.'
+  source: N. Welker
+BsuBI:
+  commercial_availability: ''
+  cut: [5' ---CTGCA  G--- 3', 3' ---G  ACGTC--- 5']
+  enzyme: BsuBI
+  isoscizomers: [PstI, AinI, AjoI, Ali2882I, AliAJI, ApiI, AplI, Asp36I, Asp708I,
+    Asp713I, AspTI, BbiI, BbrUIII, Bce170I, BloHII, BloHIII, BmeBI, BsaNII, BsaQI,
+    BscDI, Bsp17I, Bsp43I, Bsp63I, Bsp78I, Bsp81I, Bsp93I, Bsp107I, Bsp108I, Bsp268I,
+    BspBI, BspMAI, BspS122I, Bth9411I, CauIII, CflI, CfrA4I, CfuII, ClcI, CstI, EaePI,
+    Ecl77I, Ecl133I, Ecl593I, Ecl37kI, Ecl699kI, Ecl1zI, Ecl2zI, Eco48I, Eco49I, Eco83I,
+    Eco161I, Eco167I, Eco260I, Eco261I, EcoGIII, EhoI, Esp5II, Esp141I, GseII, HalII,
+    Kpn12I, MauI, MhaAI, MizI, MkrI, MmaI, Msp11I, NasI, NgbI, NocI, Pae8I, Pae9I,
+    Pae14I, Pae15I, Pae22I, Pae24I, Pae25I, Pae26I, Pae39I, Pae40I, Pae41I, PaeHII,
+    Pfl21I, Pfl37I, PmaI, Pma44I, PmyI, Pph2059I, Pph2066I, PshEI, Psp23I, Psp28I,
+    Psp46I, PspSI, Sag16I, Sag23I, Sal13I, SalPI, ScoAI, SflI, SgiI, SkaII, SprLI,
+    SriI, Srl1DI, Srl2DI, Srl5DI, Srl32DI, Ssp12I, Sst12I, TspGWII, Uba46I, Uba71I,
+    Uba72I, Uba1112I, Uba1115I, Uba1116I, Uba1119I, Uba1123I, Uba1149I, Uba1184I,
+    Uba1186I, Uba1211I, Uba1212I, Uba1213I, Uba1215I, Uba1216I, Uba1225I, Uba1232I,
+    Uba1256I, Uba1262I, Uba1287I, Uba1294II, Uba1296I, Uba1328I, Uba1337I, Uba1399I,
+    Uba1411I, Uba1417I, UbaHKBI, VchO87I, VpaK4AI, VpaK29AI, VpaK4BI, VpaKutGI, XcpI,
+    XmaII, XorI, XorKII, XphI, XveI, YenI, YenAI, YenBI, YenCI, YenDI, YenEI]
+  methylation_site: 5(6)
+  microorganism: Bacillus subtilis (BsuBI)
+  recognition_sequence: [5' CTGCAG, 3' GACGTC]
+  references: 'Hoshino, T., Uozumi, T., Horinouchi, S., Ozaki, A., Beppu, T., Arima,
+    K., (1977) Biochim. Biophys. Acta, vol. 479, pp. 367-369.
+
+    Shibata, T., Ikawa, S., Kim, C., Ando, T., (1976) J. Bacteriol., vol. 128, pp.
+    473-476.
+
+    Xu, G.L., Kapfer, W., Walter, J., Trautner, T.A., (1992) Nucleic Acids Res., vol.
+    20, pp. 6517-6523.'
+  source: IAM 1247
+BthCI:
+  commercial_availability: ''
+  cut: [5' ---GCNG  C--- 3', 3' ---C  GNCG--- 5']
+  enzyme: BthCI
+  isoscizomers: [Fnu4HI, Bli1904II, Bpu1811I, BsoFI, Bsp6I, BssFI, BssXI, Cac824I,
+    CcoP215I, CcoP216I, FbrI, Fsp4HI, ItaI, LlaDII, SatI, Uur960I]
+  methylation_site: ?(5)
+  microorganism: Bacillus thuringiensis 2294
+  recognition_sequence: [5' GCNGC, 3' CGNCG]
+  references: 'Nkenfou, C., Polisson, C., Nkenfou, J., Notedji, A., Morgan, R., Unpublished
+    observations.
+
+    Zhu, Z., Roberts, R.J., Unpublished observations.'
+  source: NEB 1402
+BthP35I:
+  commercial_availability: ''
+  cut: [5' ---C  TRYAG--- 3', 3' ---GAYRT  C--- 5']
+  enzyme: BthP35I
+  isoscizomers: [SfeI, Bco163I, BdiSI, BfmI, BpcI, BstSFI, HpyF2I, LlaBI, SfcI, Srl56DI]
+  methylation_site: ''
+  microorganism: Bacillus thermoglucosidasius
+  recognition_sequence: [5' CTRYAG, 3' GAYRTC]
+  references: Pan, X.S., Morgan, R., Unpublished observations.
+  source: NEB 1563
+CciI:
+  commercial_availability: I
+  cut: [5' ---T  CATGA--- 3', 3' ---AGTAC  T--- 5']
+  enzyme: CciI
+  isoscizomers: [BspHI, PagI, RcaI, RhcI, RspXI]
+  methylation_site: ''
+  microorganism: Curtobacterium citreus
+  recognition_sequence: [5' TCATGA, 3' AGTACT]
+  references: Chernukhin, V.A., Kashirina, Y.G., Tarasova, G.V., Dedkov, V.S., Mikhnenkova,
+    N.A., Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+CeqI:
+  commercial_availability: ''
+  cut: [5' ---GAT  ATC--- 3', 3' ---CTA  TAG--- 5']
+  enzyme: CeqI
+  isoscizomers: [EcoRV, Bsc217I, BshLI, BsoAI, Bsp16I, BstRI, Eco17I, Eco32I, Eco178I,
+    HjaI, HpyCI, NanI, NflAI, NsiCI, Pac1110II, Pfl16I, PxyARI, Rma495II, Rma496II,
+    Rma497II, SepMI, SmiMII, Tsp273I, Uba1400I, UbaN4I, UbaN21I]
+  methylation_site: ''
+  microorganism: Corynebacterium equi
+  recognition_sequence: [5' GATATC, 3' CTATAG]
+  references: 'Duda, E.G., Izsvak, Z., Orosz, A., (1987) Nucleic Acids Res., vol.
+    15, pp. 1334.
+
+    Izsvak, Z., Jobbagy, Z., Takacs, I., Duda, E., (1997) Int. J. Biochem. Cell Biol.,
+    vol. 29, pp. 895-900.'
+  source: E.G. Duda
+CfaI:
+  commercial_availability: ''
+  cut: [5' ---R  AATTY--- 3', 3' ---YTTAA  R--- 5']
+  enzyme: CfaI
+  isoscizomers: [ApoI, AcsI, FsiI, XapI]
+  methylation_site: ''
+  microorganism: Curtobacterium flaccumfaciens
+  recognition_sequence: [5' RAATTY, 3' YTTAAR]
+  references: Chee, H.Y., Unpublished observations.
+  source: Vivantis 216
+CfrBI:
+  commercial_availability: ''
+  cut: [5' ---C  CWWGG--- 3', 3' ---GGSSC  C--- 5']
+  enzyme: CfrBI
+  isoscizomers: [StyI, BsmSI, BssT1I, Bst224I, Eco130I, Eco208II, EcoT14I, EcoT104I,
+    ErhI, ErhB9II, SblAI, SblBI, SblCI, Uba1311I]
+  methylation_site: 1(4)
+  microorganism: Citrobacter freundii 4111
+  recognition_sequence: [5' CCWWGG, 3' GGSSCC]
+  references: 'Beletskaya, I.V., Zakharova, M.V., Shlyapnikov, M.G., Semenova, L.M.,
+    Solonin, A.S., (2000) Nucleic Acids Res., vol. 28, pp. 3817-3822.
+
+    Zakharova, M.V., Kravetz, A.N., Beletzkaja, I.V., Repyk, A.V., Solonin, A.S.,
+    (1993) Gene, vol. 129, pp. 77-81.'
+  source: A.S. Solonin
+CfrJ4I:
+  commercial_availability: ''
+  cut: [5' ---CCC  GGG--- 3', 3' ---GGG  CCC--- 5']
+  enzyme: CfrJ4I
+  isoscizomers: [SmaI, AhyI, Cfr9I, CphBI, EaeAI, EclRI, KteAI, Pac25I, PaeBI, PspAI,
+    PspALI, TspMI, Uba1220I, Uba1393I, XcyI, XmaI, XmaCI]
+  methylation_site: ''
+  microorganism: Citrobacter freundii J4
+  recognition_sequence: [5' CCCGGG, 3' GGGCCC]
+  references: Mushtaq, R., Riazuddin, S., Unpublished observations.
+  source: CAMB 2599
+ChaI:
+  commercial_availability: ''
+  cut: [5' ---GATC  --- 3', 3' ---  CTAG--- 5']
+  enzyme: ChaI
+  isoscizomers: [MboI, Asi256I, AspMDI, AsuMBI, Bce243I, Bfi57I, BfiSHI, BfuCI, Bme12I,
+    Bme2494I, BsaPI, BscFI, BsmXII, BspI, Bsp9I, Bsp18I, Bsp49I, Bsp51I, Bsp52I, Bsp54I,
+    Bsp57I, Bsp58I, Bsp59I, Bsp60I, Bsp61I, Bsp64I, Bsp65I, Bsp66I, Bsp67I, Bsp72I,
+    Bsp74I, Bsp76I, Bsp91I, Bsp105I, Bsp122I, Bsp135I, Bsp136I, Bsp138I, Bsp143I,
+    Bsp147I, Bsp2095I, BspAI, BspFI, BspJI, BspJ64I, BspKMI, BspKT6I, BsrMI, BsrPII,
+    BssGII, BssMI, Bst19II, Bst1274I, BstEIII, BstENII, BstKTI, BstMBI, BstXII, BtcI,
+    Bth84I, Bth211I, Bth213I, Bth221I, Bth945I, Bth1140I, Bth1141I, Bth1786I, Bth1997I,
+    BthCanI, BtkII, Btu33I, Btu34I, Btu36I, Btu37I, Btu39I, Btu41I, CacI, CcoP31I,
+    CcoP76I, CcoP84I, CcoP95II, CcoP219I, CcyI, CdiCD6II, Cin1467I, CjeP338I, CpaPI,
+    CpfI, CpfAI, Csp5I, Cte1179I, Cte1180I, CtyI, CviAI, CviHI, DpnII, EsaLHCI, FnuAII,
+    FnuCI, FnuEI, Gst1588II, HacI, HpyAIII, HpyHPK5II, Kzo9I, LlaAI, LlaDCHI, LlaKR2I,
+    Lsp1109II, Mel3JI, Mel5JI, Mel7JI, Mel4OI, Mel5OI, Mel2TI, Mel5TI, MeuI, MgoI,
+    MjaIII, MkrAI, MmeII, Mmu5I, MmuP2I, MnoIII, MosI, Msp67II, MspBI, MthI, Mth1047I,
+    MthAI, NciAI, NdeII, NflI, NflAII, NflBI, NlaII, NlaDI, NmeCI, NphI, NsiAI, NspAI,
+    NsuI, PbrTI, Pei9403I, PfaI, Pph288I, RalF40I, Rlu1I, SalAI, SalHI, Sau15I, Sau6782I,
+    Sau3AI, SauCI, SauDI, SauEI, SauFI, SauGI, SauMI, SinMI, SmiMBI, SsiAI, SsiBI,
+    Ssu211I, Ssu212I, Ssu220I, R1.Ssu2479I, R2.Ssu2479I, R1.Ssu4109I, R2.Ssu4109I,
+    R1.Ssu4961I, R2.Ssu4961I, R1.Ssu8074I, R2.Ssu8074I, R1.Ssu11318I, R2.Ssu11318I,
+    R1.SsuDAT1I, R2.SsuDAT1I, Sth368I, TrsKTI, TrsSI, TrsTI, TruII, Tsp133I, Uba4I,
+    Uba59I, Uba1101I, Uba1177I, Uba1182I, Uba1183I, Uba1204I, Uba1259I, Uba1317I,
+    Uba1323I, Uba1366I, UbaN1I, Vha44I]
+  methylation_site: ''
+  microorganism: Corynebacterium halofytica
+  recognition_sequence: [5' GATC, 3' CTAG]
+  references: Afram, C., Unpublished observations.
+  source: M.M. Wijdenbosch
+CviAII:
+  commercial_availability: N
+  cut: [5' ---C  ATG--- 3', 3' ---GTA  C--- 5']
+  enzyme: CviAII
+  isoscizomers: [NlaIII, FaeI, FatI, FatII, Hin1II, Hin8II, HpyCH4I, Hsp92II]
+  methylation_site: 2(6)
+  microorganism: Chlorella virus NC64A (PBCV-1)
+  recognition_sequence: [5' CATG, 3' GTAC]
+  references: 'Dunigan, D.D., Blanc, G., Duncan, G.A., Gurnon, J.R., Jeanniard, A.,
+    McClung, O.W., Upton, C., Van Etten, J.L., Unpublished observations.
+
+    Gurnon, J.R., Graves, M.V., Van Etten, J.L., Unpublished observations.
+
+    Zhang, Y., Nelson, M., Nietfeldt, J.W., Burbank, D.E., Van Etten, J.L., (1992)
+    Nucleic Acids Res., vol. 20, pp. 5351-5356.'
+  source: J.L. Van Etten
+CviBI:
+  commercial_availability: ''
+  cut: [5' ---G  ANTC--- 3', 3' ---CTNA  G--- 5']
+  enzyme: CviBI
+  isoscizomers: [HinfI, CviCI, CviDI, CviEI, CviFI, CviGI, FnuAI, HhaII, HpyIV, HpyAIV,
+    Hpy87AI, HpyF2II, HpyF10II, HpyF18I, HpyF38I, HpyF44I, HpyF55II, HpyF60I, HpyF71III,
+    HpyF72III, NcaI, NovII, NsiHI, SscL1I]
+  methylation_site: 2(6)
+  microorganism: Chlorella virus NC-1A
+  recognition_sequence: [5' GANTC, 3' CTNAG]
+  references: 'Kan, T.N., Lin, L., Chandrasegaran, S., (1992) Gene, vol. 121, pp.
+    1-7.
+
+    Xia, Y., Burbank, D.E., Van Etten, J.L., (1986) Nucleic Acids Res., vol. 14, pp.
+    6017-6030.'
+  source: J.L. Van Etten
+CviJI:
+  commercial_availability: QX
+  cut: [5' ---RG  CY--- 3', 3' ---YC  GR--- 5']
+  enzyme: CviJI
+  isoscizomers: [CviKI-1, CviKI, CviLI, CviMI, CviNI, CviOI]
+  methylation_site: 3(5),-3(5)
+  microorganism: Chlorella virus IL-3A
+  recognition_sequence: [5' RGCY, 3' YCGR]
+  references: 'Jeanniard, A., Dunigan, D.D., Gurnon, J.R., Agarkova, I., Kang, M.,
+    Vitek, J., Duncan, G., McClung, O.W., Larsen, M., Claverie, J.-M., Van Etten,
+    J.L., Blanc, G., Unpublished observations.
+
+    Shields, S.L., Burbank, D.E., Grabherr, R., Van Etten, J.L., (1990) Virology,
+    vol. 176, pp. 16-24.
+
+    Swaminathan, N., Mead, D.A., McMaster, K., George, D., Van Etten, J.L., Skowron,
+    P.M., (1996) Nucleic Acids Res., vol. 24, pp. 2463-2469.
+
+    Xia, Y., Burbank, D.E., Uher, L., Rabussay, D., Van Etten, J.L., (1987) Nucleic
+    Acids Res., vol. 15, pp. 6075-6090.'
+  source: J.L. Van Etten
+DdeI:
+  commercial_availability: KMNOQRSX
+  cut: [5' ---C  TNAG--- 3', 3' ---GANT  C--- 5']
+  enzyme: DdeI
+  isoscizomers: [Bpa36II, BscPI, Bst295I, BstDEI, BstJZ301I, HpyCH4II, HpyF3I, HpyF4II,
+    HpyF5I, HpyF6III, HpyF7I, HpyF9II, HpyF11I, HpyF13II, HpyF19I, HpyF21I, HpyF22II,
+    HpyF24II, HpyF25I, HpyF27I, HpyF30II, HpyF32I, HpyF34I, HpyF37I, HpyF41II, HpyF59I,
+    HpyF60II, HpyF64V, HpyF66II, HpyF67I, HpyF68II, HpyF70I, HpyF72II, HpyHI, HpyHPK5I]
+  methylation_site: 1(5)
+  microorganism: Desulfovibrio desulfuricans Norway strain
+  recognition_sequence: [5' CTNAG, 3' GANTC]
+  references: 'Brooks, J.E., Howard, K.A., US Patent Office, 1994.
+
+    Gelinas, R.E., Roberts, R.J., Unpublished observations.
+
+    Howard, K.A., Card, C., Benner, J.S., Callahan, H.L., Maunus, R., Silber, K.,
+    Wilson, G., Brooks, J.E., (1986) Nucleic Acids Res., vol. 14, pp. 7939-7951.
+
+    Makula, R.A., Meagher, R.B., (1980) Nucleic Acids Res., vol. 8, pp. 3125-3131.
+
+    Sznyter, L.A., Slatko, B., Moran, L., O''Donnell, K.H., Brooks, J.E., (1987) Nucleic
+    Acids Res., vol. 15, pp. 8249-8266.'
+  source: NCIB 83120
+DinI:
+  commercial_availability: V
+  cut: [5' ---GGC  GCC--- 3', 3' ---CCG  CGG--- 5']
+  enzyme: DinI
+  isoscizomers: [NarI, BbeI, BbeAI, R1.BbrUI, BinSII, Eco78I, EgeI, EheI, KasI, McaAI,
+    MchI, Mly113I, MsaI, NamI, NdaI, NunII, PatAI, PluTI, PmnI, SfoI, SseAI, SspDI]
+  methylation_site: ''
+  microorganism: Deinococcus indicus
+  recognition_sequence: [5' GGCGCC, 3' CCGCGG]
+  references: Chee, H.Y., Unpublished observations.
+  source: Vivantis 83
+DpaI:
+  commercial_availability: ''
+  cut: [5' ---AGT  ACT--- 3', 3' ---TCA  TGA--- 5']
+  enzyme: DpaI
+  isoscizomers: [ScaI, Acc113I, AflIV, Asp763I, AssI, BmcAI, Bpa34I, BshHI, BsoSI,
+    BstMI, Eco255I, LlaDI, NmeSI, PinI, RflFII, Uba1094I, Uba1158I, VchO49I, ZrmI]
+  methylation_site: ''
+  microorganism: Deleya pacifica
+  recognition_sequence: [5' AGTACT, 3' TCATGA]
+  references: Suzuki, T., Sato, Y., Yamada, Y., Akagawa-Matsushita, M., Yamasato,
+    K., (1991) Agric. Biol. Chem., vol. 55, pp. 2647-2649.
+  source: IAM 14115
+DraII:
+  commercial_availability: ''
+  cut: [5' ---RG  GNCCY--- 3', 3' ---YCCNG  GR--- 5']
+  enzyme: DraII
+  isoscizomers: [EcoO109I, Kaz48kI, PssI, Uba1326I, VneAI]
+  methylation_site: ''
+  microorganism: Deinococcus radiophilus
+  recognition_sequence: [5' RGGNCCY, 3' YCCNGGR]
+  references: 'Benner, J.S., Unpublished observations.
+
+    de Wit, C.M., Dekker, B.M.M., Neele, A.C., de Waard, A., (1985) FEBS Lett., vol.
+    180, pp. 219-223.
+
+    Grosskopf, R., Wolf, W., Kessler, C., (1985) Nucleic Acids Res., vol. 13, pp.
+    1517-1528.'
+  source: ATCC 27603
+DrdI:
+  commercial_availability: N
+  cut: [5' ---GACNNNN  NNGTC--- 3', 3' ---CTGNN  NNNNCAG--- 5']
+  enzyme: DrdI
+  isoscizomers: [AasI, DseDI, TrsSII]
+  methylation_site: ''
+  microorganism: Deinococcus radiodurans
+  recognition_sequence: [5' GACNNNNNNGTC, 3' CTGNNNNNNCAG]
+  references: 'Clark, T.A., Morgan, R.D., Unpublished observations.
+
+    Polisson, C., Morgan, R.D., (1989) Nucleic Acids Res., vol. 17, pp. 3316.'
+  source: NEB 479
+DsaI:
+  commercial_availability: ''
+  cut: [5' ---C  CRYGG--- 3', 3' ---GGYRC  C--- 5']
+  enzyme: DsaI
+  isoscizomers: [BstDSI, BtgI, TspBI]
+  methylation_site: ''
+  microorganism: Dactylococcopsis salina
+  recognition_sequence: [5' CCRYGG, 3' GGYRCC]
+  references: Laue, F., Evans, L.R., Jarsch, M., Brown, N.L., Kessler, C., (1991)
+    Gene, vol. 97, pp. 87-95.
+  source: A.E. Walsby
+Eae46I:
+  commercial_availability: ''
+  cut: [5' ---CCGC  GG--- 3', 3' ---GG  CGCC--- 5']
+  enzyme: Eae46I
+  isoscizomers: [SacII, AosIII, Asp32HI, BacI, Bac465I, BloMGI, BscTI, Bsp12I, Cfr37I,
+    Cfr41I, Cfr42I, Cfr43I, Cfr45II, CscI, Cte1I, DrdAI, DrdBI, DrdCI, DrdEI, DrdFI,
+    Dsp1I, EccI, Ecl1I, Ecl28I, Ecl37I, Eco55I, Eco92I, Eco96I, Eco99I, Eco100I, Eco104I,
+    Eco134I, Eco135I, Eco151I, Eco158I, Eco182I, Eco196I, Eco208I, Eco29kI, Ese3I,
+    Ese6I, FscI, GalI, GceI, GceGLI, Kpn19I, Kpn378I, KspI, Mpr154I, MraI, NgoAIII,
+    NgoDIII, NgoGIII, NgoJIII, NgoKIII, NgoMIII, NgoPIII, NlaDIII, NlaSI, Pae7I, Pae17I,
+    Pae36I, Pae42I, Pae43I, Pae44I, PaeAI, PaeQI, Pae5kI, Pae14kI, Pfl1108II, RaqI,
+    SaaI, SabI, SakI, SboI, SchZI, SenPT14bI, SenpCI, SexBI, SexCI, SfrI, Sfr303I,
+    Sfr382I, SgrBI, ShyI, SpuI, SseII, SsmII, Ssm5II, Ssp1725I, SstII, StaI, TglI,
+    TtoI, Uba66I, Uba77I, Uba90I, Uba1093I, Uba1095I, Uba1111I, Uba1113I, Uba1126I,
+    Uba1187I, Uba1229I, Uba1234I, Uba1244I, Uba1306I, Uba1364I, Uba1369I, UbaHKAI]
+  methylation_site: ''
+  microorganism: Enterobacter aerogenes 46
+  recognition_sequence: [5' CCGCGG, 3' GGCGCC]
+  references: Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+Eci125I:
+  commercial_availability: ''
+  cut: [5' ---G  GTNACC--- 3', 3' ---CCANTG  G--- 5']
+  enzyme: Eci125I
+  isoscizomers: [BstEII, AcrII, AspAI, Bse59I, Bse64I, BseT9I, BseT10I, BsiKI, Bsp1591I,
+    Bst31I, BstDI, BstPI, BstT9I, BstT10I, Cfr7I, Cfr19I, EcaI, Eco91I, EcoO65I, EcoO128I,
+    KoxI, NspSAII, PspEI, SciAI, Uba1291I]
+  methylation_site: ''
+  microorganism: Escherichia coli VKM-125
+  recognition_sequence: [5' GGTNACC, 3' CCANTGG]
+  references: Sokolov, N.N., Eldarov, M.A., Anikeitcheva, N.V., Karpichev, I.V., Samko,
+    O.T., Kalugin, A.A., Fitsner, A.B., Choroshoutina, E.B., Scryabin, K.G., Unpublished
+    observations.
+  source: N.N. Sokolov
+Eco47III:
+  commercial_availability: BMR
+  cut: [5' ---AGC  GCT--- 3', 3' ---TCG  CGA--- 5']
+  enzyme: Eco47III
+  isoscizomers: [AfeI, AitI, Aor51HI, FunI]
+  methylation_site: ''
+  microorganism: Escherichia coli RFL47
+  recognition_sequence: [5' AGCGCT, 3' TCGCGA]
+  references: Janulaitis, A., Petrusyte, M., Butkus, V., (1983) FEBS Lett., vol. 161,
+    pp. 213-216.
+  source: A. Janulaitis
+Eco56I:
+  commercial_availability: ''
+  cut: [5' ---G  CCGGC--- 3', 3' ---CGGCC  G--- 5']
+  enzyme: Eco56I
+  isoscizomers: [NaeI, Afa24RI, AmeII, AniMI, ApeAI, AprI, BheI, CcoI, Esp5I, MauAI,
+    MisI, Mlu9273II, MroNI, NbaI, NbrI, NgoAIV, NgoMIV, NmuI, NmuFI, NspWI, NtaSII,
+    PdiI, PglI, Psp61I, RluI, RrhJ1I, SacAI, SalCI, SaoI, SauAI, SauBMKI, SauHPI,
+    SauLPI, SauNI, SauSI, SceIII, SghWII, SkaI, Slu1777I, Smo40529I, SrlI, Srl77DI,
+    SspCI, Uba1122I, KroI]
+  methylation_site: ?(5)
+  microorganism: Escherichia coli RFL56
+  recognition_sequence: [5' GCCGGC, 3' CGGCCG]
+  references: 'Janulaitis, A., Stakenas, P.S., Petrusyte, M.P., Bitinaite, J.B., Klimasauskas,
+    S.I., Butkus, V.V., (1983) Mol. Biol. (Mosk), vol. 18, pp. 115-129.
+
+    Lubys, A., Janulaitis, A., Unpublished observations.
+
+    Lubys, A., Lubiene, J., Janulaitis, A., Unpublished observations.
+
+    Petrusyte, M., Padegimiene, A., Butkus, V., Janulaitis, A., Unpublished observations.'
+  source: A. Janulaitis
+EsaBC3I:
+  commercial_availability: ''
+  cut: [5' ---TC  GA--- 3', 3' ---AG  CT--- 5']
+  enzyme: EsaBC3I
+  isoscizomers: [TaqI, CviSIII, HpyV, Hpy26II, HpyF14III, HpyF16I, HpyF23I, HpyF24I,
+    HpyF26III, HpyF30I, HpyF35I, HpyF40II, HpyF42IV, HpyF45I, HpyF49I, HpyF52I, HpyF59III,
+    HpyF62II, HpyF64I, HpyF65II, HpyF66IV, HpyF71I, HpyF73II, HpyJP26II, PpaAII, Taq20I,
+    Tbr51I, TfiA3I, TfiTok6A1I, TflI, Tsc4aI, Tsp32I, Tsp32II, Tsp358I, Tsp505I, Tsp510I,
+    TspNI, Tth24I, TthHB8I, TthRQI]
+  methylation_site: 2(4)
+  microorganism: Environmental sample BC3
+  recognition_sequence: [5' TCGA, 3' AGCT]
+  references: 'Morgan, R.D., Unpublished observations.
+
+    Morgan, R.D., Roberts, R.J., International Patent Office, 2007.'
+  source: R.D. Morgan
+FaiI:
+  commercial_availability: I
+  cut: [5' ---YA  TR--- 3', 3' ---RT  AY--- 5']
+  enzyme: FaiI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Flavobacterium aquatile B15
+  recognition_sequence: [5' YATR, 3' RTAY]
+  references: Chernukhin, V.A., Dedkov, V.S., Mikhnenkova, N.A., Kileva, E.V., Tomilova,
+    J.E., Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+FatI:
+  commercial_availability: IN
+  cut: [5' ---  CATG--- 3', 3' ---GTAC  --- 5']
+  enzyme: FatI
+  isoscizomers: [NlaIII, CviAII, FaeI, FatII, Hin1II, Hin8II, HpyCH4I, Hsp92II]
+  methylation_site: ?(5)
+  microorganism: Flavobacterium aquatile NL3
+  recognition_sequence: [5' CATG, 3' GTAC]
+  references: 'Dedkov, V.S., Kileva, E.V., Popichenko, D.V., Degtyarev, S.K., (2002)
+    Biotekhnologiya, vol. 5, pp. 3-7.
+
+    Morgan, R.D., Unpublished observations.'
+  source: NEB 1779
+FdiII:
+  commercial_availability: ''
+  cut: [5' ---TGC  GCA--- 3', 3' ---ACG  CGT--- 5']
+  enzyme: FdiII
+  isoscizomers: [MstI, AcaIII, Acc16I, AosI, ApcTR183I, AviII, Bco6I, BsaTI, ClcII,
+    CliII, FspI, GspAII, NsbI, NspHIII, NspLI, NspMI, PamI, Pun14627I]
+  methylation_site: ''
+  microorganism: Fremyella diplosiphon
+  recognition_sequence: [5' TGCGCA, 3' ACGCGT]
+  references: 'Streips, U., Golemboski, B., Unpublished observations.
+
+    van den Hondel, C.A.M.J.J., van Leen, R.W., van Arkel, G.A., Duyvesteyn, M., de
+    Waard, A., (1983) FEMS Microbiol. Lett., vol. 16, pp. 7-12.'
+  source: PCC 7601
+FmuI:
+  commercial_availability: ''
+  cut: [5' ---GGNC  C--- 3', 3' ---C  CNGG--- 5']
+  enzyme: FmuI
+  isoscizomers: [AsuI, AhaB1I, ApuI, AspS9I, AvcI, Bac36I, Bal228I, BavAII, BavBII,
+    Bce22I, Bfi105I, BmgT120I, BpsI, BsaSI, Bse54I, BshKI, BsiZI, Bsp1894I, BspBII,
+    BspF4I, Bsu54I, Bsu5044I, CcuI, CdiAI, CdiCD6I, Cfr4I, Cfr8I, Cfr13I, Cfr23I,
+    Cfr33I, Cfr45I, Cfr46I, Cfr47I, Cfr52I, Cfr54I, CfrNI, Eco39I, Eco47II, Eco196II,
+    Eco201I, GseI, Hin5II, HpyF66I, HpyF71II, HpyF73IV, MaeK81II, MhoI, MjaII, Msp24I,
+    MthBI, NlaDII, NmuEII, NmuSI, NspIV, Nsp7121I, NspLII, Pde12I, Pph1579I, Pph1773I,
+    PseI, PspI, PspPI, Sau2I, Sau5I, Sau13I, Sau14I, Sau17I, Sau32I, Sau33I, Sau96I,
+    Sau557I, SauBI, SdyI, SelAI, TdeIII, Uba1099I, Uba1134I, Uba1160I, Uba1164I, UnbI,
+    VchO66I, VchO85I, VchO90I, VpaK15I, VpaK25I, VpaK9AI, VpaK19AI, VpaK19BI, VpaKutAI,
+    VpaKutBI, VpaKutJI]
+  methylation_site: ''
+  microorganism: Flavobacterium multivorum
+  recognition_sequence: [5' GGNCC, 3' CCNGG]
+  references: Rebentish, B.A., Bolotin, A.P., Grachova, I.M., Ren, L.S., Uyan, J.M.,
+    (1994) Biotekhnologiya, vol. 3, pp. 15-16.
+  source: B.A. Rebentish
+FnuCI:
+  commercial_availability: ''
+  cut: [5' ---  GATC--- 3', 3' ---CTAG  --- 5']
+  enzyme: FnuCI
+  isoscizomers: [MboI, Asi256I, AspMDI, AsuMBI, Bce243I, Bfi57I, BfiSHI, BfuCI, Bme12I,
+    Bme2494I, BsaPI, BscFI, BsmXII, BspI, Bsp9I, Bsp18I, Bsp49I, Bsp51I, Bsp52I, Bsp54I,
+    Bsp57I, Bsp58I, Bsp59I, Bsp60I, Bsp61I, Bsp64I, Bsp65I, Bsp66I, Bsp67I, Bsp72I,
+    Bsp74I, Bsp76I, Bsp91I, Bsp105I, Bsp122I, Bsp135I, Bsp136I, Bsp138I, Bsp143I,
+    Bsp147I, Bsp2095I, BspAI, BspFI, BspJI, BspJ64I, BspKMI, BspKT6I, BsrMI, BsrPII,
+    BssGII, BssMI, Bst19II, Bst1274I, BstEIII, BstENII, BstKTI, BstMBI, BstXII, BtcI,
+    Bth84I, Bth211I, Bth213I, Bth221I, Bth945I, Bth1140I, Bth1141I, Bth1786I, Bth1997I,
+    BthCanI, BtkII, Btu33I, Btu34I, Btu36I, Btu37I, Btu39I, Btu41I, CacI, CcoP31I,
+    CcoP76I, CcoP84I, CcoP95II, CcoP219I, CcyI, CdiCD6II, ChaI, Cin1467I, CjeP338I,
+    CpaPI, CpfI, CpfAI, Csp5I, Cte1179I, Cte1180I, CtyI, CviAI, CviHI, DpnII, EsaLHCI,
+    FnuAII, FnuEI, Gst1588II, HacI, HpyAIII, HpyHPK5II, Kzo9I, LlaAI, LlaDCHI, LlaKR2I,
+    Lsp1109II, Mel3JI, Mel5JI, Mel7JI, Mel4OI, Mel5OI, Mel2TI, Mel5TI, MeuI, MgoI,
+    MjaIII, MkrAI, MmeII, Mmu5I, MmuP2I, MnoIII, MosI, Msp67II, MspBI, MthI, Mth1047I,
+    MthAI, NciAI, NdeII, NflI, NflAII, NflBI, NlaII, NlaDI, NmeCI, NphI, NsiAI, NspAI,
+    NsuI, PbrTI, Pei9403I, PfaI, Pph288I, RalF40I, Rlu1I, SalAI, SalHI, Sau15I, Sau6782I,
+    Sau3AI, SauCI, SauDI, SauEI, SauFI, SauGI, SauMI, SinMI, SmiMBI, SsiAI, SsiBI,
+    Ssu211I, Ssu212I, Ssu220I, R1.Ssu2479I, R2.Ssu2479I, R1.Ssu4109I, R2.Ssu4109I,
+    R1.Ssu4961I, R2.Ssu4961I, R1.Ssu8074I, R2.Ssu8074I, R1.Ssu11318I, R2.Ssu11318I,
+    R1.SsuDAT1I, R2.SsuDAT1I, Sth368I, TrsKTI, TrsSI, TrsTI, TruII, Tsp133I, Uba4I,
+    Uba59I, Uba1101I, Uba1177I, Uba1182I, Uba1183I, Uba1204I, Uba1259I, Uba1317I,
+    Uba1323I, Uba1366I, UbaN1I, Vha44I]
+  methylation_site: ''
+  microorganism: Fusobacterium nucleatum C
+  recognition_sequence: [5' GATC, 3' CTAG]
+  references: Lui, A.C.P., McBride, B.C., Vovis, G.F., Smith, M., (1979) Nucleic Acids
+    Res., vol. 6, pp. 1-15.
+  source: M. Smith
+FnuDI:
+  commercial_availability: ''
+  cut: [5' ---GG  CC--- 3', 3' ---CC  GG--- 5']
+  enzyme: FnuDI
+  isoscizomers: [HaeIII, AcaIV, Afl83II, Asp742I, AspTIII, AvrBI, Bal475I, Bal3006I,
+    BanAI, Bce71I, Bco33I, BecAII, Bfi458I, BhaII, Bim19II, BliI, BluII, Bme46I, Bme74I,
+    Bme361I, BmeU1594I, Bpa36I, BsaRI, BscQI, BseI, Bse9I, Bse126I, BseQI, BshI, BshAI,
+    BshBI, BshCI, BshDI, BshEI, BshFI, BsiAI, BsiDI, BsiHI, BsnI, Bsp23I, Bsp44II,
+    Bsp137I, Bsp211I, Bsp226I, Bsp881I, Bsp1261I, Bsp1593I, Bsp2013I, Bsp2362I, Bsp2500I,
+    BspANI, BspBDG2I, BspBRI, BspBSE18I, BspBake1I, BspCHE15I, BspGHA1I, BspH106II,
+    BspKI, BspLRI, BspRI, BssCI, BstCI, BstJI, Bsu1076I, Bsu1114I, BsuRI, BteI, CbeI,
+    ClmI, CltI, Csp2I, DsaII, EsaBC4I, EsaWC1I, FinSI, HhgI, Hpy178VII, HpyF10V, HpyF26II,
+    HpyF29I, HpyF33II, HpyF42I, HpyF46V, HpyF49IV, HpyF53I, HpyF57I, HpyF63I, HpyF69II,
+    HpyF72I, HpyF73III, MchAII, MfoAI, MniI, MnnII, MthTI, NgoAII, NgoCII, NgoNII,
+    NgoPII, NgoSII, NgoTII, NlaI, NspLKI, OchI, PaiI, PalI, Pde133I, PflKI, PhoI,
+    PlaI, Ple214I, PpuI, Pru2I, Psb9879I, Psp29I, SagI, SbvI, SfaI, SplIII, SuaI,
+    SulI, Tsp132I, Tsp266I, Tsp273II, Tsp281I, Tsp560I, TspZNI, TteAI, TtnI, Tvu2HI,
+    Uba9I, Uba54I, Uba61I, Uba1097I, Uba1140I, Uba1146I, Uba1147I, Uba1150I, Uba1152I,
+    Uba1153I, Uba1155I, Uba1169I, Uba1174I, Uba1175I, Uba1176I, Uba1178I, Uba1179I,
+    Uba1207I, Uba1208I, Uba1209I, Uba1210I, Uba1214I, Uba1223I, Uba1228I, Uba1230I,
+    Uba1231I, Uba1235I, Uba1288I, Uba1292I, Uba1293I, Uba1319I, Uba1322I, Uba1336I,
+    Uba1377I, Uba1388I, Uba1392I, Uba1395I, Uba1408I, Uba1418I, Uba1422I, Uba1429I,
+    Uba1449I, Uba1450I, UbaN2I, UbaN8I, Uth549I, Uth555I, Uth557I, Van91III, VhaI,
+    Vha1168I, VniI]
+  methylation_site: ?(5)
+  microorganism: Fusobacterium nucleatum D
+  recognition_sequence: [5' GGCC, 3' CCGG]
+  references: 'Lui, A.C.P., McBride, B.C., Vovis, G.F., Smith, M., (1979) Nucleic
+    Acids Res., vol. 6, pp. 1-15.
+
+    Lunnen, K.D., Wilson, G.G., Unpublished observations.
+
+    Puzio, P., Blau, A., Plesch, G., Kamlage, B., Looser, R., Schmitz, O., Wendel,
+    B., European Patent Office, 2009.
+
+    Van Cott, E., Wilson, G., European Patent Office, 1987.
+
+    Van Cott, E.M., Wilson, G.G., US Patent Office, 1991.'
+  source: M. Smith
+FnuDIII:
+  commercial_availability: ''
+  cut: [5' ---GCG  C--- 3', 3' ---C  GCG--- 5']
+  enzyme: FnuDIII
+  isoscizomers: [HhaI, AspLEI, BbtI, BcaI, BspLAI, BstHHI, CcoP95I, CfoI, Csp1470I,
+    Hin6I, Hin7I, HinGUI, HinP1I, HinS1I, HinS2I, Hpy99III, HpyF10I, HsoI, HspAI,
+    Mho2965I, MnnIV, NgoEII, SciNI]
+  methylation_site: ''
+  microorganism: Fusobacterium nucleatum D
+  recognition_sequence: [5' GCGC, 3' CGCG]
+  references: Lui, A.C.P., McBride, B.C., Vovis, G.F., Smith, M., (1979) Nucleic Acids
+    Res., vol. 6, pp. 1-15.
+  source: M. Smith
+FseI:
+  commercial_availability: N
+  cut: [5' ---GGCCGG  CC--- 3', 3' ---CC  GGCCGG--- 5']
+  enzyme: FseI
+  isoscizomers: [RigI]
+  methylation_site: ?(5)
+  microorganism: Frankia species Eul1b
+  recognition_sequence: [5' GGCCGGCC, 3' CCGGCCGG]
+  references: 'Morgan, R.D., Unpublished observations.
+
+    Morgan, R.D., US Patent Office, 1996.
+
+    Morgan, R.D., Roberts, R.J., International Patent Office, 2007.
+
+    Nelson, J.M., Miceli, S.M., Lechevalier, M.P., Roberts, R.J., (1990) Nucleic Acids
+    Res., vol. 18, pp. 2061-2064.'
+  source: NRRL 18528
+FspAI:
+  commercial_availability: B
+  cut: [5' ---RTGC  GCAY--- 3', 3' ---YACG  CGTR--- 5']
+  enzyme: FspAI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Flexibacter species Tv-m21K
+  recognition_sequence: [5' RTGCGCAY, 3' YACGCGTR]
+  references: Kesminiene, A., Maneliene, Z., Vitkute, J., Petrusyte, M., Janulaitis,
+    A., (2001) Nucleic Acids Res., vol. 29.
+  source: V. Butkus
+GlaI:
+  commercial_availability: I
+  cut: [5' ---GC  GC--- 3', 3' ---CG  CG--- 5']
+  enzyme: GlaI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Glacial ice bacterium GL29
+  recognition_sequence: [5' GCGC, 3' CGCG]
+  references: Chernukhin, V.A., Nayakshina, T.N., Abdurashitov, M.A., Tomilova, Y.E.,
+    Mezentseva, N.V., Dedkov, V.S., Mikhnenkova, N.A., Gonchar, D.A., Degtyarev, S.K.,
+    (2006) Biotekhnologiya, vol. 0, pp. 26-30.
+  source: S.K. Degtyarev
+HaeI:
+  commercial_availability: ''
+  cut: [5' ---WGG  CCW--- 3', 3' ---SCC  GGS--- 5']
+  enzyme: HaeI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Haemophilus aegyptius
+  recognition_sequence: [5' WGGCCW, 3' SCCGGS]
+  references: Murray, K., Morrison, A., Cooke, H.W., Roberts, R.J., Unpublished observations.
+  source: ATCC 11116
+HaeII:
+  commercial_availability: JKNR
+  cut: [5' ---RGCGC  Y--- 3', 3' ---Y  CGCGR--- 5']
+  enzyme: HaeII
+  isoscizomers: [AccB2I, BfoI, Bme142I, BsmHI, Bsp143II, Bst16I, Bst1473II, BstH2I,
+    Btu34II, HinHI, LpnI, NgoAI, NgoBI, NgoCI, NgoGI, NgoJI, NgoMI, NgoWI]
+  methylation_site: ?(5)
+  microorganism: Haemophilus aegyptius
+  recognition_sequence: [5' RGCGCY, 3' YCGCGR]
+  references: 'Lunnen, K.D., Barsomian, J.M., Camp, R.R., Card, C.O., Chen, S.-Z.,
+    Croft, R., Looney, M.C., Meda, M.M., Moran, L.S., Nwankwo, D.O., Slatko, B.E.,
+    Van Cott, E.M., Wilson, G.G., (1988) Gene, vol. 74, pp. 25-32.
+
+    Muzny, D. et al., Unpublished observations.
+
+    Puzio, P., Blau, A., Plesch, G., Kamlage, B., Looser, R., Schmitz, O., Wendel,
+    B., European Patent Office, 2009.
+
+    Roberts, R.J., Breitmeyer, J.B., Tabachnik, N.F., Myers, P.A., (1975) J. Mol.
+    Biol., vol. 91, pp. 121-123.
+
+    Stein, D.C., Gunn, J.S., Piekarowicz, A., (1998) Biol. Chem., vol. 379, pp. 575-578.
+
+    Tu, C.-P.D., Roychoudhury, R., Wu, R., (1976) Biochem. Biophys. Res. Commun.,
+    vol. 72, pp. 355-362.'
+  source: ATCC 11116
+HauII:
+  commercial_availability: ''
+  cut: [5' ---TGGCCANNNNNNNNNNN  --- 3', 3' ---  ACCGGTNNNNNNNNNNN--- 5']
+  enzyme: HauII
+  isoscizomers: [BalI, MlsI, Mlu31I, MluNI, Mox20I, MscI, Msp16I, Msp20I]
+  methylation_site: 6(6)
+  microorganism: Herpetosiphon aurantiacus
+  recognition_sequence: [5' TGGCCANNNNNNNNNNN, 3' ACCGGTNNNNNNNNNNN]
+  references: 'Anton, B.P., Fomenkov, A., Morgan, R.D., Murray, I.A., Roberts, R.J.,
+    Unpublished observations.
+
+    Dwinnel, E., Morgan, R.D., Unpublished observations.
+
+    Kiss, H. et al., (2011) Standards in Genomic Sciences, vol. 5, pp. 356-370.
+
+    Morgan, R.D., Dwinell, E.A., Unpublished observations.'
+  source: ATCC 23779
+Hin1II:
+  commercial_availability: B
+  cut: [5' ---CATG  --- 3', 3' ---  GTAC--- 5']
+  enzyme: Hin1II
+  isoscizomers: [NlaIII, CviAII, FaeI, FatI, FatII, Hin8II, HpyCH4I, Hsp92II]
+  methylation_site: ''
+  microorganism: Haemophilus influenzae RFL1
+  recognition_sequence: [5' CATG, 3' GTAC]
+  references: Lazareviciute, L., Maneliene, Z., Padegimiene, A., Kiuduliene, L., Laucys,
+    V., Bitinaite, J., Gruber, I.M., Polyachenko, V.M., Butkus, V., Janulaitus, A.,
+    (1990) Bioorg. Khim., vol. 16, pp. 889-897.
+  source: A. Janulaitis
+Hin6I:
+  commercial_availability: B
+  cut: [5' ---G  CGC--- 3', 3' ---CGC  G--- 5']
+  enzyme: Hin6I
+  isoscizomers: [HhaI, AspLEI, BbtI, BcaI, BspLAI, BstHHI, CcoP95I, CfoI, Csp1470I,
+    FnuDIII, Hin7I, HinGUI, HinP1I, HinS1I, HinS2I, Hpy99III, HpyF10I, HsoI, HspAI,
+    Mho2965I, MnnIV, NgoEII, SciNI]
+  methylation_site: ''
+  microorganism: Haemophilus influenzae RFL6
+  recognition_sequence: [5' GCGC, 3' CGCG]
+  references: Lazareviciute, L., Maneliene, Z., Padegimiene, A., Kiuduliene, L., Laucys,
+    V., Bitinaite, J., Gruber, I.M., Polyachenko, V.M., Butkus, V., Janulaitus, A.,
+    (1990) Bioorg. Khim., vol. 16, pp. 889-897.
+  source: A. Janulaitis
+HindII:
+  commercial_availability: IMV
+  cut: [5' ---GTY  RAC--- 3', 3' ---CAR  YTG--- 5']
+  enzyme: HindII
+  isoscizomers: [ChuEII, Hin1160II, Hin1161II, HinJCI, HincII, MnnI]
+  methylation_site: 5(6)
+  microorganism: Haemophilus influenzae Rd
+  recognition_sequence: [5' GTYRAC, 3' CARYTG]
+  references: 'Fleischmann, R.D. et al., (1995) Science, vol. 269, pp. 496-512.
+
+    Fleischmann, R.D., Adams, M.D., White, O., Smith, H.O., Venter, J.C., Japanese
+    Patent Office, 2004.
+
+    Fleischmann, R.D., Adams, M.D., White, O., Smith, H.O., Venter, J.C., US Patent
+    Office, 2005.
+
+    Fomenkov, A., Redfield, R., Mell, J., Roberts, R.J., Unpublished observations.
+
+    Kelly, T.J. Jr., Smith, H.O., (1970) J. Mol. Biol., vol. 51, pp. 393-409.
+
+    Roy, P.H., Smith, H.O., (1973) J. Mol. Biol., vol. 81, pp. 427-444.
+
+    Roy, P.H., Smith, H.O., (1973) J. Mol. Biol., vol. 81, pp. 445-459.
+
+    Smith, H.O., Wilcox, K.W., (1970) J. Mol. Biol., vol. 51, pp. 379-391.'
+  source: ATCC 51907
+HpaI:
+  commercial_availability: BCIJKMNQRSVX
+  cut: [5' ---GTT  AAC--- 3', 3' ---CAA  TTG--- 5']
+  enzyme: HpaI
+  isoscizomers: [BsaKI, BseII, BstEZ359I, BstHPI, KspAI, MwhI, SsrI, Uba1408II]
+  methylation_site: 5(6)
+  microorganism: Haemophilus parainfluenzae
+  recognition_sequence: [5' GTTAAC, 3' CAATTG]
+  references: 'Benner, J.S., Rees, P., European Patent Office, 1995.
+
+    Benner, J.S., Rees, P., US Patent Office, 1994.
+
+    Garfin, D.E., Goodman, H.M., (1974) Biochem. Biophys. Res. Commun., vol. 59, pp.
+    108-116.
+
+    Ito, H., Shimado, H., Kimizuka, F., Kato, I., Japanese Patent Office, 1993.
+
+    Sharp, P.A., Sugden, B., Sambrook, J., (1973) Biochemistry, vol. 12, pp. 3055-3063.
+
+    Yoo, O.J., Dwyer-Hallquist, P., Agarwal, K.L., (1982) Nucleic Acids Res., vol.
+    10, pp. 6511-6519.'
+  source: ATCC 49669
+Hpy188I:
+  commercial_availability: N
+  cut: [5' ---TCN  GA--- 3', 3' ---AG  NCT--- 5']
+  enzyme: Hpy188I
+  isoscizomers: [Hpy166I, HpyF11II, HpyF12II, HpyF15II, HpyF17I, HpyF19II, HpyF27II,
+    HpyF28I, HpyF33I, HpyF42III, HpyF46IV, HpyF50II, HpyF61I, HpyF64III]
+  methylation_site: 5(6)
+  microorganism: Helicobacter pylori J188
+  recognition_sequence: [5' TCNGA, 3' AGNCT]
+  references: Xu, Q., Stickel, S., Roberts, R.J., Blaser, M.J., Morgan, R.D., (2000)
+    J. Biol. Chem., vol. 275, pp. 17086-17093.
+  source: M.J. Blaser
+Hpy188III:
+  commercial_availability: N
+  cut: [5' ---TC  NNGA--- 3', 3' ---AGNN  CT--- 5']
+  enzyme: Hpy188III
+  isoscizomers: [Hpy178III, HpyCH4VI, HpyF16II, HpyF19III, HpyF22III, HpyF44IV, HpyGI,
+    HpyNSH57II]
+  methylation_site: ''
+  microorganism: Helicobacter pylori J188
+  recognition_sequence: [5' TCNNGA, 3' AGNNCT]
+  references: 'Morgan, R.D., Xu, Q., US Patent Office, 2001.
+
+    Xu, Q., Morgan, R.D., Unpublished observations.'
+  source: M.J. Blaser
+Hpy8I:
+  commercial_availability: B
+  cut: [5' ---GTN  NAC--- 3', 3' ---CAN  NTG--- 5']
+  enzyme: Hpy8I
+  isoscizomers: [MjaIV, Hpy166II, HpyBII, HpyF7III, HpyF14II, HpyF46III, HpyF49III,
+    HpyF50I]
+  methylation_site: 5(6)
+  microorganism: Helicobacter pylori A 8-5
+  recognition_sequence: [5' GTNNAC, 3' CANNTG]
+  references: 'Lubys, A., Minkute, J., Janulaitis, A., Unpublished observations.
+
+    Maneliene, Z., Butkus, V., Unpublished observations.
+
+    Vitkute, J., Trinkunaite, L., Kiuduliene, E., Butkus, V., Janulaitis, A., Unpublished
+    observations.'
+  source: A. Janulaitis
+Hpy99I:
+  commercial_availability: N
+  cut: [5' ---CGWCG  --- 3', 3' ---  GCSGC--- 5']
+  enzyme: Hpy99I
+  isoscizomers: [HpyF61III]
+  methylation_site: 4(4)
+  microorganism: Helicobacter pylori J99
+  recognition_sequence: [5' CGWCG, 3' GCSGC]
+  references: 'Alm, R.A., Ling, L.-S.L., Moir, D.T., King, B.L., Brown, E.D., Doig,
+    P.C., Smith, D.R., Noonan, B., Guild, B.C., deJonge, B.L., Carmel, G., Tummino,
+    P.J., Caruso, A., Uria-Nickelsen, M., Mills, D.M., Ives, C., Gibson, R., Merberg,
+    D., Mills, S., (1999) Nature, vol. 397, pp. 176-180.
+
+    Krebes, J., Morgan, R.D., Bunk, B., Sproeer, C., Luong, K., Parusel, R., Anton,
+    B.P., Koenig, C., Josenhans, C., Overmann, J., Roberts, R.J., Korlach, J., Suerbaum,
+    S., (2014) Nucleic Acids Res., vol. 42, pp. 2415-2432.
+
+    Lin, L., Porter, N., Kong, H., Unpublished observations.
+
+    Morgan, R.D., Xu, Q., International Patent Office, 2001.
+
+    Stickel, S.K., Roberts, R.J., Unpublished observations.'
+  source: R.A. Alm
+HpyCH4IV:
+  commercial_availability: N
+  cut: [5' ---A  CGT--- 3', 3' ---TGC  A--- 5']
+  enzyme: HpyCH4IV
+  isoscizomers: [MaeII, HpyF13III, HpyF35II, HpyF74II, HpySE526I, TaiI, TscI, Tsp49I,
+    TspIDSI, TspWAM8AI, TtmI]
+  methylation_site: 2(5)
+  microorganism: Helicobacter pylori CH4
+  recognition_sequence: [5' ACGT, 3' TGCA]
+  references: Morgan, R.D., Xu, Q., US Patent Office, 2001.
+  source: M.J. Blaser
+HpyF44III:
+  commercial_availability: ''
+  cut: [5' ---TG  CA--- 3', 3' ---AC  GT--- 5']
+  enzyme: HpyF44III
+  isoscizomers: [CviRI, Hpy26I, HpyCH4V, HpyF36III, HpyF38II, HpyF45II, HpyF48III,
+    HpyF49V, HpyF67II, HpyGII, HpyJP26I]
+  methylation_site: ''
+  microorganism: Helicobacter pylori RFL44
+  recognition_sequence: [5' TGCA, 3' ACGT]
+  references: Vitkute, J., Petrusyte, V., Trinkunaite, L., Kiuduliene, L., Janulaitis,
+    A., Unpublished observations.
+  source: V. Butkus
+KflI:
+  commercial_availability: B
+  cut: [5' ---GG  GWCCC--- 3', 3' ---CCCSG  GG--- 5']
+  enzyme: KflI
+  isoscizomers: [SanDI, Sse1825I]
+  methylation_site: ''
+  microorganism: Kribbella flavida RFL1
+  recognition_sequence: [5' GGGWCCC, 3' CCCSGGG]
+  references: 'Lauciuniene, N., Norgeliene, D., Trinkunaite, L., Vitkute, J., Janulaitis,
+    A., Unpublished observations.
+
+    Zakareviciene, L., Lubys, A., Unpublished observations.'
+  source: Fermentas G320
+Kpn49kI:
+  commercial_availability: ''
+  cut: [5' ---G  AATTC--- 3', 3' ---CTTAA  G--- 5']
+  enzyme: Kpn49kI
+  isoscizomers: [EcoRI, Bci528I, Eco82I, Eco159I, Eco228I, Eco237I, Eco252I, FunII,
+    HalI, Hal22I, Ppu111I, RsrI, Srl32DII, Srl55DI, SsoI, Uba58I, Van91II, VchN100I,
+    VchO2I]
+  methylation_site: ''
+  microorganism: Klebsiella pneumoniae 49k
+  recognition_sequence: [5' GAATTC, 3' CTTAAG]
+  references: Kravetz, A.N., Zakharova, M.V., Beljetzkaja, I.V., Pertzev, A.V., Spivak,
+    O.I., Solonin, A.S., (1993) Nucleic Acids Res., vol. 21, pp. 1501.
+  source: A.S. Solonin
+Kpn49kII:
+  commercial_availability: ''
+  cut: [5' ---  CCSGG--- 3', 3' ---GGWCC  --- 5']
+  enzyme: Kpn49kII
+  isoscizomers: [CauII, AhaI, AseII, Asp1I, AsuC2I, BcnI, BpuMI, Bsp7I, Bsp8I, Bsp55I,
+    BspF105I, BspJ67I, EciDI, Eco121I, Eco179I, Eco190I, Eco1831I, EcoHI, HgiS21I,
+    HgiS22I, Hin3I, Mgl14481I, NciI, Pae181I, RshII, SflHK10695I, SflHK11086I, SflHK11087I,
+    SflHK11572I, SflHK115731I, Ssp2I, Tmu1I, Uba41I, Uba42I, Uba1280I, Uba1318I, Uba1347I,
+    Uba1370I, Uba1372I, Uba1376I, Uba1378I, Uba1389I, Uba1401I, Uba1423I, Uba1424I,
+    UbaN11I]
+  methylation_site: ''
+  microorganism: Klebsiella pneumoniae 49k
+  recognition_sequence: [5' CCSGG, 3' GGWCC]
+  references: Kravetz, A.N., Zakharova, M.V., Beljetzkaja, I.V., Pertzev, A.V., Spivak,
+    O.I., Solonin, A.S., (1993) Nucleic Acids Res., vol. 21, pp. 1501.
+  source: A.S. Solonin
+KpnI:
+  commercial_availability: BCIJKMNOQRSUVXY
+  cut: [5' ---GGTAC  C--- 3', 3' ---C  CATGG--- 5']
+  enzyme: KpnI
+  isoscizomers: [Acc65I, AhaB8I, Asp718I, BspJ106I, Eco149I, Esp19I, KpnK14I, MvsI,
+    MvsAI, MvsBI, MvsCI, MvsDI, MvsEI, NmiI, Sau10I, SthI, SthAI, SthBI, SthCI, SthDI,
+    SthEI, SthFI, SthGI, SthHI, SthJI, SthKI, SthLI, SthMI, SthNI, Uba76I, Uba85I,
+    Uba86I, Uba87I, Uba1201I]
+  methylation_site: 4(6)
+  microorganism: Klebsiella pneumoniae OK8
+  recognition_sequence: [5' GGTACC, 3' CCATGG]
+  references: 'Chatterjee, D., Longo, M., Flynn, E., Oberfelder, R., Japanese Patent
+    Office, 2001.
+
+    Chatterjee, D., Longo, M., Flynn, E., Oberfelder, R., US Patent Office, 2004.
+
+    Chatterjee, D.K., Longo, M., Flynn, E., Oberfelder, R., US Patent Office, 2007.
+
+    Kiss, A., Finta, C., Venetianer, P., (1991) Nucleic Acids Res., vol. 19, pp. 3460.
+
+    Oberfelder, R., Longo, M., Flynn, E., Chatterjee, D., European Patent Office,
+    2008.
+
+    Smith, D.I., Blattner, F.R., Davies, J., (1976) Nucleic Acids Res., vol. 3, pp.
+    343-353.
+
+    Tomassini, J., Roychoudhury, R., Wu, R., Roberts, R.J., (1978) Nucleic Acids Res.,
+    vol. 5, pp. 4055-4064.
+
+    Xu, S.-Y., Unpublished observations.'
+  source: ATCC 49790
+MabI:
+  commercial_availability: I
+  cut: [5' ---A  CCWGGT--- 3', 3' ---TGGSCC  A--- 5']
+  enzyme: MabI
+  isoscizomers: [SexAI, CsiI]
+  methylation_site: ''
+  microorganism: Microbacterium arborescens SE
+  recognition_sequence: [5' ACCWGGT, 3' TGGSCCA]
+  references: Nadeev, A.N., Tsaplin, M.M., Abdurashitov, M.A., Dedkov, V.S., Kashirina,
+    J.G., Popichenko, D.V., Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+MaeIII:
+  commercial_availability: M
+  cut: [5' ---  GTNAC--- 3', 3' ---CANTG  --- 5']
+  enzyme: MaeIII
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Methanococcus aeolicus PL-15/H
+  recognition_sequence: [5' GTNAC, 3' CANTG]
+  references: Schmid, K., Thomm, M., Laminet, A., Laue, F.G., Kessler, C., Stetter,
+    K.O., Schmitt, R., (1984) Nucleic Acids Res., vol. 12, pp. 2619-2628.
+  source: K.O. Stetter
+MalI:
+  commercial_availability: I
+  cut: [5' ---GA  TC--- 3', 3' ---CT  AG--- 5']
+  enzyme: MalI
+  isoscizomers: [DpnI, CfuI, FtnUIV, Mph1103II, NanII, NgoDXIV, NmeAII, NmeBL859I,
+    NmuDI, NmuEI, NsuDI, SbgI, TdeI]
+  methylation_site: ''
+  microorganism: Marinococus albus I
+  recognition_sequence: [5' GATC, 3' CTAG]
+  references: Chernuhin, V.A., Nayakshina, T.N., Tomilova, J.E., Degtyarev, S.K.,
+    Unpublished observations.
+  source: S.K. Degtyarev
+MauBI:
+  commercial_availability: B
+  cut: [5' ---CG  CGCGCG--- 3', 3' ---GCGCGC  GC--- 5']
+  enzyme: MauBI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Microbacterium aurum RFL2
+  recognition_sequence: [5' CGCGCGCG, 3' GCGCGCGC]
+  references: 'Vitkute, J., Lauciuniene, N., Capskaja, L., Trinkunaite, L., Janulaitis,
+    A., Unpublished observations.
+
+    Zakareviciene, L., Lubys, A., Unpublished observations.'
+  source: Fermentas G348
+McaTI:
+  commercial_availability: ''
+  cut: [5' ---GCGC  GC--- 3', 3' ---CG  CGCG--- 5']
+  enzyme: McaTI
+  isoscizomers: [BsePI, BscEI, BsoPI, BsrHI, BssBI, BssHII, BstBZ153I, CfrJ5I, Eco143I,
+    Eco152I, Esp7I, Esp8I, Kpn30I, PauI, PteI, TtmII, Uba69I]
+  methylation_site: ?(5)
+  microorganism: Methylococcus capsulatus str. Bath
+  recognition_sequence: [5' GCGCGC, 3' CGCGCG]
+  references: 'Morgan, R.D., Roberts, R.J., International Patent Office, 2007.
+
+    Ward, N. et al., (2004) PLoS Biology, vol. 2, pp. 1616-1628.
+
+    Zheng, Y., Posfai, J., Morgan, R.D., Vincze, T., Roberts, R.J., (2009) Nucleic
+    Acids Res., vol. 37.
+
+    Zheng, Y., Roberts, R.J., Unpublished observations.'
+  source: ATCC 33009
+MchAI:
+  commercial_availability: ''
+  cut: [5' ---GC  GGCCGC--- 3', 3' ---CGCCGG  CG--- 5']
+  enzyme: MchAI
+  isoscizomers: [NotI, CciNI, CsiBI, CspBI]
+  methylation_site: ''
+  microorganism: Mycobacterium chelonei
+  recognition_sequence: [5' GCGGCCGC, 3' CGCCGGCG]
+  references: Shankar, S., Tyagi, A.K., (1993) Gene, vol. 132, pp. 119-123.
+  source: A.K. Tyagi
+MfeI:
+  commercial_availability: IN
+  cut: [5' ---C  AATTG--- 3', 3' ---GTTAA  C--- 5']
+  enzyme: MfeI
+  isoscizomers: [MunI]
+  methylation_site: ?(6)
+  microorganism: Mycoplasma fermentans
+  recognition_sequence: [5' CAATTG, 3' GTTAAC]
+  references: 'Halden, N.F., Wolf, J.B., Cross, S.L., Leonard, W.J., (1988) Clin.
+    Res., vol. 36, pp. 404a.
+
+    Halden, N.F., Wolf, J.B., Leonard, W.J., (1989) Nucleic Acids Res., vol. 17, pp.
+    3491-3499.
+
+    Morgan, R.D., Roberts, R.J., International Patent Office, 2007.
+
+    Stickel, S.K., Roberts, R.J., Unpublished observations.
+
+    Xu, S.-Y., Unpublished observations.
+
+    Zhu, Z., Blanchard, A., Xu, S.-Y., Guan, S., Wei, H., Zhang, P., Sun, D., Chan,
+    S.-h., International Patent Office, 2009.'
+  source: N.F. Halden
+MflI:
+  commercial_availability: K
+  cut: [5' ---R  GATCY--- 3', 3' ---YCTAG  R--- 5']
+  enzyme: MflI
+  isoscizomers: [XhoII, AitII, AitAI, Asp17I, Asp22I, Asp1HI, Asp6HI, Asp8HI, Asp14HI,
+    Asp21HI, BloHI, BpuGI, BscSI, BstX2I, BstYI, DsaIII, MspNII, PsuI, Tru201I, Uba1432I]
+  methylation_site: ''
+  microorganism: Microbacterium flavum
+  recognition_sequence: [5' RGATCY, 3' YCTAGR]
+  references: Hiraoka, N., Kita, K., Nakajima, H., Obayashi, A., (1984) J. Ferment.
+    Technol., vol. 62, pp. 583-588.
+  source: IAM 1642
+Mlu31I:
+  commercial_availability: ''
+  cut: [5' ---TGG  CCA--- 3', 3' ---ACC  GGT--- 5']
+  enzyme: Mlu31I
+  isoscizomers: [BalI, HauII, MlsI, MluNI, Mox20I, MscI, Msp16I, Msp20I]
+  methylation_site: ''
+  microorganism: Micrococcus luteus 31
+  recognition_sequence: [5' TGGCCA, 3' ACCGGT]
+  references: Serov, G.D., Puchkova, L.I., Kolesnikov, V.A., Repin, V.E., Unpublished
+    observations.
+  source: V.E. Repin
+MluB2I:
+  commercial_availability: ''
+  cut: [5' ---TCG  CGA--- 3', 3' ---AGC  GCT--- 5']
+  enzyme: MluB2I
+  isoscizomers: [NruI, AmaSI, Bsp68I, BtuMI, Mlu9273I, PspDI, RruI, SalDI, Sbo13I,
+    Sna3286I, SpoI, Uba1117I, Uba1386I, VchO70I]
+  methylation_site: ''
+  microorganism: Micrococcus luteus B2
+  recognition_sequence: [5' TCGCGA, 3' AGCGCT]
+  references: Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+MluCI:
+  commercial_availability: N
+  cut: [5' ---  AATT--- 3', 3' ---TTAA  --- 5']
+  enzyme: MluCI
+  isoscizomers: [TspEI, Sse9I, TasI, TseCI, Tsp509I]
+  methylation_site: ''
+  microorganism: Micrococcus luteus
+  recognition_sequence: [5' AATT, 3' TTAA]
+  references: 'Lunnen, K.D., Wilson, G.G., Unpublished observations.
+
+    Nkenfou, C., Polisson, C., Nkenfou, J., Notedji, A., Morgan, R., Unpublished observations.
+
+    Stickel, S.K., Unpublished observations.'
+  source: NEB 1223
+Mly113I:
+  commercial_availability: I
+  cut: [5' ---GG  CGCC--- 3', 3' ---CCGC  GG--- 5']
+  enzyme: Mly113I
+  isoscizomers: [NarI, BbeI, BbeAI, R1.BbrUI, BinSII, DinI, Eco78I, EgeI, EheI, KasI,
+    McaAI, MchI, MsaI, NamI, NdaI, NunII, PatAI, PluTI, PmnI, SfoI, SseAI, SspDI]
+  methylation_site: ''
+  microorganism: Micrococcus lylae 113
+  recognition_sequence: [5' GGCGCC, 3' CCGCGG]
+  references: Dedkov, V.S., Zernov, Y.P., Rechkunova, N.I., Degtyarev, S.K., (1990)
+    Mol. Gen. Mikrobiol. Virusol., vol. 0, pp. 17-18.
+  source: S.K. Degtyarev
+MreI:
+  commercial_availability: B
+  cut: [5' ---CG  CCGGCG--- 3', 3' ---GCGGCC  GC--- 5']
+  enzyme: MreI
+  isoscizomers: [Sse232I]
+  methylation_site: ''
+  microorganism: Micromonospora rhodorangea RFL1
+  recognition_sequence: [5' CGCCGGCG, 3' GCGGCCGC]
+  references: 'Maneliene, Z., Lubys, A., Unpublished observations.
+
+    Vitkute, J., Slyziute, J., Maneliene, Z., Norgeliene, D., Trinkunaite, L., Janulaitis,
+    A., Unpublished observations.'
+  source: Fermentas G296
+MroI:
+  commercial_availability: MO
+  cut: [5' ---T  CCGGA--- 3', 3' ---AGGCC  T--- 5']
+  enzyme: MroI
+  isoscizomers: [BspMII, AccIII, Aor13HI, Bbf7411I, BbvAIII, Bla7920I, BlfI, BseAI,
+    BsiGI, BsiMI, BsiOI, Bsp13I, Bsp228I, Bsp233I, Bsp508I, BspEI, BspH226I, BstZ1I,
+    BstZ3I, Bsu22I, Bsu23I, CauB3I, Cfr57I, EspHK26I, Kpn2I, PinBII, PtaI, Tsp507I,
+    Tsp514I, Uba1136I, Uba1279I, Uba1375I, Uba1425I]
+  methylation_site: ''
+  microorganism: Micrococcus roseus
+  recognition_sequence: [5' TCCGGA, 3' AGGCCT]
+  references: Kato, F., Suetake, T., Murata, A., Mukai, T., Ueki, H., Japanese Patent
+    Office, 1988.
+  source: F. Kato
+MspA1I:
+  commercial_availability: INRV
+  cut: [5' ---CMG  CKG--- 3', 3' ---GKC  GMC--- 5']
+  enzyme: MspA1I
+  isoscizomers: [NspBII]
+  methylation_site: ?(4)
+  microorganism: Moraxella species A1
+  recognition_sequence: [5' CMGCKG, 3' GKCGMC]
+  references: 'Degtyarev, S.K., Unpublished observations.
+
+    Xu, S.-Y., Unpublished observations.
+
+    Xu, S.-Y., Maunus, R., Stropnicky, K., International Patent Office, 2003.'
+  source: S.K. Degtyarev
+MspB4I:
+  commercial_availability: ''
+  cut: [5' ---G  GYRCC--- 3', 3' ---CCRYG  G--- 5']
+  enzyme: MspB4I
+  isoscizomers: [HgiCI, AccB1I, BanI, BbvBI, Bme05I, BshNI, BspT107I, Eco50I, Eco64I,
+    Eco168I, Eco169I, Eco171I, Eco173I, Eco195I, Esp1I, Esp6I, Esp9I, Esp10I, Esp11I,
+    Esp12I, Esp13I, Esp14I, Esp15I, Esp21I, Esp22I, Esp25I, HgiHI, PfaAI, Pph14I,
+    SspM1III, Uba1127I, Vsp2246I]
+  methylation_site: ''
+  microorganism: Moraxella species B4
+  recognition_sequence: [5' GGYRCC, 3' CCRYGG]
+  references: Dedkov, V.S., Zernov, Y.P., Rechkunova, N.I., Degtyarev, S.K., (1990)
+    Mol. Gen. Mikrobiol. Virusol., vol. 0, pp. 17-18.
+  source: S.K. Degtyarev
+MspI:
+  commercial_availability: BIJKNQRSUVX
+  cut: [5' ---C  CGG--- 3', 3' ---GGC  C--- 5']
+  enzyme: MspI
+  isoscizomers: [HpaII, Asp748I, Bco27I, BsaZI, BshMI, BsiSI, Bsp5I, Bsp47I, Bsp48I,
+    Bsp116I, Bsp1591II, Bst40I, Bsu1192I, BsuFI, CboI, CceI, FinII, FpsJI, HapII,
+    Hin2I, Hin5I, HpyVIII, Hpy299IX, HpyF43I, MniII, MnoI, Msp199I, NflHII, Pde137I,
+    Pme35I, SecII, SfaGUI, SmoLI, Sth134I, Sth302II, Uba1128I, Uba1141I, Uba1267I,
+    Uba1338I, Uba1355I, Uba1439I, UbaN13I]
+  methylation_site: 1(5)
+  microorganism: Moraxella species
+  recognition_sequence: [5' CCGG, 3' GGCC]
+  references: 'Butkus, V., Petrauskiene, L., Maneliene, Z., Klimasauskas, S., Laucys,
+    V., Janulaitis, A., (1987) Nucleic Acids Res., vol. 15, pp. 7091-7102.
+
+    Hornby, D.P.J., Matin, M.M., International Patent Office, 2001.
+
+    Jentsch, S., Gunthert, U., Trautner, T.A., (1981) Nucleic Acids Res., vol. 9,
+    pp. 2753-2759.
+
+    Matin, M.M., Hornby, D.P., (2000) Anal. Biochem., vol. 278, pp. 46-51.
+
+    Puzio, P., Blau, A., Plesch, G., Kamlage, B., Looser, R., Schmitz, O., Wendel,
+    B., European Patent Office, 2009.
+
+    Schildkraut, I., Greenough, L., Unpublished observations.
+
+    Van Montagu, M., Sciaky, D., Myers, P.A., Roberts, R.J., Unpublished observations.
+
+    Walder, R.Y., Langtimm, C.J., Catterjee, R., Walder, J.A., (1983) J. Biol. Chem.,
+    vol. 258, pp. 1235-1241.'
+  source: ATCC 49670
+MwoI:
+  commercial_availability: N
+  cut: [5' ---GCNNNNN  NNGC--- 3', 3' ---CGNN  NNNNNCG--- 5']
+  enzyme: MwoI
+  isoscizomers: [Bce4I, Bce1247I, BceCI, BspWI, BstMWI, HpyF10VI]
+  methylation_site: ?(4)
+  microorganism: Methanobacterium wolfei
+  recognition_sequence: [5' GCNNNNNNNGC, 3' CGNNNNNNNCG]
+  references: 'Lunnen, K.D., Morgan, R.D., Timan, C.J., Krzycki, J.A., Reeve, J.N.,
+    Wilson, G.G., (1989) Gene, vol. 77, pp. 11-19.
+
+    Lunnen, K.D., Wilson, G.G., Unpublished observations.
+
+    Lunnen, K.D., Wilson, G.G., European Patent Office, 1995.
+
+    Lunnen, K.D., Wilson, G.G., US Patent Office, 1991.'
+  source: DSM 2970
+NcoI:
+  commercial_availability: BCJKMNOQRSUXY
+  cut: [5' ---C  CATGG--- 3', 3' ---GGTAC  C--- 5']
+  enzyme: NcoI
+  isoscizomers: [AteI, Bse19I, Bsp19I, NspSAIII, Pam7686I]
+  methylation_site: ?(4)
+  microorganism: Nocardia corallina
+  recognition_sequence: [5' CCATGG, 3' GGTACC]
+  references: 'Langdale, J.A., Myers, P.A., Roberts, R.J., Unpublished observations.
+
+    VanCott, E.M., European Patent Office, 1995.
+
+    VanCott, E.M., US Patent Office, 1993.
+
+    Zhang, B.-H., Van Cott, E.M., Wilson, G.G., Unpublished observations.'
+  source: ATCC 19070
+Nli3877I:
+  commercial_availability: ''
+  cut: [5' ---CYCGR  G--- 3', 3' ---G  RGCYC--- 5']
+  enzyme: Nli3877I
+  isoscizomers: [AvaI, AcrI, Ama87I, AquI, AspBI, AspDI, AvrI, BcoI, BmeT110I, Bse15I,
+    BsiHKCI, BsoBI, BspLU4I, BstBAII, BstNSII, Bst7QI, BstSI, BstZ4I, Eco88I, Eco27kI,
+    EspHK29I, Gst1588I, NliI, NmuAI, NspIII, NspDI, NspEI, NspSAI, OfoI, PlaAI, PunAI,
+    Uba1205II, Uba1436I, Uba1440I, UbaN6II, Umi5I]
+  methylation_site: ''
+  microorganism: Nostoc linckia
+  recognition_sequence: [5' CYCGRG, 3' GRGCYC]
+  references: Melnik, A.I., Rebentish, B.A., Bolotin, A.V., Mendzhul, M.I., (1991)
+    Mikrobiol. Zh., vol. 53, pp. 24-28.
+  source: A.I. Melnik
+Nsp7121I:
+  commercial_availability: ''
+  cut: [5' ---G  GNCC--- 3', 3' ---CCNG  G--- 5']
+  enzyme: Nsp7121I
+  isoscizomers: [AsuI, AhaB1I, ApuI, AspS9I, AvcI, Bac36I, Bal228I, BavAII, BavBII,
+    Bce22I, Bfi105I, BmgT120I, BpsI, BsaSI, Bse54I, BshKI, BsiZI, Bsp1894I, BspBII,
+    BspF4I, Bsu54I, Bsu5044I, CcuI, CdiAI, CdiCD6I, Cfr4I, Cfr8I, Cfr13I, Cfr23I,
+    Cfr33I, Cfr45I, Cfr46I, Cfr47I, Cfr52I, Cfr54I, CfrNI, Eco39I, Eco47II, Eco196II,
+    Eco201I, FmuI, GseI, Hin5II, HpyF66I, HpyF71II, HpyF73IV, MaeK81II, MhoI, MjaII,
+    Msp24I, MthBI, NlaDII, NmuEII, NmuSI, NspIV, NspLII, Pde12I, Pph1579I, Pph1773I,
+    PseI, PspI, PspPI, Sau2I, Sau5I, Sau13I, Sau14I, Sau17I, Sau32I, Sau33I, Sau96I,
+    Sau557I, SauBI, SdyI, SelAI, TdeIII, Uba1099I, Uba1134I, Uba1160I, Uba1164I, UnbI,
+    VchO66I, VchO85I, VchO90I, VpaK15I, VpaK25I, VpaK9AI, VpaK19AI, VpaK19BI, VpaKutAI,
+    VpaKutBI, VpaKutJI]
+  methylation_site: ''
+  microorganism: Nostoc species 7121
+  recognition_sequence: [5' GGNCC, 3' CCNGG]
+  references: Moser, D.P., Zarka, D., Kallas, T., (1993) Arch. Microbiol., vol. 160,
+    pp. 229-237.
+  source: PCC 7121
+OliI:
+  commercial_availability: B
+  cut: [5' ---CACNN  NNGTG--- 3', 3' ---GTGNN  NNCAC--- 5']
+  enzyme: OliI
+  isoscizomers: [AleI]
+  methylation_site: ''
+  microorganism: Oceanospirillum linum 4-5D
+  recognition_sequence: [5' CACNNNNGTG, 3' GTGNNNNCAC]
+  references: Padegimiene, E., Maneliene, Z., Petrusyte, M., Janulaitis, A., (2001)
+    Nucleic Acids Res., vol. 29.
+  source: V. Butkus
+PabI:
+  commercial_availability: ''
+  cut: [5' ---GTA  C--- 3', 3' ---C  ATG--- 5']
+  enzyme: PabI
+  isoscizomers: [RsaI, AfaI, Asp16HI, Asp17HI, Asp18HI, Asp29HI, CcoP73I, Csp6I, CviQI,
+    CviRII, Hpy303I, Hpy312I, Hpy401I, Hpy421I, Hpy423I, Hpy471I, Hpy501I, HpyBI,
+    HpyF10IV, HpyF13IV, HpyF21II, HpyF31I, HpyF36II, HpyF44V, HpyF52III, HpyF53II,
+    HpyF59II, HpyF65III, HpyF66III, HpyHII, HpyNSH57I, MjaV, PlaAII, RsaNI]
+  methylation_site: 3(6)
+  microorganism: Pyrococcus abyssi
+  recognition_sequence: [5' GTAC, 3' CATG]
+  references: 'Ishikawa, K., Watanabe, M., Kuroita, T., Uchiyama, I., Bujnicki, J.M.,
+    Kawakami, B., Tanokura, M., Kobayashi, I., (2005) Nucleic Acids Res., vol. 33.
+
+    Watanabe, M., Yuzawa, H., Handa, N., Kobayashi, I., (2006) Appl. Environ. Microbiol.,
+    vol. 72, pp. 5367-5375.'
+  source: Genoscope
+PacI:
+  commercial_availability: BNO
+  cut: [5' ---TTAAT  TAA--- 3', 3' ---AAT  TAATT--- 5']
+  enzyme: PacI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Pseudomonas alcaligenes
+  recognition_sequence: [5' TTAATTAA, 3' AATTAATT]
+  references: 'Anton, B.P., Fomenkov, A., Morgan, R.D., Murray, I.A., Roberts, R.J.,
+    Unpublished observations.
+
+    Kur, J., (1993) Acta Microbiol. Pol., vol. 42, pp. 145-150.
+
+    Morgan, R.D., Unpublished observations.
+
+    Morgan, R.D., Roberts, R.J., International Patent Office, 2007.
+
+    Polisson, C., European Patent Office, 1994.
+
+    Polisson, C., Fu, P., Unpublished observations.'
+  source: NEB 585
+Pae2kI:
+  commercial_availability: ''
+  cut: [5' ---A  GATCT--- 3', 3' ---TCTAG  A--- 5']
+  enzyme: Pae2kI
+  isoscizomers: [BglII, BseB631II, NcrI, NspMACI, Pae18kI]
+  methylation_site: ''
+  microorganism: Pseudomonas aeruginosa 2k
+  recognition_sequence: [5' AGATCT, 3' TCTAGA]
+  references: Kravets, A.N., Pertsev, A.V., Tarutina, Z.Y., Krendelev, Y.D., Zakharova,
+    M.V., Beletskaya, I.V., Solonin, A.S., (1998) Mol. Gen. Mikrobiol. Virusol., vol.
+    0, pp. 14-17.
+  source: A.S. Solonin
+PasI:
+  commercial_availability: B
+  cut: [5' ---CC  CWGGG--- 3', 3' ---GGGSC  CC--- 5']
+  enzyme: PasI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Pseudomonas anguilliseptica RFL1
+  recognition_sequence: [5' CCCWGGG, 3' GGGSCCC]
+  references: 'Maneliene, Z., Zakareviciene, L., Unpublished observations.
+
+    Nekrasiene, D., Vitkute, J., Capskaja, L., Trinkunaite, L., Kiuduliene, L., Markauskas,
+    A., Butkus, V., Janulaitis, A., Unpublished observations.'
+  source: V. Butkus
+PcsI:
+  commercial_availability: I
+  cut: [5' ---WCGNNNN  NNNCGW--- 3', 3' ---SGCNNN  NNNNGCS--- 5']
+  enzyme: PcsI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Paracoccus carotinifaciens 3K
+  recognition_sequence: [5' WCGNNNNNNNCGW, 3' SGCNNNNNNNGCS]
+  references: Chernukhin, V.A., Nayakshina, T.N., Tarasova, G.V., Golikova, L.N.,
+    Akishev, A.G., Dedkov, V.S., Mikhnenkova, N.A., Degtyarev, S.K., Russian Patent
+    Office, 2009.
+  source: S.K. Degtyarev
+PdmI:
+  commercial_availability: B
+  cut: [5' ---GAANN  NNTTC--- 3', 3' ---CTTNN  NNAAG--- 5']
+  enzyme: PdmI
+  isoscizomers: [XmnI, Asp700I, BbvAI, MroXI, Psc2I, SynII]
+  methylation_site: ''
+  microorganism: Pseudomonas diminuta Auk 5-324
+  recognition_sequence: [5' GAANNNNTTC, 3' CTTNNNNAAG]
+  references: Vitkute, J., Mociskyte, S., Vaitkevicius, D., Maneliene, Z., Norgeliene,
+    D., Kiuduliene, L., Butkus, V., Janulaitis, A., Unpublished observations.
+  source: V. Butkus
+PfaAII:
+  commercial_availability: ''
+  cut: [5' ---CA  TATG--- 3', 3' ---GTAT  AC--- 5']
+  enzyme: PfaAII
+  isoscizomers: [NdeI, FauNDI, TrsKTIII]
+  methylation_site: ''
+  microorganism: Phormidium favosum
+  recognition_sequence: [5' CATATG, 3' GTATAC]
+  references: Piechula, S., Waleron, K., Swiatek, W., Biedrzycka, I., Podhajska, A.J.,
+    (2001) FEMS Microbiol. Lett., vol. 198, pp. 135-140.
+  source: A.J. Podhajska
+PfoI:
+  commercial_availability: B
+  cut: [5' ---T  CCNGGA--- 3', 3' ---AGGNCC  T--- 5']
+  enzyme: PfoI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Pseudomonas fluorescens biovar 126
+  recognition_sequence: [5' TCCNGGA, 3' AGGNCCT]
+  references: Gaigalas, M., Maneliene, Z., Kazlauskiene, R., Petrusyte, M., Janulaitis,
+    A., (2002) Nucleic Acids Res., vol. 30.
+  source: A. Janulaitis
+PlaAII:
+  commercial_availability: ''
+  cut: [5' ---GT  AC--- 3', 3' ---CA  TG--- 5']
+  enzyme: PlaAII
+  isoscizomers: [RsaI, AfaI, Asp16HI, Asp17HI, Asp18HI, Asp29HI, CcoP73I, Csp6I, CviQI,
+    CviRII, Hpy303I, Hpy312I, Hpy401I, Hpy421I, Hpy423I, Hpy471I, Hpy501I, HpyBI,
+    HpyF10IV, HpyF13IV, HpyF21II, HpyF31I, HpyF36II, HpyF44V, HpyF52III, HpyF53II,
+    HpyF59II, HpyF65III, HpyF66III, HpyHII, HpyNSH57I, MjaV, PabI, RsaNI]
+  methylation_site: ''
+  microorganism: Phormidium laminosum
+  recognition_sequence: [5' GTAC, 3' CATG]
+  references: Piechula, S., Waleron, K., Swiatek, W., Biedrzycka, I., Podhajska, A.J.,
+    (2001) FEMS Microbiol. Lett., vol. 198, pp. 135-140.
+  source: A.J. Podhajska
+PlaII:
+  commercial_availability: ''
+  cut: [5' ---TT  CGAA--- 3', 3' ---AAGC  TT--- 5']
+  enzyme: PlaII
+  isoscizomers: [AsuII, AcaI, AcpI, Afl83I, Asp10HI, AviI, BimI, Bim19I, Bpu14I, BpuHI,
+    BsiCI, Bsp82I, Bsp90I, Bsp101I, Bsp102I, Bsp104I, Bsp119I, Bsp148I, Bsp151I, Bsp241I,
+    BspH22I, BspH103I, BspH106I, BspLAII, BspT104I, BstBI, CbiI, Csp45I, Csp68KII,
+    FspII, LspI, MlaI, Mva16I, NspV, Nsp29132I, NspBI, NspFI, NspJI, OspI, PpaAI,
+    Psc27I, Psc28I, Rma376I, Rma523I, SfuI, Sgr1839I, Ssp1I, Ssp14I, Ssp34I, Ssp42I,
+    Ssp43I, Ssp45I, Ssp47I, Ssp48I, Ssp152I, SspRFI, SviI, Uba1385I, Uba1452I]
+  methylation_site: ''
+  microorganism: Phormidium lapideum
+  recognition_sequence: [5' TTCGAA, 3' AAGCTT]
+  references: Ochiai, H., Shibata, H., Sawa, Y., Ashida, N., (1989) Bull. Fac. Agr.
+    Shimane Univ., vol. 23, pp. 184-191.
+  source: H. Ochiai
+PmeI:
+  commercial_availability: N
+  cut: [5' ---GTTT  AAAC--- 3', 3' ---CAAA  TTTG--- 5']
+  enzyme: PmeI
+  isoscizomers: [MssI]
+  methylation_site: ''
+  microorganism: Pseudomonas mendocina
+  recognition_sequence: [5' GTTTAAAC, 3' CAAATTTG]
+  references: 'Chang, Z., Morgan, R.D., US Patent Office, 1999.
+
+    Morgan, R., Zhou, B., US Patent Office, 1993.
+
+    Morgan, R.D., Unpublished observations.
+
+    Morgan, R.D., Roberts, R.J., International Patent Office, 2007.'
+  source: NEB 698
+PpeI:
+  commercial_availability: ''
+  cut: [5' ---GGGCC  C--- 3', 3' ---C  CCGGG--- 5']
+  enzyme: PpeI
+  isoscizomers: [ApaI, Bsp120I, EciEI, Psp30I, PspOMI, Uba1156I, Uba1157I, Uba1165I,
+    Uba1202I, Uba1241I, Uba1368I]
+  methylation_site: ''
+  microorganism: Phormidium persicinum
+  recognition_sequence: [5' GGGCCC, 3' CCCGGG]
+  references: Piechula, S., Piosik, J., Bielawski, K., Podhajska, A.J., (1996) Mol.
+    Biotechnol., vol. 5, pp. 97-99.
+  source: CCAP 1462/5
+Ppu10I:
+  commercial_availability: ''
+  cut: [5' ---A  TGCAT--- 3', 3' ---TACGT  A--- 5']
+  enzyme: Ppu10I
+  isoscizomers: [AvaIII, Asi372I, BfrBI, BfrCI, Csp68KIII, EcoT22I, Mph1103I, NsiI,
+    PinBI, PxyJKI, SepI, SmuCI, SrlII, SspD5II, Uba1353I, Uba1367I, Uba1384I, Zsp2I]
+  methylation_site: ''
+  microorganism: Pseudomonas putida RFL10
+  recognition_sequence: [5' ATGCAT, 3' TACGTA]
+  references: 'Janulaitis, A., Unpublished observations.
+
+    Janulaitis, A., Maneliene, Z., Butkus, V., Unpublished observations.'
+  source: A. Janulaitis
+PsiI:
+  commercial_availability: IN
+  cut: [5' ---TTA  TAA--- 3', 3' ---AAT  ATT--- 5']
+  enzyme: PsiI
+  isoscizomers: [AanI]
+  methylation_site: ''
+  microorganism: Pseudomonas species SE-G49
+  recognition_sequence: [5' TTATAA, 3' AATATT]
+  references: 'Abdurashitov, M.A., Belichenko, O.A., Lebedeva, N.A., Degtyarev, S.K.,
+    (1999) Biokhimiia, vol. 64, pp. 574-576.
+
+    Zhu, Z., Unpublished observations.
+
+    Zhu, Z., Roberts, R.J., Unpublished observations.'
+  source: NEB 1784
+Psp03I:
+  commercial_availability: ''
+  cut: [5' ---GGWC  C--- 3', 3' ---C  CSGG--- 5']
+  enzyme: Psp03I
+  isoscizomers: [AvaII, AflI, Asp697I, Asp745I, AspBII, AspDII, BamNII, BceSII, BcuAI,
+    Bme18I, Bme216I, BmpI, Bsp71I, Bsp100I, Bsp128I, Bsp132I, Bsp133I, Bsp1260I, BspF53I,
+    BspJ105I, BsrAI, Bst4QI, BthAI, BtiI, CauI, CliI, ClmII, Csp68KI, DsaIV, EagMI,
+    Eco47I, ErpI, FdiI, FspMSI, FssI, GspAI, HgiBI, HgiCII, HgiEI, HgiHIII, HgiJI,
+    Hsp2I, Kzo49I, Mae7806III, MfoI, MliI, MspAI, MspNI, NliII, Nli3877II, NmuAII,
+    NspDII, NspGI, NspHII, NspKI, Pfl19I, PolI, SfnI, Sgh1835I, SinI, SinAI, SinBI,
+    SinCI, SinDI, SinEI, SinFI, SinGI, SinHI, SinJI, SmuEI, SynI, TruI, Tru28I, Tsp301I,
+    Uba48I, Uba62I, Uba1131I, Uba1249I, Uba1272I, Uba1278I, Uba1304I, Uba1314I, Uba1373I,
+    Uba1413I, Uba1438I, UbaN15I, Uth554I, VpaK11I, VpaK65I, VpaK7AI, VpaK11AI, VpaK13AI,
+    VpaK11BI, VpaK11CI, VpaK11DI]
+  methylation_site: ''
+  microorganism: Phormidium species
+  recognition_sequence: [5' GGWCC, 3' CCSGG]
+  references: Piechula, S., Waleron, K., Swiatek, W., Biedrzycka, I., Podhajska, A.J.,
+    (2001) FEMS Microbiol. Lett., vol. 198, pp. 135-140.
+  source: A.J. Podhajska
+Psp5II:
+  commercial_availability: B
+  cut: [5' ---RG  GWCCY--- 3', 3' ---YCCSG  GR--- 5']
+  enzyme: Psp5II
+  isoscizomers: [PpuMI, AspBHII, Mlu1106I, Pfl27I, PpuXI, PspPPI]
+  methylation_site: ''
+  microorganism: Pseudomonas species RFL5
+  recognition_sequence: [5' RGGWCCY, 3' YCCSGGR]
+  references: 'Janulaitis, A., Unpublished observations.
+
+    Janulaitis, A., Petrusyte, M., Maneliene, Z., Capskaya, L., Kiuduliene, L., Butkus,
+    V., Unpublished observations.'
+  source: A. Janulaitis
+PspGI:
+  commercial_availability: N
+  cut: [5' ---  CCWGG--- 3', 3' ---GGSCC  --- 5']
+  enzyme: PspGI
+  isoscizomers: [EcoRII, Acc38I, AcuII, AeuI, AglI, AjnI, AorI, ApaORI, ApyI, Asp2HI,
+    AtuII, Atu1I, AtuBI, BciBII, BciT130I, BinSI, Bme2095I, BptI, BsaNI, Bse16I, Bse17I,
+    Bse24I, BseBI, BshGI, BsiLI, BsiUI, BsiVI, BsoGI, Bsp44I, Bsp56I, Bsp103I, Bsp317I,
+    BspH43I, BspNI, BspSI, Bst1I, Bst2I, Bst38I, Bst100I, BstGII, BstM6I, BstNI, BstOI,
+    Bst7QII, Bst2UI, BthDI, BthEI, CbrI, Cdi27I, Cfr5I, Cfr11I, Cfr20I, Cfr22I, Cfr24I,
+    Cfr25I, Cfr27I, Cfr28I, Cfr29I, Cfr30I, Cfr31I, Cfr35I, Cfr58I, CfrS37I, CthII,
+    Dde51507I, EagKI, EcaII, EclII, Ecl66I, Ecl136I, Ecl137II, EclS39I, Ecl37kII,
+    Ecl54kI, Ecl57kI, Ecl1zII, Eco38I, Eco40I, Eco41I, Eco60I, Eco61I, Eco67I, Eco70I,
+    Eco71I, Eco128I, Eco170I, Eco193I, Eco206I, Eco207I, Eco254I, Eco256I, Efa1KI,
+    Ese6II, Esp2I, Esp24I, EspHK7I, EspHK22I, EspHK30I, Fsp1604I, HhdI, Kox165I, Kpn10I,
+    Kpn13I, Kpn14I, Kpn16I, KspHK12I, KspHK14I, Lla497I, Mlu2300I, MphI, MpsI, MvaI,
+    Pca17AI, Psp6I, Psp39I, Sau16I, Scg2I, SelPI, SflHK1794I, SflHK2374I, SflHK2731I,
+    SflHK6873I, SflHK7234I, SflHK7462I, SflHK8401I, SflHK10790I, Sfl2aI, Sfl2bI, Sgr20I,
+    SleI, SniI, SslI, SspAI, Sth117I, Sth302I, Sth455I, TaqXI, TspAI, Uba11I, Uba13I,
+    Uba20I, Uba81I, Uba82I, Uba1114I, Uba1118I, Uba1120I, Uba1121I, Uba1125I, Uba1171I,
+    Uba1181I, Uba1185I, Uba1189I, Uba1193I, Uba1218I, Uba1243I, Uba1410I, Uba1428I,
+    UbaN11II, UbaN16I, ZanI]
+  methylation_site: ?(4)
+  microorganism: Pyrococcus species G1H
+  recognition_sequence: [5' CCWGG, 3' GGSCC]
+  references: Morgan, R., Xiao, J.-P., Xu, S.-Y., (1998) Appl. Environ. Microbiol.,
+    vol. 64, pp. 3669-3673.
+  source: NEB 906
+PspN4I:
+  commercial_availability: I
+  cut: [5' ---GGN  NCC--- 3', 3' ---CCN  NGG--- 5']
+  enzyme: PspN4I
+  isoscizomers: [NlaIV, AspNI, BcrI, BmiI, BsaEI, BscBI, Bsp29I, BspLI, BssI, HpyF44II,
+    HpyF73I, NgoBV, NgoGV, NgoMV, Rlu3I, Uba1305I, Uba1445I]
+  methylation_site: ''
+  microorganism: Pseudomonas species N4
+  recognition_sequence: [5' GGNNCC, 3' CCNNGG]
+  references: Abdurashitov, M.A., Kileva, E.V., Shevchenko, A.V., Dedkov, V.S., Degtyarev,
+    S.K., Unpublished observations.
+  source: S.K. Degtyarev
+PspOMI:
+  commercial_availability: INV
+  cut: [5' ---G  GGCCC--- 3', 3' ---CCCGG  G--- 5']
+  enzyme: PspOMI
+  isoscizomers: [ApaI, Bsp120I, EciEI, PpeI, Psp30I, Uba1156I, Uba1157I, Uba1165I,
+    Uba1202I, Uba1241I, Uba1368I]
+  methylation_site: ''
+  microorganism: Pseudomonas species OM2164
+  recognition_sequence: [5' GGGCCC, 3' CCCGGG]
+  references: Belichenko, O.A., Shevchenko, A.V., Abdurashitov, M.A., Degtyarev, S.K.,
+    Unpublished observations.
+  source: NEB 1783
+PspXI:
+  commercial_availability: IN
+  cut: [5' ---VC  TCGAGB--- 3', 3' ---BGAGCT  CV--- 5']
+  enzyme: PspXI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Pseudomonas species A1-1
+  recognition_sequence: [5' VCTCGAGB, 3' BGAGCTCV]
+  references: 'Gonchar, D.A., Abdurashitov, M.A., Belichenko, O.A., Dedkov, V.S.,
+    Mezentseva, N.V., Tomilova, J.E., Degtyarev, S.K., (2005) Ovchinnikov Bull. Biotechnol.
+    Phys. Chem. Biol., vol. 1, pp. 18-23.
+
+    Zhu, Z., Roberts, R.J., Unpublished observations.'
+  source: NEB 1782
+PssI:
+  commercial_availability: ''
+  cut: [5' ---RGGNC  CY--- 3', 3' ---YC  CNGGR--- 5']
+  enzyme: PssI
+  isoscizomers: [DraII, EcoO109I, Kaz48kI, Uba1326I, VneAI]
+  methylation_site: ''
+  microorganism: Pseudomonas species
+  recognition_sequence: [5' RGGNCCY, 3' YCCNGGR]
+  references: 'Belle Isle, H., Unpublished observations.
+
+    Makula, R.A., Unpublished observations.'
+  source: R.A. Makula
+PsyI:
+  commercial_availability: B
+  cut: [5' ---GACN  NNGTC--- 3', 3' ---CTGNN  NCAG--- 5']
+  enzyme: PsyI
+  isoscizomers: [Tth111I, AspI, AtsI, BgiI, FsuI, NtaI, PflFI, SmaAII, SpaPI, SplII,
+    SplAII, TelI, TrsKTII, TspI, TteI, TtrI]
+  methylation_site: ''
+  microorganism: Pseudomonas syringae Lki 1-pH124
+  recognition_sequence: [5' GACNNNGTC, 3' CTGNNNCAG]
+  references: Vitkute, J., Grigaite, R., Maneliene, Z., Trinkunaite, L., Kiuduliene,
+    E., Petrusyte, M., Butkus, V., Janulaitis, A., Unpublished observations.
+  source: V. Butkus
+RsaNI:
+  commercial_availability: I
+  cut: [5' ---G  TAC--- 3', 3' ---CAT  G--- 5']
+  enzyme: RsaNI
+  isoscizomers: [RsaI, AfaI, Asp16HI, Asp17HI, Asp18HI, Asp29HI, CcoP73I, Csp6I, CviQI,
+    CviRII, Hpy303I, Hpy312I, Hpy401I, Hpy421I, Hpy423I, Hpy471I, Hpy501I, HpyBI,
+    HpyF10IV, HpyF13IV, HpyF21II, HpyF31I, HpyF36II, HpyF44V, HpyF52III, HpyF53II,
+    HpyF59II, HpyF65III, HpyF66III, HpyHII, HpyNSH57I, MjaV, PabI, PlaAII]
+  methylation_site: ''
+  microorganism: Rhodopseudomonas sphaeroides N
+  recognition_sequence: [5' GTAC, 3' CATG]
+  references: Chernukhin, V.A., Nayakshina, T.V., Boltengagen, A.A., Dedkov, V.S.,
+    Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+RspLKI:
+  commercial_availability: ''
+  cut: [5' ---GCATG  C--- 3', 3' ---C  GTACG--- 5']
+  enzyme: RspLKI
+  isoscizomers: [SphI, Asp5HI, BbuI, BfuAII, BscOI, Bsp121I, BtgAII, CglAI, PaeI,
+    PaeCI, PfaAIII, SpaHI, SpaXI, Uba1162I, Uba1226I, VchO68I]
+  methylation_site: ''
+  microorganism: Rhodococcus species LK2
+  recognition_sequence: [5' GCATGC, 3' CGTACG]
+  references: Zabaznaya, E.V., Zheleznaya, L.A., Matvienko, N.I., (1997) Biokhimiia,
+    vol. 62, pp. 1018-1028.
+  source: N.I. Matvienko
+Rsr2I:
+  commercial_availability: IV
+  cut: [5' ---CG  GWCCG--- 3', 3' ---GCCSG  GC--- 5']
+  enzyme: Rsr2I
+  isoscizomers: [RsrII, CpoI, CspI]
+  methylation_site: ''
+  microorganism: Rhodobacter sphaeroides SE-I2
+  recognition_sequence: [5' CGGWCCG, 3' GCCSGGC]
+  references: Shinkarenko, O.A., Lebedeva, N.A., Dedkov, V.S., Abdurashitov, M.A.,
+    Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+SacI:
+  commercial_availability: BJKMNOQRSUX
+  cut: [5' ---GAGCT  C--- 3', 3' ---C  TCGAG--- 5']
+  enzyme: SacI
+  isoscizomers: [BpuAmI, Ecl136II, Ecl137I, EcoICRI, Eco53kI, MxaI, NasSI, Pfl18I,
+    Psp124BI, ScoI, Sgr13350I, Ssm4I, Ssm5I, SstI, UcoMSI]
+  methylation_site: 4(5)
+  microorganism: Streptomyces achromogenes
+  recognition_sequence: [5' GAGCTC, 3' CTCGAG]
+  references: 'Arrand, J.R., Myers, P.A., Roberts, R.J., Unpublished observations.
+
+    Xu, S.-Y., Xiao, J.-P., Ettwiller, L., Holden, M., Aliotta, J., Poh, C.L., Dalton,
+    M., Robinson, D.P., Petronzio, T.R., Moran, L., Ganatra, M., Ware, J., Slatko,
+    B., Benner, J., (1998) Mol. Gen. Genet., vol. 260, pp. 226-231.'
+  source: ATCC 12767
+SalI:
+  commercial_availability: BCIJKMNOQRSUVX
+  cut: [5' ---G  TCGAC--- 3', 3' ---CAGCT  G--- 5']
+  enzyme: SalI
+  isoscizomers: [Acs1371I, Acs1372I, Acs1373I, Acs1421I, Acs1422I, BbrUII, BspMKI,
+    BstZ16I, BtgAI, CglAII, HgiCIII, HgiDII, KoyI, NopI, Psp32I, Psp33I, Psp89I, RflFI,
+    RheI, RhpI, RrhI, Rrh4273I, RroI, RtrI, Rtr63I, Uba89I, XamI, XciI]
+  methylation_site: 5(6)
+  microorganism: Streptomyces albus G
+  recognition_sequence: [5' GTCGAC, 3' CAGCTG]
+  references: 'Alvarez, M.A., Chater, K.F., Rosario, M.R., (1993) Mol. Microbiol.,
+    vol. 8, pp. 243-252.
+
+    Arrand, J.R., Myers, P.A., Roberts, R.J., (1978) J. Mol. Biol., vol. 118, pp.
+    127-135.
+
+    Rodicio, M.R., Quinton-Jager, T., Moran, L.S., Slatko, B.E., Wilson, G.G., (1994)
+    Gene, vol. 151, pp. 167-172.'
+  source: ATCC 49789
+SarI:
+  commercial_availability: ''
+  cut: [5' ---AGG  CCT--- 3', 3' ---TCC  GGA--- 5']
+  enzyme: SarI
+  isoscizomers: [StuI, AatI, AehII, Asp78I, AspMI, ChyI, Eco147I, Eco1524I, GdiI,
+    GobAI, NtaSI, PceI, PluI, Pme55I, Ppu13I, Sru30DI, SseBI, SsvI, SteI, Uba40I,
+    Uba1170I, Uba1180I, Uba1217I, Uba1239I, Uba1371I, Uba1403I, Uba1419I, VchO44I]
+  methylation_site: ''
+  microorganism: Streptomyces aureomonopodiales
+  recognition_sequence: [5' AGGCCT, 3' TCCGGA]
+  references: Choudhry, S., Sohail, A., Riazuddin, S., Unpublished observations.
+  source: ATCC 19825
+SauHPI:
+  commercial_availability: ''
+  cut: [5' ---GCC  GGC--- 3', 3' ---CGG  CCG--- 5']
+  enzyme: SauHPI
+  isoscizomers: [NaeI, Afa24RI, AmeII, AniMI, ApeAI, AprI, BheI, CcoI, Eco56I, Esp5I,
+    MauAI, MisI, Mlu9273II, MroNI, NbaI, NbrI, NgoAIV, NgoMIV, NmuI, NmuFI, NspWI,
+    NtaSII, PdiI, PglI, Psp61I, RluI, RrhJ1I, SacAI, SalCI, SaoI, SauAI, SauBMKI,
+    SauLPI, SauNI, SauSI, SceIII, SghWII, SkaI, Slu1777I, Smo40529I, SrlI, Srl77DI,
+    SspCI, Uba1122I]
+  methylation_site: ''
+  microorganism: Streptomyces aureofaciens R8/26
+  recognition_sequence: [5' GCCGGC, 3' CGGCCG]
+  references: Pristas, P., Godany, A., Sevcikova, B., Oktavcova, B., Farkasovska,
+    J., (1992) Nucleic Acids Res., vol. 20, pp. 4364.
+  source: P. Pristas
+SciI:
+  commercial_availability: ''
+  cut: [5' ---CTC  GAG--- 3', 3' ---GAG  CTC--- 5']
+  enzyme: SciI
+  isoscizomers: [XhoI, AbrI, AehI, AerAI, AhyAI, AlwFII, Asp15I, Asp47I, Asp703I,
+    BadI, BbfI, BbiIII, BluI, Bsp92I, Bsp129I, Bsp139I, Bsp140I, Bsp141I, Bsp142I,
+    BspAAI, BssHI, BstHI, BstLI, BstVI, BsuMI, R1.BsuMI, R2.BsuMI, R3.BsuMI, BthI,
+    CcrI, CjaI, DdeII, DrdDI, Eae2I, EscI, MavI, McaI, MecI, MhaI, MlaAI, MpuI, MrhI,
+    MscAI, MsiI, Msp23II, OcoI, PaeR7I, PanI, Pfl67I, PflNI, PflWI, Psp4I, PspNI,
+    Sal1974I, Sau3239I, SauLPII, Sbi68I, Sca1827I, Sci1831I, SciBI, ScuI, SdiAI, SexI,
+    Sfr274I, Sfu1762I, SgaI, SgoI, Sgr1841I, Shy1766I, SlaI, SluI, Sol10179I, SpaI,
+    Sph1719I, SrifpI, Ssp4I, StaAI, StrI, Sve194I, TliI, Uba1130I, Uba1148I, Uba1154I,
+    Uba1166I, Uba1237I, Uba1248I, Uba1271I, Uba1298I, Uba1335I, Uba1397I, Uba1448I,
+    XpaI]
+  methylation_site: ''
+  microorganism: Streptoverticillium cinnamoneum
+  recognition_sequence: [5' CTCGAG, 3' GAGCTC]
+  references: Walker, J.N.B., Dean, P.G., Saunders, J.R., Unpublished observations.
+  source: S.T. Williams
+SdiI:
+  commercial_availability: ''
+  cut: [5' ---GGCCNNNN  NGGCC--- 3', 3' ---CCGGN  NNNNCCGG--- 5']
+  enzyme: SdiI
+  isoscizomers: [SfiI]
+  methylation_site: ''
+  microorganism: Streptomyces diastaticus
+  recognition_sequence: [5' GGCCNNNNNGGCC, 3' CCGGNNNNNCCGG]
+  references: Nomura, Y., Ito, H., Sagawa, H., Kotani, H., Kimizuka, F., Nakajima,
+    K., Unpublished observations.
+  source: F. Kimizuka
+SelI:
+  commercial_availability: ''
+  cut: [5' ---  CGCG--- 3', 3' ---GCGC  --- 5']
+  enzyme: SelI
+  isoscizomers: [FnuDII, AccII, Bce31293I, BceBI, BceRI, BepI, Bpu95I, Bsh1236I, Bsp50I,
+    Bsp70I, Bsp123I, BspFNI, BspJ76I, BstFNI, BstUI, Bsu1192II, Bsu1193I, Bsu1532I,
+    Bsu6633I, BsuEII, BtkI, Cpa1150I, CpaAI, Csp68KVI, EsaBS9I, FalII, FauBII, FspMI,
+    Hin1056I, HpyF14I, HpyF15I, HpyF26I, HpyF52II, HpyF64IV, MvaAI, MvnI, PflAI, SceAI,
+    ThaI, TmaI, TneDI, Uba1321I, Uba1404I, Uba1405I, Uba1446I]
+  methylation_site: ''
+  microorganism: Synechococcus elongatus
+  recognition_sequence: [5' CGCG, 3' GCGC]
+  references: 'Miyake, M., Asada, Y., Shiraki, M., Japanese Patent Office, 1994.
+
+    Miyake, M., Asada, Y., Shiraki, M., Kato, S., Kotani, H., Japanese Patent Office,
+    1994.
+
+    Miyake, M., Kotani, H., Asada, Y., (1992) Nucleic Acids Res., vol. 20, pp. 2605.'
+  source: H. Kotani
+SetI:
+  commercial_availability: I
+  cut: [5' ---ASST  --- 3', 3' ---  TWWA--- 5']
+  enzyme: SetI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Streptomyces werraensis
+  recognition_sequence: [5' ASST, 3' TWWA]
+  references: Abdurashitov, M.A., Dedkov, V.S., Okhapkina, S.S., Gonchar, D.A., Belichenko,
+    O.A., Tomilova, J.E., Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+SfaAI:
+  commercial_availability: B
+  cut: [5' ---GCGAT  CGC--- 3', 3' ---CGC  TAGCG--- 5']
+  enzyme: SfaAI
+  isoscizomers: [SgfI, AsiSI, RgaI]
+  methylation_site: ''
+  microorganism: Sphingomonas faenia RFL1
+  recognition_sequence: [5' GCGATCGC, 3' CGCTAGCG]
+  references: 'Lauciuniene, N., Trinkunaite, L., Capskaja, L., Vitkute, J., Janulaitis,
+    A., Unpublished observations.
+
+    Zakareviciene, L., Lubys, A., Unpublished observations.'
+  source: Fermentas G309
+SgeI:
+  commercial_availability: B
+  cut: [5' ---CNNGNNNNNNNNN  --- 3', 3' ---  GNNCNNNNNNNNN--- 5']
+  enzyme: SgeI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Streptomyces griseoflavus RFL11
+  recognition_sequence: [5' CNNGNNNNNNNNN, 3' GNNCNNNNNNNNN]
+  references: 'Lubiene, J., Lubys, A., Janulaitis, A., Unpublished observations.
+
+    Lubys, A., Vitkute, J., Lubiene, J., Janulaitis, A., European Patent Office, 2011.'
+  source: A. Janulaitis
+SgrAI:
+  commercial_availability: N
+  cut: [5' ---CR  CCGGYG--- 3', 3' ---GYGGCC  RC--- 5']
+  enzyme: SgrAI
+  isoscizomers: [PsuNI, SvoI]
+  methylation_site: ?(5)
+  microorganism: Streptomyces griseus
+  recognition_sequence: [5' CRCCGGYG, 3' GYGGCCRC]
+  references: 'Kong, H., Higgins, L.S., Dalton, M.A., US Patent Office, 2000.
+
+    Tautz, N., Kaluza, K., Frey, B., Jarsch, M., Schmitz, G.G., Kessler, C., (1990)
+    Nucleic Acids Res., vol. 18, pp. 3087.'
+  source: U. Mayr
+SgrDI:
+  commercial_availability: B
+  cut: [5' ---CG  TCGACG--- 3', 3' ---GCAGCT  GC--- 5']
+  enzyme: SgrDI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Streptomyces griseus RFL6
+  recognition_sequence: [5' CGTCGACG, 3' GCAGCTGC]
+  references: 'Maneliene, Z., Lubys, A., Unpublished observations.
+
+    Vitkute, J., Lauciuniene, N., Capskaja, L., Kiuduliene, L., Janulaitis, A., Unpublished
+    observations.'
+  source: Fermentas G302
+SgsI:
+  commercial_availability: B
+  cut: [5' ---GG  CGCGCC--- 3', 3' ---CCGCGC  GG--- 5']
+  enzyme: SgsI
+  isoscizomers: [AscI, PalAI]
+  methylation_site: ''
+  microorganism: Streptomyces griseus RFL5
+  recognition_sequence: [5' GGCGCGCC, 3' CCGCGCGG]
+  references: Vitkute, J., Slyziute, J., Maneliene, Z., Norgeliene, D., Kiuduliene,
+    L., Janulaitis, A., Unpublished observations.
+  source: Fermentas G295
+SmiI:
+  commercial_availability: BIKV
+  cut: [5' ---ATTT  AAAT--- 3', 3' ---TAAA  TTTA--- 5']
+  enzyme: SmiI
+  isoscizomers: [SwaI, BstRZ246I, BstSWI, MspSWI]
+  methylation_site: ''
+  microorganism: Streptococcus milleri S
+  recognition_sequence: [5' ATTTAAAT, 3' TAAATTTA]
+  references: 'Dedkov, V.S., Bondar, T.S., Shevchenco, A.V., Degtyarev, S.K., (2000)
+    Mol. Gen. Mikrobiol. Virusol., vol. 1, pp. 23-27.
+
+    Dedkov, V.S., Degtyarev, S.K., (1998) Biol. Chem., vol. 379, pp. 573-574.'
+  source: S.K. Degtyarev
+SmiMI:
+  commercial_availability: IV
+  cut: [5' ---CAYNN  NNRTG--- 3', 3' ---GTRNN  NNYAC--- 5']
+  enzyme: SmiMI
+  isoscizomers: [MslI, RseI]
+  methylation_site: ''
+  microorganism: Sphingobacterium mizutae M
+  recognition_sequence: [5' CAYNNNNRTG, 3' GTRNNNNYAC]
+  references: Dedkov, V.S., Najakshina, T.N., Gushina, E.N., Abdurashitov, M.A., Degtyarev,
+    S.K., Unpublished observations.
+  source: S.K. Degtyarev
+SmlI:
+  commercial_availability: N
+  cut: [5' ---C  TYRAG--- 3', 3' ---GARYT  C--- 5']
+  enzyme: SmlI
+  isoscizomers: [Sau90I, Sau93I, Sau98I, Sau96mI, SmoI]
+  methylation_site: ''
+  microorganism: Stenotrophomonas maltophilia
+  recognition_sequence: [5' CTYRAG, 3' GARYTC]
+  references: 'Le, T.K.T., Vu, H.N., Vu, T.K.L., Polisson, C., Morgan, R., Unpublished
+    observations.
+
+    Wei, H., Unpublished observations.
+
+    Zhu, Z., Roberts, R.J., Unpublished observations.'
+  source: NEB 1007
+SnoI:
+  commercial_availability: ''
+  cut: [5' ---G  TGCAC--- 3', 3' ---CACGT  G--- 5']
+  enzyme: SnoI
+  isoscizomers: [ApaLI, AaqI, Alw44I, AmeI, Bsp146I, DaqI, Pfl23I, Pfr12I, PliI, ScoNI,
+    Uba1203I, Uba1387I, VneI]
+  methylation_site: ''
+  microorganism: Streptomyces novocastria
+  recognition_sequence: [5' GTGCAC, 3' CACGTG]
+  references: 'Brown, N.L., Unpublished observations.
+
+    Eastlake, P., Unpublished observations.'
+  source: P. Eastlake
+Sol10179I:
+  commercial_availability: ''
+  cut: [5' ---C  TCGAG--- 3', 3' ---GAGCT  C--- 5']
+  enzyme: Sol10179I
+  isoscizomers: [XhoI, AbrI, AehI, AerAI, AhyAI, AlwFII, Asp15I, Asp47I, Asp703I,
+    BadI, BbfI, BbiIII, BluI, Bsp92I, Bsp129I, Bsp139I, Bsp140I, Bsp141I, Bsp142I,
+    BspAAI, BssHI, BstHI, BstLI, BstVI, BsuMI, R1.BsuMI, R2.BsuMI, R3.BsuMI, BthI,
+    CcrI, CjaI, DdeII, DrdDI, Eae2I, EscI, MavI, McaI, MecI, MhaI, MlaAI, MpuI, MrhI,
+    MscAI, MsiI, Msp23II, OcoI, PaeR7I, PanI, Pfl67I, PflNI, PflWI, Psp4I, PspNI,
+    Sal1974I, Sau3239I, SauLPII, Sbi68I, Sca1827I, SciI, Sci1831I, SciBI, ScuI, SdiAI,
+    SexI, Sfr274I, Sfu1762I, SgaI, SgoI, Sgr1841I, Shy1766I, SlaI, SluI, SpaI, Sph1719I,
+    SrifpI, Ssp4I, StaAI, StrI, Sve194I, TliI, Uba1130I, Uba1148I, Uba1154I, Uba1166I,
+    Uba1237I, Uba1248I, Uba1271I, Uba1298I, Uba1335I, Uba1397I, Uba1448I, XpaI]
+  methylation_site: ''
+  microorganism: Streptomyces olivochromogenes ST10179
+  recognition_sequence: [5' CTCGAG, 3' GAGCTC]
+  references: Degtyarev, S.K., Unpublished observations.
+  source: S.K. Degtyarev
+SrfI:
+  commercial_availability: ''
+  cut: [5' ---GCCC  GGGC--- 3', 3' ---CGGG  CCCG--- 5']
+  enzyme: SrfI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Streptomyces species Srf
+  recognition_sequence: [5' GCCCGGGC, 3' CGGGCCCG]
+  references: 'Fomenkov, A., Unpublished observations.
+
+    Simcox, T.G., Marsh, S.J., Gross, E.A., Lernhardt, W., Davis, S., Simcox, M.E.C.,
+    (1991) Gene, vol. 109, pp. 121-123.
+
+    Weiner, M., Costa, G., (1994) Abstr. Gen. Meet. Am. Soc. Microbiol., vol. 94,
+    pp. 249.'
+  source: T.G. Simcox
+SruI:
+  commercial_availability: ''
+  cut: [5' ---TTT  AAA--- 3', 3' ---AAA  TTT--- 5']
+  enzyme: SruI
+  isoscizomers: [AhaIII, DraI, PauAII, Srl19I, Srl61DI, Srl76DI]
+  methylation_site: ''
+  microorganism: Selenomonas ruminantium 18D
+  recognition_sequence: [5' TTTAAA, 3' AAATTT]
+  references: Vanat, I., Pristas, P., Rybosoval, E., Godany, A., Javorsky, P., (1993)
+    FEMS Microbiol. Lett., vol. 113, pp. 129-132.
+  source: I. Vanat
+Sse8387I:
+  commercial_availability: K
+  cut: [5' ---CCTGCA  GG--- 3', 3' ---GG  ACGTCC--- 5']
+  enzyme: Sse8387I
+  isoscizomers: [SbfI, SdaI]
+  methylation_site: ''
+  microorganism: Streptomyces species 8387
+  recognition_sequence: [5' CCTGCAGG, 3' GGACGTCC]
+  references: 'Kotani, H., Kato, I., Kimizuka, F., European Patent Office, 1995.
+
+    Kotani, H., Nomura, Y., Kawashima, Y., Sagawa, H., Takagi, M., Kita, A., Ito,
+    H., Kato, I., (1990) Nucleic Acids Res., vol. 18, pp. 5637-5640.'
+  source: Takara 8387
+Sse8647I:
+  commercial_availability: ''
+  cut: [5' ---AG  GWCCT--- 3', 3' ---TCCSG  GA--- 5']
+  enzyme: Sse8647I
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Streptomyces species
+  recognition_sequence: [5' AGGWCCT, 3' TCCSGGA]
+  references: Ishino, Y., Nomura, Y., Kato, I., (1995) Nucleic Acids Res., vol. 23,
+    pp. 742-744.
+  source: Y. Ishino
+SsoII:
+  commercial_availability: ''
+  cut: [5' ---  CCNGG--- 3', 3' ---GGNCC  --- 5']
+  enzyme: SsoII
+  isoscizomers: [ScrFI, Bme1390I, BmrFI, BsaCI, BsoI, Bsp53I, Bsp73I, Bsp548I, BssKI,
+    BstMZ611I, BstSCI, DsaV, Ecl18kI, Eco43I, Eco51II, Eco80I, Eco85I, Eco93I, Eco153I,
+    Eco200I, Eco13kI, Eco21kI, Eco137kI, HpyNI, Kpn2kI, LlaMI, Msp67I, MspR9I, SdeAII,
+    StyD4I, Uba17I, Uba1391I]
+  methylation_site: 2(5)
+  microorganism: Shigella sonnei 47
+  recognition_sequence: [5' CCNGG, 3' GGNCC]
+  references: 'Karyagina, A.S., Lunin, V.G., Nikolskaya, I.I., (1990) Gene, vol. 87,
+    pp. 113-118.
+
+    Karyagina, A.S., Lunin, V.G., Nikolskaya, I.I., Debov, S.S., (1989) Mol. Gen.
+    Mikrobiol. Virusol., vol. 3, pp. 16-20.
+
+    Nikolskaya, I.I., Karpetz, L.Z., Kartashova, M., Lopatina, N.G., Skripkin, E.A.,
+    Suchkov, S.V., Uporova, T.M., Gruber, I.M., Debov, S.S., (1983) Mol. Gen. Mikrobiol.
+    Virusol., vol. 0, pp. 5-10.
+
+    Uporova, T.M., Kartasheva, I.M., Skripkin, E.A., Lopareva, E.N., Nikolskaya, I.I.,
+    Debov, S.S., (1985) Vopr. Med. Khim., vol. 31, pp. 131-136.'
+  source: T.M. Uporova
+Ssp5230I:
+  commercial_availability: ''
+  cut: [5' ---GACGT  C--- 3', 3' ---C  TGCAG--- 5']
+  enzyme: Ssp5230I
+  isoscizomers: [AatII, AspJI, Ppu1253I, ZraI]
+  methylation_site: ''
+  microorganism: Streptomyces species 5230
+  recognition_sequence: [5' GACGTC, 3' CTGCAG]
+  references: Knoblich, I.M., Sellmann, E., Kaluza, K., Frey, B., Auer, J., Schmitz,
+    G.G., Westermann, P., (1992) Nucleic Acids Res., vol. 20, pp. 2378.
+  source: P. Westermann
+SspDI:
+  commercial_availability: B
+  cut: [5' ---G  GCGCC--- 3', 3' ---CCGCG  G--- 5']
+  enzyme: SspDI
+  isoscizomers: [NarI, BbeI, BbeAI, R1.BbrUI, BinSII, DinI, Eco78I, EgeI, EheI, KasI,
+    McaAI, MchI, Mly113I, MsaI, NamI, NdaI, NunII, PatAI, PluTI, PmnI, SfoI, SseAI]
+  methylation_site: ''
+  microorganism: Sphingomonas species RFL1
+  recognition_sequence: [5' GGCGCC, 3' CCGCGG]
+  references: Markauskiene, J., Capskaja, L., Kiuduliene, L., Petrusyte, M., Zakareviciene,
+    L., Lubys, A., Janulaitis, A., Unpublished observations.
+  source: Fermentas G308
+SspI:
+  commercial_availability: BCIJKNQRUVX
+  cut: [5' ---AAT  ATT--- 3', 3' ---TTA  TAA--- 5']
+  enzyme: SspI
+  isoscizomers: []
+  methylation_site: ?(6)
+  microorganism: Sphaerotilus species
+  recognition_sequence: [5' AATATT, 3' TTATAA]
+  references: 'Benner, J.S., Coe, L., Unpublished observations.
+
+    Benner, J.S., Coe, L.H., Unpublished observations.
+
+    Schildkraut, I., Grandoni, R., Unpublished observations.'
+  source: ATCC 13925
+Sth302II:
+  commercial_availability: ''
+  cut: [5' ---CC  GG--- 3', 3' ---GG  CC--- 5']
+  enzyme: Sth302II
+  isoscizomers: [HpaII, Asp748I, Bco27I, BsaZI, BshMI, BsiSI, Bsp5I, Bsp47I, Bsp48I,
+    Bsp116I, Bsp1591II, Bst40I, Bsu1192I, BsuFI, CboI, CceI, FinII, FpsJI, HapII,
+    Hin2I, Hin5I, HpyVIII, Hpy299IX, HpyF43I, MniII, MnoI, MspI, Msp199I, NflHII,
+    Pde137I, Pme35I, SecII, SfaGUI, SmoLI, Sth134I, Uba1128I, Uba1141I, Uba1267I,
+    Uba1338I, Uba1355I, Uba1439I, UbaN13I]
+  methylation_site: ''
+  microorganism: Streptococcus thermophilus CNRZ302
+  recognition_sequence: [5' CCGG, 3' GGCC]
+  references: Morgan, R.D., Unpublished observations.
+  source: G. Guedon
+SunI:
+  commercial_availability: ''
+  cut: [5' ---C  GTACG--- 3', 3' ---GCATG  C--- 5']
+  enzyme: SunI
+  isoscizomers: [SplI, BpuB5I, BsiWI, BsmWI, BvuBI, MaeK81I, Pfl23II, PfuNI, PpuAI,
+    PspLI, SmaAI, SplAI, SspKI]
+  methylation_site: ''
+  microorganism: Synechococcus uniformis
+  recognition_sequence: [5' CGTACG, 3' GCATGC]
+  references: Wijdenbosch, M.M., Unpublished observations.
+  source: M.M. Wijdenbosch
+TaiI:
+  commercial_availability: B
+  cut: [5' ---ACGT  --- 3', 3' ---  TGCA--- 5']
+  enzyme: TaiI
+  isoscizomers: [MaeII, HpyCH4IV, HpyF13III, HpyF35II, HpyF74II, HpySE526I, TscI,
+    Tsp49I, TspIDSI, TspWAM8AI, TtmI]
+  methylation_site: ''
+  microorganism: Thermus aquaticus cs1-331
+  recognition_sequence: [5' ACGT, 3' TGCA]
+  references: Vitkute, J., Jurgelyte, R., Maneliene, Z., Kairaitiene, R., Trinkunaite,
+    L., Kiuduliene, E., Petrusyte, M., Butkus, V., Janulaitis, A., Unpublished observations.
+  source: V. Butkus
+TatI:
+  commercial_availability: B
+  cut: [5' ---W  GTACW--- 3', 3' ---SCATG  S--- 5']
+  enzyme: TatI
+  isoscizomers: []
+  methylation_site: ''
+  microorganism: Thermus aquaticus CBA1-331
+  recognition_sequence: [5' WGTACW, 3' SCATGS]
+  references: Vitkute, J., Maneliene, Z., Janulaitis, A., (2001) FEMS Microbiol. Lett.,
+    vol. 204, pp. 253-257.
+  source: V. Butkus
+TfiI:
+  commercial_availability: N
+  cut: [5' ---G  AWTC--- 3', 3' ---CTSA  G--- 5']
+  enzyme: TfiI
+  isoscizomers: [PfeI]
+  methylation_site: 2(6)
+  microorganism: Thermus filiformis
+  recognition_sequence: [5' GAWTC, 3' CTSAG]
+  references: 'Cowan, D., Ward, J., Pelletier, J.J., Morgan, R., Unpublished observations.
+
+    Hiesh, P.-C., Allen, R., Xu, S.-Y., Unpublished observations.
+
+    Stickel, S.K., Roberts, R.J., Unpublished observations.'
+  source: NEB 570
+Tru9I:
+  commercial_availability: IMRV
+  cut: [5' ---T  TAA--- 3', 3' ---AAT  T--- 5']
+  enzyme: Tru9I
+  isoscizomers: [MseI, SaqAI, Tru1I]
+  methylation_site: ''
+  microorganism: Thermus ruber 9
+  recognition_sequence: [5' TTAA, 3' AATT]
+  references: Prichodko, E.A., Rechnukova, N.I., Degtyarev, S.K., (1991) Sib. Biol.
+    J., vol. 1, pp. 57-59.
+  source: S.K. Degtyarev
+TseFI:
+  commercial_availability: I
+  cut: [5' ---  GTSAC--- 3', 3' ---CAWTG  --- 5']
+  enzyme: TseFI
+  isoscizomers: [Tsp45I, Hpy8II, Hpy51I, Hpy99II, HpyF1I, HpyF4I, HpyF6II, HpyF9I,
+    HpyF13I, HpyF25II, HpyF31II, HpyF34II, HpyF35IV, HpyF36I, HpyF40III, HpyF48I,
+    HpyF49II, HpyF51I, HpyF62III, NmuCI]
+  methylation_site: ''
+  microorganism: Thermus species F35
+  recognition_sequence: [5' GTSAC, 3' CAWTG]
+  references: Gonchar, D.A., Golikova, L.N., Shinkarenko, N.M., Degtyarev, S.K., Unpublished
+    observations.
+  source: S.K. Degtyarev
+Tsp32II:
+  commercial_availability: ''
+  cut: [5' ---T  CGA--- 3', 3' ---AGC  T--- 5']
+  enzyme: Tsp32II
+  isoscizomers: [TaqI, CviSIII, EsaBC3I, HpyV, Hpy26II, HpyF14III, HpyF16I, HpyF23I,
+    HpyF24I, HpyF26III, HpyF30I, HpyF35I, HpyF40II, HpyF42IV, HpyF45I, HpyF49I, HpyF52I,
+    HpyF59III, HpyF62II, HpyF64I, HpyF65II, HpyF66IV, HpyF71I, HpyF73II, HpyJP26II,
+    PpaAII, Taq20I, Tbr51I, TfiA3I, TfiTok6A1I, TflI, Tsc4aI, Tsp32I, Tsp358I, Tsp505I,
+    Tsp510I, TspNI, Tth24I, TthHB8I, TthRQI]
+  methylation_site: ''
+  microorganism: Thermus strain 32
+  recognition_sequence: [5' TCGA, 3' AGCT]
+  references: Welch, S.G., Williams, R.A.D., (1995) Biochem. J., vol. 312, pp. 505-510.
+  source: R.A.D. Williams
+Tsp4CI:
+  commercial_availability: ''
+  cut: [5' ---ACN  GT--- 3', 3' ---TG  NCA--- 5']
+  enzyme: Tsp4CI
+  isoscizomers: [Bst4CI, HpyCH4III, HpyF5II, HpyF9III, HpyF12I, HpyF20I, HpyF22I,
+    HpyF35III, HpyF40I, HpyF41I, HpyF42II, HpyF46I, HpyF48II, HpyF51II, HpyF54I, HpyF55I,
+    HpyF56I, HpyF58I, HpyF62I, HpyF64II, HpyF65I, HpyF68I, HpyF69I, HpyF74I, TaaI]
+  methylation_site: ''
+  microorganism: Thermus species 4C
+  recognition_sequence: [5' ACNGT, 3' TGNCA]
+  references: Welch, S.G., Williams, R.A.D., (1995) Biochem. J., vol. 309, pp. 595-599.
+  source: R.A.D. Williams
+TspRI:
+  commercial_availability: N
+  cut: [5' ---CASTGNN  --- 3', 3' ---  GTWACNN--- 5']
+  enzyme: TspRI
+  isoscizomers: [TscAI]
+  methylation_site: 1(5)
+  microorganism: Thermus species strain R
+  recognition_sequence: [5' CASTGNN, 3' GTWACNN]
+  references: 'Benner, J., Dalton, M.A., Xu, S., Dore, A., Japanese Patent Office,
+    2005.
+
+    Raven, N.D.H., Kelly, C.D., Carter, N.D., Smith, K.E., Williams, R.A.D., Unpublished
+    observations.
+
+    Xu, S.-Y., Unpublished observations.
+
+    Xu, S.-Y., Dore, A., Dalton, M., Benner, J., US Patent Office, 2003.'
+  source: N.D.H. Raven
+UbaM39I:
+  commercial_availability: ''
+  cut: [5' ---CAG  CTG--- 3', 3' ---GTC  GAC--- 5']
+  enzyme: UbaM39I
+  isoscizomers: [PvuII, BamGI, BavI, BavAI, BavBI, Bsp153AI, BspM39I, BspO4I, Bth2350I,
+    Cfr6I, DmaI, EclI, GspI, MziI, NmeRI, Pae17kI, Psp3I, Psp5I, Pun14627II, Pvu84II,
+    PvuHKUI, SbaI, SciAII, SmaAIV, Sol3335I, SpaPIII, SplAIV, Uba1227I, Uba1245I,
+    Uba153AI]
+  methylation_site: ''
+  microorganism: Unidentified bacterium M39
+  recognition_sequence: [5' CAGCTG, 3' GTCGAC]
+  references: Sokolov, N.N., (1995) Vestn. Akad. Med. Nauk SSSR, vol. 2, pp. 47-51.
+  source: N.N. Sokolov
+UnbI:
+  commercial_availability: ''
+  cut: [5' ---  GGNCC--- 3', 3' ---CCNGG  --- 5']
+  enzyme: UnbI
+  isoscizomers: [AsuI, AhaB1I, ApuI, AspS9I, AvcI, Bac36I, Bal228I, BavAII, BavBII,
+    Bce22I, Bfi105I, BmgT120I, BpsI, BsaSI, Bse54I, BshKI, BsiZI, Bsp1894I, BspBII,
+    BspF4I, Bsu54I, Bsu5044I, CcuI, CdiAI, CdiCD6I, Cfr4I, Cfr8I, Cfr13I, Cfr23I,
+    Cfr33I, Cfr45I, Cfr46I, Cfr47I, Cfr52I, Cfr54I, CfrNI, Eco39I, Eco47II, Eco196II,
+    Eco201I, FmuI, GseI, Hin5II, HpyF66I, HpyF71II, HpyF73IV, MaeK81II, MhoI, MjaII,
+    Msp24I, MthBI, NlaDII, NmuEII, NmuSI, NspIV, Nsp7121I, NspLII, Pde12I, Pph1579I,
+    Pph1773I, PseI, PspI, PspPI, Sau2I, Sau5I, Sau13I, Sau14I, Sau17I, Sau32I, Sau33I,
+    Sau96I, Sau557I, SauBI, SdyI, SelAI, TdeIII, Uba1099I, Uba1134I, Uba1160I, Uba1164I,
+    VchO66I, VchO85I, VchO90I, VpaK15I, VpaK25I, VpaK9AI, VpaK19AI, VpaK19BI, VpaKutAI,
+    VpaKutBI, VpaKutJI]
+  methylation_site: ''
+  microorganism: 'Unidentified bacterium strain #8'
+  recognition_sequence: [5' GGNCC, 3' CCNGG]
+  references: Kawalec, M., Borsuk, P., Piechula, S., Stepien, P.P., (1997) Acta Biochim.
+    Pol., vol. 44, pp. 849-852.
+  source: P.P. Stepien
+Van91I:
+  commercial_availability: BK
+  cut: [5' ---CCANNNN  NTGG--- 3', 3' ---GGTN  NNNNACC--- 5']
+  enzyme: Van91I
+  isoscizomers: [PflMI, AccB7I, AcpII, Asp10HII, BasI, Esp1396I, PflBI]
+  methylation_site: ''
+  microorganism: Vibrio anguillarum RFL91
+  recognition_sequence: [5' CCANNNNNTGG, 3' GGTNNNNNACC]
+  references: Janulaitis, A., Petrusyte, M., Maneliene, Z., Capskaya, L., Kiuduliene,
+    L., Butkus, V., Unpublished observations.
+  source: A. Janulaitis
+VpaK11AI:
+  commercial_availability: ''
+  cut: [5' ---  GGWCC--- 3', 3' ---CCSGG  --- 5']
+  enzyme: VpaK11AI
+  isoscizomers: [AvaII, AflI, Asp697I, Asp745I, AspBII, AspDII, BamNII, BceSII, BcuAI,
+    Bme18I, Bme216I, BmpI, Bsp71I, Bsp100I, Bsp128I, Bsp132I, Bsp133I, Bsp1260I, BspF53I,
+    BspJ105I, BsrAI, Bst4QI, BthAI, BtiI, CauI, CliI, ClmII, Csp68KI, DsaIV, EagMI,
+    Eco47I, ErpI, FdiI, FspMSI, FssI, GspAI, HgiBI, HgiCII, HgiEI, HgiHIII, HgiJI,
+    Hsp2I, Kzo49I, Mae7806III, MfoI, MliI, MspAI, MspNI, NliII, Nli3877II, NmuAII,
+    NspDII, NspGI, NspHII, NspKI, Pfl19I, PolI, Psp03I, SfnI, Sgh1835I, SinI, SinAI,
+    SinBI, SinCI, SinDI, SinEI, SinFI, SinGI, SinHI, SinJI, SmuEI, SynI, TruI, Tru28I,
+    Tsp301I, Uba48I, Uba62I, Uba1131I, Uba1249I, Uba1272I, Uba1278I, Uba1304I, Uba1314I,
+    Uba1373I, Uba1413I, Uba1438I, UbaN15I, Uth554I, VpaK11I, VpaK65I, VpaK7AI, VpaK13AI,
+    VpaK11BI, VpaK11CI, VpaK11DI]
+  methylation_site: ''
+  microorganism: Vibrio parahaemolyticus 1743
+  recognition_sequence: [5' GGWCC, 3' CCSGG]
+  references: Miyahara, M., Mise, K., Unpublished observations.
+  source: S. Matsushita
+XagI:
+  commercial_availability: B
+  cut: [5' ---CCTNN  NNNAGG--- 3', 3' ---GGANNN  NNTCC--- 5']
+  enzyme: XagI
+  isoscizomers: [EcoNI, Bpu1268I, BsoEI, BstENI, BstWI, Uba1289I, Uba1290I, Uba1308I,
+    Uba1309I, Uba1310I]
+  methylation_site: ''
+  microorganism: Xanthobacter agilis Vs 18-132
+  recognition_sequence: [5' CCTNNNNNAGG, 3' GGANNNNNTCC]
+  references: 'Maneliene, Z., Butkus, V., Unpublished observations.
+
+    Vitkute, J., Savelskiene, A., Vonseviciene, E., Kiuduliene, E., Petrusyte, M.,
+    Butkus, V., Janulaitis, A., Unpublished observations.'
+  source: A. Janulaitis
+XbaI:
+  commercial_availability: BCIJKMNQRSUVX
+  cut: [5' ---T  CTAGA--- 3', 3' ---AGATC  T--- 5']
+  enzyme: XbaI
+  isoscizomers: [BspAAII, BspLU11II, BsrXI, Msp23I, UbaN19I]
+  methylation_site: 6(6)
+  microorganism: Xanthomonas badrii
+  recognition_sequence: [5' TCTAGA, 3' AGATCT]
+  references: 'Patel, Y., Van Cott, E., Wilson, G.G., McClelland, M., (1990) Nucleic
+    Acids Res., vol. 18, pp. 1603-1607.
+
+    Zain, B.S., Roberts, R.J., (1977) J. Mol. Biol., vol. 115, pp. 249-255.'
+  source: ATCC 11672
+XcmI:
+  commercial_availability: N
+  cut: [5' ---CCANNNNN  NNNNTGG--- 3', 3' ---GGTNNNN  NNNNNACC--- 5']
+  enzyme: XcmI
+  isoscizomers: []
+  methylation_site: 3(6)
+  microorganism: Xanthomonas campestris
+  recognition_sequence: [5' CCANNNNNNNNNTGG, 3' GGTNNNNNNNNNACC]
+  references: 'Morgan, R.D., Roberts, R.J., International Patent Office, 2007.
+
+    Nwankwo, D., Unpublished observations.
+
+    Nwankwo, D.O., Slatko, B.E., Unpublished observations.
+
+    Polisson, C., Morgan, R., Unpublished observations.
+
+    Shaw, P.C., Mok, Y.K., (1993) Gene, vol. 133, pp. 85-89.
+
+    Stickel, S.K., Roberts, R.J., Unpublished observations.'
+  source: NEB 497
+XcyI:
+  commercial_availability: ''
+  cut: [5' ---C  CCGGG--- 3', 3' ---GGGCC  C--- 5']
+  enzyme: XcyI
+  isoscizomers: [SmaI, AhyI, Cfr9I, CfrJ4I, CphBI, EaeAI, EclRI, KteAI, Pac25I, PaeBI,
+    PspAI, PspALI, TspMI, Uba1220I, Uba1393I, XmaI, XmaCI]
+  methylation_site: 2(4)
+  microorganism: Xanthomonas cyanopsidis 13D5
+  recognition_sequence: [5' CCCGGG, 3' GGGCCC]
+  references: 'Froman, B.E., Tait, R.C., Kado, C.I., Rodriguez, R.L., (1984) Gene,
+    vol. 28, pp. 331-335.
+
+    Withers, B.E., Ambroso, L.A., Dunbar, J.C., (1992) Nucleic Acids Res., vol. 20,
+    pp. 6267-6273.'
+  source: C.I. Kado
+XmaIII:
+  commercial_availability: ''
+  cut: [5' ---C  GGCCG--- 3', 3' ---GCCGG  C--- 5']
+  enzyme: XmaIII
+  isoscizomers: [AaaI, BseX3I, BsoDI, BstZI, EagI, EclXI, Eco52I, SenPT16I, TauII,
+    Tsp504I]
+  methylation_site: 4(5)
+  microorganism: Xanthomonas malvacearum
+  recognition_sequence: [5' CGGCCG, 3' GCCGGC]
+  references: 'Kunkel, L.M., Silberklang, M., McCarthy, B.J., (1979) J. Mol. Biol.,
+    vol. 132, pp. 133-139.
+
+    Trautner, T.A., Unpublished observations.'
+  source: ATCC 9924
+XmiI:
+  commercial_availability: B
+  cut: [5' ---GT  MKAC--- 3', 3' ---CAKM  TG--- 5']
+  enzyme: XmiI
+  isoscizomers: [AccI, DsaVI, FblI, OmiBII]
+  methylation_site: ''
+  microorganism: Xanthomonas maltophilia Jo21-021
+  recognition_sequence: [5' GTMKAC, 3' CAKMTG]
+  references: Jurgelyte, R., Lazareviciute, L., Maneliene, Z., Trinkunaite, L., Kiuduliene,
+    E., Butkus, V., Janulaitis, A., Unpublished observations.
+  source: V. Butkus
+XspI:
+  commercial_availability: K
+  cut: [5' ---C  TAG--- 3', 3' ---GAT  C--- 5']
+  enzyme: XspI
+  isoscizomers: [MaeI, BfaI, CchI, FgoI, FisI, FspBI, MjaI, MthFI, MthZI, RmaI, Rma485I,
+    Rma486I, Rma490I, Rma495I, Rma496I, Rma497I, Rma500I, Rma501I, Rma503I, Rma506I,
+    Rma509I, Rma510I, Rma515I, Rma516I, Rma517I, Rma518I, Rma519I, Rma522I, SspMI,
+    UbaN5I]
+  methylation_site: ''
+  microorganism: Xanthomonas species YK1
+  recognition_sequence: [5' CTAG, 3' GATC]
+  references: Song, T., Kang, B.S., Kim, Y.M., (1998) Mol. Cells, vol. 8, pp. 370-373.
+  source: Y.M. Kim
+ZraI:
+  commercial_availability: INV
+  cut: [5' ---GAC  GTC--- 3', 3' ---CTG  CAG--- 5']
+  enzyme: ZraI
+  isoscizomers: [AatII, AspJI, Ppu1253I, Ssp5230I]
+  methylation_site: ''
+  microorganism: Zoogloea ramigera 11
+  recognition_sequence: [5' GACGTC, 3' CTGCAG]
+  references: 'Dedkov, V.S., Sinichkina, S.A., Popichenko, D.V., Degtyarev, S.K.,
+    (2001) Biotekhnologiya, vol. 6, pp. 3-7.
+
+    Wei, H., Zhu, Z., Unpublished observations.
+
+    Zhu, Z., Roberts, R.J., Unpublished observations.'
+  source: NEB 1785
