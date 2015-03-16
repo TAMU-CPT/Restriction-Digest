@@ -51,7 +51,7 @@ class Dnadigest():
             self.complement_regex[self.complement_regex[k]] = k
 
         if enzyme_data_file is None:
-            handle = resource_stream(__name__, 'enzyme_data.yaml')
+            handle = resource_stream(__name__, 'rebase.yaml')
             self.load_enzyme_data(handle)
         else:
             with open(enzyme_data_file, 'r') as handle:
