@@ -1,0 +1,1465 @@
+Acc36I:
+  cut: [5' ---ACCTGCN3N  NNNN--- 3', 3' ---TGGACGN3NNNNN  --- 5']
+  enzyme: Acc36I
+  isoscizomers: [BfuAI, BspMI, BveI]
+  recognition_sequence: [5' ACCTGC, 3' TGGACG]
+AceIII:
+  cut: [5' ---CAGCTCN4NN  NNNN--- 3', 3' ---GTCGAGN4NNNNNN  --- 5']
+  enzyme: AceIII
+  isoscizomers: [None on May 2010]
+  recognition_sequence: [5' CAGCTC, 3' GTCGAG]
+AflIII:
+  cut: [5' ---A  CRYGT--- 3', 3' ---TGYRC  A--- 5']
+  enzyme: AflIII
+  isoscizomers: [Asp90I]
+  recognition_sequence: [5' ACRYGT, 3' TGYRCA]
+AlfI:
+  cut: [5' ---GCAN6TGCN9NNN  --- 3', 3' ---CGTN6ACGN9N  NN--- 5']
+  enzyme: AlfI
+  isoscizomers: [None on May 2010]
+  recognition_sequence: [5' GCAN6TGC, 3' CGTN6ACG]
+AloI:
+  cut: [5' ---GAACN6TCCN6NNNNNN  --- 3', 3' ---CTTGN6AGGN6N  NNNNN--- 5']
+  enzyme: AloI
+  isoscizomers: [None on May 2010]
+  recognition_sequence: [5' GAACN6TCC, 3' CTTGN6AGG]
+AlwI:
+  cut: [5' ---GGATCN3N  N--- 3', 3' ---CCTAGN3NN  --- 5']
+  enzyme: AlwI
+  isoscizomers: [AclWI, BinI, BspPI, BsrWI, BstH9I, BthII, Bth617I, EacI]
+  recognition_sequence: [5' GGATC, 3' CCTAG]
+ApaBI:
+  cut: [5' ---GCANNNNN  TGC--- 3', 3' ---CGT  NNNNNACG--- 5']
+  enzyme: ApaBI
+  isoscizomers: [BstAPI]
+  recognition_sequence: [5' GCAN5TGC, 3' CGTN5ACG]
+AscI:
+  cut: [5' ---GG  CGCGCC--- 3', 3' ---CCGCGC  GG--- 5']
+  enzyme: AscI
+  isoscizomers: [PalAI, SgsI]
+  recognition_sequence: [5' GGCGCGCC, 3' CCGCGCGG]
+BaeI:
+  cut: [5' ---ACN4GTAYCN6NNNNNN  --- 3', 3' ---TGN4CATYGN6N  NNNNN--- 5']
+  enzyme: BaeI
+  isoscizomers: [None on May 2010]
+  recognition_sequence: [5' ACN4GTAYC, 3' TGN4CATYG]
+BalI:
+  cut: [5' ---TGG  CCA--- 3', 3' ---ACC  GGT--- 5']
+  enzyme: BalI
+  isoscizomers: [MlsI, Mlu31I, MluNI, MscI, Msp20I]
+  recognition_sequence: [5' TGGCCA, 3' ACCGGT]
+BasI:
+  cut: [5' ---CCANNNN  NTGG--- 3', 3' ---GGTN  NNNNACC--- 5']
+  enzyme: BasI
+  isoscizomers: [AccB7I, AcpII, Asp10HII, Esp1396I, PflBI, PflMI, Van91I]
+  recognition_sequence: [5' CCAN5TGG, 3' GGTN5ACC]
+BbeI:
+  cut: [5' ---GGCGC  C--- 3', 3' ---C  CGCGG--- 5']
+  enzyme: BbeI
+  isoscizomers: []
+  recognition_sequence: [5' GGCGCC, 3' CCGCGG]
+Bbi24I:
+  cut: [5' ---A  CGCGT--- 3', 3' ---TGCGC  A--- 5']
+  enzyme: Bbi24I
+  isoscizomers: [MluI]
+  recognition_sequence: [5' ACGCGT, 3' TGCGCA]
+Bbr7I:
+  cut: [5' ---GAAGACN6N  NNNNN--- 3', 3' ---CTTCTGN6NNNNNN  --- 5']
+  enzyme: Bbr7I
+  isoscizomers: []
+  recognition_sequence: [5' GAAGAC, 3' CTTCTG]
+BbrPI:
+  cut: [5' ---CAC  GTG--- 3', 3' ---GTG  CAC--- 5']
+  enzyme: BbrPI
+  isoscizomers: [AcvI, BcoAI, Eco72I, PmaCI, PmlI, PspCI]
+  recognition_sequence: [5' CACGTG, 3' GTGCAC]
+BbuI:
+  cut: [5' ---GCATG  C--- 3', 3' ---C  GTACG--- 5']
+  enzyme: BbuI
+  isoscizomers: [PaeI, PfaAIII, RspLKI, SpaHI, SphI]
+  recognition_sequence: [5' GCATGC, 3' CGTACG]
+Bbv12I:
+  cut: [5' ---GWGCW  C--- 3', 3' ---C  WCGWG--- 5']
+  enzyme: Bbv12I
+  isoscizomers: [Alw21I, AspHI, Bsh45I, BsiHKAI, HgiAI, HpyF46II, MspV281I]
+  recognition_sequence: [5' GWGCWC, 3' CWCGWG]
+BbvAI:
+  cut: [5' ---GAANN  NNTTC--- 3', 3' ---CTTNN  NNAAG--- 5']
+  enzyme: BbvAI
+  isoscizomers: [Asp700I, MroXI, PdmI, XmnI]
+  recognition_sequence: [5' GAAN4TTC, 3' CTTN4AAG]
+BbvCI:
+  cut: [5' ---CC  TCAGC--- 3', 3' ---GGAGT  CG--- 5']
+  enzyme: BbvCI
+  isoscizomers: [AbeI]
+  recognition_sequence: [5' CCTCAGC, 3' GGAGTCG]
+BccI:
+  cut: [5' ---CCATCNNNN  N--- 3', 3' ---GGTAGNNNNN  --- 5']
+  enzyme: BccI
+  isoscizomers: [HpyC1I]
+  recognition_sequence: [5' CCATC, 3' GGTAG]
+BceAI:
+  cut: [5' ---ACGGCN11N  NN--- 3', 3' ---TGCCGN11NNN  --- 5']
+  enzyme: BceAI
+  isoscizomers: []
+  recognition_sequence: [5' ACGGC, 3' TGCCG]
+BcefI:
+  cut: [5' ---ACGGCN10NN  N--- 3', 3' ---TGCCGN10NNN  --- 5']
+  enzyme: BcefI
+  isoscizomers: []
+  recognition_sequence: [5' ACGGC, 3' TGCCG]
+BcgI:
+  cut: [5' ---CGAN6TGCN9NNN  --- 3', 3' ---GCTN6ACGN9N  NN--- 5']
+  enzyme: BcgI
+  isoscizomers: []
+  recognition_sequence: [5' CGAN6TGC, 3' GCTN6ACG]
+BcnI:
+  cut: [5' ---CC  SGG--- 3', 3' ---GGS  CC--- 5']
+  enzyme: BcnI
+  isoscizomers: [AhaI, AseII, AsuC2I, BpuMI, CauII, Eco1831I, HgiS22I, Kpn49kII, NciI,
+    Mgl14481I]
+  recognition_sequence: [5' CCSGG, 3' GGSCC]
+Bco27I:
+  cut: [5' ---C  CGG--- 3', 3' ---GGC  C--- 5']
+  enzyme: Bco27I
+  isoscizomers: [Pde137I, HapII, Hin2I, HpaII, BsiSI, Bst40I, BsuFI, Sth134I, MnoI,
+    MspI, CboI]
+  recognition_sequence: [5' CCGG, 3' GGCC]
+Bco5I:
+  cut: [5' ---CTCTTCN  NNN--- 3', 3' ---GAGAAGNNNN  --- 5']
+  enzyme: Bco5I
+  isoscizomers: [Bco116I, BcoKI, Eam1104I, EarI, Ksp632I, BseZI, Bst6I, Bsu6I]
+  recognition_sequence: [5' CTCTTC, 3' GAGAAG]
+BcuI:
+  cut: [5' ---A  CTAGT--- 3', 3' ---TGATC  A--- 5']
+  enzyme: BcuI
+  isoscizomers: [AhII, AclNI, SpeI, AhlI]
+  recognition_sequence: [5' ACTAGT, 3' TGATCA]
+BdiSI:
+  cut: [5' ---C  TRYAG--- 3', 3' ---GAYRT  C--- 5']
+  enzyme: BdiSI
+  isoscizomers: [BfmI, BpcI, BstSFI, SfcI, SfeI, Srl56DI, LlaBI]
+  recognition_sequence: [5' CTRYAG, 3' GAYRTC]
+BetI:
+  cut: [5' ---W  CCGGW--- 3', 3' ---WGGCC  W--- 5']
+  enzyme: BetI
+  isoscizomers: [Bca77I, BsaWI]
+  recognition_sequence: [5' WCCGGW, 3' WGGCCW]
+BfaI:
+  cut: [5' ---C  TAG--- 3', 3' ---GAT  C--- 5']
+  enzyme: BfaI
+  isoscizomers: [RmaI, FgoI, FspBI, MaeI, MthZI, XspI]
+  recognition_sequence: [5' CTAG, 3' GATC]
+Bfi89I:
+  cut: [5' ---Y  GGCCR--- 3', 3' ---RCCGG  Y--- 5']
+  enzyme: Bfi89I
+  isoscizomers: [EaeI, EcoHK31I, CfrI]
+  recognition_sequence: [5' YGGCCR, 3' RCCGGY]
+BfiI:
+  cut: [5' ---ACTGGGNNNNN  --- 3', 3' ---TGACCCNNNN  N--- 5']
+  enzyme: BfiI
+  isoscizomers: [BmrI]
+  recognition_sequence: [5' ACTGGG, 3' TGACCC]
+BflI:
+  cut: [5' ---CCNNNNN  NNGG--- 3', 3' ---GGNN  NNNNNCC--- 5']
+  enzyme: BflI
+  isoscizomers: [Bsc4I, Bsc107I, BseLI, BsiYI, BslI]
+  recognition_sequence: [5' CCN7GG, 3' GGN7CC]
+BfrBI:
+  cut: [5' ---ATGCA  T--- 3', 3' ---T  ACGTA--- 5']
+  enzyme: BfrBI
+  isoscizomers: [Csp68KIII, EcoT22I, Mph1103I, PinBI, Ppu10I, SepI, SspD5II, Zsp2I,
+    NsiI]
+  recognition_sequence: [5' ATGCAT, 3' TACGTA]
+BfuI:
+  cut: [5' ---GTATCCN4NN  --- 3', 3' ---CATAGGN4N  N--- 5']
+  enzyme: BfuI
+  isoscizomers: [BciVI]
+  recognition_sequence: [5' GTATCC, 3' CATAGG]
+BglI:
+  cut: [5' ---GCCNNNN  NGGC--- 3', 3' ---CGGN  NNNNCCG--- 5']
+  enzyme: BglI
+  isoscizomers: [Tsp8EI]
+  recognition_sequence: [5' GCCN5GGC, 3' CGGN5CCG]
+BglII:
+  cut: [5' ---A  GATCT--- 3', 3' ---TCTAG  A--- 5']
+  enzyme: BglII
+  isoscizomers: [Pae2kI, Pae18kI, NcrI, NspMACI]
+  recognition_sequence: [5' AGATCT, 3' TCTAGA]
+BloHI:
+  cut: [5' ---R  GATCY--- 3', 3' ---YCTAG  R--- 5']
+  enzyme: BloHI
+  isoscizomers: [PsuI, BstX2I, BstYI, MflI, Tru201I, XhoII, DsaIII]
+  recognition_sequence: [5' RGATCY, 3' YCTAGR]
+Bme1390I:
+  cut: [5' ---CC  NGG--- 3', 3' ---GGN  CC--- 5']
+  enzyme: Bme1390I
+  isoscizomers: [ScrFI, Msp67I, MspR9I]
+  recognition_sequence: [5' CCNGG, 3' GGNCC]
+Bme142I:
+  cut: [5' ---RGC  GCY--- 3', 3' ---YCG  CGR--- 5']
+  enzyme: Bme142I
+  isoscizomers: [AccB2I, BfoI, Bsp143II, BstH2I, HaeII, LpnI]
+  recognition_sequence: [5' RGCGCY, 3' YCGCGR]
+Bme1580I:
+  cut: [5' ---GKGCM  C--- 3', 3' ---C  MCGKG--- 5']
+  enzyme: Bme1580I
+  isoscizomers: [BseSI]
+  recognition_sequence: [5' GKGCMC, 3' CMCGKG]
+Bme585I:
+  cut: [5' ---CCCGCNNNN  NN--- 3', 3' ---GGGCGNNNNNN  --- 5']
+  enzyme: Bme585I
+  isoscizomers: [FauI, BstFZ438I, SmuI]
+  recognition_sequence: [5' CCCGC, 3' GGGCG]
+BmgBI:
+  cut: [5' ---CAC  GTC--- 3', 3' ---GTG  CAG--- 5']
+  enzyme: BmgBI
+  isoscizomers: [BtrI]
+  recognition_sequence: [5' CACGTC, 3' GTGCAG]
+BmtI:
+  cut: [5' ---GCTAG  C--- 3', 3' ---C  GATCG--- 5']
+  enzyme: BmtI
+  isoscizomers: [AceII, AsuNHI, BspOI, NheI, LlaG2I, PstNHI]
+  recognition_sequence: [5' GCTAGC, 3' CGATCG]
+BoxI:
+  cut: [5' ---GACNN  NNGTC--- 3', 3' ---CTGNN  NNCAG--- 5']
+  enzyme: BoxI
+  isoscizomers: [PshAI, BstPAI]
+  recognition_sequence: [5' GACN4GTC, 3' CTGN4CAG]
+BplI:
+  cut: [5' ---GAGN5CTCN7NNNNNN  --- 3', 3' ---CTCN5GAGN7N  NNNNN--- 5']
+  enzyme: BplI
+  isoscizomers: []
+  recognition_sequence: [5' GAGN5CTC, 3' CTCN5GAG]
+BpmI:
+  cut: [5' ---CTGGAGN13NNN  --- 3', 3' ---GACCTCN13N  NN--- 5']
+  enzyme: BpmI
+  isoscizomers: []
+  recognition_sequence: [5' CTGGAG, 3' GACCTC]
+BpoAI:
+  cut: [5' ---AT  TAAT--- 3', 3' ---TAAT  TA--- 5']
+  enzyme: BpoAI
+  isoscizomers: [AseI, AsnI, PshBI, Sru4DI, VspI]
+  recognition_sequence: [5' ATTAAT, 3' TAATTA]
+Bpu10I:
+  cut: [5' ---CC  TNAGC--- 3', 3' ---GGANT  CG--- 5']
+  enzyme: Bpu10I
+  isoscizomers: [BpuDI]
+  recognition_sequence: [5' CCTNAGC, 3' GGANTCG]
+BpuAmI:
+  cut: [5' ---GAG  CTC--- 3', 3' ---CTC  GAG--- 5']
+  enzyme: BpuAmI
+  isoscizomers: [Ecl136II, EcoICRI, Eco53kI, MxaI]
+  recognition_sequence: [5' GAGCTC, 3' CTCGAG]
+BpuB5I:
+  cut: [5' ---C  GTACG--- 3', 3' ---GCATG  C--- 5']
+  enzyme: BpuB5I
+  isoscizomers: [Pfl23II, PpuAI, PspLI, BsiWI, BvuBI, SplI, SunI, MaeK81I]
+  recognition_sequence: [5' CGTACG, 3' GCATGC]
+BpuEI:
+  cut: [5' ---CTTGAGN13NNN  --- 3', 3' ---GAACTCN13N  NN--- 5']
+  enzyme: BpuEI
+  isoscizomers: [Bce83I]
+  recognition_sequence: [5' CTTGAG, 3' GAACTC]
+BpuJI:
+  cut: [5' ---CCCGTN10N  NNNNNNNN--- 3', 3' ---GGGCAN10NNNNNNNNN  --- 5']
+  enzyme: BpuJI
+  isoscizomers: [None on May 2010]
+  recognition_sequence: [5' CCCGT, 3' GGGCA]
+BpuSI:
+  cut: [5' ---GGGACN9N  NNNN--- 3', 3' ---CCCTGN9NNNNN  --- 5']
+  enzyme: BpuSI
+  isoscizomers: []
+  recognition_sequence: [5' GGGAC, 3' CCCTG]
+BsaOI:
+  cut: [5' ---CGRY  CG--- 3', 3' ---GC  YRGC--- 5']
+  enzyme: BsaOI
+  isoscizomers: [Bsh1285I, BsiEI, BstMCI, McrI]
+  recognition_sequence: [5' CGRYCG, 3' GCYRGC]
+BsaXI:
+  cut: [5' ---ACN5CTCCN6NNNN  --- 3', 3' ---TGN5GAGGN6N  NNN--- 5']
+  enzyme: BsaXI
+  isoscizomers: [BsmCI, BsmDI, BsmXI]
+  recognition_sequence: [5' ACN5CTCC, 3' TGN5GAGG]
+BscAI:
+  cut: [5' ---GCATCNNNN  NN--- 3', 3' ---CGTAGNNNNNN  --- 5']
+  enzyme: BscAI
+  isoscizomers: [Bst19I]
+  recognition_sequence: [5' GCATC, 3' CGTAG]
+BseGI:
+  cut: [5' ---GGATGNN  --- 3', 3' ---CCTAC  NN--- 5']
+  enzyme: BseGI
+  isoscizomers: [BstF5I]
+  recognition_sequence: [5' GGATG, 3' CCTAC]
+BseMII:
+  cut: [5' ---CTCAGN7NNN  --- 3', 3' ---GAGTCN7N  NN--- 5']
+  enzyme: BseMII
+  isoscizomers: []
+  recognition_sequence: [5' CTCAG, 3' GAGTC]
+BseRI:
+  cut: [5' ---GAGGAGN7NNN  --- 3', 3' ---CTCCTCN7N  NN--- 5']
+  enzyme: BseRI
+  isoscizomers: []
+  recognition_sequence: [5' GAGGAG, 3' CTCCTC]
+BseYI:
+  cut: [5' ---C  CCAGC--- 3', 3' ---GGGTC  G--- 5']
+  enzyme: BseYI
+  isoscizomers: []
+  recognition_sequence: [5' CCCAGC, 3' GGGTCG]
+BsgI:
+  cut: [5' ---GTGCAGN12NNNN  --- 3', 3' ---CACGTCN12NN  NN--- 5']
+  enzyme: BsgI
+  isoscizomers: []
+  recognition_sequence: [5' GTGCAG, 3' CACGTC]
+BsmAI:
+  cut: [5' ---GTCTCN  NNNN--- 3', 3' ---CAGAGNNNNN  --- 5']
+  enzyme: BsmAI
+  isoscizomers: [Alw26I, BcoDI, BscQII, BsoMAI, BstMAI]
+  recognition_sequence: [5' GTCTC, 3' CAGAG]
+Bsp106I:
+  cut: [5' ---AT  CGAT--- 3', 3' ---TAGC  TA--- 5']
+  enzyme: Bsp106I
+  isoscizomers: [BbvAII, Bci29I, BciBI, BcmI, BspOVII, BstNZ169I, Rme21I, BspDI, BspJII,
+    BspXI, BspZEI, BdiI, Bli41I, Bli86I, BliAI, BliRI, BanIII, BavCI, PgaI, Bsa29I,
+    BscI, BseCI, BsiXI, Bst28I, Bsu15I, BsuTUI, SpmI, Ssp27144I, LcaI, LplI, ZhoI,
+    ClaI]
+  recognition_sequence: [5' ATCGAT, 3' TAGCTA]
+Bsp119I:
+  cut: [5' ---TT  CGAA--- 3', 3' ---AAGC  TT--- 5']
+  enzyme: Bsp119I
+  isoscizomers: [AcpI, Bim19I, Bpu14I, BspT104I, Csp45I, FspII, NspV, SspRFI, BspLAII,
+    BimI, PlaII, PpaAI, BsiCI, BstBI, SfuI, Ssp1I, SviI, LspI, MlaI, CbiI, Csp68KII,
+    Asp10HI, AsuII]
+  recognition_sequence: [5' TTCGAA, 3' AAGCTT]
+Bsp120I:
+  cut: [5' ---G  GGCCC--- 3', 3' ---CCCGG  G--- 5']
+  enzyme: Bsp120I
+  isoscizomers: [ApaI, PpeI, PspOMI]
+  recognition_sequence: [5' GGGCCC, 3' CCCGGG]
+Bsp1286I:
+  cut: [5' ---GDGCH  C--- 3', 3' ---C  HCGDG--- 5']
+  enzyme: Bsp1286I
+  isoscizomers: [AocII, BmyI, BsoCI, Bsp1286I, BspLS2I, NspII, SduI, MhlI]
+  recognition_sequence: [5' GDGCHC, 3' CHCGDG]
+Bsp13I:
+  cut: [5' ---T  CCGGA--- 3', 3' ---AGGCC  T--- 5']
+  enzyme: Bsp13I
+  isoscizomers: [AccIII, BbvAIII, BlfI, BsiMI, BspMII, Bsu23I, Kpn2I, PinBII, BspEI,
+    PtaI, BseAI, MroI, CauB3I, Aor13HI]
+  recognition_sequence: [5' TCCGGA, 3' AGGCCT]
+Bsp1407I:
+  cut: [5' ---T  GTACA--- 3', 3' ---ACATG  T--- 5']
+  enzyme: Bsp1407I
+  isoscizomers: [AauI, BsmRI, BsrGI, BstAUI, Ssp4800I, SspBI, AaaI]
+  recognition_sequence: [5' TGTACA, 3' ACATGT]
+Bsp143II:
+  cut: [5' ---RGCGC  Y--- 3', 3' ---Y  CGCGR--- 5']
+  enzyme: Bsp143II
+  isoscizomers: [AccB2I, BfoI, Bme142I, BstH2I, HaeII, LpnI]
+  recognition_sequence: [5' RGCGCY, 3' YCGCGR]
+Bsp153AI:
+  cut: [5' ---CAG  CTG--- 3', 3' ---GTC  GAC--- 5']
+  enzyme: Bsp153AI
+  isoscizomers: [BspM39I, BspO4I, BavI, BavAI, BavBI, Pae17kI, PovII, Pun14627II,
+    PvuII, Pvu84II, EclI, NmeRI, Uba153AI, UbaM39I, Cfr6I, DmaI]
+  recognition_sequence: [5' CAGCTG, 3' GTCGAC]
+Bsp1720I:
+  cut: [5' ---GC  TNAGC--- 3', 3' ---CGANT  CG--- 5']
+  enzyme: Bsp1720I
+  isoscizomers: [BlpI, Bpu1102I, EspI, CelII]
+  recognition_sequence: [5' GCTNAGC, 3' CGANTCG]
+Bsp1894I:
+  cut: [5' ---G  GNCC--- 3', 3' ---CCNG  G--- 5']
+  enzyme: Bsp1894I
+  isoscizomers: [AspS9I, Bac36I, BavBII, BshKI, BspBII, CcuI, MaeK81II, Pde12I, BspF4I,
+    Bal228I, BavAII, Bce22I, PspPI, BsiZI, Bsu54I, Sau96I, NspIV, Nsp7121I, Cfr13I,
+    AsuI, AvcI]
+  recognition_sequence: [5' GGNCC, 3' CCNGG]
+Bsp19I:
+  cut: [5' ---C  CATGG--- 3', 3' ---GGTAC  C--- 5']
+  enzyme: Bsp19I
+  isoscizomers: [NcoI]
+  recognition_sequence: [5' CCATGG, 3' GGTACC]
+Bsp211I:
+  cut: [5' ---GG  CC--- 3', 3' ---CC  GG--- 5']
+  enzyme: Bsp211I
+  isoscizomers: [BspANI, BspBRI, BspKI, BspRI, BecAII, Bim19II, Bme361I, BanAI, PalI,
+    Pde133I, PflKI, PhoI, PlaI, EsaBC4I, FnuDI, HaeIII, BseQI, BshI, BshFI, BsuRI,
+    BteI, SbvI, SfaI, SuaI, MchAII, MfoAI, NgoPII, NspLKI, CltI, DsaII]
+  recognition_sequence: [5' GGCC, 3' CCGG]
+Bsp24I:
+  cut: [5' ---GACN6TGGN6NNNNNN  --- 3', 3' ---CTGN6ACCN6N  NNNNN--- 5']
+  enzyme: Bsp24I
+  isoscizomers: []
+  recognition_sequence: [5' GACN6TGG, 3' CTGN6ACC]
+Bsp423I:
+  cut: [5' ---GCAGCN7N  NNNN--- 3', 3' ---CGTCGN7NNNNN  --- 5']
+  enzyme: Bsp423I
+  isoscizomers: [AlwXI, BbvI, BseKI, BseXI, Bst12I, Bst71I, BstV1I]
+  recognition_sequence: [5' GCAGC, 3' CGTCG]
+Bsp50I:
+  cut: [5' ---CG  CG--- 3', 3' ---GC  GC--- 5']
+  enzyme: Bsp50I
+  isoscizomers: [BceBI, Bsh1236I, BstFNI, BstUI, Bsu1532I, FalII, FnuDII, MvnI, ThaI,
+    Bsp123I, BepI, Bpu95I, FauBII, BtkI, Csp68KVI, CspKVI, AccII]
+  recognition_sequence: [5' CGCG, 3' GCGC]
+Bsp519I:
+  cut: [5' ---GRGCY  C--- 3', 3' ---C  YCGRG--- 5']
+  enzyme: Bsp519I
+  isoscizomers: [BpuI, BanII, PaeHI, Eco24I, Eco75KI, EcoT38I, FriOI, HgiJII, KoxII,
+    Bsu1854I, BvuI, SacNI]
+  recognition_sequence: [5' GRGCYC, 3' CYCGRG]
+Bsp63I:
+  cut: [5' ---CTGCA  G--- 3', 3' ---G  ACGTC--- 5']
+  enzyme: Bsp63I
+  isoscizomers: [AjoI, Asp713I, BloHII, MhaAI, Pfl21I, PstI, SalPI, SflI, Sst12I,
+    YenI, BspBI, BspMAI, PaePI, Psp23I, Ecl37kI, Ecl2zI, HalII, BsuBI, Srl5DI, CflI,
+    CfrA4I, CfuII, CstI, AliAJI, ApiI]
+  recognition_sequence: [5' CTGCAG, 3' GACGTC]
+Bsp67I:
+  cut: [5' ---  GATC--- 3', 3' ---CTAG  --- 5']
+  enzyme: Bsp67I
+  isoscizomers: [AspMDI, Bsp143I, BspJI, BtkII, DpnII, LlaAI, NlaII, SsiBI, Bsp105I,
+    Bsp2095I, BspAI, BspFI, Bfi57I, BfuCI, Bme12I, Bce243I, RalF40I, FnuCI, FnuEI,
+    HacI, Kzo9I, BscFI, Bst19II, BstENII, BstMBI, Sau3AI, SauMI, SsiAI, Sth368I, MboI,
+    MgoI, MkrAI, NdeII, NmeCI, NphI, CacI, CcyI, CpfI, CviAI]
+  recognition_sequence: [5' GATC, 3' CTAG]
+Bsp68I:
+  cut: [5' ---TCG  CGA--- 3', 3' ---AGC  GCT--- 5']
+  enzyme: Bsp68I
+  isoscizomers: [NruI, Sbo13I, SpoI, MluB2I]
+  recognition_sequence: [5' TCGCGA, 3' AGCGCT]
+Bsp6I:
+  cut: [5' ---GC  NGC--- 3', 3' ---CGN  CG--- 5']
+  enzyme: Bsp6I
+  isoscizomers: [FbrI, Fnu4HI, Fsp4HI, ItaI, BsoFI, SatI, Uur960I]
+  recognition_sequence: [5' GCNGC, 3' CGNCG]
+Bsp98I:
+  cut: [5' ---G  GATCC--- 3', 3' ---CCTAG  G--- 5']
+  enzyme: Bsp98I
+  isoscizomers: [AccEBI, AliI, BamHI, BnaI, BstI, CelI, OkrAI, NspSAIV, Pfl8I, SurI,
+    Bsp4009I, BspAAIII, Bce751I, RspLKII, GstI, SolI, Mlu23I, Nsp29132II, Uba4009I,
+    ApaCI, AsiI]
+  recognition_sequence: [5' GGATCC, 3' CCTAGG]
+BspA2I:
+  cut: [5' ---C  CTAGG--- 3', 3' ---GGATC  C--- 5']
+  enzyme: BspA2I
+  isoscizomers: [AspA2I, AvrII, AvrBII, BlnI, XmaJI]
+  recognition_sequence: [5' CCTAGG, 3' GGATCC]
+BspAAI:
+  cut: [5' ---C  TCGAG--- 3', 3' ---GAGCT  C--- 5']
+  enzyme: BspAAI
+  isoscizomers: [AbrI, BluI, BstVI, PanI, SauLPII, SciI, SlaI, StrI, TliI, BssHI,
+    PaeR7I, BsuMI, Sau3239I, Sbi68I, Sfr274I, Sol10179I, MavI, MlaAI, XhoI, XpaI,
+    CcrI]
+  recognition_sequence: [5' CTCGAG, 3' GAGCTC]
+BspAAII:
+  cut: [5' ---T  CTAGA--- 3', 3' ---AGATC  T--- 5']
+  enzyme: BspAAII
+  isoscizomers: [XbaI]
+  recognition_sequence: [5' TCTAGA, 3' AGATCT]
+BspBS31I:
+  cut: [5' ---GAAGACNN  NNNN--- 3', 3' ---CTTCTGNNNNNN  --- 5']
+  enzyme: BspBS31I
+  isoscizomers: [BspIS4I, BspTS514I, BpiI, BpuAI, BbsI, BbvII, Bbv16II, Bsc91I, BstBS32I,
+    BstTS5I, BstV2I]
+  recognition_sequence: [5' GAAGAC, 3' CTTCTG]
+BspCI:
+  cut: [5' ---CGAT  CG--- 3', 3' ---GC  TAGC--- 5']
+  enzyme: BspCI
+  isoscizomers: [Afa16RI, Afa22MI, EagBI, ErhB9I, NblI, Psu161I, RshI, XorII, Ple19I,
+    PvuI, MvrI]
+  recognition_sequence: [5' CGATCG, 3' GCTAGC]
+BspCNI:
+  cut: [5' ---CTCAGN6NNN  --- 3', 3' ---GAGTCN6N  NN--- 5']
+  enzyme: BspCNI
+  isoscizomers: []
+  recognition_sequence: [5' CTCAG, 3' GAGTC]
+BspD6I:
+  cut: [5' ---GACTCNNNN  NN--- 3', 3' ---CTGAGNNNNNN  --- 5']
+  enzyme: BspD6I
+  isoscizomers: []
+  recognition_sequence: [5' GACTC, 3' CTGAG]
+BspHI:
+  cut: [5' ---T  CATGA--- 3', 3' ---AGTAC  T--- 5']
+  enzyme: BspHI
+  isoscizomers: [PagI, RcaI, RspXI]
+  recognition_sequence: [5' TCATGA, 3' AGTACT]
+BspKT5I:
+  cut: [5' ---CTGAAGN12NNNN  --- 3', 3' ---GACTTCN12NN  NN--- 5']
+  enzyme: BspKT5I
+  isoscizomers: [Eco57I, AcuI]
+  recognition_sequence: [5' CTGAAG, 3' GACTTC]
+BspKT6I:
+  cut: [5' ---GAT  C--- 3', 3' ---C  TAG--- 5']
+  enzyme: BspKT6I
+  isoscizomers: [BfuCI, Bsp2095I, Bst19II, BstKTI, DpnII, LlaAI, NmeCI, SsiAI]
+  recognition_sequence: [5' GATC, 3' CTAG]
+BspKT8I:
+  cut: [5' ---A  AGCTT--- 3', 3' ---TTCGA  A--- 5']
+  enzyme: BspKT8I
+  isoscizomers: [BspLAIII, BbrI, EcoVIII, HindIII, HsuI, BstFI, SsbI, LlaCI]
+  recognition_sequence: [5' AAGCTT, 3' TTCGAA]
+BspLAI:
+  cut: [5' ---GCG  C--- 3', 3' ---C  GCG--- 5']
+  enzyme: BspLAI
+  isoscizomers: [AspLEI, BstHHI, CfoI, FnuDIII, HhaI, Hin6I, HinP1I, HsoI, HspAI,
+    SciNI]
+  recognition_sequence: [5' GCGC, 3' CGCG]
+BspLI:
+  cut: [5' ---GGN  NCC--- 3', 3' ---CCN  NGG--- 5']
+  enzyme: BspLI
+  isoscizomers: [AspNI, BscBI, BmiI, NlaIV, PspN4I]
+  recognition_sequence: [5' GGNNCC, 3' CCNNGG]
+BspLU11I:
+  cut: [5' ---A  CATGT--- 3', 3' ---TGTAC  A--- 5']
+  enzyme: BspLU11I
+  isoscizomers: [PciI]
+  recognition_sequence: [5' ACATGT, 3' TGTACA]
+BspLU11III:
+  cut: [5' ---GGGACN8NN  NNNN--- 3', 3' ---CCCTGN8NNNNNN  --- 5']
+  enzyme: BspLU11III
+  isoscizomers: [FaqI, BslFI, BsmFI, BstOZ616I]
+  recognition_sequence: [5' GGGAC, 3' CCCTG]
+BspLU4I:
+  cut: [5' ---C  YCGRG--- 3', 3' ---GRGCY  C--- 5']
+  enzyme: BspLU4I
+  isoscizomers: [Ama87I, AvaI, Bse15I, BsoBI, BstSI, NspIII, NspSAI, OfoI, BcoI, PlaAI,
+    PunAI, Eco88I, Eco27kI, BsiHKCI, AquI]
+  recognition_sequence: [5' CYCGRG, 3' GRGCYC]
+BspM90I:
+  cut: [5' ---GTA  TAC--- 3', 3' ---CAT  ATG--- 5']
+  enzyme: BspM90I
+  isoscizomers: [BssNAI, Bst1107I, BstBSI, BstZ17I, XcaI]
+  recognition_sequence: [5' GTATAC, 3' CATATG]
+BspMI:
+  cut: [5' ---ACCTGCNNNN  NNNN--- 3', 3' ---TGGACGNNNNNNNN  --- 5']
+  enzyme: BspMI
+  isoscizomers: [Acc36I, BfuAI, BveI]
+  recognition_sequence: [5' ACCTGC, 3' TGGACG]
+BspMKI:
+  cut: [5' ---G  TCGAC--- 3', 3' ---CAGCT  G--- 5']
+  enzyme: BspMKI
+  isoscizomers: [RflFI, RtrI, Rtr63I, HgiCIII, HgiDII, SalI, NopI, XciI]
+  recognition_sequence: [5' GTCGAC, 3' CAGCTG]
+BspNI:
+  cut: [5' ---CC  WGG--- 3', 3' ---GGW  CC--- 5']
+  enzyme: BspNI
+  isoscizomers: [AglI, BseBI, Bse17I, Bst2I, CbrI, CthII, EcoRII, MvaI, SspAI, TaqXI,
+    BptI, BciBII, Fsp1604I, Bse16I, Bse24I, BshGI, BsiLI, Bst1I, Bst38I, Bst100I,
+    BstM6I, BstNI, BstOI, Bst2UI, BthDI, BthEI, SniI, SslI, Sth117I, ZanI, AeuI, 'AglI[29]',
+    AorI, ApaORI, ApyI]
+  recognition_sequence: [5' CCWGG, 3' GGWCC]
+BspOVI:
+  cut: [5' ---GACNNN  NNGTC--- 3', 3' ---CTGNN  NNNCAG--- 5']
+  enzyme: BspOVI
+  isoscizomers: [AhdI, AspEI, BmeRI, DriI, Eam1105I, EclHKI, NruGI]
+  recognition_sequence: [5' GACN5GTC, 3' CTGN5CAG]
+BspPI:
+  cut: [5' ---GGATCNNNN  N--- 3', 3' ---CCTAGNNNNN  --- 5']
+  enzyme: BspPI
+  isoscizomers: [AclWI, AlwI, BinI, BsrWI, BstH9I, Bst31TI, Bth617I, EacI]
+  recognition_sequence: [5' GGATC, 3' CCTAG]
+BspR7I:
+  cut: [5' ---CC  TNAGG--- 3', 3' ---GGANT  CC--- 5']
+  enzyme: BspR7I
+  isoscizomers: [AocI, AxyI, Bse21I, Bsu36I, Eco81I, MstII, SauI, SshAI, BliHKI, OxaNI,
+    Lmu60I, CvnI]
+  recognition_sequence: [5' CCTNAGG, 3' GGANTCC]
+BspST5I:
+  cut: [5' ---GCATCN4N  NNNN--- 3', 3' ---CGTAGN4NNNNN  --- 5']
+  enzyme: BspST5I
+  isoscizomers: [PhaI, SfaNI, LweI]
+  recognition_sequence: [5' GCATC, 3' CGTAG]
+BspT107I:
+  cut: [5' ---G  GYRCC--- 3', 3' ---CCRYG  G--- 5']
+  enzyme: BspT107I
+  isoscizomers: [AccB1I, BanI, BbvBI, Eco64I, HgiCI, HgiHI, MspB4I, PfaAI, BshNI]
+  recognition_sequence: [5' GGYRCC, 3' CCRYGG]
+BspTI:
+  cut: [5' ---C  TTAAG--- 3', 3' ---GAATT  C--- 5']
+  enzyme: BspTI
+  isoscizomers: [AflII, BfrI, Esp4I, Bst98I, BstPZ740I, MspCI, Vha464I]
+  recognition_sequence: [5' CTTAAG, 3' GAATTC]
+BspTNI:
+  cut: [5' ---GGTCTCN  NNNN--- 3', 3' ---CCAGAGNNNNN  --- 5']
+  enzyme: BspTNI
+  isoscizomers: [Bli736I, Eco31I, EcoA4I, EcoO44I, BsaI, Bso31I]
+  recognition_sequence: [5' GGTCTC, 3' CCAGAG]
+BspWI:
+  cut: [5' ---GCNNNNN  NNGC--- 3', 3' ---CGNN  NNNNNCG--- 5']
+  enzyme: BspWI
+  isoscizomers: [Bce4I, BceCI, HpyF10VI, BstMWI, MwoI]
+  recognition_sequence: [5' GCN7GC, 3' CGN7CG]
+BspXII:
+  cut: [5' ---T  GATCA--- 3', 3' ---ACTAG  T--- 5']
+  enzyme: BspXII
+  isoscizomers: [AbaI, BclI, BsiQI, BstT7I, FbaI, Ksp22I, ParI]
+  recognition_sequence: [5' TGATCA, 3' ACTAGT]
+BsrAI:
+  cut: [5' ---G  GWCC--- 3', 3' ---CCWG  G--- 5']
+  enzyme: BsrAI
+  isoscizomers: [BamNxI, BcuAI, Csp68KI, Eco47I, FssI, HgiCII, HgiJI, SinI, Bme18I,
+    Bme216I, EagMI, ErpI, FdiI, FspMSI, HgiBI, HgiEI, HgiHIII, Kzo49I, BthAI, SmuEI,
+    VpaK11BI, CauI, DsaIV, AflI, Asp745I, AvaII]
+  recognition_sequence: [5' GGWCC, 3' CCWGG]
+BsrBI:
+  cut: [5' ---CCG  CTC--- 3', 3' ---GGC  GAG--- 5']
+  enzyme: BsrBI
+  isoscizomers: [AccBSI, BstD102I, Bst31NI, MbiI]
+  recognition_sequence: [5' CCGCTC, 3' GGCGAG]
+BsrBRI:
+  cut: [5' ---GATNN  NNATC--- 3', 3' ---CTANN  NNTAG--- 5']
+  enzyme: BsrBRI
+  isoscizomers: [BsaBI, Bse8I, BseJI, Bsh1365I, BsiBI, MamI]
+  recognition_sequence: [5' GATN4ATC, 3' CTAN4TAG]
+BsrDI:
+  cut: [5' ---GCAATGNN  --- 3', 3' ---CGTTAC  NN--- 5']
+  enzyme: BsrDI
+  isoscizomers: [Bse3DI, BseMI]
+  recognition_sequence: [5' GCAATG, 3' CGTTAC]
+BsrFI:
+  cut: [5' ---R  CCGGY--- 3', 3' ---YGGCC  R--- 5']
+  enzyme: BsrFI
+  isoscizomers: [BssAI, Bco118I, Bse118I, Bse634I, BstB7SI, Cfr10I]
+  recognition_sequence: [5' RCCGGY, 3' YGGCCR]
+BsrI:
+  cut: [5' ---ACTGGN  --- 3', 3' ---TGAC  CN--- 5']
+  enzyme: BsrI
+  isoscizomers: [BsrSI, Bse1I, BseNI, Bst11I, Tsp1I]
+  recognition_sequence: [5' ACTGG, 3' TGACC]
+BssECI:
+  cut: [5' ---C  CNNGG--- 3', 3' ---GGNNC  C--- 5']
+  enzyme: BssECI
+  isoscizomers: [BsaJI, BseDI, SecI]
+  recognition_sequence: [5' CCNNGG, 3' GGNNCC]
+BssHII:
+  cut: [5' ---G  CGCGC--- 3', 3' ---CGCGC  G--- 5']
+  enzyme: BssHII
+  isoscizomers: [PauI, BsePI, BstBZ153I]
+  recognition_sequence: [5' GCGCGC, 3' CGCGCG]
+BssIMI:
+  cut: [5' ---GG  GTC--- 3', 3' ---CCCAG  --- 5']
+  enzyme: BssIMI
+  isoscizomers: [SimI]
+  recognition_sequence: [5' GGGTC, 3' CCCAG]
+BssKI:
+  cut: [5' ---  CCNGG--- 3', 3' ---GGNCC  --- 5']
+  enzyme: BssKI
+  isoscizomers: [Ecl18kI, Eco13kI, Eco21kI, Eco137kI, Kpn2kI, BstMZ611I, BstSCI, SsoII,
+    StyD4I, DsaV]
+  recognition_sequence: [5' CCNGG, 3' GGNCC]
+BssNI:
+  cut: [5' ---GR  CGYC--- 3', 3' ---CYGC  RG--- 5']
+  enzyme: BssNI
+  isoscizomers: [AcyI, AhaII, AosII, AstWI, AsuIII, BsaHI, HgiI, Hsp92I, Msp17I, BbiII,
+    PamII, HgiDI, HgiGI, HgiHII, Hin1I, BstACI]
+  recognition_sequence: [5' GRCGYC, 3' CYGCRG]
+BssSI:
+  cut: [5' ---C  ACGAG--- 3', 3' ---GTGCT  C--- 5']
+  enzyme: BssSI
+  isoscizomers: [BauI, BsiI, Bst2BI]
+  recognition_sequence: [5' CACGAG, 3' GTGCTC]
+BssT1I:
+  cut: [5' ---C  CWWGG--- 3', 3' ---GGWWC  C--- 5']
+  enzyme: BssT1I
+  isoscizomers: [Eco130I, EcoT14I, ErhI, ErhB9II, BsmSI, StyI, CfrBI]
+  recognition_sequence: [5' CCWWGG, 3' GGWWCC]
+BstAPI:
+  cut: [5' ---GCANNNN  NTGC--- 3', 3' ---CGTN  NNNNACG--- 5']
+  enzyme: BstAPI
+  isoscizomers: [ApaBI]
+  recognition_sequence: [5' GCAN4NTGC, 3' CGTN4NACG]
+BstC8I:
+  cut: [5' ---GCN  NGC--- 3', 3' ---CGN  NCG--- 5']
+  enzyme: BstC8I
+  isoscizomers: [Cac8I]
+  recognition_sequence: [5' GCNNGC, 3' CGNNCG]
+BstDEI:
+  cut: [5' ---C  TNAG--- 3', 3' ---GANT  C--- 5']
+  enzyme: BstDEI
+  isoscizomers: [BstJZ301I, DdeI]
+  recognition_sequence: [5' CTNAG, 3' GANTC]
+BstDSI:
+  cut: [5' ---C  CRYGG--- 3', 3' ---GGYRC  C--- 5']
+  enzyme: BstDSI
+  isoscizomers: [BtgI, TspBI, DsaI]
+  recognition_sequence: [5' CCRYGG, 3' GGYRCC]
+BstHZ55I:
+  cut: [5' ---CCANNNNN  NTGG--- 3', 3' ---GGTN  NNNNNACC--- 5']
+  enzyme: BstHZ55I
+  isoscizomers: [BstXI]
+  recognition_sequence: [5' CCAN6TGG, 3' GGTN6ACC]
+BstIZ316I:
+  cut: [5' ---CACNNN  GTG--- 3', 3' ---GTG  NNNCAC--- 5']
+  enzyme: BstIZ316I
+  isoscizomers: [AdeI, DraIII]
+  recognition_sequence: [5' CACNNNGTG, 3' GTGNNNCAC]
+BstMAI:
+  cut: [5' ---GTCTCN  NNNNN--- 3', 3' ---CAGAGNNNNN  N--- 5']
+  enzyme: BstMAI
+  isoscizomers: [Alw26I, BcoDI, BscQII, BsmAI, BsoMAI]
+  recognition_sequence: [5' GTCTC, 3' CAGAG]
+BstRZ246I:
+  cut: [5' ---ATTT  AAAT--- 3', 3' ---TAAA  TTTA--- 5']
+  enzyme: BstRZ246I
+  isoscizomers: [BstSWI, SmiI, SwaI, MspSWI]
+  recognition_sequence: [5' ATTTAAAT, 3' TAAATTTA]
+BtgZI:
+  cut: [5' ---GCGATGN8NN  NNNN--- 3', 3' ---CGCTACN8NNNNNN  --- 5']
+  enzyme: BtgZI
+  isoscizomers: []
+  recognition_sequence: [5' GCGATG, 3' CGCTAC]
+BthCI:
+  cut: [5' ---GCNG  C--- 3', 3' ---C  GNCG--- 5']
+  enzyme: BthCI
+  isoscizomers: []
+  recognition_sequence: [5' GCNGC, 3' CGNCG]
+BtsI:
+  cut: [5' ---GCAGTGNN  --- 3', 3' ---CGTCAC  NN--- 5']
+  enzyme: BtsI
+  isoscizomers: []
+  recognition_sequence: [5' GCAGTG, 3' CGTCAC]
+CaiI:
+  cut: [5' ---CAGNNN  CTG--- 3', 3' ---GTC  NNNGAC--- 5']
+  enzyme: CaiI
+  isoscizomers: [AlwNI]
+  recognition_sequence: [5' CAGNNNCTG, 3' GTCNNNGAC]
+CdiI:
+  cut: [5' ---CATC  G--- 3', 3' ---GTAG  C--- 5']
+  enzyme: CdiI
+  isoscizomers: []
+  recognition_sequence: [5' CATCG, 3' GTAGC]
+CfuI:
+  cut: [5' ---GA  TC--- 3', 3' ---CT  AG--- 5']
+  enzyme: CfuI
+  isoscizomers: [DpnI]
+  recognition_sequence: [5' GATC, 3' CTAG]
+ChaI:
+  cut: [5' ---GATC  --- 3', 3' ---  CTAG--- 5']
+  enzyme: ChaI
+  isoscizomers: [BfuCI, Bsp2095I, BspKT6I BtkII, FnuCI, MboI, NmeCI, SsiAI]
+  recognition_sequence: [5' GATC, 3' CTAG]
+CjeI:
+  cut: [5' ---CCAN6GTN8NNNNNNN  --- 3', 3' ---GGTN6CAN8N  NNNNNN--- 5']
+  enzyme: CjeI
+  isoscizomers: [None on May 2010]
+  recognition_sequence: [5' CCAN6GT, 3' GGTN6CA]
+CjePI:
+  cut: [5' ---CCAN7TCN7NNNNNNN  --- 3', 3' ---GGTN7AGN7N  NNNNNN--- 5']
+  enzyme: CjePI
+  isoscizomers: [None on May 2010]
+  recognition_sequence: [5' CCAN7TC, 3' GGTN7AG]
+Csp6I:
+  cut: [5' ---G  TAC--- 3', 3' ---CAT  G--- 5']
+  enzyme: Csp6I
+  isoscizomers: [AfaI, CviQI, CviRII, HpyBI, PabI, PlaAII, RsaI, RsaNI, '']
+  recognition_sequence: [5' GTAC, 3' CATG]
+CspCI:
+  cut: [5' ---CAAN5GTGGN8NNNN  --- 3', 3' ---GTTN5CACCN8NN  NN--- 5']
+  enzyme: CspCI
+  isoscizomers: [None on May 2010]
+  recognition_sequence: [5' CAAN4NGTGG, 3' GTTN4NCACC]
+CstMI:
+  cut: [5' ---AAGGAGN17NNN  --- 3', 3' ---TTCCTCN17N  NN--- 5']
+  enzyme: CstMI
+  isoscizomers: [None on May 2010]
+  recognition_sequence: [5' AAGGAG, 3' TTCCTC]
+CviAII:
+  cut: [5' ---C  ATG--- 3', 3' ---GTA  C--- 5']
+  enzyme: CviAII
+  isoscizomers: []
+  recognition_sequence: [5' CATG, 3' GTAC]
+CviJI:
+  cut: [5' ---RG  CY--- 3', 3' ---YC  GR--- 5']
+  enzyme: CviJI
+  isoscizomers: [CviTI]
+  recognition_sequence: [5' RGCY, 3' YCGR]
+DrdI:
+  cut: [5' ---GACNNNN  NNGTC--- 3', 3' ---CTGNN  NNNNCAG--- 5']
+  enzyme: DrdI
+  isoscizomers: [AasI, DseDI]
+  recognition_sequence: [5' GACN6GTC, 3' CTGN6CAG]
+EagI:
+  cut: [5' ---C  GGCCG--- 3', 3' ---GCCGG  C--- 5']
+  enzyme: EagI
+  isoscizomers: [AaaI, BseX3I, BstZI, EclXI, Eco52I, SenPT16I, XmaIII]
+  recognition_sequence: [5' CGGCCG, 3' GCCGGC]
+EciI:
+  cut: [5' ---GGCGGAN8NNN  --- 3', 3' ---CCGCCTN8N  NN--- 5']
+  enzyme: EciI
+  isoscizomers: []
+  recognition_sequence: [5' GGCGGA, 3' CCGCCT]
+Eco105I:
+  cut: [5' ---TAC  GTA--- 3', 3' ---ATG  CAT--- 5']
+  enzyme: Eco105I
+  isoscizomers: [BstSNI, SnaBI]
+  recognition_sequence: [5' TACGTA, 3' ATGCAT]
+Eco1831I:
+  cut: [5' ---  CCSGG--- 3', 3' ---GGSCC  --- 5']
+  enzyme: Eco1831I
+  isoscizomers: [AhaI, AseII, AsuC2I, BcnI, BpuMI, CauII, EcoHI, HgiS22I, Kpn49kII]
+  recognition_sequence: [5' CCSGG, 3' GGSCC]
+Eco32I:
+  cut: [5' ---GAT  ATC--- 3', 3' ---CTA  TAG--- 5']
+  enzyme: Eco32I
+  isoscizomers: [EcoRV, HjaI, HpyCI, NsiCI, CeqI]
+  recognition_sequence: [5' GATATC, 3' CTATAG]
+Eco47III:
+  cut: [5' ---AGC  GCT--- 3', 3' ---TCG  CGA--- 5']
+  enzyme: Eco47III
+  isoscizomers: [AfeI, AitI, Aor51H, FunI, Aor51HI]
+  recognition_sequence: [5' AGCGCT, 3' TCGCGA]
+Eco56I:
+  cut: [5' ---G  CCGGC--- 3', 3' ---CGGCC  G--- 5']
+  enzyme: Eco56I
+  isoscizomers: [SceIII, SrlI, MroNI, NgoAIV, NgoMIV]
+  recognition_sequence: [5' GCCGGC, 3' CGGCCG]
+Eco57MI:
+  cut: [5' ---CTGRAGN12NNNN  --- 3', 3' ---GACYTCN12NN  NN--- 5']
+  enzyme: Eco57MI
+  isoscizomers: []
+  recognition_sequence: [5' CTGRAG, 3' GACYTC]
+Eco78I:
+  cut: [5' ---GGC  GCC--- 3', 3' ---CCG  CGG--- 5']
+  enzyme: Eco78I
+  isoscizomers: [EgeI, EheI, SfoI]
+  recognition_sequence: [5' GGCGCC, 3' CCGCGG]
+EcoNI:
+  cut: [5' ---CCTNN  NNNAGG--- 3', 3' ---GGANNN  NNTCC--- 5']
+  enzyme: EcoNI
+  isoscizomers: [BstENI, XagI]
+  recognition_sequence: [5' CCTN5AGG, 3' GGAN5TCC]
+EcoO109I:
+  cut: [5' ---RG  GNCCY--- 3', 3' ---YCCNG  GR--- 5']
+  enzyme: EcoO109I
+  isoscizomers: [DraII]
+  recognition_sequence: [5' RGGNCCY, 3' YCCNGGR]
+EcoP15I:
+  cut: [5' ---CAGCAGN25NN --- 3', 3' ---GTCGTCN25 NN--- 5']
+  enzyme: EcoP15I
+  isoscizomers: []
+  recognition_sequence: [5' CAGCAG, 3' GTCGTC]
+EsaBC3I:
+  cut: [5' ---TC  GA--- 3', 3' ---AG  CT--- 5']
+  enzyme: EsaBC3I
+  isoscizomers: []
+  recognition_sequence: [5' TCGA, 3' AGCT]
+Esp3I:
+  cut: [5' ---CGTCTCN  NNNN--- 3', 3' ---GCAGAGNNNNN  --- 5']
+  enzyme: Esp3I
+  isoscizomers: [BsmBI, BstGZ53I]
+  recognition_sequence: [5' CGTCTC, 3' GCAGAG]
+FalI:
+  cut: [5' ---AAGN5CTTN7NNNNNN  --- 3', 3' ---TTCN5GAAN7N  NNNNN--- 5']
+  enzyme: FalI
+  isoscizomers: []
+  recognition_sequence: [5' AAGN5CTT, 3' TTCN5GAA]
+FatI:
+  cut: [5' ---  CATG--- 3', 3' ---GTAC  --- 5']
+  enzyme: FatI
+  isoscizomers: []
+  recognition_sequence: [5' CATG, 3' GTAC]
+FblI:
+  cut: [5' ---GT  MKAC--- 3', 3' ---CAKM  TG--- 5']
+  enzyme: FblI
+  isoscizomers: [AccI, XmiI]
+  recognition_sequence: [5' GTMKAC, 3' CAKMTG]
+FmuI:
+  cut: [5' ---GGNC  C--- 3', 3' ---C  CNGG--- 5']
+  enzyme: FmuI
+  isoscizomers: [FmuI AvcI, BavAII, Bce22I, Bsu54I, NspIV, Pde12I, UnbI]
+  recognition_sequence: [5' GGNCC, 3' CCNGG]
+FnuAI:
+  cut: [5' ---G  ANTC--- 3', 3' ---CTNA  G--- 5']
+  enzyme: FnuAI
+  isoscizomers: [HhaII, HinfI, SscL1I, CviBI]
+  recognition_sequence: [5' GANTC, 3' CTNAG]
+FokI:
+  cut: [5' ---GGATGN8N  NNNN--- 3', 3' ---CCTACN8NNNNN  --- 5']
+  enzyme: FokI
+  isoscizomers: [BstPZ418I]
+  recognition_sequence: [5' GGATG, 3' CCTAC]
+FseI:
+  cut: [5' ---GGCCGG  CC--- 3', 3' ---CC  GGCCGG--- 5']
+  enzyme: FseI
+  isoscizomers: []
+  recognition_sequence: [5' GGCCGGCC, 3' CCGGCCGG]
+FsiI:
+  cut: [5' ---R  AATTY--- 3', 3' ---YTTAA  R--- 5']
+  enzyme: FsiI
+  isoscizomers: [AcsI, ApoI, CfaI, XapI]
+  recognition_sequence: [5' RAATTY, 3' YTTAAR]
+FspAI:
+  cut: [5' ---RTGC  GCAY--- 3', 3' ---YACG  CGTR--- 5']
+  enzyme: FspAI
+  isoscizomers: []
+  recognition_sequence: [5' RTGCGCAY, 3' YACGCGTR]
+GdiII:
+  cut: [5' ---C  GGCCR--- 3', 3' ---GCCGG  Y--- 5']
+  enzyme: GdiII
+  isoscizomers: []
+  recognition_sequence: [5' CGGCCR, 3' GCCGGY]
+GsuI:
+  cut: [5' ---CTGGAGN12NNNN  --- 3', 3' ---GACCTCN12NN  NN--- 5']
+  enzyme: GsuI
+  isoscizomers: []
+  recognition_sequence: [5' CTGGAG, 3' GACCTC]
+HaeI:
+  cut: [5' ---WGG  CCW--- 3', 3' ---WCC  GGW--- 5']
+  enzyme: HaeI
+  isoscizomers: []
+  recognition_sequence: [5' WGGCCW, 3' WCCGGW]
+HaeIV:
+  cut: [5' ---GAYN5RTCN8NNNNNN  --- 3', 3' ---CTRN5YAGN8N  NNNNN--- 5']
+  enzyme: HaeIV
+  isoscizomers: []
+  recognition_sequence: [5' GAYN5RTC, 3' CTRN5YAG]
+HgaI:
+  cut: [5' ---GACGCN4N  NNNNN--- 3', 3' ---CTGCGN4NNNNNN  --- 5']
+  enzyme: HgaI
+  isoscizomers: []
+  recognition_sequence: [5' GACGC, 3' CTGCG]
+Hin1II:
+  cut: [5' ---CATG  --- 3', 3' ---  GTAC--- 5']
+  enzyme: Hin1II
+  isoscizomers: [HpyCH4I, Hsp92II, NlaIII]
+  recognition_sequence: [5' CATG, 3' GTAC]
+Hin4I:
+  cut: [5' ---GAYN5VTCN7NNNNNN  --- 3', 3' ---CTRN5BAGN7N  NNNNN--- 5']
+  enzyme: Hin4I
+  isoscizomers: []
+  recognition_sequence: [5' GAYN5VTC, 3' CTRN5BAG]
+Hin6I:
+  cut: [5' ---G  CGC--- 3', 3' ---CGC  G--- 5']
+  enzyme: Hin6I
+  isoscizomers: [AspLEI, BspLAI, BstHHI, CfoI, FnuDIII, HhaI, HsoI, HspAI, SciNI,
+    HinP1I]
+  recognition_sequence: [5' GCGC, 3' CGCG]
+HinJCI:
+  cut: [5' ---GTY  RAC--- 3', 3' ---CAR  YTG--- 5']
+  enzyme: HinJCI
+  isoscizomers: [HincII, HindII]
+  recognition_sequence: [5' GTYRAC, 3' CARYTG]
+HpaI:
+  cut: [5' ---GTT  AAC--- 3', 3' ---CAA  TTG--- 5']
+  enzyme: HpaI
+  isoscizomers: [KspAI, BstEZ359I, BstHPI, SsrI]
+  recognition_sequence: [5' GTTAAC, 3' CAATTG]
+HphI:
+  cut: [5' ---GGTGAN6NN  --- 3', 3' ---CCACTN6N  N--- 5']
+  enzyme: HphI
+  isoscizomers: [AsuHPI, SspD5I]
+  recognition_sequence: [5' GGTGA, 3' CCACT]
+Hpy178III:
+  cut: [5' ---TC  NNGA--- 3', 3' ---AGNN  CT--- 5']
+  enzyme: Hpy178III
+  isoscizomers: [Hpy188III]
+  recognition_sequence: [5' TCNNGA, 3' AGNNCT]
+Hpy188I:
+  cut: [5' ---TCN  GA--- 3', 3' ---AG  NCT--- 5']
+  enzyme: Hpy188I
+  isoscizomers: []
+  recognition_sequence: [5' TCNGA, 3' AGNCT]
+Hpy51I:
+  cut: [5' ---  GTSAC--- 3', 3' ---CASTG  --- 5']
+  enzyme: Hpy51I
+  isoscizomers: [NmuCI, Tsp45I]
+  recognition_sequence: [5' GTSAC, 3' CASTG]
+Hpy8I:
+  cut: [5' ---GTN  NAC--- 3', 3' ---CAN  NTG--- 5']
+  enzyme: Hpy8I
+  isoscizomers: [HpyBII]
+  recognition_sequence: [5' GTNNAC, 3' CANNTG]
+Hpy99I:
+  cut: [5' ---CGWCG  --- 3', 3' ---  GCWGC--- 5']
+  enzyme: Hpy99I
+  isoscizomers: []
+  recognition_sequence: [5' CGWCG, 3' GCWGC]
+HpyAV:
+  cut: [5' ---CCTTCN4NN  --- 3', 3' ---GGAAGN4N  N--- 5']
+  enzyme: HpyAV
+  isoscizomers: []
+  recognition_sequence: [5' CCTTC, 3' GGAAG]
+HpyCH4III:
+  cut: [5' ---ACN  GT--- 3', 3' ---TG  NCA--- 5']
+  enzyme: HpyCH4III
+  isoscizomers: [Bst4CI, TaaI, Tsp4CI]
+  recognition_sequence: [5' ACNGT, 3' TGNCA]
+HpyCH4IV:
+  cut: [5' ---A  CGT--- 3', 3' ---TGC  A--- 5']
+  enzyme: HpyCH4IV
+  isoscizomers: [MaeII]
+  recognition_sequence: [5' ACGT, 3' TGCA]
+HpyCH4V:
+  cut: [5' ---TG  CA--- 3', 3' ---AC  GT--- 5']
+  enzyme: HpyCH4V
+  isoscizomers: [HpyF44III, CviRI]
+  recognition_sequence: [5' TGCA, 3' ACGT]
+KasI:
+  cut: [5' ---G  GCGCC--- 3', 3' ---CCGCG  G--- 5']
+  enzyme: KasI
+  isoscizomers: []
+  recognition_sequence: [5' GGCGCC, 3' CCGCGG]
+KpnI:
+  cut: [5' ---GGTAC  C--- 3', 3' ---C  CATGG--- 5']
+  enzyme: KpnI
+  isoscizomers: [Acc65I, AhaB8I, Asp718I, SthI]
+  recognition_sequence: [5' GGTACC, 3' CCATGG]
+MaeIII:
+  cut: [5' ---  GTNAC--- 3', 3' ---CANTG  --- 5']
+  enzyme: MaeIII
+  isoscizomers: []
+  recognition_sequence: [5' GTNAC, 3' CANTG]
+MboII:
+  cut: [5' ---GAAGAN6NN  --- 3', 3' ---CTTCTN6N  N--- 5']
+  enzyme: MboII
+  isoscizomers: [NcuI]
+  recognition_sequence: [5' GAAGA, 3' CTTCT]
+MchAI:
+  cut: [5' ---GC  GGCCGC--- 3', 3' ---CGCCGG  CG--- 5']
+  enzyme: MchAI
+  isoscizomers: [NotI, CciNI, CsiBI, CspBI]
+  recognition_sequence: [5' GCGGCCGC, 3' CGCCGGCG]
+MfeI:
+  cut: [5' ---C  AATTG--- 3', 3' ---GTTAA  C--- 5']
+  enzyme: MfeI
+  isoscizomers: [MunI]
+  recognition_sequence: [5' CAATTG, 3' GTTAAC]
+MltI:
+  cut: [5' ---AG  CT--- 3', 3' ---TC  GA--- 5']
+  enzyme: MltI
+  isoscizomers: [AluBI, AluI]
+  recognition_sequence: [5' AGCT, 3' TCGA]
+MmeI:
+  cut: [5' ---TCCRACN17NNN  --- 3', 3' ---AGGYTGN17N  NN--- 5']
+  enzyme: MmeI
+  isoscizomers: []
+  recognition_sequence: [5' TCCRAC, 3' AGGYTG]
+MnlI:
+  cut: [5' ---CCTCN4NNN  --- 3', 3' ---GGAGN4NN  N--- 5']
+  enzyme: MnlI
+  isoscizomers: []
+  recognition_sequence: [5' CCTC, 3' GGAG]
+MseI:
+  cut: [5' ---T  TAA--- 3', 3' ---AAT  T--- 5']
+  enzyme: MseI
+  isoscizomers: [Tru1I, Tru9I]
+  recognition_sequence: [5' TTAA, 3' AATT]
+MspA1I:
+  cut: [5' ---CMG  CKG--- 3', 3' ---GKC  GMC--- 5']
+  enzyme: MspA1I
+  isoscizomers: [NspBII]
+  recognition_sequence: [5' CMGCKG, 3' GKCGMC]
+Nli3877I:
+  cut: [5' ---CYCGR  G--- 3', 3' ---G  RGCYC--- 5']
+  enzyme: Nli3877I
+  isoscizomers: [Ama87I, AvaI, BcoI, BsiHKCI, Eco27kI, Eco88I, NspSAI, OfoI]
+  recognition_sequence: [5' CYCGRG, 3' GRGCYC]
+OliI:
+  cut: [5' ---CACNN  NNGTG--- 3', 3' ---GTGNN  NNCAC--- 5']
+  enzyme: OliI
+  isoscizomers: [AleI]
+  recognition_sequence: [5' CACN4GTG, 3' GTGN4CAC]
+PabI:
+  cut: [5' ---GTA  C--- 3', 3' ---C  ATG--- 5']
+  enzyme: PabI
+  isoscizomers: [AfaI, Csp6I, CviQI, HpyBI, HpyBI, PlaAII, RsaI, RsaNI, '']
+  recognition_sequence: [5' GTAC, 3' CATG]
+Pac25I:
+  cut: [5' ---C  CCGGG--- 3', 3' ---GGGCC  C--- 5']
+  enzyme: Pac25I
+  isoscizomers: [AhyI, Cfr9I, EaeAI, EclRI, PspAI, PspALI, XcyI, XmaI, XmaCI, TspMI
+      = UthSI]
+  recognition_sequence: [5' CCCGGG, 3' GGGCCC]
+PacI:
+  cut: [5' ---TTAAT  TAA--- 3', 3' ---AAT  TAATT--- 5']
+  enzyme: PacI
+  isoscizomers: []
+  recognition_sequence: [5' TTAATTAA, 3' AATTAATT]
+PaeAI:
+  cut: [5' ---CCGC  GG--- 3', 3' ---GG  CGCC--- 5']
+  enzyme: PaeAI
+  isoscizomers: [PaeQI, Pae5kI, Pae14kI, Eae46I, Eco29kI, GalI, GceI, GceGLI, Kpn378I,
+    KspI, SacII, SchZI, SenPT14bI, SexBI, SexCI, Sfr303I, SgrBI, SpuI, SstII, NgoAIII,
+    NgoPIII, Cfr42I, CscI]
+  recognition_sequence: [5' CCGCGG, 3' GGCGCC]
+PaeBI:
+  cut: [5' ---CCC  GGG--- 3', 3' ---GGG  CCC--- 5']
+  enzyme: PaeBI
+  isoscizomers: [AhyI, Cfr9I, EaeAI, EclRI, PspALI, SmaI, TspMI, XcyI, XmaI, XmaCI,
+    CfrJ4I]
+  recognition_sequence: [5' CCCGGG, 3' GGGCCC]
+PamI:
+  cut: [5' ---TGC  GCA--- 3', 3' ---ACG  CGT--- 5']
+  enzyme: PamI
+  isoscizomers: [Acc16I, AosI, AviII, FdiII, FspI, MstI, NsbI, Pun14627I]
+  recognition_sequence: [5' TGCGCA, 3' ACGCGT]
+PasI:
+  cut: [5' ---CC  CWGGG--- 3', 3' ---GGGWC  CC--- 5']
+  enzyme: PasI
+  isoscizomers: [None on May 2010]
+  recognition_sequence: [5' CCCWGGG, 3' GGGWCCC]
+PauAI:
+  cut: [5' ---RCATG  Y--- 3', 3' ---Y  GTACR--- 5']
+  enzyme: PauAI
+  isoscizomers: [PunAII, BstNSI, NspI, NspHI, XceI]
+  recognition_sequence: [5' RCATGY, 3' YGTACR]
+PauAII:
+  cut: [5' ---TTT  AAA--- 3', 3' ---AAA  TTT--- 5']
+  enzyme: PauAII
+  isoscizomers: [AhaIII, DraI, SruI]
+  recognition_sequence: [5' TTTAAA, 3' AAATTT]
+PceI:
+  cut: [5' ---AGG  CCT--- 3', 3' ---TCC  GGA--- 5']
+  enzyme: PceI
+  isoscizomers: [AatI, AspMI, GdiI, PceI, Pme55I, SarI, Sru30DI, SseBI, SteI, StuI,
+    Eco147I]
+  recognition_sequence: [5' AGGCCT, 3' TCCGGA]
+PctI:
+  cut: [5' ---GAATGCN  --- 3', 3' ---CTTAC  GN--- 5']
+  enzyme: PctI
+  isoscizomers: [Asp26HI, Asp27HI, Asp35HI, BmaHI, BsaMI, BscCI, Mva1269I, BsmI, Asp35HI, Asp36HI, Asp40HI, Asp50HI]
+  recognition_sequence: [5' GAATGC, 3' CTTACG]
+PdiI:
+  cut: [5' ---GCC  GGC--- 3', 3' ---CGG  CCG--- 5']
+  enzyme: PdiI
+  isoscizomers: [SauBMKI, SauHPI, SauLPI, SauNI, SauSI, Slu1777I, SspCI, NaeI, CcoI]
+  recognition_sequence: [5' GCCGGC, 3' CGGCCG]
+PfaAII:
+  cut: [5' ---CA  TATG--- 3', 3' ---GTAT  AC--- 5']
+  enzyme: PfaAII
+  isoscizomers: [FauNDI, NdeI]
+  recognition_sequence: [5' CATATG, 3' GTATAC]
+PfeI:
+  cut: [5' ---G  AWTC--- 3', 3' ---CTWA  G--- 5']
+  enzyme: PfeI
+  isoscizomers: [TfiI]
+  recognition_sequence: [5' GAWTC, 3' CTWAG]
+Pfl27I:
+  cut: [5' ---RG  GWCCY--- 3', 3' ---YCCWG  GR--- 5']
+  enzyme: Pfl27I
+  isoscizomers: [PpuMI, PpuXI, Psp5II, PspPPI]
+  recognition_sequence: [5' RGGWCCY, 3' YCCWGGR]
+PflFI:
+  cut: [5' ---GACN  NNGTC--- 3', 3' ---CTGNN  NCAG--- 5']
+  enzyme: PflFI
+  isoscizomers: [AspI, AtsI, PsyI, TelI, Tth111I]
+  recognition_sequence: [5' GACNNNGTC, 3' CTGNNNCAG]
+PfoI:
+  cut: [5' ---T  CCNGGA--- 3', 3' ---AGGNCC  T--- 5']
+  enzyme: PfoI
+  isoscizomers: []
+  recognition_sequence: [5' TCCNGGA, 3' AGGNCCT]
+PinAI:
+  cut: [5' ---A  CCGGT--- 3', 3' ---TGGCC  A--- 5']
+  enzyme: PinAI
+  isoscizomers: [AgeI, AsiAI, AsiGI, BshTI, CsiAI, CspAI, BshTI, CsiAI]
+  recognition_sequence: [5' ACCGGT, 3' TGGCCA]
+PlaAII:
+  cut: [5' ---GT  AC--- 3', 3' ---CA  TG--- 5']
+  enzyme: PlaAII
+  isoscizomers: [AfaI, Csp6I, CviQI, CviRII, HpyBI, PabI, RsaI, RsaNI, '']
+  recognition_sequence: [5' GTAC, 3' CATG]
+PleI:
+  cut: [5' ---GAGTCNNNN  N--- 3', 3' ---CTCAGNNNNN  --- 5']
+  enzyme: PleI
+  isoscizomers: [PpsI]
+  recognition_sequence: [5' GAGTC, 3' CTCAG]
+PmeI:
+  cut: [5' ---GTTT  AAAC--- 3', 3' ---CAAA  TTTG--- 5']
+  enzyme: PmeI
+  isoscizomers: [MssI]
+  recognition_sequence: [5' GTTTAAAC, 3' CAAATTTG]
+PpaAII:
+  cut: [5' ---T  CGA--- 3', 3' ---AGC  T--- 5']
+  enzyme: PpaAII
+  isoscizomers: [TaqI, Tsp32I, Tsp32II, TthHB8I]
+  recognition_sequence: [5' TCGA, 3' AGCT]
+PpeI:
+  cut: [5' ---GGGCC  C--- 3', 3' ---C  CCGGG--- 5']
+  enzyme: PpeI
+  isoscizomers: [ApaI, Bsp120I, PspOMI]
+  recognition_sequence: [5' GGGCCC, 3' CCCGGG]
+PpiI:
+  cut: [5' ---GAACN5CTCN7NNNNNN  --- 3', 3' ---CTTGN5GAGN7N  NNNNN--- 5']
+  enzyme: PpiI
+  isoscizomers: []
+  recognition_sequence: [5' GAACN5CTC, 3' CTTGN5GAG]
+Ppu10I:
+  cut: [5' ---A  TGCAT--- 3', 3' ---TACGT  A--- 5']
+  enzyme: Ppu10I
+  isoscizomers: [BfrBI, Csp68KII, EcoT22I, Mph1103I, NsiI, SepI, SspD5II]
+  recognition_sequence: [5' ATGCAT, 3' TACGTA]
+Ppu111I:
+  cut: [5' ---G  AATTC--- 3', 3' ---CTTAA  G--- 5']
+  enzyme: Ppu111I
+  isoscizomers: [RsrI, EcoRI, FunII, HalI, Kpn49kI, Srl32DII, Srl55DI, SsoI]
+  recognition_sequence: [5' GAATTC, 3' CTTAAG]
+PsiI:
+  cut: [5' ---TTA  TAA--- 3', 3' ---AAT  ATT--- 5']
+  enzyme: PsiI
+  isoscizomers: []
+  recognition_sequence: [5' TTATAA, 3' AATATT]
+Psp03I:
+  cut: [5' ---GGWC  C--- 3', 3' ---C  CWGG--- 5']
+  enzyme: Psp03I
+  isoscizomers: [Bme216I, CauI, EagMI, FdiI, HgiBI, HgiHIII, SinI, VpaK11AI]
+  recognition_sequence: [5' GGWCC, 3' CCWGG]
+Psp124BI:
+  cut: [5' ---GAGCT  C--- 3', 3' ---C  TCGAG--- 5']
+  enzyme: Psp124BI
+  isoscizomers: [SacI, SstI]
+  recognition_sequence: [5' GAGCTC, 3' CTCGAG]
+Psp1406I:
+  cut: [5' ---AA  CGTT--- 3', 3' ---TTGC  AA--- 5']
+  enzyme: Psp1406I
+  isoscizomers: [AclI]
+  recognition_sequence: [5' AACGTT, 3' TTGCAA]
+Psp6I:
+  cut: [5' ---  CCWGG--- 3', 3' ---GGWCC  --- 5']
+  enzyme: Psp6I
+  isoscizomers: [AeuI, AglI, ApaORI, Bse17I, EcoRII, Fsp1604I, SspAI, Sth117I, PspGI,
+    SleI, AjnI]
+  recognition_sequence: [5' CCWGG, 3' GGWCC]
+PspEI:
+  cut: [5' ---G  GTNACC--- 3', 3' ---CCANTG  G--- 5']
+  enzyme: PspEI
+  isoscizomers: [AcrII, AspAI, BstEII, BstPI, Eci125I, Eco91I, EcoO65I, EcoO128I,
+    EcaI, Bse64I, BseT9I, BseT10I, BsiKI, BstT9I, BstT10I, NspSAII]
+  recognition_sequence: [5' GGTNACC, 3' CCANTGG]
+PspXI:
+  cut: [5' ---VC  TCGAGB--- 3', 3' ---BGAGCT  CV--- 5']
+  enzyme: PspXI
+  isoscizomers: []
+  recognition_sequence: [5' VCTCGAGB, 3' BGAGCTCV]
+PsrI:
+  cut: [5' ---GAACN6TACN6NNNNNN  --- 3', 3' ---CTTGN6ATGN6N  NNNNN--- 5']
+  enzyme: PsrI
+  isoscizomers: []
+  recognition_sequence: [5' GAACN6TAC, 3' CTTGN6ATG]
+PssI:
+  cut: [5' ---RGGNC  CY--- 3', 3' ---YC  CNGGR--- 5']
+  enzyme: PssI
+  isoscizomers: [Kaz48kI]
+  recognition_sequence: [5' RGGNCCY, 3' YCCNGGR]
+PstNHI:
+  cut: [5' ---G  CTAGC--- 3', 3' ---CGATC  G--- 5']
+  enzyme: PstNHI
+  isoscizomers: [AceII, AsuNHI, BmtI, BspOI, NheI, LlaG2I]
+  recognition_sequence: [5' GCTAGC, 3' CGATCG]
+PsuAI:
+  cut: [5' ---YAC  GTR--- 3', 3' ---RTG  CAY--- 5']
+  enzyme: PsuAI
+  isoscizomers: [BsaAI, BstBAI, MspYI]
+  recognition_sequence: [5' YACGTR, 3' RTGCAY]
+RflFII:
+  cut: [5' ---AGT  ACT--- 3', 3' ---TCA  TGA--- 5']
+  enzyme: RflFII
+  isoscizomers: [Acc113I, AssI, BmcAI, Bpa34I, DpaI, Eco255I, ScaI, ZrmI]
+  recognition_sequence: [5' AGTACT, 3' TCATGA]
+RleAI:
+  cut: [5' ---CCCACAN8NNNN  --- 3', 3' ---GGGTGTN8N  NNN--- 5']
+  enzyme: RleAI
+  isoscizomers: []
+  recognition_sequence: [5' CCCACA, 3' GGGTGT]
+RsrII:
+  cut: [5' ---CG  GWCCG--- 3', 3' ---GCCWG  GC--- 5']
+  enzyme: RsrII
+  isoscizomers: [Rsr2I, CpoI, CspI]
+  recognition_sequence: [5' CGGWCCG, 3' GCCWGGC]
+SanDI:
+  cut: [5' ---GG  GWCCC--- 3', 3' ---CCCWG  GG--- 5']
+  enzyme: SanDI
+  isoscizomers: [Sse1825I]
+  recognition_sequence: [5' GGGWCCC, 3' CCCWGGG]
+SapI:
+  cut: [5' ---GCTCTTCN  NNN--- 3', 3' ---CGAGAAGNNNN  --- 5']
+  enzyme: SapI
+  isoscizomers: [VpaK32I]
+  recognition_sequence: [5' GCTCTTC, 3' CGAGAAG]
+SbfI:
+  cut: [5' ---CCTGCA  GG--- 3', 3' ---GG  ACGTCC--- 5']
+  enzyme: SbfI
+  isoscizomers: [SdaI, Sse8387I]
+  recognition_sequence: [5' CCTGCAGG, 3' GGACGTCC]
+SchI:
+  cut: [5' ---GAGTCN4N  --- 3', 3' ---CTCAGN4N  --- 5']
+  enzyme: SchI
+  isoscizomers: [MlyI]
+  recognition_sequence: [5' GAGTC, 3' CTCAG]
+SciI:
+  cut: [5' ---CTC  GAG--- 3', 3' ---GAG  CTC--- 5']
+  enzyme: SciI
+  isoscizomers: [BspAAI, BstVI, MlaAI, PaeR7I, SauLPII, SlaI, Sol10179I, XhoI]
+  recognition_sequence: [5' CTCGAG, 3' GAGCTC]
+SdiI:
+  cut: [5' ---GGCCNNNN  NGGCC--- 3', 3' ---CCGGN  NNNNCCGG--- 5']
+  enzyme: SdiI
+  isoscizomers: [SfiI]
+  recognition_sequence: [5' GGCCN5GGCC, 3' CCGGN5CCGG]
+SelI:
+  cut: [5' ---  CGCG--- 3', 3' ---GCGC  --- 5']
+  enzyme: SelI
+  isoscizomers: [AccII, Bsh1236I, Bsp123I, Bsp50I, BstFNI, BstUI, BtkI, Csp68KVI]
+  recognition_sequence: [5' CGCG, 3' GCGC]
+SexAI:
+  cut: [5' ---A  CCWGGT--- 3', 3' ---TGGWCC  A--- 5']
+  enzyme: SexAI
+  isoscizomers: [MabI]
+  recognition_sequence: [5' ACCWGGT, 3' TGGWCCA]
+SgfI:
+  cut: [5' ---GCGAT  CGC--- 3', 3' ---CGC  TAGCG--- 5']
+  enzyme: SgfI
+  isoscizomers: [AsiSI, RgaI, SfaAI]
+  recognition_sequence: [5' GCGATCGC, 3' CGCTAGCG]
+SgrAI:
+  cut: [5' ---CR  CCGGYG--- 3', 3' ---GYGGCC  RC--- 5']
+  enzyme: SgrAI
+  isoscizomers: []
+  recognition_sequence: [5' CRCCGGYG, 3' GYGGCCRC]
+SmiMI:
+  cut: [5' ---CAYNN  NNRTG--- 3', 3' ---GTRNN  NNYAC--- 5']
+  enzyme: SmiMI
+  isoscizomers: [MslI]
+  recognition_sequence: [5' CAYN4RTG, 3' GTRN4YAC]
+SmlI:
+  cut: [5' ---C  TYRAG--- 3', 3' ---GARYT  C--- 5']
+  enzyme: SmlI
+  isoscizomers: []
+  recognition_sequence: [5' CTYRAG, 3' GARYTC]
+SnoI:
+  cut: [5' ---G  TGCAC--- 3', 3' ---CACGT  G--- 5']
+  enzyme: SnoI
+  isoscizomers: [Alw44I, ApaLI, VneI]
+  recognition_sequence: [5' GTGCAC, 3' CACGTG]
+SrfI:
+  cut: [5' ---GCCC  GGGC--- 3', 3' ---CGGG  CCCG--- 5']
+  enzyme: SrfI
+  isoscizomers: []
+  recognition_sequence: [5' GCCCGGGC, 3' CGGGCCCG]
+Sse232I:
+  cut: [5' ---CG  CCGGCG--- 3', 3' ---GCGGCC  GC--- 5']
+  enzyme: Sse232I
+  isoscizomers: []
+  recognition_sequence: [5' CGCCGGCG, 3' GCGGCCGC]
+Sse8647I:
+  cut: [5' ---AG  GWCCT--- 3', 3' ---TCCWG  GA--- 5']
+  enzyme: Sse8647I
+  isoscizomers: []
+  recognition_sequence: [5' AGGWCCT, 3' TCCWGGA]
+Sse9I:
+  cut: [5' ---  AATT--- 3', 3' ---TTAA  --- 5']
+  enzyme: Sse9I
+  isoscizomers: [TasI, Tsp509I, TspEI]
+  recognition_sequence: [5' AATT, 3' TTAA]
+SseAI:
+  cut: [5' ---GG  CGCC--- 3', 3' ---CCGC  GG--- 5']
+  enzyme: SseAI
+  isoscizomers: [MchI, Mly113I, NarI, NdaI, NunII]
+  recognition_sequence: [5' GGCGCC, 3' CCGCGG]
+SsiI:
+  cut: [5' ---C  CGC--- 3', 3' ---GGC  G--- 5']
+  enzyme: SsiI
+  isoscizomers: [AciI]
+  recognition_sequence: [5' CCGC, 3' GGCG]
+Ssp5230I:
+  cut: [5' ---GACGT  C--- 3', 3' ---C  TGCAG--- 5']
+  enzyme: Ssp5230I
+  isoscizomers: [AatII, ZraI]
+  recognition_sequence: [5' GACGTC, 3' CTGCAG]
+SspD5I:
+  cut: [5' ---GGTGAN7N  --- 3', 3' ---CCACTN7N  --- 5']
+  enzyme: SspD5I
+  isoscizomers: [AsuHPI, HphI]
+  recognition_sequence: [5' GGTGA, 3' CCACT]
+SspI:
+  cut: [5' ---AAT  ATT--- 3', 3' ---TTA  TAA--- 5']
+  enzyme: SspI
+  isoscizomers: []
+  recognition_sequence: [5' AATATT, 3' TTATAA]
+Sth132I:
+  cut: [5' ---CCCGNNNN  NNNN--- 3', 3' ---GGGCNNNNNNNN  --- 5']
+  enzyme: Sth132I
+  isoscizomers: []
+  recognition_sequence: [5' CCCG, 3' GGGC]
+SthI:
+  cut: [5' ---G  GTACC--- 3', 3' ---CCATG  G--- 5']
+  enzyme: SthI
+  isoscizomers: [Acc65I, AhaB8I, Asp718I, KpnI, '']
+  recognition_sequence: [5' GGTACC, 3' CCATGG]
+StsI:
+  cut: [5' ---GGATGN8NN  NNNN--- 3', 3' ---CCTACN8NNNNNN  --- 5']
+  enzyme: StsI
+  isoscizomers: []
+  recognition_sequence: [5' GGATG, 3' CCTAC]
+SuiI:
+  cut: [5' ---G  CWGC--- 3', 3' --- CGWC  G--- 5']
+  enzyme: SuiI
+  isoscizomers: [AceI, ApeKI, Taq52I, TseI]
+  recognition_sequence: [5' GCWGC, 3' CGWCG]
+TaiI:
+  cut: [5' ---ACGT  --- 3', 3' ---  TGCA--- 5']
+  enzyme: TaiI
+  isoscizomers: [TscI, Tsp49I]
+  recognition_sequence: [5' ACGT, 3' TGCA]
+Taq52I:
+  cut: [5' ---G  CWGC--- 3', 3' ---CGWC  G--- 5']
+  enzyme: Taq52I
+  isoscizomers: [AceI, ApeKI, SuiI, TseI]
+  recognition_sequence: [5' GCWGC, 3' CGWCG]
+TaqII:
+  cut: [5' ---GACCGACACCCAN8NNN  --- 3', 3' ---CTGGCTGTGGGTN8N  NN--- 5']
+  enzyme: TaqII
+  isoscizomers: []
+  recognition_sequence: [5' GACCGACACCCA, 3' CTGGCTGTGGGT]
+TatI:
+  cut: [5' ---W  GTACW--- 3', 3' ---WCATG  W--- 5']
+  enzyme: TatI
+  isoscizomers: []
+  recognition_sequence: [5' WGTACW, 3' WCATGW]
+TauI:
+  cut: [5' ---GCSG  C--- 3', 3' ---C  GSCG--- 5']
+  enzyme: TauI
+  isoscizomers: []
+  recognition_sequence: [5' GCSGC, 3' CGSCG]
+TspDTI:
+  cut: [5' ---ATGAAN8NNN  --- 3', 3' ---TACTTN8N  NN--- 5']
+  enzyme: TspDTI
+  isoscizomers: [None on May 2010]
+  recognition_sequence: [5' ATGAA, 3' TACTT]
+TspGWI:
+  cut: [5' ---ACGGAN8NNN  --- 3', 3' ---TGCCTN8N  NN--- 5']
+  enzyme: TspGWI
+  isoscizomers: []
+  recognition_sequence: [5' ACGGA, 3' TGCCT]
+TspRI:
+  cut: [5' ---CASTGNN  --- 3', 3' ---  GTSACNN--- 5']
+  enzyme: TspRI
+  isoscizomers: []
+  recognition_sequence: [5' CASTGNN, 3' GTSAC]
+Tth111II:
+  cut: [5' ---CAARCAN8NNN  --- 3', 3' ---GTTYGTN8N  NN--- 5']
+  enzyme: Tth111II
+  isoscizomers: []
+  recognition_sequence: [5' CAARCA, 3' GTTYGT]
+UnbI:
+  cut: [5' ---  GGNCC--- 3', 3' ---CCNGG  --- 5']
+  enzyme: UnbI
+  isoscizomers: [AvcI, BavAII, Bce22I, Bsp1894I, Bsu54I, FmuI, NspIV, UnbI]
+  recognition_sequence: [5' GGNCC, 3' CCNGG]
+VpaK11AI:
+  cut: [5' ---  GGWCC--- 3', 3' ---CCWGG  --- 5']
+  enzyme: VpaK11AI
+  isoscizomers: [Bme216I, CauI, EagMI, FdiI, HgiBI, HgiHIII, SinI, VpaK11BI]
+  recognition_sequence: [5' GGWCC, 3' CCWGG]
+XcmI:
+  cut: [5' ---CCANNNNN  NNNNTGG--- 3', 3' ---GGTNNNN  NNNNNACC--- 5']
+  enzyme: XcmI
+  isoscizomers: []
+  recognition_sequence: [5' CCAN9TGG, 3' GGTN9ACC]
+ZraI:
+  cut: [5' ---GAC  GTC--- 3', 3' ---CTG  CAG--- 5']
+  enzyme: ZraI
+  isoscizomers: [AatII, Ssp5230I]
+  recognition_sequence: [5' GACGTC, 3' CTGCAG]
