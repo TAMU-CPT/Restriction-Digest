@@ -4,9 +4,9 @@ import yaml
 import logging
 import math
 import svgwrite
+from pkg_resources import resource_stream
 logging.basicConfig()
 log = logging.getLogger()
-from pkg_resources import resource_stream
 
 
 class Dnadigest():
@@ -248,10 +248,8 @@ class Dnadigest():
         return cut_locations, status
 
     def __adjust_recog_for_strand(self, recog_nucl_index, plus_reference, matchstr):
-        #log.debug("RNI: %s, PR: %s, M: %s" % (recog_nucl_index, plus_reference, matchstr))
         # If the matched group is the plus sense strand, then cut site is FINE
         plus_ref_re = re.compile(self.generate_regex_str(plus_reference))
-        #log.debug('%s %s %s' % (plus_reference, plus_ref_re.match(matchstr), matchstr))
         if plus_ref_re.match(matchstr):
             return recog_nucl_index
         else:
@@ -341,8 +339,6 @@ class Dnadigest():
     def drawer(cls, sequence_length, cut_sites, sequence_id="PhiX", radius=250,
                border=50):
         """Print SVG in plasmid digest style
-
-
         """
 
         image_size = 2 * (radius + border)
