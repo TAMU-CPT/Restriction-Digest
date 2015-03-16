@@ -1,6 +1,9 @@
+#!/usr/bin/env python
 import re
 import yaml
 import logging
+import math
+import svgwrite
 logging.basicConfig()
 log = logging.getLogger()
 
@@ -184,6 +187,61 @@ class Dnadigest():
         # Instead of returning status, if len(fragments) > 1: status='linear'
         return fragments
 
+    def find_cut_sites(self, sequence, enzyme_list, enzyme_dict,
+                       status='circular'):
+        """Primarily for use with the drawer() method
+        """
+        enzymes = self.enzyme_dict_filter(enzyme_dict, enzyme_list)
+        cut_sites = {}
+        for enzyme in enzymes:
+            sites, status = self.__find_cut_sites(sequence,
+                                                  enzyme_dict[enzyme]['recognition_sequence'],
+                                                  enzyme_dict[enzyme]['sense_cut_idx'],
+                                                  'circular')
+            for site in sites:
+                try:
+                    cut_sites[site].append(enzyme)
+                except KeyError:
+                    cut_sites[site] = [enzyme]
+        return cut_sites
+
+    def __find_cut_sites(self, sequence, recognition_fr, recog_nucl_index, status):
+        """Find all cut locations in a sequence with a 5'+3' cut recognition site
+        """
+        rec_f_exp = self.expand_multiple(recognition_fr['5'])
+        rec_r_exp = self.expand_multiple(recognition_fr['3'])
+        rec_seq_f = re.compile(self.generate_regex_str(rec_f_exp))
+        rec_seq_r = re.compile(self.generate_regex_str(rec_r_exp))
+
+        cut_locations = []
+        if status == 'circular':
+            # Add a little bit on the end where it'd "wrap"
+            mod_sequence = sequence + sequence[0:15]
+            match_list = self.__merged_iter(
+                rec_seq_f.finditer(mod_sequence),
+                rec_seq_r.finditer(mod_sequence)
+            )
+            for match in match_list:
+                adjusted_recog = self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp, match.group(0))
+                cut_location = match.start() + adjusted_recog
+
+                if cut_location < len(sequence):
+                    cut_locations.append(cut_location)
+                else:
+                    tmp = cut_location - len(sequence)
+                    if tmp not in cut_locations:
+                        cut_locations.append(tmp)
+        else:
+            match_list = self.__merged_iter(
+                rec_seq_f.finditer(sequence),
+                rec_seq_r.finditer(sequence)
+            )
+            for match in match_list:
+                adjusted_recog = self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp, match.group(0))
+                cut_location = match.start() + adjusted_recog
+                cut_locations.append(cut_location)
+        return cut_locations, status
+
     def __adjust_recog_for_strand(self, recog_nucl_index, plus_reference, matchstr):
         #log.debug("RNI: %s, PR: %s, M: %s" % (recog_nucl_index, plus_reference, matchstr))
         # If the matched group is the plus sense strand, then cut site is FINE
@@ -278,3 +336,44 @@ class Dnadigest():
             'cut_with': cuts,
             'status': status,
         }
+
+    @classmethod
+    def drawer(cls, sequence_length, cut_sites, sequence_id="PhiX", radius=250,
+               border=50):
+        """Print SVG in plasmid digest style
+
+
+        """
+
+        image_size = 2 * (radius + border)
+        center = (radius+border, radius+border)
+        svg_document = svgwrite.Drawing(size=("%spx" % image_size, "%spx" %
+                                              image_size))
+        svg_document.add(svg_document.circle(center=center, r=radius,
+                                             fill="rgb(255, 255, 255)",
+                                             stroke="black"))
+
+        # TODO: offset text based on length of string
+        svg_document.add(svg_document.text('>' + sequence_id, insert=center))
+
+        for cut_site in sorted(cut_sites.keys()):
+            tau = 2 * math.pi
+            angle_in_radians = (float(cut_site)/float(sequence_length)) * tau
+
+            point_from = cls.__cast_ray(center, angle_in_radians, radius - 20)
+            point_to = cls.__cast_ray(center, angle_in_radians, radius + 20)
+            svg_document.add(svg_document.line(start=point_from, end=point_to,
+                                               stroke="black"))
+
+            text_loc = cls.__cast_ray(center, angle_in_radians, radius+40)
+            for i, enzyme in enumerate(cut_sites[cut_site]):
+                text_loc[1] += i * 10
+                svg_document.add(svg_document.text(enzyme, insert=text_loc))
+
+        return svg_document.tostring()
+
+    @classmethod
+    def __cast_ray(cls, center, angle, length):
+        # Now we need to find a vector of length start_distance from center
+        return [length * math.cos(angle) + center[0],
+                length * math.sin(angle) + center[1]]
