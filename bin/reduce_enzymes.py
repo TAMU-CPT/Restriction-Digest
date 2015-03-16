@@ -12,8 +12,8 @@ with open(sys.argv[1], 'r') as handle:
 recog_site_map = {}
 
 for e in data:
-    en = e['enzyme']
-    key = ':'.join(e['cut'])
+    en = data[e]['enzyme']
+    key = ':'.join(data[e]['cut'])
     if key in recog_site_map:
         # Clean out empty item in list
         iz = recog_site_map[key]['isoscizomers']
@@ -23,7 +23,7 @@ for e in data:
         if en not in recog_site_map[key]['isoscizomers']:
             recog_site_map[key]['isoscizomers'].append(en)
     else:
-        recog_site_map[key] = e
+        recog_site_map[key] = data[e]
 
         # Clean out empty item in list
         iz = recog_site_map[key]['isoscizomers']
