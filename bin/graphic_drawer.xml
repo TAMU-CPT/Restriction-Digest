@@ -1345,7 +1345,9 @@ $positional_2
     </param>
   </inputs>
   <outputs>
-    <data format="html" hidden="false" name="default"/>
+    <data format="html" hidden="false" name="default" label="$positional_1.name digested with $positional_2">
+        <when input="standalone" value="--standalone" format="svg" />
+    </data>
   </outputs>
   <help><![CDATA[
 **What it does**
