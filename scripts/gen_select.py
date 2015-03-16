@@ -5,8 +5,11 @@ import sys
 with open(sys.argv[1], 'r') as handle:
     data = yaml.load(handle)
 
+full_list = []
 for x in data:
     for q in ([data[x]['enzyme']] + data[x]['isoscizomers']):
-    #if len(data[x]['isoscizomers']) > 0:
-        #q += " [%s]" % ' '.join(data[x]['isoscizomers'])
-        print '<option value="%s">%s</option>' % (q, q)
+        if q not in full_list:
+            full_list.append(q)
+
+for q in sorted(full_list):
+    print '<option value="%s">%s</option>' % (q, q)
