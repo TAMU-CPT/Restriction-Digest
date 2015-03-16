@@ -11,14 +11,13 @@ if __name__ == '__main__':
     # Input filename, required
     parser.add_argument('file', help='Input fasta genome(s)')
     # A single string with default value of 'enzyme_data.yaml'
-    parser.add_argument('--data', help='Enzyme cut site dataset',
-                        default='enzyme_data.yaml')
+    parser.add_argument('--data', help='Enzyme cut site dataset')
     parser.add_argument('--standalone', action="store_true", help='Produces a standalone graphic, rather than full HTML page. Only useful with one sequence in a fasta file')
     # A list of one or more strings, at the end
     parser.add_argument('enzyme', help='Comma separated list of enzymes')
     args = parser.parse_args()
 
-    dd = dnadigest.Dnadigest()
+    dd = dnadigest.Dnadigest(enzyme_data_file=args.data)
 
     if not args.standalone:
         print '<html><head></head><body>'

@@ -14,6 +14,10 @@ requirements = [
     'biopython',
 ]
 
+test_requirements = [
+    'nose',
+]
+
 setup(
     name='dnadigest',
     version='0.1.0',

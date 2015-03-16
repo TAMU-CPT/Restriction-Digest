@@ -11,13 +11,12 @@ if __name__ == '__main__':
     # Input filename, required
     parser.add_argument('file', help='Input fasta genome(s)')
     # A single string with default value of 'enzyme_data.yaml'
-    parser.add_argument('--data', help='Enzyme cut site dataset',
-                        default='enzyme_data.yaml')
+    parser.add_argument('--data', help='Enzyme cut site dataset')
     # A list of one or more strings, at the end
     parser.add_argument('enzyme', help='Comma separated list of enzymes')
     args = parser.parse_args()
 
-    dd = dnadigest.Dnadigest()
+    dd = dnadigest.Dnadigest(enzyme_data_file=args.data)
     template = '>%s_%s [orig=%s;status=%s;cut_with=%s]\n%s\n'
 
     for record in SeqIO.parse(args.file, 'fasta'):
