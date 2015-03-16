@@ -7,7 +7,6 @@
   <command interpreter="python"><![CDATA[
 digest_dna.py
 $positional_1
---data /home/galaxy/galaxy/tools/cpt/Restriction-Digest-Tool/enzyme_data.yaml
 $positional_2
 > $default]]></command>
   <inputs>
