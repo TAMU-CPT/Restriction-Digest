@@ -5,20 +5,20 @@ try:
 except ImportError:
     from distutils.core import setup
 
+readme = open('README.rst').read()
+history = open('HISTORY.rst').read().replace('.. :changelog:', '')
+
 requirements = [
     'beautifulsoup4',
     'pyyaml',
     'biopython',
 ]
 
-test_requirements = [
-    'nose'
-]
-
 setup(
     name='dnadigest',
-    version='0.0.1',
+    version='0.1.0',
     description='Command line tool to run restriction digests of DNA sequences',
+    long_description=readme + '\n\n' + history,
     author='Stephen Crosby',
     author_email='stcrosby@gmail.com',
     packages=[
@@ -29,10 +29,9 @@ setup(
     install_requires=requirements,
     license="GPLv3",
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
+        'Development Status :: 4 - Beta',
         'Programming Language :: Python :: 2.7',
+        'Topic :: Scientific/Engineering :: Bio-Informatics',
     ],
     test_suite='tests',
     tests_require=test_requirements
