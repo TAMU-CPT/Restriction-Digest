@@ -10,17 +10,9 @@ Galaxy tool with the following aims:
 -  optimise restrictions with multiple genomes in order to easily
    determine enzymes for unique resetriction patterns
 
-Testing
--------
-
-::
-
-    python setup.py test
-
 Running
 -------
 
 ::
 
-    python bin/tool_wip.py  test.fa Bsp6I Bsp13I DseDI
-
+    python bin/digest_dna.py test.fa Bsp6I,Bsp13I,DseDI

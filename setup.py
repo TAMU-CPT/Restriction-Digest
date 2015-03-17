@@ -21,12 +21,16 @@ test_requirements = [
 setup(
     name='dnadigest',
     version='0.1.0',
-    description='Command line tool to run restriction digests of DNA sequences',
+    description='Library+Tool to run restriction digests of DNA sequences',
     long_description=readme + '\n\n' + history,
     author='Stephen Crosby',
     author_email='stcrosby@gmail.com',
     packages=[
         'dnadigest',
+    ],
+    scripts=[
+        'bin/digest_dna.py',
+        'bin/graphic_drawer.py',
     ],
     package_dir={'dnadigest': 'dnadigest'},
     include_package_data=True,
