@@ -3,3 +3,4 @@ pyyaml
 biopython
 svgwrite
 nose
+sphinx

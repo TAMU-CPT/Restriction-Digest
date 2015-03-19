@@ -63,9 +63,11 @@ class Dnadigest():
         for enzyme_key in data_structure:
             enzyme = data_structure[enzyme_key]
             if len(enzyme['cut'][0]) != len(enzyme['cut'][1]):
-                log.warning("Cannot use %s; no support for non-matching cuts" % enzyme['enzyme'])
+                log.warning("Cannot use %s; no support for non-matching cuts" %
+                            enzyme['enzyme'])
             elif len(enzyme['cut']) != 2:
-                log.warning("Cannot use %s; too many cut sites" % enzyme['enzyme'])
+                log.warning("Cannot use %s; too many cut sites" %
+                            enzyme['enzyme'])
             else:
                 # Convert
                 # d['k'] = ["5' asdfasdf", "3' asdfasdf"]
@@ -99,7 +101,8 @@ class Dnadigest():
             for x in arg:
                 yield x
 
-    def string_cutter(self, sequence, recognition_fr, recog_nucl_index, status):
+    def string_cutter(self, sequence, recognition_fr, recog_nucl_index,
+                      status):
         """Cut a sequence with a 5'+3' cut recognition site
         """
         rec_f_exp = self.expand_multiple(recognition_fr['5'])
@@ -127,7 +130,9 @@ class Dnadigest():
             # Cleanup for some corner cases
             remove_first_fragment = False
             for match in match_list:
-                adjusted_recog = self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp, match.group(0))
+                adjusted_recog = \
+                    self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp,
+                                                   match.group(0))
                 cut_location = match.start() + adjusted_recog
                 if first_cut is None:
                     # If this is the first cut, in order to handle some nasty
@@ -140,8 +145,9 @@ class Dnadigest():
                         reopened_sequence = mod_sequence[cut_location:] + \
                             mod_sequence[wrap_around:cut_location]
 
-                    return self.string_cutter(reopened_sequence, recognition_fr,
-                                              adjusted_recog, 'linear')
+                    return self.string_cutter(reopened_sequence,
+                                              recognition_fr, adjusted_recog,
+                                              'linear')
 
                 # If this is a "normal" cut, append the new fragment from the
                 # previous cut site to here
@@ -171,7 +177,8 @@ class Dnadigest():
                         # Get the full first fragment by taking the first
                         # fragment with the "latest" sequence, not including
                         # the wrap around
-                        full_first_fragment = mod_sequence[prev_index:] + fragments[0]
+                        full_first_fragment = mod_sequence[prev_index:] + \
+                            fragments[0]
                         remapped_cut_location = cut_location - prev_index
                         fragments.append(full_first_fragment[0:remapped_cut_location])
                         fragments.append(full_first_fragment[remapped_cut_location:])
@@ -184,7 +191,9 @@ class Dnadigest():
                 rec_seq_r.finditer(sequence)
             )
             for match in match_list:
-                adjusted_recog = self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp, match.group(0))
+                adjusted_recog = \
+                    self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp,
+                                                   match.group(0))
                 cut_location = match.start() + adjusted_recog
                 fragments.append(sequence[prev_index:cut_location])
                 prev_index = cut_location
@@ -210,9 +219,10 @@ class Dnadigest():
                     cut_sites[site] = [enzyme]
         return cut_sites
 
-    def __find_cut_sites(self, sequence, recognition_fr, recog_nucl_index, status):
-        """Find all cut locations in a sequence with a 5'+3' cut recognition site
-        """
+    def __find_cut_sites(self, sequence, recognition_fr, recog_nucl_index,
+                         status):
+        """Find all cut locations in a sequence with a 5'+3' cut recognition
+        site """
         rec_f_exp = self.expand_multiple(recognition_fr['5'])
         rec_r_exp = self.expand_multiple(recognition_fr['3'])
         rec_seq_f = re.compile(self.generate_regex_str(rec_f_exp))
@@ -227,7 +237,9 @@ class Dnadigest():
                 rec_seq_r.finditer(mod_sequence)
             )
             for match in match_list:
-                adjusted_recog = self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp, match.group(0))
+                adjusted_recog = \
+                    self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp,
+                                                   match.group(0))
                 cut_location = match.start() + adjusted_recog
 
                 if cut_location < len(sequence):
@@ -242,12 +254,15 @@ class Dnadigest():
                 rec_seq_r.finditer(sequence)
             )
             for match in match_list:
-                adjusted_recog = self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp, match.group(0))
+                adjusted_recog = \
+                    self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp,
+                                                   match.group(0))
                 cut_location = match.start() + adjusted_recog
                 cut_locations.append(cut_location)
         return cut_locations, status
 
-    def __adjust_recog_for_strand(self, recog_nucl_index, plus_reference, matchstr):
+    def __adjust_recog_for_strand(self, recog_nucl_index, plus_reference,
+                                  matchstr):
         # If the matched group is the plus sense strand, then cut site is FINE
         plus_ref_re = re.compile(self.generate_regex_str(plus_reference))
         if plus_ref_re.match(matchstr):
@@ -256,13 +271,13 @@ class Dnadigest():
             # Otherwise, invert it against length of matchstr
             return len(matchstr) - recog_nucl_index
 
-    def string_processor(self, fragment_list, recognition_fr, recog_nucl_index, status):
+    def string_processor(self, fragment_list, recognition_fr, recog_nucl_index,
+                         status):
         new_fragment_list = []
         did_cut = False
-        log.debug("SP: FL: %s, RF: %s, RNI: %s, ST: %s" % (fragment_list, recognition_fr, recog_nucl_index, status))
         for fragment in fragment_list:
-            fragments = self.string_cutter(fragment, recognition_fr, recog_nucl_index, status)
-            log.info("Fragments: [%s]" % ','.join(fragments))
+            fragments = self.string_cutter(fragment, recognition_fr,
+                                           recog_nucl_index, status)
 
             if status == 'circular' and len(fragments) > 0:
                 status = 'linear'
