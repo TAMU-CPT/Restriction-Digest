@@ -20,11 +20,12 @@ test_requirements = [
 
 setup(
     name='dnadigest',
-    version='0.1.0',
+    version='0.1.1',
     description='Library+Tool to run restriction digests of DNA sequences',
     long_description=readme + '\n\n' + history,
     author='Stephen Crosby',
     author_email='stcrosby@gmail.com',
+    url='https://github.com/erasche/restriction-digest/'
     packages=[
         'dnadigest',
     ],
