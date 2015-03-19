@@ -26,5 +26,7 @@ Authors
 Acknowledgements
 ----------------
 
-* Thanks to NEB's REBASE for providing the data backing [dnadigest/rebase.yaml](dnadigest/rebase.yaml).
-* Thanks to Wikipedia for their enzyme data backing [dnadigest/wikipedia.yaml](dnadigest/wikiepdia.yaml)
+-  Thanks to NEB's REBASE for providing the data backing
+   `dnadigest/rebase.yaml <dnadigest/rebase.yaml>`__.
+-  Thanks to Wikipedia for their enzyme data backing
+   `dnadigest/wikipedia.yaml <dnadigest/wikiepdia.yaml>`__
