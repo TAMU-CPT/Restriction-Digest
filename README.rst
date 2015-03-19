@@ -1,7 +1,7 @@
 Restriction Digest Tool
 =======================
 
-Galaxy tool with the following aims:
+Python/Galaxy tool with the following aims:
 
 -  digest DNA into fragments, produce FASTA output of that
 -  plot restriction digests in easy to use SVG format
@@ -20,5 +20,11 @@ Running
 Authors
 -------
 
- * Stephen Crosby
- * Eric Rasche
+* Stephen Crosby
+* Eric Rasche
+
+Acknowledgements
+----------------
+
+* Thanks to NEB's REBASE for providing the data backing [dnadigest/rebase.yaml](dnadigest/rebase.yaml).
+* Thanks to Wikipedia for their enzyme data backing [dnadigest/wikipedia.yaml](dnadigest/wikiepdia.yaml)

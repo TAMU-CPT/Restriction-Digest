@@ -264,5 +264,8 @@ and DseDI
 Undigested fragments will retain their "circular" label and indicate that they
 haven't been cut by any enzymes.
       ]]></help>
+  <citations>
+      <citation type="doi">10.1093/nar/gkp874</citation>
+  </citations>
 </tool>
 

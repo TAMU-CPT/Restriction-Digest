@@ -238,5 +238,8 @@ $positional_2
 For input DNA sequence(s), digests it with the selected enzymes, and then
 produces a plot pertaining to the fragmented results
       ]]></help>
+  <citations>
+      <citation type="doi">10.1093/nar/gkp874</citation>
+  </citations>
 </tool>
 
