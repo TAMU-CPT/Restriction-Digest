@@ -25,7 +25,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author='Stephen Crosby',
     author_email='stcrosby@gmail.com',
-    url='https://github.com/erasche/restriction-digest/'
+    url='https://github.com/erasche/restriction-digest/',
     packages=[
         'dnadigest',
     ],
