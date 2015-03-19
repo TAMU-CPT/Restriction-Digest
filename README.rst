@@ -16,3 +16,9 @@ Running
 ::
 
     python bin/digest_dna.py test.fa Bsp6I,Bsp13I,DseDI
+
+Authors
+-------
+
+ * Stephen Crosby
+ * Eric Rasche
