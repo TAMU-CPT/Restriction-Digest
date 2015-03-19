@@ -43,6 +43,6 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Topic :: Scientific/Engineering :: Bio-Informatics',
     ],
-    test_suite='tests',
+    test_suite='test',
     tests_require=test_requirements
 )
