@@ -1,6 +1,5 @@
 beautifulsoup4
 pyyaml
 biopython
-svgwrite
 nose
 sphinx

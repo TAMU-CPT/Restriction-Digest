@@ -2,8 +2,6 @@
 import re
 import yaml
 import logging
-import math
-import svgwrite
 from pkg_resources import resource_stream
 logging.basicConfig()
 log = logging.getLogger()
@@ -350,41 +348,3 @@ class Dnadigest():
             'status': status,
         }
 
-    @classmethod
-    def drawer(cls, sequence_length, cut_sites, sequence_id="PhiX", radius=250,
-               border=50):
-        """Print SVG in plasmid digest style
-        """
-
-        image_size = 2 * (radius + border)
-        center = (radius+border, radius+border)
-        svg_document = svgwrite.Drawing(size=("%spx" % image_size, "%spx" %
-                                              image_size))
-        svg_document.add(svg_document.circle(center=center, r=radius,
-                                             fill="rgb(255, 255, 255)",
-                                             stroke="black"))
-
-        # TODO: offset text based on length of string
-        svg_document.add(svg_document.text('>' + sequence_id, insert=center))
-
-        for cut_site in sorted(cut_sites.keys()):
-            tau = 2 * math.pi
-            angle_in_radians = (float(cut_site)/float(sequence_length)) * tau
-
-            point_from = cls.__cast_ray(center, angle_in_radians, radius - 20)
-            point_to = cls.__cast_ray(center, angle_in_radians, radius + 20)
-            svg_document.add(svg_document.line(start=point_from, end=point_to,
-                                               stroke="black"))
-
-            text_loc = cls.__cast_ray(center, angle_in_radians, radius+40)
-            for i, enzyme in enumerate(cut_sites[cut_site]):
-                text_loc[1] += i * 10
-                svg_document.add(svg_document.text(enzyme, insert=text_loc))
-
-        return svg_document.tostring()
-
-    @classmethod
-    def __cast_ray(cls, center, angle, length):
-        # Now we need to find a vector of length start_distance from center
-        return [length * math.cos(angle) + center[0],
-                length * math.sin(angle) + center[1]]
