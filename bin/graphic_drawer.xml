@@ -1,18 +1,23 @@
-<tool id="edu.tamu.cpt.fasta.digest_draw" name="Virtual DNA Digest Plotter" version="1.0">
+<tool id="edu.tamu.cpt.fasta.digest_draw" name="Virtual DNA Digest Plotter" version="2.0">
   <description>runs digest and plots fragments</description>
   <stdio>
     <exit_code level="fatal" range="1:"/>
   </stdio>
   <version_command>python graphic_drawer.py --version</version_command>
   <command interpreter="python"><![CDATA[graphic_drawer.py
-$positional_1
-$standalone
-$positional_2
-> $default]]></command>
+$sequences
+$enzymes
+
+#if str($regions) != "None":
+--regions
+    #for region in $regions:
+        $region
+    #end for
+#end if
+> $output]]></command>
   <inputs>
-    <param area="false" label="Input fasta genome(s)" name="positional_1" type="data" format="fasta"/>
-    <param checked="false" label="Produces a standalone graphic, rather than full HTML page." help="Only useful with one sequence in a fasta file (--standalone)" name="standalone" type="boolean" truevalue="--standalone" falsevalue=""/>
-    <param label="Enzymes for digestion" name="positional_2" type="select" multiple="True">
+    <param label="Input fasta genome(s)" name="sequences" type="data" format="fasta"/>
+    <param label="Enzymes for digestion" name="enzymes" type="select" multiple="True">
       <option value="AbsI">AbsI</option>
       <option value="AccII">AccII [FnuDII, Bce31293I, BceBI, BceRI, BepI, Bpu95I, Bsh1236I, Bsp50I, Bsp70I, Bsp123I, BspFNI, BspJ76I, BstFNI, BstUI, Bsu1192II, Bsu1193I, Bsu1532I, Bsu6633I, BsuEII, BtkI, Cpa1150I, CpaAI, Csp68KVI, EsaBS9I, FalII, FauBII, FspMI, Hin1056I, HpyF14I, HpyF15I, HpyF26I, HpyF52II, HpyF64IV, MvaAI, MvnI, PflAI, SceAI, SelI, ThaI, TmaI, TneDI, Uba1321I, Uba1404I, Uba1405I, Uba1446I]</option>
       <option value="AceII">AceII [NheI, AsuNHI, BmtI, BspOI, LlaG2I, PstNHI]</option>
@@ -226,10 +231,10 @@ $positional_2
       <option value="XspI">XspI [MaeI, BfaI, CchI, FgoI, FisI, FspBI, MjaI, MthFI, MthZI, RmaI, Rma485I, Rma486I, Rma490I, Rma495I, Rma496I, Rma497I, Rma500I, Rma501I, Rma503I, Rma506I, Rma509I, Rma510I, Rma515I, Rma516I, Rma517I, Rma518I, Rma519I, Rma522I, SspMI, UbaN5I]</option>
       <option value="ZraI">ZraI [AatII, AspJI, Ppu1253I, Ssp5230I]</option>
     </param>
+    <param label="Annotated Regions" name="regions" type="data" format="bed6,bed12" multiple="True" optional="True" />
   </inputs>
   <outputs>
-    <data format="html" hidden="false" name="default" label="$positional_1.name digested with $positional_2">
-        <when input="standalone" value="--standalone" format="svg" />
+    <data format="html" name="output" label="$positional_1.name digested with $positional_2">
     </data>
   </outputs>
   <help><![CDATA[
@@ -242,4 +247,3 @@ produces a plot pertaining to the fragmented results
       <citation type="doi">10.1093/nar/gkp874</citation>
   </citations>
 </tool>
-
