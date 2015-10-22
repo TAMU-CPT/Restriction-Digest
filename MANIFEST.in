@@ -3,6 +3,7 @@ include LICENSE
 include README.rst
 
 include dnadigest/*.yaml
+include dnadigest/angularplasmid.complete.min.js
 
 recursive-include test *
 
