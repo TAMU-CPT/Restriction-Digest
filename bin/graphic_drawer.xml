@@ -234,7 +234,7 @@ $enzymes
     <param label="Annotated Regions" name="regions" type="data" format="bed6,bed12" multiple="True" optional="True" />
   </inputs>
   <outputs>
-    <data format="html" name="output" label="$positional_1.name digested with $positional_2">
+    <data format="html" name="output" label="$sequences.name digested with $enzymes">
     </data>
   </outputs>
   <help><![CDATA[
