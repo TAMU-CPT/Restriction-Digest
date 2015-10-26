@@ -3,7 +3,7 @@ import re
 import yaml
 import logging
 from pkg_resources import resource_stream
-logging.basicConfig()
+logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger()
 
 
@@ -89,7 +89,7 @@ class Dnadigest():
                         recognition_sequence])
 
     def matcher(self, sequence, recognition_sequence):
-        regex = re.compile(self.generate_regex_str(recognition_sequence))
+        regex = re.compile(self.generate_regex_str(recognition_sequence), re.IGNORECASE)
         return len(regex.findall(sequence)) != 0
 
     def __merged_iter(cls, *args):
@@ -105,8 +105,8 @@ class Dnadigest():
         """
         rec_f_exp = self.expand_multiple(recognition_fr['5'])
         rec_r_exp = self.expand_multiple(recognition_fr['3'])
-        rec_seq_f = re.compile(self.generate_regex_str(rec_f_exp))
-        rec_seq_r = re.compile(self.generate_regex_str(rec_r_exp))
+        rec_seq_f = re.compile(self.generate_regex_str(rec_f_exp), re.IGNORECASE)
+        rec_seq_r = re.compile(self.generate_regex_str(rec_r_exp), re.IGNORECASE)
 
         # TODO: try and make this appx. the length of the cut site, we don't
         # want to have a case where we match TWO times within the wrapped
@@ -223,8 +223,8 @@ class Dnadigest():
         site """
         rec_f_exp = self.expand_multiple(recognition_fr['5'])
         rec_r_exp = self.expand_multiple(recognition_fr['3'])
-        rec_seq_f = re.compile(self.generate_regex_str(rec_f_exp))
-        rec_seq_r = re.compile(self.generate_regex_str(rec_r_exp))
+        rec_seq_f = re.compile(self.generate_regex_str(rec_f_exp), re.IGNORECASE)
+        rec_seq_r = re.compile(self.generate_regex_str(rec_r_exp), re.IGNORECASE)
 
         cut_locations = []
         if status == 'circular':
@@ -325,8 +325,8 @@ class Dnadigest():
         return good
 
     def process_data(self, seq, cut_with, status='circular'):
-        filtered_enzyme_dict = self.enzyme_dict_filter(self.enzyme_dict,
-                                                       cut_with)
+        filtered_enzyme_dict = self.enzyme_dict_filter(
+            self.enzyme_dict, cut_with)
 
         fragment_list = [seq]
 
@@ -334,6 +334,7 @@ class Dnadigest():
         for enzyme in filtered_enzyme_dict:
             log.info('Cutting [%s] with %s' % (','.join(fragment_list),
                                                enzyme))
+            log.debug(filtered_enzyme_dict[enzyme])
             (fragment_list, status, did_cut) = \
                 self.string_processor(fragment_list,
                                       filtered_enzyme_dict[enzyme]['recognition_sequence'],
@@ -347,4 +348,3 @@ class Dnadigest():
             'cut_with': cuts,
             'status': status,
         }
-

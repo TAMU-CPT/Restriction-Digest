@@ -20,7 +20,8 @@ if __name__ == '__main__':
     template = '>%s_%s [orig=%s;status=%s;cut_with=%s]\n%s\n'
 
     for record in SeqIO.parse(args.file, 'fasta'):
-        processed_results = dd.process_data(str(record.seq), cut_with=args.enzyme.split(','))
+        processed_results = dd.process_data(
+            str(record.seq), cut_with=args.enzyme.split(','))
 
         for i, fragment in enumerate(processed_results['fragment_list']):
             fragseq = Seq.Seq(fragment)
