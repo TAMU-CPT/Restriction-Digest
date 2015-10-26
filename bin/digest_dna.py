@@ -26,7 +26,7 @@ if __name__ == '__main__':
         for i, fragment in enumerate(processed_results['fragment_list']):
             fragseq = Seq.Seq(fragment)
             print template % (record.id, i,
-                              record.description,
+                              record.description[0:80] + '...',
                               processed_results['status'],
                               ','.join(processed_results['cut_with']),
                               fragseq)

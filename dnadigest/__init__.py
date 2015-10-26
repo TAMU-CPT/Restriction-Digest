@@ -206,59 +206,23 @@ class Dnadigest():
         enzymes = self.enzyme_dict_filter(self.enzyme_dict, enzyme_list)
         cut_sites = {}
         for enzyme in enzymes:
-            sites, status = self.__find_cut_sites(sequence,
-                                                  self.enzyme_dict[enzyme]['recognition_sequence'],
-                                                  self.enzyme_dict[enzyme]['sense_cut_idx'],
-                                                  'circular')
-            for site in sites:
-                try:
-                    cut_sites[site].append(enzyme)
-                except KeyError:
-                    cut_sites[site] = [enzyme]
+            fragments, status, did_cut = self.string_processor(
+                [sequence],
+                self.enzyme_dict[enzyme]['recognition_sequence'],
+                self.enzyme_dict[enzyme]['sense_cut_idx'],
+                'circular'
+            )
+            current_pos = 0
+            # We proceed from first to penultimate fragment, marking at site
+            # AFTER the currnet fragment we're examining.
+            import pprint; pprint.pprint(fragments)
+            for fragment in fragments[0:-1]:
+                current_pos += len(fragment)
+
+                if current_pos not in cut_sites:
+                    cut_sites[current_pos] = []
+                cut_sites[current_pos].append(enzyme)
         return cut_sites
-
-    def __find_cut_sites(self, sequence, recognition_fr, recog_nucl_index,
-                         status):
-        """Find all cut locations in a sequence with a 5'+3' cut recognition
-        site """
-        rec_f_exp = self.expand_multiple(recognition_fr['5'])
-        rec_r_exp = self.expand_multiple(recognition_fr['3'])
-        rec_seq_f = re.compile(self.generate_regex_str(rec_f_exp), re.IGNORECASE)
-        rec_seq_r = re.compile(self.generate_regex_str(rec_r_exp), re.IGNORECASE)
-
-        cut_locations = []
-        if status == 'circular':
-            # Add a little bit on the end where it'd "wrap"
-            mod_sequence = sequence + sequence[0:15]
-            match_list = self.__merged_iter(
-                rec_seq_f.finditer(mod_sequence),
-                rec_seq_r.finditer(mod_sequence)
-            )
-            for match in match_list:
-                adjusted_recog = \
-                    self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp,
-                                                   match.group(0))
-                cut_location = match.start() + adjusted_recog
-
-                if cut_location < len(sequence):
-                    cut_locations.append(cut_location)
-                else:
-                    tmp = cut_location - len(sequence)
-                    if tmp not in cut_locations:
-                        cut_locations.append(tmp)
-        else:
-            match_list = self.__merged_iter(
-                rec_seq_f.finditer(sequence),
-                rec_seq_r.finditer(sequence)
-            )
-            for match in match_list:
-                adjusted_recog = \
-                    self.__adjust_recog_for_strand(recog_nucl_index, rec_f_exp,
-                                                   match.group(0))
-                cut_location = match.start() + adjusted_recog
-                cut_locations.append(cut_location)
-        return cut_locations, status
-
     def __adjust_recog_for_strand(self, recog_nucl_index, plus_reference,
                                   matchstr):
         # If the matched group is the plus sense strand, then cut site is FINE
@@ -269,8 +233,8 @@ class Dnadigest():
             # Otherwise, invert it against length of matchstr
             return len(matchstr) - recog_nucl_index
 
-    def string_processor(self, fragment_list, recognition_fr, recog_nucl_index,
-                         status):
+    def string_processor(self, fragment_list, recognition_fr,
+                         recog_nucl_index, status):
         new_fragment_list = []
         did_cut = False
         for fragment in fragment_list:
