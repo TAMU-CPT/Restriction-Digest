@@ -7,34 +7,61 @@ logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger()
 
 
-class Dnadigest():
-    def __init__(self, enzyme_data_file=None):
-        """Class to digest DNA strings.
+class Enzyme(object):
 
-        By default a dataset based on the Wikipedia enzyme list is loaded
-        """
-        self.data = ''
-        self.dna_regex_translations = {
-            'A': 'A',
-            'T': 'T',
-            'C': 'C',
-            'G': 'G',
-            'N': '.',
-            'M': '[AC]',
-            'R': '[AG]',
-            'W': '[AT]',
-            'Y': '[CT]',
-            'S': '[CG]',
-            'K': '[GT]',
+    drt = {
+        'A': 'A',
+        'T': 'T',
+        'C': 'C',
+        'G': 'G',
+        'N': '.',
+        'M': '[AC]',
+        'R': '[AG]',
+        'W': '[AT]',
+        'Y': '[CT]',
+        'S': '[CG]',
+        'K': '[GT]',
 
-            'H': '[^G]',
-            'B': '[^A]',
-            'V': '[^T]',
-            'D': '[^C]',
-        }
+        'H': '[^G]',
+        'B': '[^A]',
+        'V': '[^T]',
+        'D': '[^C]',
+    }
 
+    def __init__(self, name="", forward=None, reverse=None):
+        self.name = name
+        self.forward = forward  # ('G', 'AATTC')
+        self.reverse = reverse  # ('CTTAA', 'G')
+        self.cut_index = len(self.forward[0])
+
+    def generate_regex_str(self, recognition_sequence):
+        return ''.join([self.dna_regex_translations[x] for x in
+                        recognition_sequence])
+
+
+class DnaFragment(object):
+    LINEAR = 0
+    CIRCULAR = 1
+
+    def __init__(self, seqobj, status=LINEAR):
+        self.seq = seqobj
+        self.status = status
+
+
+class EnzymeLibrary(object):
+    """A library of enzymes, can be used to digest sequences"""
+
+    def __init__(self, data_file=None):
+        self.library = self.load_enzyme_data(data_file)
+        self.mask = []
+        self.complement_regex = self.gen_regex()
+
+    def mask(self, enzymes):
+        self.mask = [x for x in enzymes if x in self.library]
+
+    def gen_regex(self):
         # These provide translations between the ambiguity codes.
-        self.complement_regex = {
+        complement_regex = {
             'A': 'T',
             'C': 'G',
             'N': 'N',
@@ -44,20 +71,27 @@ class Dnadigest():
             'R': 'Y',
             'W': 'S',
         }
-        # Less typing
-        for k in self.complement_regex.keys():
-            self.complement_regex[self.complement_regex[k]] = k
+        for k in complement_regex.keys():
+            complement_regex[complement_regex[k]] = k
 
+        return complement_regex
+
+    def load_enzyme_data(self, enzyme_data_file):
+        """Load enzyme data from a specified path, or from internal rebase.yml
+        file is arg[0] is None"""
         if enzyme_data_file is None:
             handle = resource_stream(__name__, 'rebase.yaml')
-            self.load_enzyme_data(handle)
+            return self._load_enzyme_data(handle)
         else:
             with open(enzyme_data_file, 'r') as handle:
-                self.load_enzyme_data(handle)
+                return self._load_enzyme_data(handle)
 
-    def load_enzyme_data(self, data_handle):
+    def _load_enzyme_data(self, data_handle):
+        """Actual code to convert rebase.yml file into a usable format
+        """
+        ed = {}
+
         data_structure = yaml.load(data_handle)
-        self.enzyme_dict = {}
         for enzyme_key in data_structure:
             enzyme = data_structure[enzyme_key]
             if len(enzyme['cut'][0]) != len(enzyme['cut'][1]):
@@ -71,26 +105,32 @@ class Dnadigest():
                 # d['k'] = ["5' asdfasdf", "3' asdfasdf"]
                 # to
                 # d['k'] = {"5": "asdfasdf", "3": "asdfasdf" }
-                enzyme['recognition_sequence'] = {
-                    x[0]: x[3:] for x in enzyme['recognition_sequence']
-                }
                 enzyme['cut'] = {
                     x[0]: x[3:-3] for x in enzyme['cut']
                 }
                 enzyme['sense_cut_idx'] = self.determine_cut_index(enzyme)
-                self.enzyme_dict[enzyme['enzyme']] = enzyme
 
-    @classmethod
-    def determine_cut_index(cls, enzyme):
-        return enzyme['cut']['5'].strip('-').index(' ')
+            e = Enzyme(
+                name=enzyme_key,
+                forward=enzyme['cut']['5'].split('  '),
+                reverse=enzyme['cut']['3'].split('  ')
+            )
+        ed[enzyme_key] = e
 
-    def generate_regex_str(self, recognition_sequence):
-        return ''.join([self.dna_regex_translations[x] for x in
-                        recognition_sequence])
 
-    def matcher(self, sequence, recognition_sequence):
-        regex = re.compile(self.generate_regex_str(recognition_sequence), re.IGNORECASE)
-        return len(regex.findall(sequence)) != 0
+class Digest2(object):
+
+    def __init__(self, enzyme_data_file=None):
+        """Class to digest DNA strings.
+
+        By default a dataset based on the Wikipedia enzyme list is loaded
+        """
+
+        self.enzyme_library = EnzymeLibrary(enzyme_data_file)
+
+
+class Dnadigest():
+
 
     def __merged_iter(cls, *args):
         """Treat multiple iterators as a single iterator
