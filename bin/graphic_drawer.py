@@ -110,11 +110,12 @@ if __name__ == '__main__':
                 annotated_regions[chrom] = []
             annotated_regions[chrom].append(data[1:6])
 
-    dd = dnadigest.Dnadigest(enzyme_data_file=args.data)
+    dd = dnadigest.DnaDigest(data_file=args.data)
+    enzymes = args.enzyme.split(',')
 
     plasmids = []
     for record in SeqIO.parse(args.file, 'fasta'):
-        cut_sites = dd.find_cut_sites(str(record.seq), args.enzyme.split(','))
+        fragments, cut_sites, did_cut = dd.digest_sequence(record, enzymes)
         regions = []
         for annotated_region in annotated_regions.get(record.id, []):
             regions.append(region_tpl.format(

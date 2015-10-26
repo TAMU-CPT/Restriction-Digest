@@ -17,7 +17,7 @@ if __name__ == '__main__':
     parser.add_argument('enzyme', help='Comma separated list of enzymes')
     args = parser.parse_args()
 
-    dd = dnadigest.DnaDigest(enzyme_data_file=args.data)
+    dd = dnadigest.DnaDigest(data_file=args.data)
     enzymes = args.enzyme.split(',')
 
     for record in SeqIO.parse(args.file, 'fasta'):

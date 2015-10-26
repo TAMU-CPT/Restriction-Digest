@@ -7,7 +7,7 @@ import re
 import yaml
 import logging
 from pkg_resources import resource_stream
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 LOG = logging.getLogger()
 
 
@@ -103,13 +103,18 @@ class Enzyme(object):
     def digest_iter(self, sequence):
         """Iterator over every cut site in the genome"""
         reg_f, reg_r = self.get_regex()
+        LOG.debug('Digest_iter: %s %s', reg_f.pattern, reg_r.pattern)
 
-        for match in reg_f.finditer(str(sequence)):
+        for match in reg_f.finditer(str(sequence.seq)):
             cut_location = match.start() + self.cut_index
+            LOG.debug('  Match: %s %s %s -> %s', match.start(), match.group(),
+                      match.end(), cut_location)
             yield cut_location
 
-        for match in reg_r.finditer(str(sequence)):
+        for match in reg_r.finditer(str(sequence.seq)):
             cut_location = match.start() + len(match.group(0)) - self.cut_index
+            LOG.debug('  Match: %s %s %s -> %s', match.start(), match.group(),
+                      match.end(), cut_location)
             yield cut_location
 
 
@@ -208,11 +213,11 @@ class DnaDigest(object):
         if not hasattr(sequence, 'circular'):
             sequence.circular = True
 
+        LOG.debug('Digesting %s with %s. Circ=%s', sequence.id, enzyme, sequence.circular)
         if not sequence.circular:
-            # Linear sequence, we'll toss out 1-N children
-            match_list = enzyme.digest_iter(sequence)
             # For all the places we hit
-            for cut_location in match_list:
+            for cut_location in enzyme.digest_iter(sequence):
+                LOG.debug("  Cut at %s", cut_location)
                 # Store new fragment/cut_site
                 fragments.append(sequence[prev_index:cut_location])
                 cut_sites.append(cut_location + offset)
