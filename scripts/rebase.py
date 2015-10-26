@@ -71,7 +71,9 @@ def parse_data(data):
 
         if len(ed.keys()) > 0:
             # Reformat
-            ed['isoscizomers'] = ed['isoscizomers'].split(',')
+            # ed['isoscizomers'] = ed['isoscizomers'].split(',')
+            if 'isoscizomers' in ed:
+                del ed['isoscizomers']
             # Build new data
             edcut = ed['cut']
 
