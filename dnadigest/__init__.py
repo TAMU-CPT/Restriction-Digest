@@ -7,9 +7,17 @@ logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger()
 
 
+def __merged_iter(cls, *args):
+    """Treat multiple iterators as a single iterator
+    """
+    for arg in args:
+        for x in arg:
+            yield x
+
+
 class Enzyme(object):
 
-    drt = {
+    DNA_REGEX_TRANSLATIONS = {
         'A': 'A',
         'T': 'T',
         'C': 'C',
@@ -34,18 +42,50 @@ class Enzyme(object):
         self.reverse = reverse  # ('CTTAA', 'G')
         self.cut_index = len(self.forward[0])
 
-    def generate_regex_str(self, recognition_sequence):
-        return ''.join([self.dna_regex_translations[x] for x in
+    def _gen_regex_str(self):
+        reg_f = self.expand_multiple(self.forward[0] + self.forward[1])
+        reg_r = self.expand_multiple(self.reverse[0] + self.reverse[1])
+        return reg_f, reg_r
+
+    def get_regex(self):
+        reg_f, reg_r = self._gen_regex_str()
+        rec_seq_f = re.compile(self._generate_regex_str(reg_f), re.IGNORECASE)
+        rec_seq_r = re.compile(self._generate_regex_str(reg_r), re.IGNORECASE)
+        return (rec_seq_f, rec_seq_r)
+
+    def expand_multiple(self, base_str):
+        m = re.search('(?P<base>[A-Z])(?P<count>[0-9]+)', base_str)
+        try:
+            # Get position of first match
+            base = m.group('base')
+            count = int(m.group('count'))
+
+            # Create a fixed string with those bases replaced properly
+            replaced = base_str[0:m.start('base')] + \
+                base * count + \
+                base_str[m.end('count'):]
+            # Recurse to replace any more instances of [ACTG][0-9]+
+            return self.expand_multiple(replaced)
+        except AttributeError:
+            return base_str
+
+    def _generate_regex_str(self, recognition_sequence):
+        return ''.join([self.DNA_REGEX_TRANSLATIONS[x] for x in
                         recognition_sequence])
 
+    def __str__(self):
+        return "%10s (5' %10s %-10s)" % (self.name, self.forward[0], self.forward[1])
 
-class DnaFragment(object):
-    LINEAR = 0
-    CIRCULAR = 1
+    def digest_iter(self, sequence):
+        reg_f, reg_r = self.get_regex()
 
-    def __init__(self, seqobj, status=LINEAR):
-        self.seq = seqobj
-        self.status = status
+        for m in reg_f.finditer(str(sequence)):
+            cut_location = m.start() + self.cut_index
+            yield cut_location
+
+        for m in reg_r.finditer(str(sequence)):
+            cut_location = m.start() + len(m.group(0)) - self.cut_index
+            yield cut_location
 
 
 class EnzymeLibrary(object):
@@ -90,14 +130,123 @@ class EnzymeLibrary(object):
                 enzyme['cut'] = {
                     x[0]: x[3:-3] for x in enzyme['cut']
                 }
-                enzyme['sense_cut_idx'] = self.determine_cut_index(enzyme)
 
             e = Enzyme(
                 name=enzyme_key,
                 forward=enzyme['cut']['5'].split('  '),
                 reverse=enzyme['cut']['3'].split('  ')
             )
-        ed[enzyme_key] = e
+            ed[enzyme_key] = e
+        return ed
+
+    def digest(self, sequence, enzyme):
+        e = self.library.get(enzyme, None)
+        if e is None:
+            raise Exception("Unknown enzyme")
+
+        return self._digest(sequence, e)
+
+    def _digest(self, sequence, enzyme):
+        # TODO: try and make this appx. the length of the cut site, we don't
+        # want to have a case where we match TWO times within the wrapped
+        # around section
+        wrap_around = 15
+
+        cut_sites = []
+        fragments = []
+        prev_index = 0
+
+        if not hasattr(sequence, 'circular'):
+            sequence.circular = True
+
+        if not sequence.circular:
+            # Linear sequence, we'll toss out 1-N children
+            match_list = enzyme.digest_iter(sequence)
+            # For all the places we hit
+            for cut_location in match_list:
+                # Store new fragment/cut_site
+                fragments.append(sequence[prev_index:cut_location])
+                cut_sites.append(cut_location)
+
+                # update our last cut_site
+                prev_index = cut_location
+
+            # Append the final fragment
+            fragments.append(sequence[prev_index:])
+            cut_sites.append(cut_location)
+        else:  # sequence.circular
+            # Add a little bit on the end where it'd "wrap"
+            mod_sequence = sequence + sequence[0:wrap_around]
+
+            # Track where our first cut was made
+            first_cut = None
+            # Cleanup for some corner cases
+            remove_first_fragment = False
+
+            for cut_location in enzyme.digest_iter(mod_sequence):
+                if first_cut is None:
+                    # If this is the first cut, in order to handle some nasty
+                    # corner cases more nicely, just call/return ourselves
+                    # with the strand opened at the first cut site.
+                    if cut_location < len(sequence):
+                        reopened_sequence = sequence[cut_location:] + \
+                            sequence[0:cut_location]
+                        reopened_sequence.circular = False
+                    else:
+                        reopened_sequence = mod_sequence[cut_location:] + \
+                            mod_sequence[wrap_around:cut_location]
+                        reopened_sequence.circular = False
+
+                    return self._digest(reopened_sequence, enzyme)
+
+                # If this is a "normal" cut, append the new fragment from the
+                # previous cut site to here
+                remove_first_fragment = True
+                if cut_location < len(sequence):
+                    fragments.append(mod_sequence[prev_index:cut_location])
+                    cut_sites.append(cut_location)
+                    prev_index = cut_location
+                else:
+                    # This is not a normal cut, i.e. in the wrapped sequenc
+                    # This case is a bit complicated:
+                    # - need to add the correct fragment
+                    # - need to removeleading characters from the first
+                    #   fragment (and ensure it wasn't detected there too)
+                    if first_cut == cut_location - len(sequence):
+                        # First cut was in the same position as this, so we
+                        # delete first fragment and trim up to this cut
+                        # location here.
+                        fragments.append(mod_sequence[prev_index:cut_location])
+                        cut_sites.append(cut_location)
+                        break
+                    else:
+                        # This cut was NOT caught by the first cut, so this
+                        # means that there's some serious overlap and we cannot
+                        # delete the first fragment.
+                        #
+                        # This is a REALLY unpleasant case.
+
+                        # Get the full first fragment by taking the first
+                        # fragment with the "latest" sequence, not including
+                        # the wrap around
+                        full_first_fragment = mod_sequence[prev_index:] + \
+                            fragments[0]
+                        remapped_cut_location = cut_location - prev_index
+                        fragments.append(full_first_fragment[0:remapped_cut_location])
+                        fragments.append(full_first_fragment[remapped_cut_location:])
+                        cut_sites.append(remapped_cut_location)
+
+            if remove_first_fragment and len(fragments) > 1:
+                del fragments[0]
+
+        # Instead of returning status, if len(fragments) > 1: status='linear'
+        return fragments
+
+    def __str__(self):
+        x = "EnzymeLibrary with %s enzymes\n" % len(self.library)
+        for e in self.library:
+            x += "    %s\n" % self.library[e]
+        return x
 
 
 class Digest2(object):
@@ -110,17 +259,13 @@ class Digest2(object):
 
         self.enzyme_library = EnzymeLibrary(enzyme_data_file)
 
+    def identify_cut_locations(self, sequence, enzyme):
+        # Mask our EL with the correct set of enzymes, so only those will be
+        # used to digest
+        return self.enzyme_library.digest(sequence, enzyme)
+
 
 class Dnadigest():
-
-
-    def __merged_iter(cls, *args):
-        """Treat multiple iterators as a single iterator
-        """
-        for arg in args:
-            for x in arg:
-                yield x
-
     def string_cutter(self, sequence, recognition_fr, recog_nucl_index,
                       status):
         """Cut a sequence with a 5'+3' cut recognition site
@@ -244,15 +389,6 @@ class Dnadigest():
                     cut_sites[current_pos] = []
                 cut_sites[current_pos].append(enzyme)
         return cut_sites
-    def __adjust_recog_for_strand(self, recog_nucl_index, plus_reference,
-                                  matchstr):
-        # If the matched group is the plus sense strand, then cut site is FINE
-        plus_ref_re = re.compile(self.generate_regex_str(plus_reference))
-        if plus_ref_re.match(matchstr):
-            return recog_nucl_index
-        else:
-            # Otherwise, invert it against length of matchstr
-            return len(matchstr) - recog_nucl_index
 
     def string_processor(self, fragment_list, recognition_fr,
                          recog_nucl_index, status):
@@ -275,22 +411,6 @@ class Dnadigest():
             return fragment_list, status, False
         else:
             return new_fragment_list, status, did_cut
-
-    def expand_multiple(self, base_str):
-        m = re.search('(?P<base>[A-Z])(?P<count>[0-9]+)', base_str)
-        try:
-            # Get position of first match
-            base = m.group('base')
-            count = int(m.group('count'))
-
-            # Create a fixed string with those bases replaced properly
-            replaced = base_str[0:m.start('base')] + \
-                base * count + \
-                base_str[m.end('count'):]
-            # Recurse to replace any more instances of [ACTG][0-9]+
-            return self.expand_multiple(replaced)
-        except AttributeError:
-            return base_str
 
     def enzyme_dict_filter(self, data, cut_list):
         # TODO: need to include isoscizomers, but current data structure
