@@ -1,7 +1,8 @@
 #!/usr/bin/env python
-from Bio import SeqIO, Seq
+import sys
 import argparse
 import dnadigest
+from Bio import SeqIO
 
 
 if __name__ == '__main__':
@@ -16,17 +17,15 @@ if __name__ == '__main__':
     parser.add_argument('enzyme', help='Comma separated list of enzymes')
     args = parser.parse_args()
 
-    dd = dnadigest.Dnadigest(enzyme_data_file=args.data)
-    template = '>%s_%s [orig=%s;status=%s;cut_with=%s]\n%s\n'
+    dd = dnadigest.DnaDigest(data_file=args.data)
+    enzymes = args.enzyme.split(',')
 
     for record in SeqIO.parse(args.file, 'fasta'):
-        processed_results = dd.process_data(
-            str(record.seq), cut_with=args.enzyme.split(','))
+        fragments, cut_sites, did_cut = dd.digest_sequence(record, enzymes)
 
-        for i, fragment in enumerate(processed_results['fragment_list']):
-            fragseq = Seq.Seq(fragment)
-            print template % (record.id, i,
-                              record.description[0:80] + '...',
-                              processed_results['status'],
-                              ','.join(processed_results['cut_with']),
-                              fragseq)
+        for i, fragment in enumerate(fragments):
+            fragment.description = '[orig={};status={};cut_with={}]'.format(
+                fragment.id, did_cut, enzymes)
+            fragment.id = '%s_%s' % (fragment.id, i)
+
+            SeqIO.write([fragment], sys.stdout, 'fasta')
