@@ -214,8 +214,7 @@ class Dnadigest():
             )
             current_pos = 0
             # We proceed from first to penultimate fragment, marking at site
-            # AFTER the currnet fragment we're examining.
-            import pprint; pprint.pprint(fragments)
+            # AFTER the current fragment we're examining.
             for fragment in fragments[0:-1]:
                 current_pos += len(fragment)
 
