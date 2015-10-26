@@ -11,7 +11,7 @@ History
 
 * Swapped out interal code to more object-oriented patterns
 * Bio.Seq used everywhere
-* AngualrPlasmid used for graphics drawing
+* AngularPlasmid used for graphics drawing
 
 ---------------------------
 0.1.0 (2015-03-16)
