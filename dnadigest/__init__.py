@@ -54,27 +54,9 @@ class EnzymeLibrary(object):
     def __init__(self, data_file=None):
         self.library = self.load_enzyme_data(data_file)
         self.mask = []
-        self.complement_regex = self.gen_regex()
 
     def mask(self, enzymes):
         self.mask = [x for x in enzymes if x in self.library]
-
-    def gen_regex(self):
-        # These provide translations between the ambiguity codes.
-        complement_regex = {
-            'A': 'T',
-            'C': 'G',
-            'N': 'N',
-            'H': 'D',
-            'B': 'V',
-            'M': 'K',
-            'R': 'Y',
-            'W': 'S',
-        }
-        for k in complement_regex.keys():
-            complement_regex[complement_regex[k]] = k
-
-        return complement_regex
 
     def load_enzyme_data(self, enzyme_data_file):
         """Load enzyme data from a specified path, or from internal rebase.yml
