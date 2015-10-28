@@ -128,7 +128,7 @@ if __name__ == '__main__':
             ))
 
         for site in cut_sites:
-            regions.append(cut_site_tpl.format(position=site, label=', '.join(cut_sites[site])))
+            regions.append(cut_site_tpl.format(position=site, label=', '.join(map(str,cut_sites[site]))))
 
         size = 500
         major_tick_interval = BestTick(len(record.seq), 20)

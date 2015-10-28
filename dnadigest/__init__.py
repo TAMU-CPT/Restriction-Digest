@@ -11,20 +11,6 @@ logging.basicConfig(level=logging.INFO)
 LOG = logging.getLogger()
 
 
-def __merge_dicts(dict_a, dict_b):
-    """Merge dicts where keys map to lists."""
-    ret = {}
-
-    for a_dict in (dict_a, dict_b):
-        for key in a_dict:
-            if key not in ret:
-                ret[key] = a_dict[key]
-            else:
-                ret[key] += a_dict[key]
-
-    return ret
-
-
 class Enzyme(object):
     """
     A class representing a single enzyme
@@ -166,12 +152,26 @@ class DnaDigest(object):
         return enzyme_data
 
     def digest(self, sequence, enzyme):
-        """Digest a signle sequence with a specified enzyme from library"""
+        """Digest a single sequence with a specified enzyme from library"""
         enz = self.library.get(enzyme, None)
         if enz is None:
             raise Exception("Unknown enzyme")
 
         return self._digest(sequence, enz, did_cut=False, offset=0)
+
+    @classmethod
+    def __merge_dicts(cls, dict_a, dict_b):
+        """Merge dicts where keys map to lists."""
+        ret = {}
+
+        for a_dict in (dict_a, dict_b):
+            for key in a_dict:
+                if key not in ret:
+                    ret[key] = a_dict[key]
+                else:
+                    ret[key] += a_dict[key]
+
+        return ret
 
     def multidigest(self, sequences, enzyme):
         """Digest multiple sequences with a specified enzyme from library"""
@@ -185,10 +185,11 @@ class DnaDigest(object):
 
         current_offset = 0
         for sequence in sequences:
-            frags, cuts, didc = self._digest(sequence, enz, did_cut=False, offset=current_offset)
+            frags, cuts, didc = self._digest(sequence, enz, did_cut=False,
+                                             offset=current_offset)
             # Update fragment list
             fragments += frags
-            cut_sites = __merge_dicts(cut_sites, cuts)
+            cut_sites = self.__merge_dicts(cut_sites, cuts)
             did_cut.append(didc)
             current_offset += len(sequence)
 
@@ -233,7 +234,10 @@ class DnaDigest(object):
             # Add a little bit on the end where it'd "wrap"
             mod_sequence = sequence + sequence[0:wrap_around]
 
-            cut_location = enzyme.digest_iter(mod_sequence).next()
+            try:
+                cut_location = enzyme.digest_iter(mod_sequence).next()
+            except StopIteration:
+                return [sequence], {}, False
             # If this is the first cut (we'll only ever receive 1+ linear
             # sequences *OR*, **ONE** circular sequence), in order to handle some
             # nasty corner cases more nicely, we'll make the first cut, and
@@ -251,7 +255,7 @@ class DnaDigest(object):
                 reopened_sequence.circular = False
             return cls._digest(reopened_sequence, enzyme, did_cut=True, offset=cut_location)
 
-        return fragments, cut_sites, did_cut
+        return fragments, {enzyme.name: [site] for site in cut_sites}, did_cut
 
     def __str__(self):
         ret = "EnzymeLibrary with %s enzymes\n" % len(self.library)
@@ -264,9 +268,8 @@ class DnaDigest(object):
         enzyme = enzymes[0]
         if len(enzymes) == 1:
             fragments, cut_sites, did_cut = self.digest(sequence, enzyme)
-            fixed_cut_sites = {idx: [enzyme] for idx in cut_sites}
-            return fragments, fixed_cut_sites, did_cut
+            return fragments, cut_sites, did_cut
         else:
-            frags, cuts, didc = self.digest_sequence(self, sequence, enzymes[1:])
+            frags, cuts, didc = self.digest_sequence(sequence, enzymes[1:])
             fragments, cut_sites, did_cut = self.multidigest(frags, enzyme)
-            return fragments, __merge_dicts(cut_sites, cuts), did_cut or didc
+            return fragments, self.__merge_dicts(cut_sites, cuts), did_cut or didc
