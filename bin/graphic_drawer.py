@@ -35,22 +35,35 @@ style_static = u"""
 
 region_tpl = u"""
 <trackmarker start="{start}" end="{end}" markerstyle="fill:{color}" arrowendlength="{strand}4" arrowstartlength="{notstrand}4">
-    <markerlabel type="path" class="mdlabel white" text="{label}"></markerlabel>
+    <markerlabel type="path" class="smlabel" text="{label}"></markerlabel>
 </trackmarker>
 
-<trackmarker start="{start}" markerstyle="stroke:{color}" class="boundary" wadjust="20">
-    <markerlabel class="smlabel" text="{start}" vadjust="30"></markerlabel>
+<!--
+<trackmarker start="{start}" markerstyle="stroke:rgba(0,0,0,0.3)" class="boundary" wadjust="10">
+    <markerlabel class="smlabel" text="{start}" vadjust="10"></markerlabel>
 </trackmarker>
-<trackmarker start="{end}" markerstyle="stroke:{color}" class="boundary" wadjust="20">
-    <markerlabel class="smlabel" text="{end}" vadjust="30"></markerlabel>
+<trackmarker start="{end}" markerstyle="stroke:rgba(0,0,0,0.3)" class="boundary" wadjust="10">
+    <markerlabel class="smlabel" text="{end}" vadjust="10"></markerlabel>
 </trackmarker>
+-->
 """
 
 cut_site_tpl = u"""
-<trackmarker start="{position}" markerstyle="stroke:rgba(0, 0, 0, 0.7)" wadjust="20" vadjust="-6" class="marker">
-    <markerlabel text="{label}" labelclass="smlabel" vadjust="30"></markerlabel>
+<trackmarker start="{position}" markerstyle="stroke:rgba(0, 0, 0, 0.3);" wadjust="{rad}" vadjust="-6" class="marker">
+    <markerlabel text="{label}" labelclass="smlabel"
+    vadjust="{rad_label}"></markerlabel>
 </trackmarker>
 """
+# labelstyle="
+# -webkit-transform: rotate({rotation}deg);
+# -moz-transform: rotate({rotation}deg);
+# -ms-transform: rotate({rotation}deg);
+# -o-transform: rotate({rotation}deg);
+# -webkit-transform-origin: {pos_x}px {pos_y}px;
+# -moz-transform-origin: {pos_x}px {pos_y}px;
+# -ms-transform-origin: {pos_x}px {pos_y}px;
+# -o-transform-origin: {pos_x}px {pos_y}px;
+# "
 
 plasmid_tpl = u"""
 <plasmid sequencelength="{sequence_length}" plasmidheight="{size_full}" plasmidwidth="{size_full}">
@@ -113,9 +126,12 @@ if __name__ == '__main__':
     dd = dnadigest.DnaDigest(data_file=args.data)
     enzymes = args.enzyme.split(',')
 
+    enzyme_distance_adjustment_map = {enzyme: 20 + 15 * idx for idx, enzyme in enumerate(enzymes)}
+    length_adjustments = {}
+
     plasmids = []
     for record in SeqIO.parse(args.file, 'fasta'):
-        fragments, cut_sites, did_cut = dd.digest_sequence(record, enzymes)
+        cut_sites = dd.multidigest_sites(record, enzymes)
         regions = []
         for annotated_region in annotated_regions.get(record.id, []):
             regions.append(region_tpl.format(
@@ -127,28 +143,46 @@ if __name__ == '__main__':
                 notstrand='' if annotated_region[4] != '+' else '-',
             ))
 
-        for site in cut_sites:
-            regions.append(cut_site_tpl.format(position=site, label=', '.join(map(str,cut_sites[site]))))
+        import pprint
+        log.debug(pprint.pformat(cut_sites))
+
+        cut_site_keys = sorted(cut_sites.keys())
+        for idx, site in enumerate(cut_site_keys):
+            prev_site = cut_site_keys[idx-1] if idx > 1 else None
+            # next_site = cut_sites[idx+1] if idx < len(cut_sites) else None
+            local_length_adjustment = 20
+            if prev_site is not None and site - prev_site < 20:
+                if prev_site in length_adjustments:
+                    local_length_adjustment = length_adjustments[prev_site] + 15
+            length_adjustments[site] = local_length_adjustment
+
+            for cut_enz in cut_sites[site]:
+                regions.append(cut_site_tpl.format(
+                    position=site,
+                    label=cut_enz,
+                    rad=local_length_adjustment + 10,
+                    rad_label=local_length_adjustment + 15,
+                ))
 
         size = 500
         major_tick_interval = BestTick(len(record.seq), 20)
         minor_tick_interval = major_tick_interval / 5
+        radial_scaling = .35
         plasmids.append(
             plasmid_tpl.format(
                 sequence_length=len(record.seq),
                 sequence_id=record.id,
                 regions='\n'.join(regions),
                 size_full=size,
-                size_half=.40 * size,
-                size_half_inner=.40 * size - 10,
+                size_half=radial_scaling * size,
+                size_half_inner=radial_scaling * size - 10,
                 major_tick_interval=major_tick_interval,
                 minor_tick_interval=minor_tick_interval,
             )
         )
 
-    data = html_tpl.format(
+    print html_tpl.format(
         resource_stream('dnadigest', 'angularplasmid.complete.min.js').read().decode("utf-8"),
         style_static,
         u'\n'.join(plasmids)
-    )
-    print data.encode('utf-8')
+    ).encode('utf-8')

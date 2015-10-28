@@ -7,7 +7,7 @@ import re
 import yaml
 import logging
 from pkg_resources import resource_stream
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 LOG = logging.getLogger()
 
 
@@ -255,7 +255,7 @@ class DnaDigest(object):
                 reopened_sequence.circular = False
             return cls._digest(reopened_sequence, enzyme, did_cut=True, offset=cut_location)
 
-        return fragments, {enzyme.name: [site] for site in cut_sites}, did_cut
+        return fragments, {site: [enzyme.name] for site in cut_sites}, did_cut
 
     def __str__(self):
         ret = "EnzymeLibrary with %s enzymes\n" % len(self.library)
@@ -273,3 +273,13 @@ class DnaDigest(object):
             frags, cuts, didc = self.digest_sequence(sequence, enzymes[1:])
             fragments, cut_sites, did_cut = self.multidigest(frags, enzyme)
             return fragments, self.__merge_dicts(cut_sites, cuts), did_cut or didc
+
+    def multidigest_sites(self, sequence, enzymes):
+        """Digest a sequence and obtain JUST the cut sites. More appropriate for plotting."""
+        cut_sites = {}
+
+        for enzyme in enzymes:
+            _, cuts, _ = self.digest(sequence, enzyme)
+            cut_sites = self.__merge_dicts(cut_sites, cuts)
+
+        return cut_sites
